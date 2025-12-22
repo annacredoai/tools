@@ -5,12 +5,16 @@ A real-time engineering metrics dashboard that pulls data from GitHub to visuali
 ## Features
 
 - **Top Contributors**: View PR counts, average PR size, and review times per developer
+  - Click any contributor to see their individual PRs breakdown
 - **Weekly PR Activity**: Track PRs created, merged, and closed over time
 - **PR Size Distribution**: Understand the distribution of PR sizes across your organization
 - **Review Time Analytics**: Monitor how quickly PRs are getting reviewed
 - **Repository Activity**: See which repositories have the most activity
+- **Recent Activity Feed**: View the latest PRs per repository
 - **Time Range Filtering**: View metrics for the last 7, 30, 90 days, or 1 year
 - **Real GitHub Data**: Automatically fetches and updates from your GitHub organization
+- **Bot Filtering**: Automatically excludes bot accounts (dependabot, renovate, etc.)
+- **Optimized Performance**: Uses GitHub GraphQL API for efficient data fetching
 
 ## Prerequisites
 
@@ -56,7 +60,7 @@ VITE_GITHUB_REPOS=repo1,repo2,repo3
 
 - `VITE_GITHUB_TOKEN`: Your GitHub Personal Access Token
 - `VITE_GITHUB_ORG`: Your GitHub organization name (e.g., "facebook", "google")
-- `VITE_GITHUB_REPOS`: (Optional) Comma-separated list of specific repos to track. Leave empty to track all repos in the organization.
+- `VITE_GITHUB_REPOS`: (Optional) Comma-separated list of specific repos to track. Leave empty to automatically track the top 10 most recently active repositories. **Tip**: Specifying repos significantly improves performance and reduces loading time.
 
 ### 4. Run the Application
 
@@ -70,8 +74,10 @@ Open [http://localhost:5173](http://localhost:5173) in your browser.
 
 - **Time Range Filter**: Select different time ranges (7d, 30d, 90d, 1y) to see metrics for different periods
 - **Automatic Refresh**: The dashboard fetches fresh data whenever you change the time range
-- **Loading States**: The dashboard shows a loading indicator while fetching data from GitHub
+- **Loading States**: The dashboard shows a progress bar while fetching data from GitHub
 - **Error Handling**: If there's an issue with the API or configuration, you'll see an error message with a retry button
+- **Contributor Details**: Click on any contributor in the table to see a detailed breakdown of their PRs
+- **Recent Activity**: Scroll down to see the latest PRs for each repository
 
 ## Development
 
@@ -84,25 +90,37 @@ npm run lint         # Run ESLint
 
 ## How It Works
 
-The dashboard uses the GitHub REST API to:
+The dashboard uses the GitHub GraphQL API to efficiently fetch data:
 
-1. Fetch all repositories in your organization
-2. Get pull requests for each repository within the selected time range
-3. Calculate metrics like:
+1. Fetch repositories in your organization (or use the specified list)
+2. Use GraphQL to batch-fetch pull requests with reviews in a single query per repository
+3. Process repos in parallel (batches of 3) to speed up data collection
+4. Calculate metrics like:
    - PR counts per contributor
    - Average PR size (lines changed)
    - Review time (time from PR creation to first review)
    - Weekly PR activity (created, merged, closed)
    - PR size distribution
-4. Display the data in interactive charts and tables
+5. Cache results in browser storage for 10 minutes
+6. Display the data in interactive charts and tables
+
+## Performance Optimizations
+
+- **GraphQL API**: Reduces API calls from ~500 to ~10-20 by batching PR and review data
+- **Parallel Processing**: Fetches multiple repositories concurrently in batches
+- **Smart Defaults**: Auto-selects top 10 active repos if none specified
+- **Caching**: Stores fetched data for 10 minutes to avoid redundant API calls
+- **Progress Tracking**: Shows real-time progress during data fetching
+- **Bot Filtering**: Excludes automated accounts to focus on human contributors
 
 ## Rate Limits
 
 The GitHub API has rate limits:
 - **Authenticated requests**: 5,000 requests per hour
-- The dashboard makes multiple API calls per repository
+- The dashboard typically uses 10-30 requests per data fetch (depending on number of repos and PR count)
+- With caching enabled, you can view the dashboard multiple times within the cache window without additional API calls
 
-For large organizations with many repositories and PRs, the initial load may take some time and could approach rate limits.
+**Tip**: Specifying repositories in `VITE_GITHUB_REPOS` significantly reduces API usage and loading time.
 
 ## Technologies
 

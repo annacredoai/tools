@@ -8,17 +8,365 @@ const EngineeringDashboard = () => {
   const [timeRange, setTimeRange] = useState('30d');
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [selectedContributor, setSelectedContributor] = useState(null);
+  const [selectedWeeklyContributor, setSelectedWeeklyContributor] = useState('all');
+  const [loadingProgress, setLoadingProgress] = useState({ current: 0, total: 0, repo: '' });
+  const [usingCache, setUsingCache] = useState(false);
+  const [releaseData, setReleaseData] = useState([]);
+  const [loadingReleases, setLoadingReleases] = useState(false);
+  const [expandedRelease, setExpandedRelease] = useState(null);
+  const [activeTab, setActiveTab] = useState('dashboard');
+  const [availableReleases, setAvailableReleases] = useState([]);
+  const [selectedRepo, setSelectedRepo] = useState('');
+  const [selectedBaseRelease, setSelectedBaseRelease] = useState('');
+  const [selectedHeadRelease, setSelectedHeadRelease] = useState('');
+  const [releaseSummary, setReleaseSummary] = useState([]);
+  const [loadingSummary, setLoadingSummary] = useState(false);
   const [data, setData] = useState({
     contributors: [],
     repositories: [],
     weeklyData: [],
     prSizeDistribution: [],
     reviewTimeData: [],
+    recentPRsByRepo: {},
+    projectWorkData: [],
+    epicWorkData: [],
   });
 
   useEffect(() => {
     fetchGitHubData();
   }, [timeRange]);
+
+  useEffect(() => {
+    // Auto-load available releases when releases tab is selected
+    if (activeTab === 'releases' && Object.keys(availableReleases).length === 0) {
+      fetchAvailableReleases();
+    }
+  }, [activeTab]);
+
+  useEffect(() => {
+    // Auto-load release summary when releases are available
+    if (Object.keys(availableReleases).length > 0 && releaseSummary.length === 0) {
+      fetchReleaseSummary();
+    }
+  }, [availableReleases]);
+
+  const getCacheKey = (org, repos, timeRange) => {
+    const reposKey = repos?.join(',') || 'all';
+    return `github_metrics_${org}_${reposKey}_${timeRange}`;
+  };
+
+  const getCachedData = (cacheKey) => {
+    try {
+      const cached = localStorage.getItem(cacheKey);
+      if (!cached) return null;
+
+      const { data, timestamp } = JSON.parse(cached);
+      const now = Date.now();
+      const TEN_MINUTES = 10 * 60 * 1000;
+
+      // Check if cache is still valid (less than 10 minutes old)
+      if (now - timestamp < TEN_MINUTES) {
+        console.log('Using cached data (age:', Math.round((now - timestamp) / 1000), 'seconds)');
+        return data;
+      }
+
+      // Cache expired, remove it
+      localStorage.removeItem(cacheKey);
+      return null;
+    } catch (error) {
+      console.error('Error reading cache:', error);
+      return null;
+    }
+  };
+
+  const setCachedData = (cacheKey, data) => {
+    try {
+      const cacheEntry = {
+        data,
+        timestamp: Date.now(),
+      };
+      localStorage.setItem(cacheKey, JSON.stringify(cacheEntry));
+    } catch (error) {
+      console.error('Error writing cache:', error);
+    }
+  };
+
+  const fetchAvailableReleases = async () => {
+    console.log('[Release] Fetching available releases...');
+
+    // Check cache first
+    const cacheKey = `available_releases_${import.meta.env.VITE_GITHUB_ORG}`;
+    const cachedData = getCachedData(cacheKey);
+
+    if (cachedData) {
+      console.log('[Release] Using cached releases data');
+      setAvailableReleases(cachedData.releasesMap);
+      if (cachedData.selectedRepo) {
+        setSelectedRepo(cachedData.selectedRepo);
+        setSelectedHeadRelease(cachedData.selectedHeadRelease);
+        setSelectedBaseRelease(cachedData.selectedBaseRelease);
+      }
+      return;
+    }
+
+    try {
+      const token = import.meta.env.VITE_GITHUB_TOKEN;
+      const org = import.meta.env.VITE_GITHUB_ORG;
+      const repos = import.meta.env.VITE_GITHUB_REPOS?.split(',').filter(Boolean);
+
+      console.log('[Release] Config:', { org, hasToken: !!token, repos });
+
+      if (!token || !org) {
+        throw new Error('Missing GitHub configuration.');
+      }
+
+      const githubApi = new GitHubAPI(token, org);
+
+      // Fetch releases for each repo
+      const reposToCheck = repos && repos.length > 0 ? repos : await githubApi.getRecentRepositories();
+      console.log('[Release] Repos to check:', reposToCheck);
+
+      const releasesMap = {};
+
+      for (const repo of reposToCheck) {
+        try {
+          console.log(`[Release] Fetching releases for ${repo}...`);
+          const releases = await githubApi.getReleaseBranches(repo);
+          console.log(`[Release] Found ${releases.length} releases for ${repo}:`, releases.map(r => r.name));
+          if (releases.length > 0) {
+            releasesMap[repo] = releases;
+          }
+        } catch (err) {
+          console.error(`[Release] Error fetching releases for ${repo}:`, err);
+        }
+      }
+
+      console.log('[Release] Final releases map:', releasesMap);
+      setAvailableReleases(releasesMap);
+
+      // Auto-select repo with the most recent release
+      let latestRepo = null;
+      let latestReleaseDate = null;
+
+      for (const [repo, releases] of Object.entries(releasesMap)) {
+        if (releases.length >= 2) {
+          // Sort by commit date to get the truly latest
+          const sortedByDate = [...releases].sort((a, b) =>
+            new Date(b.committedDate) - new Date(a.committedDate)
+          );
+          const recentDate = new Date(sortedByDate[0].committedDate);
+
+          if (!latestReleaseDate || recentDate > latestReleaseDate) {
+            latestReleaseDate = recentDate;
+            latestRepo = repo;
+          }
+        }
+      }
+
+      if (latestRepo) {
+        console.log(`[Release] Auto-selecting ${latestRepo} with latest release from ${latestReleaseDate}`);
+        setSelectedRepo(latestRepo);
+        // Sort by date to get latest two releases
+        const releases = [...releasesMap[latestRepo]].sort((a, b) =>
+          new Date(b.committedDate) - new Date(a.committedDate)
+        );
+        const headRelease = releases[0].name;
+        const baseRelease = releases[1].name;
+        setSelectedHeadRelease(headRelease);
+        setSelectedBaseRelease(baseRelease);
+
+        // Cache the releases data
+        const cacheKey = `available_releases_${import.meta.env.VITE_GITHUB_ORG}`;
+        setCachedData(cacheKey, {
+          releasesMap,
+          selectedRepo: latestRepo,
+          selectedHeadRelease: headRelease,
+          selectedBaseRelease: baseRelease,
+        });
+        console.log('[Release] Cached releases data');
+      }
+    } catch (err) {
+      console.error('Error fetching available releases:', err);
+    }
+  };
+
+  const detectDbMigration = (commits) => {
+    // Check for data migration patterns (alembic, SQL migrations)
+    const migrationPatterns = [
+      /alembic/i,
+      /migration.*\.py$/i,
+      /data.*migration/i,
+      /\.sql$/i,
+      /db\/migrate/i,
+      /schema.*change/i,
+    ];
+
+    const migrationsFound = [];
+
+    commits.forEach(commit => {
+      const hasDataMigration = migrationPatterns.some(pattern =>
+        pattern.test(commit.message)
+      );
+
+      if (hasDataMigration && commit.pr) {
+        migrationsFound.push({
+          message: commit.message,
+          pr: commit.pr,
+        });
+      }
+    });
+
+    return migrationsFound.length > 0 ? migrationsFound : null;
+  };
+
+  const fetchReleaseSummary = async () => {
+    console.log('[Release] Fetching release summary...');
+
+    // Check cache first
+    const cacheKey = `release_summary_${import.meta.env.VITE_GITHUB_ORG}`;
+    const cachedData = getCachedData(cacheKey);
+
+    if (cachedData) {
+      console.log('[Release] Using cached summary data');
+      setReleaseSummary(cachedData);
+      return;
+    }
+
+    setLoadingSummary(true);
+    try {
+      const token = import.meta.env.VITE_GITHUB_TOKEN;
+      const org = import.meta.env.VITE_GITHUB_ORG;
+
+      if (!token || !org) {
+        throw new Error('Missing GitHub configuration.');
+      }
+
+      const githubApi = new GitHubAPI(token, org);
+
+      // Define the repos we want to track with their display names
+      const repoMapping = {
+        'credo-ui': 'credoai/ui',
+        'credo-backend': 'credoai/server',
+        'credoai-integration-service': 'credoai/integration',
+        'policy-packs': 'credoai/assets',
+        'credoai-gaia': 'credoai/gaia',
+      };
+
+      console.log('[Release] Available releases for summary:', availableReleases);
+
+      const summaryData = [];
+
+      for (const [repoKey, repoPath] of Object.entries(repoMapping)) {
+        const releases = availableReleases[repoKey] || [];
+
+        // Compare v25 → v24 and v24 → v23 (if available)
+        const comparisons = [];
+        for (let i = 0; i < releases.length - 1 && i < 2; i++) {
+          comparisons.push({ head: releases[i], base: releases[i + 1] });
+        }
+
+        if (comparisons.length > 0) {
+          for (const { head, base } of comparisons) {
+            try {
+              const comparison = await githubApi.compareReleaseBranches(
+                repoKey,
+                base.name,
+                head.name
+              );
+
+              const commits = comparison.commits || [];
+
+              // Only check for DB migrations in backend repo
+              const dbMigrations = repoKey === 'credo-backend'
+                ? detectDbMigration(commits)
+                : null;
+
+              summaryData.push({
+                app: repoKey,
+                path: repoPath,
+                dbMigrations: dbMigrations,
+                hasChanges: commits.length > 0,
+                changeCount: commits.length,
+                currentRelease: `${head.name.replace('release/v', 'v')} ← ${base.name.replace('release/v', 'v')}`,
+              });
+            } catch (err) {
+              console.warn(`Could not fetch comparison for ${repoKey} (${head.name} ← ${base.name}):`, err);
+              summaryData.push({
+                app: repoKey,
+                path: repoPath,
+                dbMigrations: null,
+                hasChanges: null,
+                changeCount: 0,
+                currentRelease: `${head.name.replace('release/v', 'v')} ← ${base.name.replace('release/v', 'v')}`,
+              });
+            }
+          }
+        } else {
+          summaryData.push({
+            app: repoKey,
+            path: repoPath,
+            dbMigrations: null,
+            hasChanges: null,
+            changeCount: 0,
+            currentRelease: 'N/A',
+          });
+        }
+      }
+
+      setReleaseSummary(summaryData);
+
+      // Cache the summary data
+      const cacheKey = `release_summary_${import.meta.env.VITE_GITHUB_ORG}`;
+      setCachedData(cacheKey, summaryData);
+      console.log('[Release] Cached summary data');
+    } catch (err) {
+      console.error('Error fetching release summary:', err);
+    } finally {
+      setLoadingSummary(false);
+    }
+  };
+
+  const fetchReleaseComparisons = async () => {
+    setLoadingReleases(true);
+    try {
+      const token = import.meta.env.VITE_GITHUB_TOKEN;
+      const org = import.meta.env.VITE_GITHUB_ORG;
+      const repos = import.meta.env.VITE_GITHUB_REPOS?.split(',').filter(Boolean);
+
+      if (!token || !org) {
+        throw new Error('Missing GitHub configuration.');
+      }
+
+      const githubApi = new GitHubAPI(token, org);
+
+      // If specific releases are selected, compare those
+      if (selectedRepo && selectedBaseRelease && selectedHeadRelease) {
+        const comparison = await githubApi.compareReleaseBranches(
+          selectedRepo,
+          selectedBaseRelease,
+          selectedHeadRelease,
+          true // Fetch PR details for detailed view
+        );
+        const commits = comparison.commits || [];
+        setReleaseData([{
+          repo: selectedRepo,
+          currentVersion: selectedHeadRelease.replace('release/v', ''),
+          previousVersion: selectedBaseRelease.replace('release/v', ''),
+          changeCount: commits.length,
+          changes: commits.slice(0, 10),
+        }]);
+      } else {
+        // Fall back to sequential comparisons
+        const comparisons = await githubApi.getReleaseComparisons(repos);
+        setReleaseData(comparisons);
+      }
+    } catch (err) {
+      console.error('Error fetching release comparisons:', err);
+    } finally {
+      setLoadingReleases(false);
+    }
+  };
 
   const fetchGitHubData = async () => {
     setLoading(true);
@@ -33,21 +381,42 @@ const EngineeringDashboard = () => {
         throw new Error('Missing GitHub configuration. Please set VITE_GITHUB_TOKEN and VITE_GITHUB_ORG in your .env.local file.');
       }
 
+      // Check cache first
+      const cacheKey = getCacheKey(org, repos, timeRange);
+      const cachedData = getCachedData(cacheKey);
+
+      if (cachedData) {
+        setData(cachedData);
+        setUsingCache(true);
+        setLoading(false);
+        return;
+      }
+
+      setUsingCache(false);
+
       const githubApi = new GitHubAPI(token, org);
 
       // Convert timeRange to days
       const daysMap = { '7d': 7, '30d': 30, '90d': 90, '1y': 365 };
       const days = daysMap[timeRange] || 30;
 
-      const metrics = await githubApi.getEngineeringMetrics(repos, days);
+      const metrics = await githubApi.getEngineeringMetrics(repos, days, (progress) => {
+        setLoadingProgress(progress);
+      });
 
-      setData({
+      const newData = {
         contributors: metrics.contributors,
         repositories: metrics.repositories,
         weeklyData: metrics.weeklyData,
         prSizeDistribution: metrics.prSizeDistribution,
         reviewTimeData: metrics.reviewTimeData,
-      });
+        recentPRsByRepo: metrics.recentPRsByRepo,
+        projectWorkData: metrics.projectWorkData,
+        epicWorkData: metrics.epicWorkData,
+      };
+
+      setData(newData);
+      setCachedData(cacheKey, newData);
     } catch (err) {
       console.error('Error fetching GitHub data:', err);
       setError(err.message);
@@ -57,7 +426,37 @@ const EngineeringDashboard = () => {
   };
 
   const prData = data.contributors;
-  const weeklyPRs = data.weeklyData;
+
+  // Filter weekly data by selected contributor
+  const getWeeklyPRs = () => {
+    if (selectedWeeklyContributor === 'all') {
+      return data.weeklyData;
+    }
+
+    const contributor = data.contributors.find(c => c.author === selectedWeeklyContributor);
+    if (!contributor || !contributor.weeklyData) {
+      return [];
+    }
+
+    // Convert contributor's weekly data to the same format as overall weekly data
+    return Object.entries(contributor.weeklyData)
+      .sort(([a], [b]) => a.localeCompare(b))
+      .slice(-8) // Last 8 weeks
+      .map(([week, weekData]) => {
+        // Format the week label
+        const date = new Date(week);
+        const month = date.toLocaleDateString('en-US', { month: 'short' });
+        const day = date.getDate();
+        return {
+          week: `${month} ${day}`,
+          prs: weekData.created,
+          merged: weekData.merged,
+          closed: weekData.closed,
+        };
+      });
+  };
+
+  const weeklyPRs = getWeeklyPRs();
   const prSizeDistribution = data.prSizeDistribution;
   const reviewTimeData = data.reviewTimeData;
   const repositoryStats = data.repositories;
@@ -100,11 +499,46 @@ const EngineeringDashboard = () => {
         <p className="text-gray-600">Team productivity and code review analytics</p>
       </div>
 
+      {/* Tab Navigation */}
+      <div className="bg-white rounded-lg shadow-md mb-6 overflow-hidden">
+        <div className="flex border-b border-gray-200">
+          <button
+            onClick={() => setActiveTab('dashboard')}
+            className={`flex-1 px-6 py-4 text-center font-medium transition-colors ${
+              activeTab === 'dashboard'
+                ? 'bg-blue-500 text-white border-b-2 border-blue-600'
+                : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
+            }`}
+          >
+            <div className="flex items-center justify-center gap-2">
+              <Activity className="w-5 h-5" />
+              <span>Dashboard</span>
+            </div>
+          </button>
+          <button
+            onClick={() => setActiveTab('releases')}
+            className={`flex-1 px-6 py-4 text-center font-medium transition-colors ${
+              activeTab === 'releases'
+                ? 'bg-blue-500 text-white border-b-2 border-blue-600'
+                : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
+            }`}
+          >
+            <div className="flex items-center justify-center gap-2">
+              <GitPullRequest className="w-5 h-5" />
+              <span>Release Comparisons</span>
+            </div>
+          </button>
+        </div>
+      </div>
+
+      {/* Dashboard Tab Content */}
+      {activeTab === 'dashboard' && (
+        <>
       {/* Filters */}
-      <div className="bg-white rounded-lg shadow-md p-4 mb-6 flex gap-4">
+      <div className="bg-white rounded-lg shadow-md p-4 mb-6 flex gap-4 items-end">
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-2">Team</label>
-          <select 
+          <select
             value={selectedTeam}
             onChange={(e) => setSelectedTeam(e.target.value)}
             className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -117,7 +551,7 @@ const EngineeringDashboard = () => {
         </div>
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-2">Time Range</label>
-          <select 
+          <select
             value={timeRange}
             onChange={(e) => setTimeRange(e.target.value)}
             className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -128,15 +562,42 @@ const EngineeringDashboard = () => {
             <option value="1y">Last year</option>
           </select>
         </div>
+        <div className="ml-auto">
+          <button
+            onClick={() => {
+              localStorage.clear();
+              window.location.reload();
+            }}
+            className="px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors text-sm"
+          >
+            Clear Cache & Refresh
+          </button>
+        </div>
       </div>
 
       {/* Loading State */}
       {loading && (
         <div className="flex items-center justify-center py-20">
-          <div className="text-center">
+          <div className="text-center max-w-md w-full px-4">
             <Loader2 className="w-12 h-12 text-blue-500 animate-spin mx-auto mb-4" />
-            <p className="text-gray-600 text-lg">Fetching data from GitHub...</p>
-            <p className="text-gray-500 text-sm mt-2">This may take a moment for large organizations</p>
+            <p className="text-gray-600 text-lg mb-2">Fetching data from GitHub...</p>
+            {loadingProgress.total > 0 && (
+              <>
+                <div className="w-full bg-gray-200 rounded-full h-2.5 mb-2">
+                  <div
+                    className="bg-blue-600 h-2.5 rounded-full transition-all duration-300"
+                    style={{ width: `${(loadingProgress.current / loadingProgress.total) * 100}%` }}
+                  ></div>
+                </div>
+                <p className="text-gray-500 text-sm">
+                  Processing repository {loadingProgress.current} of {loadingProgress.total}
+                  {loadingProgress.repo && (
+                    <span className="block text-blue-600 font-medium mt-1">{loadingProgress.repo}</span>
+                  )}
+                </p>
+              </>
+            )}
+            <p className="text-gray-500 text-xs mt-2">Using GraphQL for optimized fetching</p>
           </div>
         </div>
       )}
@@ -165,42 +626,56 @@ const EngineeringDashboard = () => {
         <>
       {/* Key Metrics */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
-        <StatCard 
+        <StatCard
           title="Total Pull Requests"
           value={totalPRs.toLocaleString()}
           subtitle="Across all repositories"
           icon={GitPullRequest}
-          trend={12}
           color="#3b82f6"
         />
-        <StatCard 
+        <StatCard
           title="Avg Review Time"
           value={`${avgReviewTime}h`}
           subtitle="Time to first review"
           icon={Clock}
-          trend={-8}
           color="#10b981"
         />
-        <StatCard 
+        <StatCard
           title="Active Repositories"
           value={totalRepos}
           subtitle={`${openPRs} open PRs`}
           icon={Activity}
           color="#f59e0b"
         />
-        <StatCard 
+        <StatCard
           title="Team Members"
           value={prData.length}
-          subtitle="Contributing developers"
+          subtitle="Contributing developers (bots excluded)"
           icon={Users}
-          trend={5}
           color="#8b5cf6"
         />
       </div>
 
       {/* PR Activity Over Time */}
       <div className="bg-white rounded-lg shadow-md p-6 mb-6">
-        <h2 className="text-xl font-bold text-gray-900 mb-4">Weekly PR Activity</h2>
+        <div className="flex items-center justify-between mb-4">
+          <h2 className="text-xl font-bold text-gray-900">Weekly PR Activity</h2>
+          <div className="flex items-center gap-2">
+            <label className="text-sm font-medium text-gray-700">Contributor:</label>
+            <select
+              value={selectedWeeklyContributor}
+              onChange={(e) => setSelectedWeeklyContributor(e.target.value)}
+              className="px-3 py-1.5 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            >
+              <option value="all">All Contributors</option>
+              {prData.map((contributor, index) => (
+                <option key={index} value={contributor.author}>
+                  {contributor.author}
+                </option>
+              ))}
+            </select>
+          </div>
+        </div>
         <ResponsiveContainer width="100%" height={300}>
           <LineChart data={weeklyPRs}>
             <CartesianGrid strokeDasharray="3 3" />
@@ -280,7 +755,11 @@ const EngineeringDashboard = () => {
             </thead>
             <tbody className="bg-white divide-y divide-gray-200">
               {prData.map((author, index) => (
-                <tr key={index} className="hover:bg-gray-50">
+                <tr
+                  key={index}
+                  className="hover:bg-gray-50 cursor-pointer"
+                  onClick={() => setSelectedContributor(author)}
+                >
                   <td className="px-6 py-4 whitespace-nowrap">
                     <div className="flex items-center">
                       {author.avatarUrl ? (
@@ -296,6 +775,7 @@ const EngineeringDashboard = () => {
                       )}
                       <div className="ml-4">
                         <div className="text-sm font-medium text-gray-900">{author.author}</div>
+                        <div className="text-xs text-gray-500">Click to view PRs</div>
                       </div>
                     </div>
                   </td>
@@ -346,9 +826,494 @@ const EngineeringDashboard = () => {
         </ResponsiveContainer>
       </div>
 
+      {/* Recent Activity by Repository */}
+      <div className="bg-white rounded-lg shadow-md p-6 mb-6">
+        <h2 className="text-xl font-bold text-gray-900 mb-4">Recent Activity by Repository</h2>
+        <div className="space-y-6">
+          {repositoryStats.slice(0, 5).map((repo, index) => {
+            const recentPRs = data.recentPRsByRepo[repo.repo] || [];
+            return (
+              <div key={index} className="border-b last:border-0 pb-6 last:pb-0">
+                <h3 className="text-lg font-semibold text-gray-800 mb-3">{repo.repo}</h3>
+                {recentPRs.length === 0 ? (
+                  <p className="text-gray-500 text-sm">No recent PRs</p>
+                ) : (
+                  <div className="space-y-2">
+                    {recentPRs.map((pr, prIndex) => {
+                      const org = import.meta.env.VITE_GITHUB_ORG;
+                      const prUrl = pr.url || `https://github.com/${org}/${pr.repository}/pull/${pr.number}`;
+                      return (
+                      <a
+                        key={prIndex}
+                        href={prUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-start justify-between p-3 bg-gray-50 rounded-lg hover:bg-gray-100 hover:border hover:border-blue-300 transition-all cursor-pointer"
+                      >
+                        <div className="flex-1 min-w-0">
+                          <div className="flex items-center gap-2 mb-1">
+                            <span className="text-sm font-medium text-blue-600 hover:text-blue-800">#{pr.number}</span>
+                            <span className="text-sm text-gray-700 truncate">{pr.title}</span>
+                          </div>
+                          <div className="flex items-center gap-3 text-xs text-gray-500">
+                            <span>{pr.user.login}</span>
+                            <span>{new Date(pr.created_at).toLocaleDateString()}</span>
+                            <span>{(pr.additions || 0) + (pr.deletions || 0)} lines</span>
+                          </div>
+                        </div>
+                        <div className="ml-4 flex-shrink-0">
+                          {pr.state === 'open' && (
+                            <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                              Open
+                            </span>
+                          )}
+                          {pr.merged_at && (
+                            <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-purple-100 text-purple-800">
+                              Merged
+                            </span>
+                          )}
+                          {pr.closed_at && !pr.merged_at && (
+                            <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800">
+                              Closed
+                            </span>
+                          )}
+                        </div>
+                      </a>
+                      );
+                    })}
+                  </div>
+                )}
+              </div>
+            );
+          })}
+        </div>
+      </div>
+        </>
+      )}
+
+      {/* Releases Tab Content */}
+      {activeTab === 'releases' && (
+        <>
+          {/* Debug Info */}
+          <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4 mb-6">
+            <h3 className="text-sm font-semibold text-yellow-800 mb-2">Debug Info:</h3>
+            <div className="text-xs text-yellow-700 space-y-1">
+              <p>Available releases: {Object.keys(availableReleases).length} repos</p>
+              <p>Release summary: {releaseSummary.length} items</p>
+              <p>Loading summary: {loadingSummary ? 'Yes' : 'No'}</p>
+              <p>Selected repo: {selectedRepo || 'None'}</p>
+              <p>Releases for selected: {selectedRepo ? (availableReleases[selectedRepo]?.length || 0) : 0}</p>
+              {releaseSummary.length > 0 && (
+                <details className="mt-2">
+                  <summary className="cursor-pointer">Show raw summary data</summary>
+                  <pre className="mt-2 text-xs bg-white p-2 rounded overflow-auto max-h-40">
+                    {JSON.stringify(releaseSummary, null, 2)}
+                  </pre>
+                </details>
+              )}
+            </div>
+          </div>
+
+          {/* Release Summary Loading */}
+          {loadingSummary && releaseSummary.length === 0 && (
+            <div className="bg-white rounded-lg shadow-md p-6 mb-6">
+              <div className="flex items-center justify-center py-12">
+                <div className="text-center">
+                  <Loader2 className="w-10 h-10 text-blue-500 animate-spin mx-auto mb-3" />
+                  <p className="text-gray-600">Loading release status overview...</p>
+                  <p className="text-gray-500 text-sm mt-1">Analyzing releases across all repositories</p>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* Release Summary Empty State */}
+          {!loadingSummary && releaseSummary.length === 0 && Object.keys(availableReleases).length > 0 && (
+            <div className="bg-white rounded-lg shadow-md p-6 mb-6">
+              <div className="flex items-center justify-between mb-4">
+                <h2 className="text-xl font-bold text-gray-900">Release Status Overview</h2>
+                <button
+                  onClick={fetchReleaseSummary}
+                  className="px-3 py-1.5 text-sm bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                >
+                  Load Release Status
+                </button>
+              </div>
+              <div className="text-center py-8 text-gray-500">
+                <p>Click "Load Release Status" to analyze release status across all repositories</p>
+              </div>
+            </div>
+          )}
+
+          {/* Release Summary Table */}
+          {releaseSummary.length > 0 ? (
+            <div className="bg-white rounded-lg shadow-md p-6 mb-6">
+              <div className="flex items-center justify-between mb-4">
+                <h2 className="text-xl font-bold text-gray-900">Release Status Overview ({releaseSummary.length} comparisons)</h2>
+                <button
+                  onClick={fetchReleaseSummary}
+                  disabled={loadingSummary}
+                  className="px-3 py-1.5 text-sm bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors disabled:bg-gray-50 disabled:cursor-not-allowed flex items-center gap-2"
+                >
+                  {loadingSummary ? (
+                    <>
+                      <Loader2 className="w-3 h-3 animate-spin" />
+                      Loading...
+                    </>
+                  ) : (
+                    '↻ Refresh'
+                  )}
+                </button>
+              </div>
+              <div className="overflow-x-auto">
+                <table className="min-w-full divide-y divide-gray-200">
+                  <thead className="bg-gray-50">
+                    <tr>
+                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">App</th>
+                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">DB Migration</th>
+                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Comparison</th>
+                    </tr>
+                  </thead>
+                  <tbody className="bg-white divide-y divide-gray-200">
+                    {releaseSummary.map((item, index) => (
+                      <tr key={index} className="hover:bg-gray-50">
+                        <td className="px-6 py-4 whitespace-nowrap">
+                          <div className="text-sm font-medium text-gray-900">{item.app}</div>
+                          <div className="text-xs text-gray-500">{item.path}</div>
+                        </td>
+                        <td className="px-6 py-4">
+                          {item.app === 'credo-backend' ? (
+                            item.dbMigrations && item.dbMigrations.length > 0 ? (
+                              <div className="space-y-1">
+                                {item.dbMigrations.map((migration, idx) => (
+                                  <div key={idx} className="flex items-start gap-2">
+                                    <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800">
+                                      ⚠️ Yes
+                                    </span>
+                                    <a
+                                      href={migration.pr.url}
+                                      target="_blank"
+                                      rel="noopener noreferrer"
+                                      className="text-xs text-blue-600 hover:text-blue-800 underline"
+                                    >
+                                      PR #{migration.pr.number}
+                                    </a>
+                                  </div>
+                                ))}
+                              </div>
+                            ) : (
+                              <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                                ✓ No
+                              </span>
+                            )
+                          ) : (
+                            <span className="text-gray-400 text-sm">N/A</span>
+                          )}
+                        </td>
+                        <td className="px-6 py-4">
+                          {item.hasChanges === true ? (
+                            <div>
+                              <div className="text-sm font-semibold text-gray-900">{item.currentRelease}</div>
+                              <div className="text-xs text-green-600 mt-1">{item.changeCount} changes</div>
+                            </div>
+                          ) : item.hasChanges === false ? (
+                            <div>
+                              <div className="text-sm font-semibold text-gray-900">{item.currentRelease}</div>
+                              <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800 mt-1">
+                                No changes
+                              </span>
+                            </div>
+                          ) : (
+                            <span className="text-gray-400 text-sm">?</span>
+                          )}
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          ) : !loadingSummary ? (
+            <div className="bg-white rounded-lg shadow-md p-6 mb-6">
+              <p className="text-gray-500 text-center py-8">
+                No release data available. Check the debug info above.
+              </p>
+            </div>
+          ) : null}
+
+          {/* Release Comparisons */}
+          <div className="bg-white rounded-lg shadow-md p-6 mb-6">
+            <h2 className="text-xl font-bold text-gray-900 mb-4">Release Comparisons</h2>
+
+            {/* Release Selector */}
+            <div className="bg-gray-50 rounded-lg p-4 mb-4">
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">Repository</label>
+                  <select
+                    value={selectedRepo}
+                    onChange={(e) => {
+                      setSelectedRepo(e.target.value);
+                      // Auto-select latest two releases for new repo
+                      const releases = availableReleases[e.target.value] || [];
+                      if (releases.length >= 2) {
+                        setSelectedHeadRelease(releases[0].name);
+                        setSelectedBaseRelease(releases[1].name);
+                      }
+                    }}
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  >
+                    <option value="">Select repository...</option>
+                    {Object.keys(availableReleases).map((repo) => (
+                      <option key={repo} value={repo}>{repo}</option>
+                    ))}
+                  </select>
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">From (Base)</label>
+                  <select
+                    value={selectedBaseRelease}
+                    onChange={(e) => setSelectedBaseRelease(e.target.value)}
+                    disabled={!selectedRepo}
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent disabled:bg-gray-100 disabled:cursor-not-allowed"
+                  >
+                    <option value="">Select base release...</option>
+                    {selectedRepo && availableReleases[selectedRepo]?.map((release) => (
+                      <option key={release.name} value={release.name}>
+                        {release.name.replace('release/v', 'v')}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">To (Head)</label>
+                  <select
+                    value={selectedHeadRelease}
+                    onChange={(e) => setSelectedHeadRelease(e.target.value)}
+                    disabled={!selectedRepo}
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent disabled:bg-gray-100 disabled:cursor-not-allowed"
+                  >
+                    <option value="">Select head release...</option>
+                    {selectedRepo && availableReleases[selectedRepo]?.map((release) => (
+                      <option key={release.name} value={release.name}>
+                        {release.name.replace('release/v', 'v')}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+
+                <div className="flex items-end">
+                  <button
+                    onClick={fetchReleaseComparisons}
+                    disabled={loadingReleases || !selectedRepo || !selectedBaseRelease || !selectedHeadRelease}
+                    className="w-full px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors disabled:bg-gray-400 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                  >
+                    {loadingReleases ? (
+                      <>
+                        <Loader2 className="w-4 h-4 animate-spin" />
+                        Loading...
+                      </>
+                    ) : (
+                      <>
+                        <GitPullRequest className="w-4 h-4" />
+                        Compare
+                      </>
+                    )}
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            {releaseData.length === 0 && !loadingReleases && (
+              <p className="text-gray-500 text-sm">
+                {Object.keys(availableReleases).length === 0
+                  ? 'Loading available releases...'
+                  : 'Select releases above and click "Compare" to see what went into each release'}
+              </p>
+            )}
+
+            {releaseData.length > 0 && (
+              <div className="space-y-4">
+                {releaseData.map((release, index) => (
+                  <div key={index} className="border border-gray-200 rounded-lg overflow-hidden">
+                    <div
+                      className="bg-gray-50 p-4 cursor-pointer hover:bg-gray-100 transition-colors"
+                      onClick={() => setExpandedRelease(expandedRelease === index ? null : index)}
+                    >
+                      <div className="flex items-center justify-between">
+                        <div>
+                          <h3 className="text-lg font-semibold text-gray-900">
+                            {release.repo}: v{release.currentVersion}
+                          </h3>
+                          <p className="text-sm text-gray-600 mt-1">
+                            {release.changeCount} changes from v{release.previousVersion}
+                          </p>
+                        </div>
+                        <svg
+                          className={`w-5 h-5 text-gray-500 transition-transform ${
+                            expandedRelease === index ? 'transform rotate-180' : ''
+                          }`}
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                        </svg>
+                      </div>
+                    </div>
+
+                    {expandedRelease === index && (
+                      <div className="p-4 bg-white">
+                        <div className="space-y-2">
+                          {release.changes.map((change, changeIndex) => (
+                            <div key={changeIndex} className="flex items-start gap-3 p-3 bg-gray-50 rounded-lg">
+                              <code className="text-xs text-gray-500 font-mono mt-0.5">{change.sha}</code>
+                              <div className="flex-1 min-w-0">
+                                <p className="text-sm text-gray-900">{change.message}</p>
+                                <div className="flex items-center gap-3 mt-1 text-xs text-gray-500">
+                                  <span>{change.author}</span>
+                                  <span>{new Date(change.date).toLocaleDateString()}</span>
+                                  {change.pr && (
+                                    <a
+                                      href={change.pr.url}
+                                      target="_blank"
+                                      rel="noopener noreferrer"
+                                      className="text-blue-600 hover:text-blue-800"
+                                    >
+                                      PR #{change.pr.number}
+                                    </a>
+                                  )}
+                                </div>
+                              </div>
+                            </div>
+                          ))}
+                          {release.changeCount > 10 && (
+                            <p className="text-sm text-gray-500 text-center mt-2">
+                              Showing 10 of {release.changeCount} changes
+                            </p>
+                          )}
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        </>
+      )}
+
+      {/* Contributor Detail Modal */}
+      {selectedContributor && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4"
+          onClick={() => setSelectedContributor(null)}
+        >
+          <div
+            className="bg-white rounded-lg shadow-xl max-w-4xl w-full max-h-[90vh] overflow-hidden"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Modal Header */}
+            <div className="bg-gradient-to-r from-blue-500 to-blue-600 p-6 text-white">
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-4">
+                  {selectedContributor.avatarUrl ? (
+                    <img
+                      src={selectedContributor.avatarUrl}
+                      alt={selectedContributor.author}
+                      className="h-16 w-16 rounded-full border-4 border-white"
+                    />
+                  ) : (
+                    <div className="h-16 w-16 bg-white text-blue-600 rounded-full flex items-center justify-center text-2xl font-bold border-4 border-white">
+                      {selectedContributor.author.split(' ').map(n => n[0]).join('')}
+                    </div>
+                  )}
+                  <div>
+                    <h2 className="text-2xl font-bold">{selectedContributor.author}</h2>
+                    <p className="text-blue-100 mt-1">
+                      {selectedContributor.count} PRs • {selectedContributor.avgSize} lines avg • {selectedContributor.avgReviewTime}h avg review time
+                    </p>
+                  </div>
+                </div>
+                <button
+                  onClick={() => setSelectedContributor(null)}
+                  className="text-white hover:bg-white hover:bg-opacity-20 rounded-full p-2 transition-colors"
+                >
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            {/* Modal Body */}
+            <div className="p-6 overflow-y-auto max-h-[calc(90vh-200px)]">
+              <h3 className="text-lg font-semibold text-gray-900 mb-4">Pull Requests</h3>
+              <div className="space-y-3">
+                {selectedContributor.prs.map((pr, index) => {
+                  const org = import.meta.env.VITE_GITHUB_ORG;
+                  const prUrl = pr.url || `https://github.com/${org}/${pr.repository}/pull/${pr.number}`;
+                  return (
+                    <a
+                      key={index}
+                      href={prUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block border border-gray-200 rounded-lg p-4 hover:shadow-md hover:border-blue-300 transition-all cursor-pointer"
+                    >
+                      <div className="flex items-start justify-between">
+                        <div className="flex-1 min-w-0">
+                          <div className="flex items-center gap-2 mb-2">
+                            <span className="text-sm font-semibold text-blue-600 hover:text-blue-800">#{pr.number}</span>
+                            <span className="text-sm text-gray-700">{pr.title}</span>
+                          </div>
+                          <div className="flex items-center gap-4 text-xs text-gray-500">
+                            <span className="font-medium">{pr.repository}</span>
+                            <span>{new Date(pr.created_at).toLocaleDateString()}</span>
+                            <span className="text-green-600">+{pr.additions || 0}</span>
+                            <span className="text-red-600">-{pr.deletions || 0}</span>
+                          </div>
+                        </div>
+                        <div className="ml-4">
+                          {pr.state === 'open' && (
+                            <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                              Open
+                            </span>
+                          )}
+                          {pr.merged_at && (
+                            <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-purple-100 text-purple-800">
+                              Merged
+                            </span>
+                          )}
+                          {pr.closed_at && !pr.merged_at && (
+                            <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gray-100 text-gray-800">
+                              Closed
+                            </span>
+                          )}
+                        </div>
+                      </div>
+                    </a>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
       {/* Footer */}
       <div className="mt-8 text-center text-sm text-gray-500">
         <p>Last updated: {new Date().toLocaleDateString()} at {new Date().toLocaleTimeString()}</p>
+        {usingCache && (
+          <p className="mt-1 text-xs text-green-600">
+            <span className="inline-flex items-center">
+              <CheckCircle className="w-3 h-3 mr-1" />
+              Using cached data (refreshes every 10 minutes)
+            </span>
+          </p>
+        )}
       </div>
       </>
       )}
