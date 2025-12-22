@@ -1,56 +1,71 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { BarChart, Bar, LineChart, Line, PieChart, Pie, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
-import { Calendar, GitPullRequest, Clock, Users, TrendingUp, Activity, AlertCircle, CheckCircle } from 'lucide-react';
+import { Calendar, GitPullRequest, Clock, Users, TrendingUp, Activity, AlertCircle, CheckCircle, Loader2 } from 'lucide-react';
+import GitHubAPI from './services/githubApi';
 
 const EngineeringDashboard = () => {
   const [selectedTeam, setSelectedTeam] = useState('all');
   const [timeRange, setTimeRange] = useState('30d');
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+  const [data, setData] = useState({
+    contributors: [],
+    repositories: [],
+    weeklyData: [],
+    prSizeDistribution: [],
+    reviewTimeData: [],
+  });
 
-  // Sample data - replace with your actual data
-  const prData = [
-    { author: 'Anna Garcia', count: 279, avgSize: 150, avgReviewTime: 2.3 },
-    { author: 'John Smith', count: 156, avgSize: 200, avgReviewTime: 3.1 },
-    { author: 'Sarah Chen', count: 143, avgSize: 180, avgReviewTime: 2.8 },
-    { author: 'Mike Johnson', count: 128, avgSize: 220, avgReviewTime: 3.5 },
-    { author: 'Emma Wilson', count: 115, avgSize: 160, avgReviewTime: 2.5 },
-    { author: 'David Lee', count: 98, avgSize: 190, avgReviewTime: 2.9 },
-    { author: 'Lisa Brown', count: 87, avgSize: 170, avgReviewTime: 2.7 },
-    { author: 'Tom Davis', count: 76, avgSize: 210, avgReviewTime: 3.2 },
-  ];
+  useEffect(() => {
+    fetchGitHubData();
+  }, [timeRange]);
 
-  const weeklyPRs = [
-    { week: 'Week 1', prs: 45, merged: 38, closed: 5 },
-    { week: 'Week 2', prs: 52, merged: 44, closed: 6 },
-    { week: 'Week 3', prs: 48, merged: 40, closed: 7 },
-    { week: 'Week 4', prs: 56, merged: 49, closed: 5 },
-  ];
+  const fetchGitHubData = async () => {
+    setLoading(true);
+    setError(null);
 
-  const prSizeDistribution = [
-    { name: 'XS (0-10)', value: 145, color: '#10b981' },
-    { name: 'S (11-50)', value: 312, color: '#3b82f6' },
-    { name: 'M (51-200)', value: 428, color: '#f59e0b' },
-    { name: 'L (201-500)', value: 187, color: '#ef4444' },
-    { name: 'XL (500+)', value: 45, color: '#8b5cf6' },
-  ];
+    try {
+      const token = import.meta.env.VITE_GITHUB_TOKEN;
+      const org = import.meta.env.VITE_GITHUB_ORG;
+      const repos = import.meta.env.VITE_GITHUB_REPOS?.split(',').filter(Boolean);
 
-  const reviewTimeData = [
-    { timeRange: '< 1h', count: 234 },
-    { timeRange: '1-4h', count: 456 },
-    { timeRange: '4-24h', count: 312 },
-    { timeRange: '1-3d', count: 145 },
-    { timeRange: '> 3d', count: 67 },
-  ];
+      if (!token || !org) {
+        throw new Error('Missing GitHub configuration. Please set VITE_GITHUB_TOKEN and VITE_GITHUB_ORG in your .env.local file.');
+      }
 
-  const repositoryStats = [
-    { repo: 'credo-backend', prs: 458, avgTime: 2.8, openPRs: 12 },
-    { repo: 'credoai-gaia', prs: 287, avgTime: 2.3, openPRs: 8 },
-    { repo: 'credoai-integration', prs: 234, avgTime: 3.1, openPRs: 15 },
-    { repo: 'credo-frontend', prs: 198, avgTime: 2.6, openPRs: 7 },
-    { repo: 'credoai-platform', prs: 145, avgTime: 2.9, openPRs: 10 },
-  ];
+      const githubApi = new GitHubAPI(token, org);
+
+      // Convert timeRange to days
+      const daysMap = { '7d': 7, '30d': 30, '90d': 90, '1y': 365 };
+      const days = daysMap[timeRange] || 30;
+
+      const metrics = await githubApi.getEngineeringMetrics(repos, days);
+
+      setData({
+        contributors: metrics.contributors,
+        repositories: metrics.repositories,
+        weeklyData: metrics.weeklyData,
+        prSizeDistribution: metrics.prSizeDistribution,
+        reviewTimeData: metrics.reviewTimeData,
+      });
+    } catch (err) {
+      console.error('Error fetching GitHub data:', err);
+      setError(err.message);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const prData = data.contributors;
+  const weeklyPRs = data.weeklyData;
+  const prSizeDistribution = data.prSizeDistribution;
+  const reviewTimeData = data.reviewTimeData;
+  const repositoryStats = data.repositories;
 
   const totalPRs = prData.reduce((sum, author) => sum + author.count, 0);
-  const avgReviewTime = (prData.reduce((sum, author) => sum + author.avgReviewTime * author.count, 0) / totalPRs).toFixed(1);
+  const avgReviewTime = totalPRs > 0
+    ? (prData.reduce((sum, author) => sum + author.avgReviewTime * author.count, 0) / totalPRs).toFixed(1)
+    : 0;
   const totalRepos = repositoryStats.length;
   const openPRs = repositoryStats.reduce((sum, repo) => sum + repo.openPRs, 0);
 
@@ -115,6 +130,39 @@ const EngineeringDashboard = () => {
         </div>
       </div>
 
+      {/* Loading State */}
+      {loading && (
+        <div className="flex items-center justify-center py-20">
+          <div className="text-center">
+            <Loader2 className="w-12 h-12 text-blue-500 animate-spin mx-auto mb-4" />
+            <p className="text-gray-600 text-lg">Fetching data from GitHub...</p>
+            <p className="text-gray-500 text-sm mt-2">This may take a moment for large organizations</p>
+          </div>
+        </div>
+      )}
+
+      {/* Error State */}
+      {error && (
+        <div className="bg-red-50 border-l-4 border-red-500 p-6 mb-6 rounded-lg">
+          <div className="flex items-start">
+            <AlertCircle className="w-6 h-6 text-red-500 mr-3 flex-shrink-0 mt-0.5" />
+            <div>
+              <h3 className="text-red-800 font-semibold mb-2">Error Loading Data</h3>
+              <p className="text-red-700 mb-3">{error}</p>
+              <button
+                onClick={fetchGitHubData}
+                className="px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors"
+              >
+                Retry
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Dashboard Content - Only show when not loading and no error */}
+      {!loading && !error && (
+        <>
       {/* Key Metrics */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
         <StatCard 
@@ -235,9 +283,17 @@ const EngineeringDashboard = () => {
                 <tr key={index} className="hover:bg-gray-50">
                   <td className="px-6 py-4 whitespace-nowrap">
                     <div className="flex items-center">
-                      <div className="flex-shrink-0 h-10 w-10 bg-blue-500 rounded-full flex items-center justify-center text-white font-semibold">
-                        {author.author.split(' ').map(n => n[0]).join('')}
-                      </div>
+                      {author.avatarUrl ? (
+                        <img
+                          src={author.avatarUrl}
+                          alt={author.author}
+                          className="flex-shrink-0 h-10 w-10 rounded-full"
+                        />
+                      ) : (
+                        <div className="flex-shrink-0 h-10 w-10 bg-blue-500 rounded-full flex items-center justify-center text-white font-semibold">
+                          {author.author.split(' ').map(n => n[0]).join('')}
+                        </div>
+                      )}
                       <div className="ml-4">
                         <div className="text-sm font-medium text-gray-900">{author.author}</div>
                       </div>
@@ -294,6 +350,8 @@ const EngineeringDashboard = () => {
       <div className="mt-8 text-center text-sm text-gray-500">
         <p>Last updated: {new Date().toLocaleDateString()} at {new Date().toLocaleTimeString()}</p>
       </div>
+      </>
+      )}
     </div>
   );
 };
