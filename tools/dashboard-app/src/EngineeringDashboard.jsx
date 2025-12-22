@@ -15,13 +15,6 @@ const EngineeringDashboard = () => {
   const [releaseData, setReleaseData] = useState([]);
   const [loadingReleases, setLoadingReleases] = useState(false);
   const [expandedRelease, setExpandedRelease] = useState(null);
-  const [activeTab, setActiveTab] = useState('dashboard');
-  const [availableReleases, setAvailableReleases] = useState([]);
-  const [selectedRepo, setSelectedRepo] = useState('');
-  const [selectedBaseRelease, setSelectedBaseRelease] = useState('');
-  const [selectedHeadRelease, setSelectedHeadRelease] = useState('');
-  const [releaseSummary, setReleaseSummary] = useState([]);
-  const [loadingSummary, setLoadingSummary] = useState(false);
   const [data, setData] = useState({
     contributors: [],
     repositories: [],
@@ -36,20 +29,6 @@ const EngineeringDashboard = () => {
   useEffect(() => {
     fetchGitHubData();
   }, [timeRange]);
-
-  useEffect(() => {
-    // Auto-load available releases when releases tab is selected
-    if (activeTab === 'releases' && Object.keys(availableReleases).length === 0) {
-      fetchAvailableReleases();
-    }
-  }, [activeTab]);
-
-  useEffect(() => {
-    // Auto-load release summary when releases are available
-    if (Object.keys(availableReleases).length > 0 && releaseSummary.length === 0) {
-      fetchReleaseSummary();
-    }
-  }, [availableReleases]);
 
   const getCacheKey = (org, repos, timeRange) => {
     const reposKey = repos?.join(',') || 'all';
@@ -314,6 +293,7 @@ const EngineeringDashboard = () => {
         }
       }
 
+      console.log('[Release] Setting release summary with', summaryData.length, 'items:', summaryData);
       setReleaseSummary(summaryData);
 
       // Cache the summary data
@@ -495,45 +475,27 @@ const EngineeringDashboard = () => {
     <div className="min-h-screen bg-gray-50 p-6">
       {/* Header */}
       <div className="mb-8">
-        <h1 className="text-4xl font-bold text-gray-900 mb-2">Engineering Dashboard</h1>
-        <p className="text-gray-600">Team productivity and code review analytics</p>
-      </div>
-
-      {/* Tab Navigation */}
-      <div className="bg-white rounded-lg shadow-md mb-6 overflow-hidden">
-        <div className="flex border-b border-gray-200">
-          <button
-            onClick={() => setActiveTab('dashboard')}
-            className={`flex-1 px-6 py-4 text-center font-medium transition-colors ${
-              activeTab === 'dashboard'
-                ? 'bg-blue-500 text-white border-b-2 border-blue-600'
-                : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
-            }`}
+        <div className="flex items-center justify-between">
+          <div>
+            <h1 className="text-4xl font-bold text-gray-900 mb-2">Engineering Dashboard</h1>
+            <p className="text-gray-600">Team productivity and code review analytics</p>
+          </div>
+          <a
+            href="/release.html"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors flex items-center gap-2"
           >
-            <div className="flex items-center justify-center gap-2">
-              <Activity className="w-5 h-5" />
-              <span>Dashboard</span>
-            </div>
-          </button>
-          <button
-            onClick={() => setActiveTab('releases')}
-            className={`flex-1 px-6 py-4 text-center font-medium transition-colors ${
-              activeTab === 'releases'
-                ? 'bg-blue-500 text-white border-b-2 border-blue-600'
-                : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
-            }`}
-          >
-            <div className="flex items-center justify-center gap-2">
-              <GitPullRequest className="w-5 h-5" />
-              <span>Release Comparisons</span>
-            </div>
-          </button>
+            <GitPullRequest className="w-5 h-5" />
+            <span>Go to Release Comparisons</span>
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+          </a>
         </div>
       </div>
 
-      {/* Dashboard Tab Content */}
-      {activeTab === 'dashboard' && (
-        <>
+      {/* Dashboard Content */}
       {/* Filters */}
       <div className="bg-white rounded-lg shadow-md p-4 mb-6 flex gap-4 items-end">
         <div>
@@ -879,331 +841,15 @@ const EngineeringDashboard = () => {
                           )}
                         </div>
                       </a>
-                      );
+                      )
                     })}
                   </div>
                 )}
               </div>
-            );
+            )
           })}
         </div>
       </div>
-        </>
-      )}
-
-      {/* Releases Tab Content */}
-      {activeTab === 'releases' && (
-        <>
-          {/* Debug Info */}
-          <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4 mb-6">
-            <h3 className="text-sm font-semibold text-yellow-800 mb-2">Debug Info:</h3>
-            <div className="text-xs text-yellow-700 space-y-1">
-              <p>Available releases: {Object.keys(availableReleases).length} repos</p>
-              <p>Release summary: {releaseSummary.length} items</p>
-              <p>Loading summary: {loadingSummary ? 'Yes' : 'No'}</p>
-              <p>Selected repo: {selectedRepo || 'None'}</p>
-              <p>Releases for selected: {selectedRepo ? (availableReleases[selectedRepo]?.length || 0) : 0}</p>
-              {releaseSummary.length > 0 && (
-                <details className="mt-2">
-                  <summary className="cursor-pointer">Show raw summary data</summary>
-                  <pre className="mt-2 text-xs bg-white p-2 rounded overflow-auto max-h-40">
-                    {JSON.stringify(releaseSummary, null, 2)}
-                  </pre>
-                </details>
-              )}
-            </div>
-          </div>
-
-          {/* Release Summary Loading */}
-          {loadingSummary && releaseSummary.length === 0 && (
-            <div className="bg-white rounded-lg shadow-md p-6 mb-6">
-              <div className="flex items-center justify-center py-12">
-                <div className="text-center">
-                  <Loader2 className="w-10 h-10 text-blue-500 animate-spin mx-auto mb-3" />
-                  <p className="text-gray-600">Loading release status overview...</p>
-                  <p className="text-gray-500 text-sm mt-1">Analyzing releases across all repositories</p>
-                </div>
-              </div>
-            </div>
-          )}
-
-          {/* Release Summary Empty State */}
-          {!loadingSummary && releaseSummary.length === 0 && Object.keys(availableReleases).length > 0 && (
-            <div className="bg-white rounded-lg shadow-md p-6 mb-6">
-              <div className="flex items-center justify-between mb-4">
-                <h2 className="text-xl font-bold text-gray-900">Release Status Overview</h2>
-                <button
-                  onClick={fetchReleaseSummary}
-                  className="px-3 py-1.5 text-sm bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
-                >
-                  Load Release Status
-                </button>
-              </div>
-              <div className="text-center py-8 text-gray-500">
-                <p>Click "Load Release Status" to analyze release status across all repositories</p>
-              </div>
-            </div>
-          )}
-
-          {/* Release Summary Table */}
-          {releaseSummary.length > 0 ? (
-            <div className="bg-white rounded-lg shadow-md p-6 mb-6">
-              <div className="flex items-center justify-between mb-4">
-                <h2 className="text-xl font-bold text-gray-900">Release Status Overview ({releaseSummary.length} comparisons)</h2>
-                <button
-                  onClick={fetchReleaseSummary}
-                  disabled={loadingSummary}
-                  className="px-3 py-1.5 text-sm bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors disabled:bg-gray-50 disabled:cursor-not-allowed flex items-center gap-2"
-                >
-                  {loadingSummary ? (
-                    <>
-                      <Loader2 className="w-3 h-3 animate-spin" />
-                      Loading...
-                    </>
-                  ) : (
-                    '↻ Refresh'
-                  )}
-                </button>
-              </div>
-              <div className="overflow-x-auto">
-                <table className="min-w-full divide-y divide-gray-200">
-                  <thead className="bg-gray-50">
-                    <tr>
-                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">App</th>
-                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">DB Migration</th>
-                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Comparison</th>
-                    </tr>
-                  </thead>
-                  <tbody className="bg-white divide-y divide-gray-200">
-                    {releaseSummary.map((item, index) => (
-                      <tr key={index} className="hover:bg-gray-50">
-                        <td className="px-6 py-4 whitespace-nowrap">
-                          <div className="text-sm font-medium text-gray-900">{item.app}</div>
-                          <div className="text-xs text-gray-500">{item.path}</div>
-                        </td>
-                        <td className="px-6 py-4">
-                          {item.app === 'credo-backend' ? (
-                            item.dbMigrations && item.dbMigrations.length > 0 ? (
-                              <div className="space-y-1">
-                                {item.dbMigrations.map((migration, idx) => (
-                                  <div key={idx} className="flex items-start gap-2">
-                                    <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800">
-                                      ⚠️ Yes
-                                    </span>
-                                    <a
-                                      href={migration.pr.url}
-                                      target="_blank"
-                                      rel="noopener noreferrer"
-                                      className="text-xs text-blue-600 hover:text-blue-800 underline"
-                                    >
-                                      PR #{migration.pr.number}
-                                    </a>
-                                  </div>
-                                ))}
-                              </div>
-                            ) : (
-                              <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
-                                ✓ No
-                              </span>
-                            )
-                          ) : (
-                            <span className="text-gray-400 text-sm">N/A</span>
-                          )}
-                        </td>
-                        <td className="px-6 py-4">
-                          {item.hasChanges === true ? (
-                            <div>
-                              <div className="text-sm font-semibold text-gray-900">{item.currentRelease}</div>
-                              <div className="text-xs text-green-600 mt-1">{item.changeCount} changes</div>
-                            </div>
-                          ) : item.hasChanges === false ? (
-                            <div>
-                              <div className="text-sm font-semibold text-gray-900">{item.currentRelease}</div>
-                              <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800 mt-1">
-                                No changes
-                              </span>
-                            </div>
-                          ) : (
-                            <span className="text-gray-400 text-sm">?</span>
-                          )}
-                        </td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          ) : !loadingSummary ? (
-            <div className="bg-white rounded-lg shadow-md p-6 mb-6">
-              <p className="text-gray-500 text-center py-8">
-                No release data available. Check the debug info above.
-              </p>
-            </div>
-          ) : null}
-
-          {/* Release Comparisons */}
-          <div className="bg-white rounded-lg shadow-md p-6 mb-6">
-            <h2 className="text-xl font-bold text-gray-900 mb-4">Release Comparisons</h2>
-
-            {/* Release Selector */}
-            <div className="bg-gray-50 rounded-lg p-4 mb-4">
-              <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Repository</label>
-                  <select
-                    value={selectedRepo}
-                    onChange={(e) => {
-                      setSelectedRepo(e.target.value);
-                      // Auto-select latest two releases for new repo
-                      const releases = availableReleases[e.target.value] || [];
-                      if (releases.length >= 2) {
-                        setSelectedHeadRelease(releases[0].name);
-                        setSelectedBaseRelease(releases[1].name);
-                      }
-                    }}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  >
-                    <option value="">Select repository...</option>
-                    {Object.keys(availableReleases).map((repo) => (
-                      <option key={repo} value={repo}>{repo}</option>
-                    ))}
-                  </select>
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">From (Base)</label>
-                  <select
-                    value={selectedBaseRelease}
-                    onChange={(e) => setSelectedBaseRelease(e.target.value)}
-                    disabled={!selectedRepo}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent disabled:bg-gray-100 disabled:cursor-not-allowed"
-                  >
-                    <option value="">Select base release...</option>
-                    {selectedRepo && availableReleases[selectedRepo]?.map((release) => (
-                      <option key={release.name} value={release.name}>
-                        {release.name.replace('release/v', 'v')}
-                      </option>
-                    ))}
-                  </select>
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">To (Head)</label>
-                  <select
-                    value={selectedHeadRelease}
-                    onChange={(e) => setSelectedHeadRelease(e.target.value)}
-                    disabled={!selectedRepo}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent disabled:bg-gray-100 disabled:cursor-not-allowed"
-                  >
-                    <option value="">Select head release...</option>
-                    {selectedRepo && availableReleases[selectedRepo]?.map((release) => (
-                      <option key={release.name} value={release.name}>
-                        {release.name.replace('release/v', 'v')}
-                      </option>
-                    ))}
-                  </select>
-                </div>
-
-                <div className="flex items-end">
-                  <button
-                    onClick={fetchReleaseComparisons}
-                    disabled={loadingReleases || !selectedRepo || !selectedBaseRelease || !selectedHeadRelease}
-                    className="w-full px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors disabled:bg-gray-400 disabled:cursor-not-allowed flex items-center justify-center gap-2"
-                  >
-                    {loadingReleases ? (
-                      <>
-                        <Loader2 className="w-4 h-4 animate-spin" />
-                        Loading...
-                      </>
-                    ) : (
-                      <>
-                        <GitPullRequest className="w-4 h-4" />
-                        Compare
-                      </>
-                    )}
-                  </button>
-                </div>
-              </div>
-            </div>
-
-            {releaseData.length === 0 && !loadingReleases && (
-              <p className="text-gray-500 text-sm">
-                {Object.keys(availableReleases).length === 0
-                  ? 'Loading available releases...'
-                  : 'Select releases above and click "Compare" to see what went into each release'}
-              </p>
-            )}
-
-            {releaseData.length > 0 && (
-              <div className="space-y-4">
-                {releaseData.map((release, index) => (
-                  <div key={index} className="border border-gray-200 rounded-lg overflow-hidden">
-                    <div
-                      className="bg-gray-50 p-4 cursor-pointer hover:bg-gray-100 transition-colors"
-                      onClick={() => setExpandedRelease(expandedRelease === index ? null : index)}
-                    >
-                      <div className="flex items-center justify-between">
-                        <div>
-                          <h3 className="text-lg font-semibold text-gray-900">
-                            {release.repo}: v{release.currentVersion}
-                          </h3>
-                          <p className="text-sm text-gray-600 mt-1">
-                            {release.changeCount} changes from v{release.previousVersion}
-                          </p>
-                        </div>
-                        <svg
-                          className={`w-5 h-5 text-gray-500 transition-transform ${
-                            expandedRelease === index ? 'transform rotate-180' : ''
-                          }`}
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                        </svg>
-                      </div>
-                    </div>
-
-                    {expandedRelease === index && (
-                      <div className="p-4 bg-white">
-                        <div className="space-y-2">
-                          {release.changes.map((change, changeIndex) => (
-                            <div key={changeIndex} className="flex items-start gap-3 p-3 bg-gray-50 rounded-lg">
-                              <code className="text-xs text-gray-500 font-mono mt-0.5">{change.sha}</code>
-                              <div className="flex-1 min-w-0">
-                                <p className="text-sm text-gray-900">{change.message}</p>
-                                <div className="flex items-center gap-3 mt-1 text-xs text-gray-500">
-                                  <span>{change.author}</span>
-                                  <span>{new Date(change.date).toLocaleDateString()}</span>
-                                  {change.pr && (
-                                    <a
-                                      href={change.pr.url}
-                                      target="_blank"
-                                      rel="noopener noreferrer"
-                                      className="text-blue-600 hover:text-blue-800"
-                                    >
-                                      PR #{change.pr.number}
-                                    </a>
-                                  )}
-                                </div>
-                              </div>
-                            </div>
-                          ))}
-                          {release.changeCount > 10 && (
-                            <p className="text-sm text-gray-500 text-center mt-2">
-                              Showing 10 of {release.changeCount} changes
-                            </p>
-                          )}
-                        </div>
-                      </div>
-                    )}
-                  </div>
-                ))}
-              </div>
-            )}
-          </div>
-        </>
-      )}
 
       {/* Contributor Detail Modal */}
       {selectedContributor && (
