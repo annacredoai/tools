@@ -18,6 +18,7 @@ const EngineeringDashboard = () => {
   const [expandedEpics, setExpandedEpics] = useState({});
   const [epicPage, setEpicPage] = useState(1);
   const epicsPerPage = 10;
+  const epicsRef = React.useRef(null);
 
   useEffect(() => {
     fetchGitHubData();
@@ -205,7 +206,7 @@ const EngineeringDashboard = () => {
       </div>
 
       {/* Epic Progress */}
-      <div className="bg-white rounded-lg shadow-md p-6 mb-6">
+      <div ref={epicsRef} className="bg-white rounded-lg shadow-md p-6 mb-6">
         <div className="flex items-center justify-between mb-4">
           <h2 className="text-xl font-bold text-gray-900">Active Epics</h2>
           <button
@@ -424,7 +425,10 @@ const EngineeringDashboard = () => {
                 </div>
                 <div className="flex gap-2">
                   <button
-                    onClick={() => setEpicPage(p => Math.max(1, p - 1))}
+                    onClick={() => {
+                      setEpicPage(p => Math.max(1, p - 1));
+                      epicsRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }}
                     disabled={epicPage === 1}
                     className="px-3 py-1 text-sm border border-gray-300 rounded hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
                   >
@@ -434,7 +438,10 @@ const EngineeringDashboard = () => {
                     Page {epicPage} of {totalPages}
                   </span>
                   <button
-                    onClick={() => setEpicPage(p => Math.min(totalPages, p + 1))}
+                    onClick={() => {
+                      setEpicPage(p => Math.min(totalPages, p + 1));
+                      epicsRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }}
                     disabled={epicPage === totalPages}
                     className="px-3 py-1 text-sm border border-gray-300 rounded hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
                   >
