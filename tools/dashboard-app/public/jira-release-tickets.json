@@ -706,7 +706,7 @@
         "key": "DEV-4007",
         "summary": "Read-only admin role [RBAC Phase 1]",
         "issueType": "Epic",
-        "status": "Open",
+        "status": "In Progress",
         "isEpic": true,
         "assignee": "Unassigned",
         "priority": "Medium",
@@ -6747,7 +6747,7 @@
         "Closed Verified": 15,
         "Dev complete": 8,
         "Closed": 4,
-        "Open": 1
+        "In Progress": 1
       }
     },
     "v21.1": {
@@ -6905,7 +6905,7 @@
       }
     }
   },
-  "lastUpdated": "2025-12-23T16:05:47.740Z",
+  "lastUpdated": "2025-12-23T16:29:17.642Z",
   "releaseCount": 15,
   "totalTickets": 605
 }

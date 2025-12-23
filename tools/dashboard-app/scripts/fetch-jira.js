@@ -323,8 +323,124 @@ async function main() {
     console.log(`  Contributors: ${epic.contributors.join(', ')}`);
   }
 
+  // Fetch active work by engineer
+  console.log('\n' + '='.repeat(60));
+  console.log('👥 Fetching active work by engineer...');
+  console.log('='.repeat(60));
+
+  const activeWork = await fetchActiveWorkByEngineer();
+
+  const activeWorkOutputFile = join(publicDir, 'jira-active-work.json');
+  const activeWorkOutput = {
+    engineers: activeWork,
+    lastUpdated: new Date().toISOString(),
+    engineerCount: activeWork.length,
+    totalActiveTickets: activeWork.reduce((sum, eng) => sum + eng.tickets.length, 0)
+  };
+
+  writeFileSync(activeWorkOutputFile, JSON.stringify(activeWorkOutput, null, 2));
+
+  console.log(`\n✅ Saved active work for ${activeWork.length} engineers to ${activeWorkOutputFile}`);
+  console.log(`📊 Total active tickets: ${activeWorkOutput.totalActiveTickets}`);
+
+  // Print top engineers by active work
+  const topEngineers = activeWork.slice(0, 5);
+  for (const eng of topEngineers) {
+    console.log(`\n${eng.engineer}: ${eng.tickets.length} active tickets (${eng.totalStoryPoints} points)`);
+    console.log(`  In epics: ${eng.tickets.filter(t => t.epicKey).length}`);
+  }
+
   console.log('\n' + '='.repeat(60));
   console.log('\n✨ Dashboard is ready! Refresh your browser to see updates.\n');
+}
+
+async function fetchActiveWorkByEngineer() {
+  console.log('\n🔄 Fetching active tickets for all engineers...');
+
+  // Fetch all active tickets (In Progress, Ready for Sprint, Open)
+  const jql = `project = ${JIRA_PROJECT_KEY} AND status IN ("In Progress", "Ready for Sprint", "Open") AND assignee is not EMPTY ORDER BY assignee ASC, priority DESC`;
+  const payload = {
+    jql,
+    maxResults: 500,
+    fields: ['issuetype', 'summary', 'status', 'assignee', 'priority', 'customfield_10037', 'customfield_10016', 'parent']
+  };
+
+  const auth = Buffer.from(`${JIRA_EMAIL}:${JIRA_API_TOKEN}`).toString('base64');
+  const url = `${JIRA_URL}/rest/api/3/search/jql`;
+
+  try {
+    const response = await fetch(url, {
+      method: 'POST',
+      headers: {
+        'Authorization': `Basic ${auth}`,
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+        'X-Atlassian-Token': 'no-check'
+      },
+      body: JSON.stringify(payload)
+    });
+
+    if (!response.ok) {
+      throw new Error(`JIRA API error: ${response.status} ${response.statusText}`);
+    }
+
+    const data = await response.json();
+    const engineerMap = new Map();
+
+    for (const issue of data.issues || []) {
+      const assignee = issue.fields.assignee ? issue.fields.assignee.displayName : 'Unassigned';
+      const storyPoints = issue.fields.customfield_10016 || 0;
+      const parent = issue.fields.parent;
+
+      // Check if this ticket has a parent (is part of an epic)
+      let epicKey = null;
+      let epicSummary = null;
+      if (parent) {
+        epicKey = parent.key;
+        epicSummary = parent.fields.summary;
+      }
+
+      const ticket = {
+        key: issue.key,
+        summary: issue.fields.summary,
+        issueType: issue.fields.issuetype.name,
+        status: issue.fields.status.name,
+        priority: issue.fields.priority ? issue.fields.priority.name : 'None',
+        featureFlag: issue.fields.customfield_10037 || null,
+        storyPoints: storyPoints,
+        epicKey: epicKey,
+        epicSummary: epicSummary
+      };
+
+      if (!engineerMap.has(assignee)) {
+        engineerMap.set(assignee, {
+          engineer: assignee,
+          tickets: [],
+          totalStoryPoints: 0,
+          ticketsInEpics: 0
+        });
+      }
+
+      const engineerData = engineerMap.get(assignee);
+      engineerData.tickets.push(ticket);
+      engineerData.totalStoryPoints += storyPoints;
+      if (epicKey) {
+        engineerData.ticketsInEpics++;
+      }
+    }
+
+    // Convert map to array and sort by number of tickets
+    const engineers = Array.from(engineerMap.values()).sort((a, b) => b.tickets.length - a.tickets.length);
+
+    console.log(`✅ Found ${engineers.length} engineers with active work`);
+    console.log(`📊 Total active tickets: ${data.issues.length}`);
+
+    return engineers;
+
+  } catch (error) {
+    console.error('❌ Error fetching active work:', error.message);
+    return [];
+  }
 }
 
 async function fetchActiveEpicsWithSubTickets() {
@@ -432,6 +548,7 @@ async function fetchActiveEpicsWithSubTickets() {
         key: epicIssue.key,
         summary: epicIssue.fields.summary,
         status: epicIssue.fields.status.name,
+        epicStoryPoints: epicIssue.fields.customfield_10016 || null,
         totalTickets: totalTickets,
         completedTickets: completedTickets,
         progressPercent: progressPercent,

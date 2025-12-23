@@ -1,0 +1,1212 @@
+{
+  "engineers": [
+    {
+      "engineer": "Ehrik Aldana",
+      "tickets": [
+        {
+          "key": "DEV-1368",
+          "summary": "Vendor Registry",
+          "issueType": "Epic",
+          "status": "In Progress",
+          "priority": "Highest",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "epicKey": null,
+          "epicSummary": null
+        },
+        {
+          "key": "DEV-3285",
+          "summary": "Task Support for Model and Vendor Questionnaire",
+          "issueType": "Epic",
+          "status": "In Progress",
+          "priority": "High",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "epicKey": "DEV-3228",
+          "epicSummary": "AI Tool Registration and Approval Workflow"
+        },
+        {
+          "key": "DEV-3281",
+          "summary": "Updated Entity Management: Use Case Type",
+          "issueType": "Epic",
+          "status": "In Progress",
+          "priority": "High",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "epicKey": "DEV-3228",
+          "epicSummary": "AI Tool Registration and Approval Workflow"
+        },
+        {
+          "key": "DEV-3157",
+          "summary": "Archive Use Case",
+          "issueType": "Epic",
+          "status": "Ready for Sprint",
+          "priority": "High",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "epicKey": "DEV-2914",
+          "epicSummary": "Enhanced Governance Workflow Stages, Statuses - 2"
+        },
+        {
+          "key": "DEV-2765",
+          "summary": "Unified Intake Process to Register New AI System and Subcomponents",
+          "issueType": "Epic",
+          "status": "In Progress",
+          "priority": "High",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "epicKey": "DEV-3228",
+          "epicSummary": "AI Tool Registration and Approval Workflow"
+        },
+        {
+          "key": "DEV-4065",
+          "summary": "Customizable Use Case Reports",
+          "issueType": "Epic",
+          "status": "In Progress",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "epicKey": null,
+          "epicSummary": null
+        },
+        {
+          "key": "DEV-4041",
+          "summary": "Provide link to knowledge base article",
+          "issueType": "Task",
+          "status": "Open",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "epicKey": "DEV-521",
+          "epicSummary": "Configurable Risk Classification Calculations for Use Cases"
+        },
+        {
+          "key": "DEV-4010",
+          "summary": "Update user license agreement link in footer",
+          "issueType": "Task",
+          "status": "Open",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "epicKey": "DEV-3832",
+          "epicSummary": "User license agreement linked in footer"
+        },
+        {
+          "key": "DEV-3712",
+          "summary": "Better searchability & sortability in the AI Registry",
+          "issueType": "Epic",
+          "status": "Ready for Sprint",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "epicKey": null,
+          "epicSummary": null
+        },
+        {
+          "key": "DEV-3532",
+          "summary": "Questionnaire-Driven Risk Assessment",
+          "issueType": "Epic",
+          "status": "In Progress",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "epicKey": "DEV-3227",
+          "epicSummary": "Enhanced Risk Scoring & Visualization"
+        },
+        {
+          "key": "DEV-3229",
+          "summary": "TPRM: Users can see approved list of AI tools and request access",
+          "issueType": "Initiative",
+          "status": "Open",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "epicKey": null,
+          "epicSummary": null
+        },
+        {
+          "key": "DEV-3228",
+          "summary": "AI Tool Registration and Approval Workflow",
+          "issueType": "Initiative",
+          "status": "In Progress",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "epicKey": null,
+          "epicSummary": null
+        },
+        {
+          "key": "DEV-3227",
+          "summary": "Enhanced Risk Scoring & Visualization",
+          "issueType": "Initiative",
+          "status": "Open",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "epicKey": null,
+          "epicSummary": null
+        },
+        {
+          "key": "DEV-3206",
+          "summary": "Improve Model Card",
+          "issueType": "Epic",
+          "status": "Open",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "epicKey": "DEV-3135",
+          "epicSummary": "Improve Platform-Generated Reports"
+        },
+        {
+          "key": "DEV-3205",
+          "summary": "Use Case Transparency Report (\"Use Case Card\")",
+          "issueType": "Epic",
+          "status": "Open",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "epicKey": "DEV-3135",
+          "epicSummary": "Improve Platform-Generated Reports"
+        },
+        {
+          "key": "DEV-3159",
+          "summary": "\"Add questionnaire\" in approve/close review modal",
+          "issueType": "Epic",
+          "status": "Ready for Sprint",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "epicKey": "DEV-2914",
+          "epicSummary": "Enhanced Governance Workflow Stages, Statuses - 2"
+        },
+        {
+          "key": "DEV-3158",
+          "summary": "Workflow Stage Automations",
+          "issueType": "Epic",
+          "status": "Open",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "epicKey": "DEV-2914",
+          "epicSummary": "Enhanced Governance Workflow Stages, Statuses - 2"
+        },
+        {
+          "key": "DEV-3135",
+          "summary": "Improve Platform-Generated Reports",
+          "issueType": "Initiative",
+          "status": "Ready for Sprint",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "epicKey": null,
+          "epicSummary": null
+        },
+        {
+          "key": "DEV-2925",
+          "summary": "Microsoft Integration Phase 2: Interpretability",
+          "issueType": "Initiative",
+          "status": "In Progress",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "epicKey": null,
+          "epicSummary": null
+        },
+        {
+          "key": "DEV-2914",
+          "summary": "Enhanced Governance Workflow Stages, Statuses - 2",
+          "issueType": "Initiative",
+          "status": "In Progress",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "epicKey": null,
+          "epicSummary": null
+        },
+        {
+          "key": "DEV-2542",
+          "summary": "Scheduled Use Case Reviews",
+          "issueType": "Epic",
+          "status": "In Progress",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "epicKey": null,
+          "epicSummary": null
+        },
+        {
+          "key": "DEV-1516",
+          "summary": "Use Case Registry Bulk Data Management",
+          "issueType": "Epic",
+          "status": "In Progress",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "epicKey": null,
+          "epicSummary": null
+        },
+        {
+          "key": "DEV-1366",
+          "summary": "User can create an organization as an entity",
+          "issueType": "Story",
+          "status": "Open",
+          "priority": "Low",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "epicKey": null,
+          "epicSummary": null
+        }
+      ],
+      "totalStoryPoints": 0,
+      "ticketsInEpics": 11
+    },
+    {
+      "engineer": "Chanaveer Kadapatti",
+      "tickets": [
+        {
+          "key": "DEV-2050",
+          "summary": "[FEATURE] Allow commenting outside a Review",
+          "issueType": "Epic",
+          "status": "In Progress",
+          "priority": "High",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "epicKey": "DEV-3200",
+          "epicSummary": "Enable communication with external users during governance workflow"
+        },
+        {
+          "key": "DEV-2049",
+          "summary": "[FEATURE] Comments in External User Portal",
+          "issueType": "Epic",
+          "status": "Ready for Sprint",
+          "priority": "High",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "epicKey": "DEV-3200",
+          "epicSummary": "Enable communication with external users during governance workflow"
+        },
+        {
+          "key": "DEV-3651",
+          "summary": "Create Knowledge Center article for Governance Bounds",
+          "issueType": "Story",
+          "status": "Open",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "epicKey": "DEV-3225",
+          "epicSummary": "Evidence Alerting UX (Starting with Alerts for Technical Evidence Outside of Bounds)"
+        },
+        {
+          "key": "DEV-3650",
+          "summary": "Update public Knowledge Center article with new notifications",
+          "issueType": "Story",
+          "status": "Open",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "epicKey": "DEV-3225",
+          "epicSummary": "Evidence Alerting UX (Starting with Alerts for Technical Evidence Outside of Bounds)"
+        },
+        {
+          "key": "DEV-3446",
+          "summary": "Closed Loop Governance Pt. 1: Monitoring Metrics",
+          "issueType": "Initiative",
+          "status": "In Progress",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "epicKey": null,
+          "epicSummary": null
+        },
+        {
+          "key": "DEV-3386",
+          "summary": "Credo AI Labs \"Tier 1\" Support",
+          "issueType": "Epic",
+          "status": "Open",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "epicKey": null,
+          "epicSummary": null
+        },
+        {
+          "key": "DEV-3208",
+          "summary": "Generic Audit Logs / Trail",
+          "issueType": "Epic",
+          "status": "In Progress",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "epicKey": "DEV-2746",
+          "epicSummary": "Generic Audit Log for Tenant Changes"
+        },
+        {
+          "key": "DEV-3202",
+          "summary": "ServiceNow Metadata & Questionnaire Integration",
+          "issueType": "Epic",
+          "status": "In Progress",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "epicKey": "DEV-2612",
+          "epicSummary": "ServiceNow OOTB Integration: Phase 1"
+        },
+        {
+          "key": "DEV-3201",
+          "summary": "ServiceNow Use Case Creation & Sync to Credo AI",
+          "issueType": "Epic",
+          "status": "In Progress",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "epicKey": "DEV-2612",
+          "epicSummary": "ServiceNow OOTB Integration: Phase 1"
+        },
+        {
+          "key": "DEV-3200",
+          "summary": "Enable communication with external users during governance workflow",
+          "issueType": "Initiative",
+          "status": "In Progress",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "epicKey": null,
+          "epicSummary": null
+        },
+        {
+          "key": "DEV-3154",
+          "summary": "Moving to OpenAPI 3.0",
+          "issueType": "Epic",
+          "status": "In Progress",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "epicKey": "DEV-3153",
+          "epicSummary": "Move API specs to OpenAPI 3.0"
+        },
+        {
+          "key": "DEV-3153",
+          "summary": "Move API specs to OpenAPI 3.0",
+          "issueType": "Initiative",
+          "status": "In Progress",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "epicKey": null,
+          "epicSummary": null
+        },
+        {
+          "key": "DEV-3090",
+          "summary": "[FEATURE] Improve existing email notifications",
+          "issueType": "Epic",
+          "status": "In Progress",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "epicKey": "DEV-2934",
+          "epicSummary": "Improved email content for existing email notifications"
+        },
+        {
+          "key": "DEV-3087",
+          "summary": "Unsubmitted questionnaire sections not reset when reopening review",
+          "issueType": "Bug",
+          "status": "Ready for Sprint",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "epicKey": null,
+          "epicSummary": null
+        },
+        {
+          "key": "DEV-3086",
+          "summary": "Draft responses not deleted when unsubmitted questionnaire section is reassigned to another vendor",
+          "issueType": "Bug",
+          "status": "Ready for Sprint",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "epicKey": "DEV-2532",
+          "epicSummary": "External User Portal usability improvements"
+        },
+        {
+          "key": "DEV-2934",
+          "summary": "Improved email content for existing email notifications",
+          "issueType": "Initiative",
+          "status": "In Progress",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "epicKey": null,
+          "epicSummary": null
+        },
+        {
+          "key": "DEV-2612",
+          "summary": "ServiceNow OOTB Integration: Phase 1",
+          "issueType": "Initiative",
+          "status": "In Progress",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "epicKey": null,
+          "epicSummary": null
+        },
+        {
+          "key": "DEV-2596",
+          "summary": "Associate Risk Scenarios and Controls with Vendors & Models",
+          "issueType": "Epic",
+          "status": "Open",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "epicKey": null,
+          "epicSummary": null
+        },
+        {
+          "key": "DEV-2512",
+          "summary": "Single-select type question responses not finalized on Use Case review completion",
+          "issueType": "Bug",
+          "status": "Open",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "epicKey": null,
+          "epicSummary": null
+        },
+        {
+          "key": "DEV-2242",
+          "summary": "Model Entity Feature Parity with Vendor Entity",
+          "issueType": "Initiative",
+          "status": "In Progress",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "epicKey": null,
+          "epicSummary": null
+        },
+        {
+          "key": "DEV-2048",
+          "summary": "Comments Enhancement (Comment outside a review + External user commenting + Comments on control level)",
+          "issueType": "Epic",
+          "status": "In Progress",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "epicKey": "DEV-3200",
+          "epicSummary": "Enable communication with external users during governance workflow"
+        }
+      ],
+      "totalStoryPoints": 0,
+      "ticketsInEpics": 11
+    },
+    {
+      "engineer": "Anna Tovkun",
+      "tickets": [
+        {
+          "key": "DEV-4513",
+          "summary": "[Blueprint Document] External tools via MCP Server",
+          "issueType": "Story",
+          "status": "Ready for Sprint",
+          "priority": "High",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "epicKey": "DEV-4498",
+          "epicSummary": "Context Source: External tools via MCP Server"
+        },
+        {
+          "key": "DEV-4436",
+          "summary": "Add description field to custom metadata configuration",
+          "issueType": "Story",
+          "status": "Ready for Sprint",
+          "priority": "High",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "epicKey": null,
+          "epicSummary": null
+        },
+        {
+          "key": "DEV-4553",
+          "summary": "Create AGENT.MD",
+          "issueType": "Story",
+          "status": "Ready for Sprint",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "epicKey": null,
+          "epicSummary": null
+        },
+        {
+          "key": "DEV-4542",
+          "summary": "Add tenant to Loki logger metadata",
+          "issueType": "Story",
+          "status": "Open",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "epicKey": "DEV-1376",
+          "epicSummary": "Observability & Analytics"
+        },
+        {
+          "key": "DEV-4460",
+          "summary": "[BE] Add pagination to context entities endpoints",
+          "issueType": "Story",
+          "status": "In Progress",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "epicKey": "DEV-3949",
+          "epicSummary": "[Feature] AI-Assisted Intake Support"
+        },
+        {
+          "key": "DEV-4422",
+          "summary": "AI-Assist fails to suggest models from Model registry during Use Case registration",
+          "issueType": "Bug",
+          "status": "In Progress",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "epicKey": "DEV-3949",
+          "epicSummary": "[Feature] AI-Assisted Intake Support"
+        },
+        {
+          "key": "DEV-4410",
+          "summary": "Feature Flags Dashboard",
+          "issueType": "Story",
+          "status": "Open",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "epicKey": "DEV-1376",
+          "epicSummary": "Observability & Analytics"
+        },
+        {
+          "key": "DEV-4402",
+          "summary": "[BE] Move suggestion application logic to the backend",
+          "issueType": "Story",
+          "status": "Open",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "epicKey": "DEV-3949",
+          "epicSummary": "[Feature] AI-Assisted Intake Support"
+        },
+        {
+          "key": "DEV-4359",
+          "summary": "[BE] Suggestion deduplication logic",
+          "issueType": "Story",
+          "status": "Open",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "epicKey": "DEV-3887",
+          "epicSummary": "[GAIA] AI Service"
+        },
+        {
+          "key": "DEV-4304",
+          "summary": "[Context Hub][Optimization] Get tools list from Metorial APIs",
+          "issueType": "Story",
+          "status": "Open",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "epicKey": "DEV-3997",
+          "epicSummary": "[Feature] Context Source Management"
+        },
+        {
+          "key": "DEV-4191",
+          "summary": "[Context Hub]  Integration Sources - Collaboration Tools (JIRA, confluence) POC",
+          "issueType": "Story",
+          "status": "Open",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "epicKey": "DEV-3997",
+          "epicSummary": "[Feature] Context Source Management"
+        },
+        {
+          "key": "DEV-4189",
+          "summary": "Capture metrics: identify critical endpoints by response time and frequency",
+          "issueType": "Story",
+          "status": "In Progress",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "epicKey": "DEV-4123",
+          "epicSummary": "Improve DB query performance for critical API endpoints"
+        },
+        {
+          "key": "DEV-1918",
+          "summary": "Gathering Statistics for Caching",
+          "issueType": "Task",
+          "status": "Open",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "epicKey": "DEV-1653",
+          "epicSummary": "Tech Debt Q3-Q3 2024"
+        }
+      ],
+      "totalStoryPoints": 0,
+      "ticketsInEpics": 11
+    },
+    {
+      "engineer": "Fabrizio Puletti",
+      "tickets": [
+        {
+          "key": "DEV-4413",
+          "summary": "No email sent when AI-Assist suggestions are complete after use case registration",
+          "issueType": "Story",
+          "status": "Open",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "epicKey": null,
+          "epicSummary": null
+        },
+        {
+          "key": "DEV-4360",
+          "summary": "Handle (429 + Retry-After) response from GAIA",
+          "issueType": "Story",
+          "status": "In Progress",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "epicKey": "DEV-3949",
+          "epicSummary": "[Feature] AI-Assisted Intake Support"
+        },
+        {
+          "key": "DEV-4256",
+          "summary": "[BE|MCP] AI Suggestion Validation",
+          "issueType": "Story",
+          "status": "In Progress",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "epicKey": "DEV-3949",
+          "epicSummary": "[Feature] AI-Assisted Intake Support"
+        },
+        {
+          "key": "DEV-4227",
+          "summary": "Automate release branches with Github Actions",
+          "issueType": "Story",
+          "status": "Open",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "epicKey": null,
+          "epicSummary": null
+        },
+        {
+          "key": "DEV-4179",
+          "summary": "Update 1-line description for every input parameter and output field",
+          "issueType": "Story",
+          "status": "Open",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "epicKey": "DEV-4178",
+          "epicSummary": "[Phase-2] Move APIs to OpenAPI 3.0 spec"
+        },
+        {
+          "key": "DEV-4176",
+          "summary": "Public APIs to include in OpenAPI 3.0 spec (Phase-I)",
+          "issueType": "Story",
+          "status": "Ready for Sprint",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "epicKey": "DEV-4178",
+          "epicSummary": "[Phase-2] Move APIs to OpenAPI 3.0 spec"
+        },
+        {
+          "key": "DEV-4132",
+          "summary": "User role can't add evidence during collecting evidence status",
+          "issueType": "Bug",
+          "status": "Open",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "epicKey": null,
+          "epicSummary": null
+        }
+      ],
+      "totalStoryPoints": 0,
+      "ticketsInEpics": 4
+    },
+    {
+      "engineer": "Barbara Jaber",
+      "tickets": [
+        {
+          "key": "DEV-4135",
+          "summary": "Set custom field Action only sets one Option for Multi Select Questions and Fields",
+          "issueType": "Story",
+          "status": "In Progress",
+          "priority": "High",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "epicKey": "DEV-3682",
+          "epicSummary": "Set custom field Action only sets one Option for Multi Select Questions and Fields"
+        },
+        {
+          "key": "DEV-1604",
+          "summary": "TDD for Trigger to add a Questionnaire Section",
+          "issueType": "Task",
+          "status": "In Progress",
+          "priority": "High",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "epicKey": "DEV-1542",
+          "epicSummary": "Trigger & Action Enhancements"
+        },
+        {
+          "key": "DEV-4458",
+          "summary": "Blueprint: configurable email & in-app notification",
+          "issueType": "Story",
+          "status": "In Progress",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "epicKey": "DEV-4271",
+          "epicSummary": "Configurable Email Notifications (Phase I)"
+        },
+        {
+          "key": "DEV-4344",
+          "summary": "Risk chart displays inconsistent Average Inherent Risk values when switching pages",
+          "issueType": "Bug",
+          "status": "Open",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "epicKey": null,
+          "epicSummary": null
+        },
+        {
+          "key": "DEV-4308",
+          "summary": "Audit log entries for policy pack due date changes use identical wording for all operations",
+          "issueType": "Bug",
+          "status": "In Progress",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "epicKey": "DEV-3208",
+          "epicSummary": "Generic Audit Logs / Trail"
+        },
+        {
+          "key": "DEV-3642",
+          "summary": "Update entity questionnaire business logic modules to use new schemas",
+          "issueType": "Story",
+          "status": "In Progress",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "epicKey": "DEV-2936",
+          "epicSummary": "Improve Questionnaire/Section/Question/Compliance data models"
+        }
+      ],
+      "totalStoryPoints": 0,
+      "ticketsInEpics": 5
+    },
+    {
+      "engineer": "Ed Morales",
+      "tickets": [
+        {
+          "key": "DEV-4519",
+          "summary": "[FE] Remove MUI dynamic elements and leverage curakit dynamic elements",
+          "issueType": "Story",
+          "status": "In Progress",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "epicKey": null,
+          "epicSummary": null
+        },
+        {
+          "key": "DEV-4070",
+          "summary": "Main nav re-organziation",
+          "issueType": "Story",
+          "status": "In Progress",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "epicKey": "DEV-4067",
+          "epicSummary": "[Feature] General Platform UX/UI Changes"
+        },
+        {
+          "key": "DEV-3876",
+          "summary": "Multiple triggers on the same question not visualized correctly in alert",
+          "issueType": "Bug",
+          "status": "Ready for Sprint",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "epicKey": null,
+          "epicSummary": null
+        },
+        {
+          "key": "DEV-3685",
+          "summary": "UI Hangs When Navigating Use Case Control with Embedded Images",
+          "issueType": "Bug",
+          "status": "Ready for Sprint",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "epicKey": null,
+          "epicSummary": null
+        },
+        {
+          "key": "DEV-3144",
+          "summary": "Contributor Cannot Add Evidence for Risks and Policy Packs",
+          "issueType": "Bug",
+          "status": "Open",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "epicKey": null,
+          "epicSummary": null
+        },
+        {
+          "key": "DEV-2571",
+          "summary": "User role changes fail to save from profile view",
+          "issueType": "Bug",
+          "status": "Ready for Sprint",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "epicKey": null,
+          "epicSummary": null
+        }
+      ],
+      "totalStoryPoints": 0,
+      "ticketsInEpics": 1
+    },
+    {
+      "engineer": "Alvaro Sanchez",
+      "tickets": [
+        {
+          "key": "DEV-4384",
+          "summary": "Test for Request Load",
+          "issueType": "Story",
+          "status": "Ready for Sprint",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "epicKey": "DEV-4382",
+          "epicSummary": "AI Assist Robustness (December 2026)"
+        },
+        {
+          "key": "DEV-4320",
+          "summary": "Improve test ids and aria labels to enable stable E2E testing.",
+          "issueType": "Story",
+          "status": "In Progress",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "epicKey": null,
+          "epicSummary": null
+        },
+        {
+          "key": "DEV-3804",
+          "summary": "Testing questionnaire functionality via CLI tool",
+          "issueType": "Story",
+          "status": "Open",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "epicKey": "DEV-3803",
+          "epicSummary": "Questionnaire Functionality via CLI Tool"
+        },
+        {
+          "key": "DEV-2234",
+          "summary": "Can add deactivated users as reviewers",
+          "issueType": "Bug",
+          "status": "Open",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "epicKey": null,
+          "epicSummary": null
+        },
+        {
+          "key": "DEV-2154",
+          "summary": "Implement basic API test automation infrastructure.",
+          "issueType": "Story",
+          "status": "In Progress",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "epicKey": "DEV-2072",
+          "epicSummary": "API V2 automated testing suite development."
+        }
+      ],
+      "totalStoryPoints": 0,
+      "ticketsInEpics": 3
+    },
+    {
+      "engineer": "Ionut Marcut",
+      "tickets": [
+        {
+          "key": "DEV-3506",
+          "summary": "Implement Automated API Tests for Scheduled Reviews Feature",
+          "issueType": "Story",
+          "status": "Open",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "epicKey": "DEV-2542",
+          "epicSummary": "Scheduled Use Case Reviews"
+        },
+        {
+          "key": "DEV-2105",
+          "summary": "Implement Policy Packs Tests",
+          "issueType": "Story",
+          "status": "Open",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "epicKey": "DEV-2072",
+          "epicSummary": "API V2 automated testing suite development."
+        },
+        {
+          "key": "DEV-2093",
+          "summary": "Implement Risk Scenarios Tests",
+          "issueType": "Story",
+          "status": "Open",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "epicKey": "DEV-2072",
+          "epicSummary": "API V2 automated testing suite development."
+        },
+        {
+          "key": "DEV-2073",
+          "summary": "Implement /custom_fields tests.",
+          "issueType": "Story",
+          "status": "Open",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "epicKey": "DEV-2072",
+          "epicSummary": "API V2 automated testing suite development."
+        },
+        {
+          "key": "DEV-2072",
+          "summary": "API V2 automated testing suite development.",
+          "issueType": "Epic",
+          "status": "Open",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "epicKey": null,
+          "epicSummary": null
+        }
+      ],
+      "totalStoryPoints": 0,
+      "ticketsInEpics": 4
+    },
+    {
+      "engineer": "Eli Sherman",
+      "tickets": [
+        {
+          "key": "DEV-4538",
+          "summary": "[GAIA] Refactor questionnaire answering logic into a dedicated \"agent\" and \"service\" out of intake service",
+          "issueType": "Story",
+          "status": "Open",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "epicKey": "DEV-3949",
+          "epicSummary": "[Feature] AI-Assisted Intake Support"
+        },
+        {
+          "key": "DEV-4485",
+          "summary": "Context Source: PDFs and Docs",
+          "issueType": "Epic",
+          "status": "In Progress",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "epicKey": null,
+          "epicSummary": null
+        },
+        {
+          "key": "DEV-3887",
+          "summary": "[GAIA] AI Service",
+          "issueType": "Epic",
+          "status": "In Progress",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "epicKey": "DEV-3718",
+          "epicSummary": "AI Assist Initiative"
+        },
+        {
+          "key": "DEV-3674",
+          "summary": "[Content] Migrate evidence requirement threshold to governance bounds",
+          "issueType": "Story",
+          "status": "Open",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "epicKey": "DEV-3225",
+          "epicSummary": "Evidence Alerting UX (Starting with Alerts for Technical Evidence Outside of Bounds)"
+        }
+      ],
+      "totalStoryPoints": 0,
+      "ticketsInEpics": 3
+    },
+    {
+      "engineer": "Susannah Shattuck",
+      "tickets": [
+        {
+          "key": "DEV-3210",
+          "summary": "Asset Management System",
+          "issueType": "Initiative",
+          "status": "In Progress",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "epicKey": null,
+          "epicSummary": null
+        },
+        {
+          "key": "DEV-2041",
+          "summary": "Duplicated policy pack is already completed/answered upon being attached to a Use Case",
+          "issueType": "Bug",
+          "status": "Ready for Sprint",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "epicKey": null,
+          "epicSummary": null
+        },
+        {
+          "key": "DEV-1355",
+          "summary": "Tenant Status Page",
+          "issueType": "Story",
+          "status": "Ready for Sprint",
+          "priority": "Low",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "epicKey": "DEV-1376",
+          "epicSummary": "Observability & Analytics"
+        }
+      ],
+      "totalStoryPoints": 0,
+      "ticketsInEpics": 1
+    },
+    {
+      "engineer": "Chang Shin",
+      "tickets": [
+        {
+          "key": "DEV-1325",
+          "summary": "Make API Docs Public",
+          "issueType": "Epic",
+          "status": "Open",
+          "priority": "High",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "epicKey": null,
+          "epicSummary": null
+        },
+        {
+          "key": "DEV-1311",
+          "summary": "Jira Integration",
+          "issueType": "Epic",
+          "status": "Ready for Sprint",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "epicKey": null,
+          "epicSummary": null
+        }
+      ],
+      "totalStoryPoints": 0,
+      "ticketsInEpics": 0
+    },
+    {
+      "engineer": "Jefferson Reis",
+      "tickets": [
+        {
+          "key": "DEV-4376",
+          "summary": "Regions with the same name are not differentiated in the UI",
+          "issueType": "Bug",
+          "status": "In Progress",
+          "priority": "High",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "epicKey": null,
+          "epicSummary": null
+        },
+        {
+          "key": "DEV-4457",
+          "summary": "Question & Answer Widget",
+          "issueType": "Story",
+          "status": "Ready for Sprint",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "epicKey": "DEV-4065",
+          "epicSummary": "Customizable Use Case Reports"
+        }
+      ],
+      "totalStoryPoints": 0,
+      "ticketsInEpics": 1
+    },
+    {
+      "engineer": "Benji Zamora",
+      "tickets": [
+        {
+          "key": "DEV-3523",
+          "summary": "[PenTest] Improper Neutralization of Formula Elements in a CSV File",
+          "issueType": "Bug",
+          "status": "Open",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "epicKey": null,
+          "epicSummary": null
+        }
+      ],
+      "totalStoryPoints": 0,
+      "ticketsInEpics": 0
+    },
+    {
+      "engineer": "Paula Gluss",
+      "tickets": [
+        {
+          "key": "DEV-1176",
+          "summary": "AI-Powered Evidence & Question Answer Support",
+          "issueType": "Epic",
+          "status": "Ready for Sprint",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "epicKey": null,
+          "epicSummary": null
+        }
+      ],
+      "totalStoryPoints": 0,
+      "ticketsInEpics": 0
+    },
+    {
+      "engineer": "Ian Eisenberg",
+      "tickets": [
+        {
+          "key": "DEV-3894",
+          "summary": "[GAIA] Governance Intelligence Service",
+          "issueType": "Epic",
+          "status": "In Progress",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "epicKey": "DEV-3718",
+          "epicSummary": "AI Assist Initiative"
+        }
+      ],
+      "totalStoryPoints": 0,
+      "ticketsInEpics": 1
+    }
+  ],
+  "lastUpdated": "2025-12-23T16:29:35.491Z",
+  "engineerCount": 15,
+  "totalActiveTickets": 100
+}

@@ -19,10 +19,13 @@ const EngineeringDashboard = () => {
   const [epicPage, setEpicPage] = useState(1);
   const epicsPerPage = 10;
   const epicsRef = React.useRef(null);
+  const [activeWork, setActiveWork] = useState([]);
+  const [expandedEngineers, setExpandedEngineers] = useState({});
 
   useEffect(() => {
     fetchGitHubData();
     fetchJiraEpics();
+    fetchActiveWork();
   }, [timeRange]);
 
   const fetchJiraEpics = async () => {
@@ -37,6 +40,21 @@ const EngineeringDashboard = () => {
       console.log(`[JIRA] Loaded ${data.epics?.length || 0} epics`);
     } catch (error) {
       console.error('[JIRA] Error loading jira-epics.json:', error);
+    }
+  };
+
+  const fetchActiveWork = async () => {
+    try {
+      const response = await fetch('/jira-active-work.json');
+      if (!response.ok) {
+        console.log('[JIRA] No jira-active-work.json found. Run: npm run fetch-jira');
+        return;
+      }
+      const data = await response.json();
+      setActiveWork(data.engineers || []);
+      console.log(`[JIRA] Loaded active work for ${data.engineers?.length || 0} engineers`);
+    } catch (error) {
+      console.error('[JIRA] Error loading jira-active-work.json:', error);
     }
   };
 
@@ -453,6 +471,173 @@ const EngineeringDashboard = () => {
           </div>
           )
         })()}
+      </div>
+
+      {/* Active Work by Engineer */}
+      <div className="bg-white rounded-lg shadow-md p-6 mb-6">
+        <div className="flex items-center justify-between mb-4">
+          <h2 className="text-xl font-bold text-gray-900">Active Work by Engineer</h2>
+          <button
+            onClick={fetchActiveWork}
+            className="px-3 py-1.5 text-sm bg-gray-100 text-gray-700 hover:bg-gray-200 rounded-lg transition-colors"
+          >
+            ↻ Refresh
+          </button>
+        </div>
+        {activeWork.length === 0 ? (
+          <p className="text-gray-500 text-center py-8">No active work found. Run <code className="bg-gray-100 px-2 py-1 rounded">npm run fetch-jira</code> to load data.</p>
+        ) : (
+          <div className="overflow-x-auto">
+            <table className="min-w-full divide-y divide-gray-200">
+              <thead className="bg-gray-50">
+                <tr>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Engineer</th>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Active Tickets</th>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">In Epics</th>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Story Points</th>
+                  <th className="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Details</th>
+                </tr>
+              </thead>
+              <tbody className="bg-white divide-y divide-gray-200">
+                {activeWork.map((eng) => {
+                  const isExpanded = expandedEngineers[eng.engineer];
+
+                  return (
+                    <React.Fragment key={eng.engineer}>
+                      <tr className="hover:bg-gray-50">
+                        <td className="px-6 py-4 whitespace-nowrap">
+                          <div className="text-sm font-medium text-gray-900">{eng.engineer}</div>
+                        </td>
+                        <td className="px-6 py-4 whitespace-nowrap">
+                          <div className="text-sm text-gray-900 font-semibold">{eng.tickets.length}</div>
+                        </td>
+                        <td className="px-6 py-4 whitespace-nowrap">
+                          <div className="text-sm text-gray-600">{eng.ticketsInEpics}</div>
+                        </td>
+                        <td className="px-6 py-4 whitespace-nowrap">
+                          <div className="text-sm text-gray-900">{eng.totalStoryPoints || 0}</div>
+                        </td>
+                        <td className="px-6 py-4 text-center">
+                          <button
+                            onClick={() => setExpandedEngineers(prev => ({ ...prev, [eng.engineer]: !prev[eng.engineer] }))}
+                            className="px-3 py-1 text-xs font-medium text-blue-600 hover:text-blue-800 hover:bg-blue-50 rounded transition-colors"
+                          >
+                            {isExpanded ? '▼ Hide' : '▶ Show'} Tickets
+                          </button>
+                        </td>
+                      </tr>
+
+                      {/* Expandable Tickets Row */}
+                      {isExpanded && (
+                        <tr>
+                          <td colSpan="5" className="px-6 py-4 bg-gray-50">
+                            <div className="space-y-2">
+                              {eng.tickets.map((ticket, idx) => {
+                                const jiraUrl = import.meta.env.VITE_JIRA_URL;
+                                const ticketUrl = jiraUrl ? `${jiraUrl.replace(/\/$/, '')}/browse/${ticket.key}` : null;
+                                const epicUrl = ticket.epicKey && jiraUrl ? `${jiraUrl.replace(/\/$/, '')}/browse/${ticket.epicKey}` : null;
+
+                                return (
+                                  <div
+                                    key={idx}
+                                    className={`p-3 rounded-lg border transition-all ${
+                                      ticket.epicKey
+                                        ? 'bg-purple-50 border-purple-200'
+                                        : 'bg-white border-gray-200'
+                                    }`}
+                                  >
+                                    <div className="flex items-start gap-3">
+                                      <div className="flex-shrink-0 mt-1">
+                                        <span className={`inline-flex items-center px-2 py-0.5 rounded text-xs font-medium ${
+                                          ticket.issueType === 'Bug' ? 'bg-red-100 text-red-800' :
+                                          ticket.issueType === 'Story' ? 'bg-blue-100 text-blue-800' :
+                                          ticket.issueType === 'Task' ? 'bg-green-100 text-green-800' :
+                                          'bg-gray-100 text-gray-800'
+                                        }`}>
+                                          {ticket.issueType}
+                                        </span>
+                                      </div>
+                                      <div className="flex-1 min-w-0">
+                                        {ticketUrl ? (
+                                          <a
+                                            href={ticketUrl}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="text-sm font-semibold text-purple-600 hover:text-purple-800"
+                                          >
+                                            {ticket.key}: {ticket.summary}
+                                          </a>
+                                        ) : (
+                                          <div className="text-sm font-semibold text-purple-600">
+                                            {ticket.key}: {ticket.summary}
+                                          </div>
+                                        )}
+                                        <div className="flex items-center gap-3 text-xs mt-1.5 text-gray-600 flex-wrap">
+                                          <span className={`inline-flex items-center px-2 py-0.5 rounded font-medium ${
+                                            ticket.status === 'In Progress' ? 'bg-yellow-100 text-yellow-800' :
+                                            ticket.status === 'Ready for Sprint' ? 'bg-blue-100 text-blue-800' :
+                                            'bg-gray-100 text-gray-800'
+                                          }`}>
+                                            {ticket.status}
+                                          </span>
+                                          {ticket.storyPoints > 0 && (
+                                            <span className="inline-flex items-center px-2 py-0.5 rounded font-medium bg-blue-50 text-blue-700 border border-blue-200">
+                                              📊 {ticket.storyPoints} pts
+                                            </span>
+                                          )}
+                                          {ticket.priority && ticket.priority !== 'None' && (
+                                            <span className={`inline-flex items-center px-2 py-0.5 rounded text-xs font-medium ${
+                                              ticket.priority === 'High' || ticket.priority === 'Highest' ? 'bg-red-50 text-red-700 border border-red-200' :
+                                              ticket.priority === 'Medium' ? 'bg-yellow-50 text-yellow-700 border border-yellow-200' :
+                                              'bg-gray-50 text-gray-700 border border-gray-200'
+                                            }`}>
+                                              {ticket.priority}
+                                            </span>
+                                          )}
+                                          {ticket.featureFlag && (
+                                            <span className="inline-flex items-center px-2 py-0.5 rounded font-medium bg-indigo-50 text-indigo-700 border border-indigo-200">
+                                              🚩 {ticket.featureFlag}
+                                            </span>
+                                          )}
+                                          {ticket.epicKey && (
+                                            <>
+                                              <span className="text-gray-400">•</span>
+                                              <span className="inline-flex items-center px-2 py-0.5 rounded font-medium bg-purple-100 text-purple-700 border border-purple-300">
+                                                📌 Epic: {epicUrl ? (
+                                                  <a
+                                                    href={epicUrl}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="ml-1 hover:underline"
+                                                  >
+                                                    {ticket.epicKey}
+                                                  </a>
+                                                ) : ticket.epicKey}
+                                              </span>
+                                            </>
+                                          )}
+                                        </div>
+                                        {ticket.epicSummary && (
+                                          <div className="text-xs text-purple-600 mt-1 italic">
+                                            {ticket.epicSummary}
+                                          </div>
+                                        )}
+                                      </div>
+                                    </div>
+                                  </div>
+                                );
+                              })}
+                            </div>
+                          </td>
+                        </tr>
+                      )}
+                    </React.Fragment>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
+        )}
       </div>
 
       {/* PR Statistics Grid */}
