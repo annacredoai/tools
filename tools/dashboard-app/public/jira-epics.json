@@ -1,0 +1,3155 @@
+{
+  "epics": [
+    {
+      "key": "DEV-3949",
+      "summary": "[Feature] AI-Assisted Intake Support",
+      "status": "In Progress",
+      "totalTickets": 45,
+      "completedTickets": 25,
+      "progressPercent": 56,
+      "totalStoryPoints": 0,
+      "completedStoryPoints": 0,
+      "contributors": [
+        "Anna Tovkun",
+        "Ed Morales",
+        "Eli Sherman",
+        "Fabrizio Puletti",
+        "Leonardo Lemos",
+        "Steven Barber"
+      ],
+      "subTickets": [
+        {
+          "key": "DEV-4387",
+          "summary": "Multi-Suggestions GUI for Risks and Controls",
+          "issueType": "Story",
+          "status": "In Progress",
+          "assignee": "Leonardo Lemos",
+          "priority": "High",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": false
+        },
+        {
+          "key": "DEV-4538",
+          "summary": "[GAIA] Refactor questionnaire answering logic into a dedicated \"agent\" and \"service\" out of intake service",
+          "issueType": "Story",
+          "status": "Open",
+          "assignee": "Eli Sherman",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": false
+        },
+        {
+          "key": "DEV-4537",
+          "summary": "[MCP] Support pagination for non-(model/vendor) registry content",
+          "issueType": "Story",
+          "status": "Open",
+          "assignee": "Unassigned",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": false
+        },
+        {
+          "key": "DEV-4505",
+          "summary": "AI Assist: \"Names must be unique\" error",
+          "issueType": "Bug",
+          "status": "Open",
+          "assignee": "Unassigned",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": false
+        },
+        {
+          "key": "DEV-4504",
+          "summary": "AI Assist: wrong component used for AI filled fields",
+          "issueType": "Bug",
+          "status": "Open",
+          "assignee": "Unassigned",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": false
+        },
+        {
+          "key": "DEV-4503",
+          "summary": "AI Assist: Review suggestions banner showing with no suggestions to review (during review)",
+          "issueType": "Bug",
+          "status": "Open",
+          "assignee": "Unassigned",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": false
+        },
+        {
+          "key": "DEV-4502",
+          "summary": "AI Assist: Assisted workflow skipped ",
+          "issueType": "Bug",
+          "status": "Open",
+          "assignee": "Unassigned",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": false
+        },
+        {
+          "key": "DEV-4501",
+          "summary": "AI Assist: Suggestion counter not showing progress",
+          "issueType": "Bug",
+          "status": "Open",
+          "assignee": "Unassigned",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": false
+        },
+        {
+          "key": "DEV-4500",
+          "summary": "AI Assist: Suggestion box clean up",
+          "issueType": "Bug",
+          "status": "Open",
+          "assignee": "Unassigned",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": false
+        },
+        {
+          "key": "DEV-4499",
+          "summary": "AI Assist: Focused question not aligned with AI suggestion box",
+          "issueType": "Bug",
+          "status": "Open",
+          "assignee": "Unassigned",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": false
+        },
+        {
+          "key": "DEV-4460",
+          "summary": "[BE] Add pagination to context entities endpoints",
+          "issueType": "Story",
+          "status": "In Progress",
+          "assignee": "Anna Tovkun",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": false
+        },
+        {
+          "key": "DEV-4422",
+          "summary": "AI-Assist fails to suggest models from Model registry during Use Case registration",
+          "issueType": "Bug",
+          "status": "In Progress",
+          "assignee": "Anna Tovkun",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": false
+        },
+        {
+          "key": "DEV-4402",
+          "summary": "[BE] Move suggestion application logic to the backend",
+          "issueType": "Story",
+          "status": "Open",
+          "assignee": "Anna Tovkun",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": false
+        },
+        {
+          "key": "DEV-4373",
+          "summary": "Limit context/document uploads",
+          "issueType": "Story",
+          "status": "Open",
+          "assignee": "Unassigned",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": false
+        },
+        {
+          "key": "DEV-4368",
+          "summary": "(BE)AI assist is showing no suggestions available prior to populating Gov materials suggestions (during a review)",
+          "issueType": "Bug",
+          "status": "Open",
+          "assignee": "Unassigned",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": false
+        },
+        {
+          "key": "DEV-4360",
+          "summary": "Handle (429 + Retry-After) response from GAIA",
+          "issueType": "Story",
+          "status": "In Progress",
+          "assignee": "Fabrizio Puletti",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": false
+        },
+        {
+          "key": "DEV-4256",
+          "summary": "[BE|MCP] AI Suggestion Validation",
+          "issueType": "Story",
+          "status": "In Progress",
+          "assignee": "Fabrizio Puletti",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": false
+        },
+        {
+          "key": "DEV-4053",
+          "summary": "[FE] Context Hub informs metadata fields",
+          "issueType": "Story",
+          "status": "Open",
+          "assignee": "Unassigned",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": false
+        },
+        {
+          "key": "DEV-4052",
+          "summary": "[AI] Context Hub informing metadata fields & Questionnaire Questions",
+          "issueType": "Story",
+          "status": "In Production (GA)",
+          "assignee": "Eli Sherman",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": false
+        },
+        {
+          "key": "DEV-4050",
+          "summary": "[FE] Adding files as context source as part of registration flow",
+          "issueType": "Story",
+          "status": "Ready for Release",
+          "assignee": "Leonardo Lemos",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": false
+        },
+        {
+          "key": "DEV-4514",
+          "summary": "[FE] Applying multi-select answer suggestion malforms evidence data",
+          "issueType": "Bug",
+          "status": "Dev complete",
+          "assignee": "Leonardo Lemos",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": true
+        },
+        {
+          "key": "DEV-4510",
+          "summary": "[BE] Support string_array for entity metadata suggestions for relevant fields",
+          "issueType": "Story",
+          "status": "Dev complete",
+          "assignee": "Anna Tovkun",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": true
+        },
+        {
+          "key": "DEV-4492",
+          "summary": "[BE] Support string_array for question_answer suggestion",
+          "issueType": "Story",
+          "status": "Dev complete",
+          "assignee": "Anna Tovkun",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": true
+        },
+        {
+          "key": "DEV-4484",
+          "summary": "Suggestions for multi-select questions are separated, leading to overwriting during review",
+          "issueType": "Story",
+          "status": "Dev complete",
+          "assignee": "Leonardo Lemos",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": true
+        },
+        {
+          "key": "DEV-4483",
+          "summary": "Questionnaire suggestions don't (always) show explanations",
+          "issueType": "Bug",
+          "status": "Dev complete",
+          "assignee": "Leonardo Lemos",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": true
+        },
+        {
+          "key": "DEV-4482",
+          "summary": "'Description' not shown for entity metadata suggestions",
+          "issueType": "Bug",
+          "status": "Dev complete",
+          "assignee": "Leonardo Lemos",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": true
+        },
+        {
+          "key": "DEV-4472",
+          "summary": "Newly-created models aren't exposed to GAIA for possible suggestion",
+          "issueType": "Bug",
+          "status": "Closed",
+          "assignee": "Anna Tovkun",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": true
+        },
+        {
+          "key": "DEV-4427",
+          "summary": "[FE] Add user-gratifying signal that suggestions were attempted when there's a GAIA failure",
+          "issueType": "Story",
+          "status": "Closed",
+          "assignee": "Unassigned",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": true
+        },
+        {
+          "key": "DEV-4426",
+          "summary": "[AI] Enforce hard explanation limits for all return types",
+          "issueType": "Story",
+          "status": "Dev complete",
+          "assignee": "Anna Tovkun",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": true
+        },
+        {
+          "key": "DEV-4425",
+          "summary": "[MCP] Add search functionality to registry-like asset retrievers",
+          "issueType": "Story",
+          "status": "Dev complete",
+          "assignee": "Anna Tovkun",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": true
+        },
+        {
+          "key": "DEV-4423",
+          "summary": "AI-Assist suggests only one option for multi-select questions despite multiple applicable",
+          "issueType": "Bug",
+          "status": "Dev complete",
+          "assignee": "Anna Tovkun",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": true
+        },
+        {
+          "key": "DEV-4411",
+          "summary": "Remove Accept All button from reviews of questionnaire & risk/control suggestions",
+          "issueType": "Story",
+          "status": "Dev complete",
+          "assignee": "Leonardo Lemos",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": true
+        },
+        {
+          "key": "DEV-4371",
+          "summary": "FE - small use case title affordance on scroll",
+          "issueType": "Story",
+          "status": "Dev complete",
+          "assignee": "Ed Morales",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": true
+        },
+        {
+          "key": "DEV-4369",
+          "summary": "(FE)AI assist (UX add): add confirm popover to accept all",
+          "issueType": "Story",
+          "status": "Closed",
+          "assignee": "Unassigned",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": true
+        },
+        {
+          "key": "DEV-4367",
+          "summary": "(BE)AI Assist: Accept all not accepting all",
+          "issueType": "Bug",
+          "status": "Closed",
+          "assignee": "Eli Sherman",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": true
+        },
+        {
+          "key": "DEV-4364",
+          "summary": "(FE)AI assist UI: explanation pattern clean-up for registration",
+          "issueType": "Story",
+          "status": "Dev complete",
+          "assignee": "Leonardo Lemos",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": true
+        },
+        {
+          "key": "DEV-4362",
+          "summary": "(FE)AI Assist: Metadata in registration missing affordance + no selection pattern",
+          "issueType": "Bug",
+          "status": "Dev complete",
+          "assignee": "Ed Morales",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": true
+        },
+        {
+          "key": "DEV-4361",
+          "summary": "(FE)AI Assist: Waiting for suggestions banner missing",
+          "issueType": "Bug",
+          "status": "Dev complete",
+          "assignee": "Ed Morales",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": true
+        },
+        {
+          "key": "DEV-4311",
+          "summary": "Only 1 risk shows in post-AI suggestions review",
+          "issueType": "Bug",
+          "status": "Closed",
+          "assignee": "Unassigned",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": true
+        },
+        {
+          "key": "DEV-4054",
+          "summary": "[BE] Context Hub informing metadata fields",
+          "issueType": "Story",
+          "status": "Closed",
+          "assignee": "Steven Barber",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": true
+        },
+        {
+          "key": "DEV-4051",
+          "summary": "[BE] Move sources added as registration source to context hub",
+          "issueType": "Story",
+          "status": "Dev complete",
+          "assignee": "Steven Barber",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": true
+        },
+        {
+          "key": "DEV-4023",
+          "summary": "Timeout logic",
+          "issueType": "Story",
+          "status": "Dev complete",
+          "assignee": "Steven Barber",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": true
+        },
+        {
+          "key": "DEV-4022",
+          "summary": "[FE] Multiple Models, Vendors, and Questionnaires",
+          "issueType": "Story",
+          "status": "Closed",
+          "assignee": "Ed Morales",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": true
+        },
+        {
+          "key": "DEV-4017",
+          "summary": "[AI] Multiple Models, Vendors, and Questionnaires",
+          "issueType": "Story",
+          "status": "Dev complete",
+          "assignee": "Eli Sherman",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": true
+        },
+        {
+          "key": "DEV-4016",
+          "summary": "[BE] Multiple Models, Vendors, and Questionnaires",
+          "issueType": "Story",
+          "status": "Dev complete",
+          "assignee": "Steven Barber",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": true
+        }
+      ]
+    },
+    {
+      "key": "DEV-4322",
+      "summary": "Extend API Services Business Layer for SDK v1.0 requirements",
+      "status": "Open",
+      "totalTickets": 15,
+      "completedTickets": 0,
+      "progressPercent": 0,
+      "totalStoryPoints": 0,
+      "completedStoryPoints": 0,
+      "contributors": [
+        "Patrick Higgins",
+        "Steven Barber"
+      ],
+      "subTickets": [
+        {
+          "key": "DEV-4548",
+          "summary": "As a developer, I want to create and update Policy Packs",
+          "issueType": "Story",
+          "status": "Ready for Sprint",
+          "assignee": "Patrick Higgins",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": false
+        },
+        {
+          "key": "DEV-4547",
+          "summary": "As a developer, I want to be able to create and update Questionnaires",
+          "issueType": "Story",
+          "status": "Ready for Sprint",
+          "assignee": "Patrick Higgins",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": false
+        },
+        {
+          "key": "DEV-4335",
+          "summary": "Verified by legal - what license? open source considerations?",
+          "issueType": "Story",
+          "status": "Open",
+          "assignee": "Unassigned",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": false
+        },
+        {
+          "key": "DEV-4334",
+          "summary": "Cookbook for use cases, models, and vendors, examples of each requirement",
+          "issueType": "Story",
+          "status": "Open",
+          "assignee": "Unassigned",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": false
+        },
+        {
+          "key": "DEV-4333",
+          "summary": "As a developer, I want to delete a vendor by referring to its name or ID",
+          "issueType": "Story",
+          "status": "In Review",
+          "assignee": "Patrick Higgins",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": false
+        },
+        {
+          "key": "DEV-4332",
+          "summary": "As a developer, I want to update an existing vendor’s metadata, linked questionnaire, and model.",
+          "issueType": "Story",
+          "status": "In Review",
+          "assignee": "Patrick Higgins",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": false
+        },
+        {
+          "key": "DEV-4331",
+          "summary": "As a developer, I want to create a vendor in Credo AI model registry by providing name of the model and link it to a questionnaire and a model.",
+          "issueType": "Story",
+          "status": "In Review",
+          "assignee": "Patrick Higgins",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": false
+        },
+        {
+          "key": "DEV-4330",
+          "summary": "As a developer, I want to delete a model by referring to its name or ID",
+          "issueType": "Story",
+          "status": "In Review",
+          "assignee": "Patrick Higgins",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": false
+        },
+        {
+          "key": "DEV-4329",
+          "summary": "As a developer, I want to update an existing model’s metadata, linked questionnaire, and vendor.",
+          "issueType": "Story",
+          "status": "In Review",
+          "assignee": "Patrick Higgins",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": false
+        },
+        {
+          "key": "DEV-4328",
+          "summary": "As a developer, I want to create a model in Credo AI model registry by providing name of the model and link it to a questionnaire and a vendor.",
+          "issueType": "Story",
+          "status": "In Review",
+          "assignee": "Patrick Higgins",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": false
+        },
+        {
+          "key": "DEV-4327",
+          "summary": "As a developer, I want to delete a Use Case by referring to its name or ID.",
+          "issueType": "Story",
+          "status": "In Review",
+          "assignee": "Patrick Higgins",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": false
+        },
+        {
+          "key": "DEV-4326",
+          "summary": "As a developer, I want to fetch list of all Use Cases, filtered by attributes like stage or status.",
+          "issueType": "Story",
+          "status": "In Review",
+          "assignee": "Steven Barber",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": false
+        },
+        {
+          "key": "DEV-4325",
+          "summary": "As a developer, I want to fetch details of a Credo AI Use Case by providing the name or identifier of the Use Case.",
+          "issueType": "Story",
+          "status": "In Review",
+          "assignee": "Patrick Higgins",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": false
+        },
+        {
+          "key": "DEV-4324",
+          "summary": "As a developer, I want to update a Credo AI Use Case by providing name of the updated attributes such as model, stage, status, risk classification ",
+          "issueType": "Story",
+          "status": "In Review",
+          "assignee": "Steven Barber",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": false
+        },
+        {
+          "key": "DEV-4323",
+          "summary": "As a developer, I want to create a Credo AI Use Case by providing the name, description of the Use Case, and name of associated model",
+          "issueType": "Story",
+          "status": "In Review",
+          "assignee": "Steven Barber",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "key": "DEV-4271",
+      "summary": "Configurable Email Notifications (Phase I)",
+      "status": "Open",
+      "totalTickets": 13,
+      "completedTickets": 0,
+      "progressPercent": 0,
+      "totalStoryPoints": 0,
+      "completedStoryPoints": 0,
+      "contributors": [
+        "Barbara Jaber"
+      ],
+      "subTickets": [
+        {
+          "key": "DEV-4569",
+          "summary": "Create unified notification service",
+          "issueType": "Story",
+          "status": "Open",
+          "assignee": "Unassigned",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": false
+        },
+        {
+          "key": "DEV-4568",
+          "summary": " Integrate tenant settings into preference resolver",
+          "issueType": "Story",
+          "status": "Open",
+          "assignee": "Unassigned",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": false
+        },
+        {
+          "key": "DEV-4567",
+          "summary": "Extend CredoAI.Tenants.Tenant context module",
+          "issueType": "Story",
+          "status": "Open",
+          "assignee": "Unassigned",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": false
+        },
+        {
+          "key": "DEV-4566",
+          "summary": "Update user controller for notification preferences",
+          "issueType": "Story",
+          "status": "Open",
+          "assignee": "Unassigned",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": false
+        },
+        {
+          "key": "DEV-4565",
+          "summary": "Create tenant notification settings controller",
+          "issueType": "Story",
+          "status": "Open",
+          "assignee": "Unassigned",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": false
+        },
+        {
+          "key": "DEV-4564",
+          "summary": "Update email event subscribers to pass notification type",
+          "issueType": "Story",
+          "status": "Open",
+          "assignee": "Unassigned",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": false
+        },
+        {
+          "key": "DEV-4563",
+          "summary": "Update CredoAI.CxEmails.Emails to use preference resolver",
+          "issueType": "Story",
+          "status": "Open",
+          "assignee": "Unassigned",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": false
+        },
+        {
+          "key": "DEV-4562",
+          "summary": "Create CredoAI.Notifications.PreferenceResolver module",
+          "issueType": "Story",
+          "status": "Open",
+          "assignee": "Unassigned",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": false
+        },
+        {
+          "key": "DEV-4561",
+          "summary": "Create CredoAI.Notifications.Configuration module",
+          "issueType": "Story",
+          "status": "Open",
+          "assignee": "Unassigned",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": false
+        },
+        {
+          "key": "DEV-4560",
+          "summary": "Extend User.Setting.NotificationPreferences schema",
+          "issueType": "Story",
+          "status": "Open",
+          "assignee": "Unassigned",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": false
+        },
+        {
+          "key": "DEV-4559",
+          "summary": "Create database migration for tenant notification settings",
+          "issueType": "Story",
+          "status": "Open",
+          "assignee": "Unassigned",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": false
+        },
+        {
+          "key": "DEV-4558",
+          "summary": "Extend TenantInfo schema with notification preferences",
+          "issueType": "Story",
+          "status": "Open",
+          "assignee": "Unassigned",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": false
+        },
+        {
+          "key": "DEV-4458",
+          "summary": "Blueprint: configurable email & in-app notification",
+          "issueType": "Story",
+          "status": "In Progress",
+          "assignee": "Barbara Jaber",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "key": "DEV-4065",
+      "summary": "Customizable Use Case Reports",
+      "status": "In Progress",
+      "totalTickets": 32,
+      "completedTickets": 21,
+      "progressPercent": 66,
+      "totalStoryPoints": 0,
+      "completedStoryPoints": 0,
+      "contributors": [
+        "Jefferson Reis",
+        "Juan Alcantara",
+        "Leonardo Lemos"
+      ],
+      "subTickets": [
+        {
+          "key": "DEV-4457",
+          "summary": "Question & Answer Widget",
+          "issueType": "Story",
+          "status": "Ready for Sprint",
+          "assignee": "Jefferson Reis",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": false
+        },
+        {
+          "key": "DEV-4456",
+          "summary": "Policy Packs & Controls Widget",
+          "issueType": "Story",
+          "status": "Ready for Sprint",
+          "assignee": "Jefferson Reis",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": false
+        },
+        {
+          "key": "DEV-4455",
+          "summary": "Risk Scenarios & Controls Widget",
+          "issueType": "Story",
+          "status": "Ready for Sprint",
+          "assignee": "Jefferson Reis",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": false
+        },
+        {
+          "key": "DEV-4454",
+          "summary": "Risk Chart Widgets",
+          "issueType": "Story",
+          "status": "Ready for Sprint",
+          "assignee": "Jefferson Reis",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": false
+        },
+        {
+          "key": "DEV-4453",
+          "summary": "Risk Classification Widgets",
+          "issueType": "Story",
+          "status": "Ready for Sprint",
+          "assignee": "Jefferson Reis",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": false
+        },
+        {
+          "key": "DEV-4452",
+          "summary": "Stakeholder & Association Widgets",
+          "issueType": "Story",
+          "status": "Ready for Sprint",
+          "assignee": "Jefferson Reis",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": false
+        },
+        {
+          "key": "DEV-4451",
+          "summary": "Use Case Metadata Widgets",
+          "issueType": "Story",
+          "status": "In Progress",
+          "assignee": "Jefferson Reis",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": false
+        },
+        {
+          "key": "DEV-4449",
+          "summary": "Header Widget",
+          "issueType": "Story",
+          "status": "In Progress",
+          "assignee": "Jefferson Reis",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": false
+        },
+        {
+          "key": "DEV-4293",
+          "summary": "[FE] [8] PDF Export Integration",
+          "issueType": "Task",
+          "status": "Open",
+          "assignee": "Jefferson Reis",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": false
+        },
+        {
+          "key": "DEV-4291",
+          "summary": "[FE] [6] Widget Registry & Components",
+          "issueType": "Task",
+          "status": "In Progress",
+          "assignee": "Jefferson Reis",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": false
+        },
+        {
+          "key": "DEV-4285",
+          "summary": "[BE] [12] Template Migration Script",
+          "issueType": "Task",
+          "status": "Open",
+          "assignee": "Unassigned",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": false
+        },
+        {
+          "key": "DEV-4082",
+          "summary": "Blueprint/TDD: Customizable Use Case Reports",
+          "issueType": "Task",
+          "status": "Dev complete",
+          "assignee": "Leonardo Lemos",
+          "priority": "High",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": true
+        },
+        {
+          "key": "DEV-4450",
+          "summary": "Basic Content Widgets (Divider & Text Block)",
+          "issueType": "Story",
+          "status": "Dev complete",
+          "assignee": "Jefferson Reis",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": true
+        },
+        {
+          "key": "DEV-4298",
+          "summary": "[FE] [0] Feature Flags Setup",
+          "issueType": "Task",
+          "status": "Dev complete",
+          "assignee": "Jefferson Reis",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": true
+        },
+        {
+          "key": "DEV-4292",
+          "summary": "[FE] [7] Report Routes & Navigation",
+          "issueType": "Task",
+          "status": "Dev complete",
+          "assignee": "Jefferson Reis",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": true
+        },
+        {
+          "key": "DEV-4290",
+          "summary": "[FE] [5] Report Viewer Component",
+          "issueType": "Task",
+          "status": "Dev complete",
+          "assignee": "Jefferson Reis",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": true
+        },
+        {
+          "key": "DEV-4289",
+          "summary": "[FE] [4] Report Generation UI - List & Modal",
+          "issueType": "Task",
+          "status": "Dev complete",
+          "assignee": "Jefferson Reis",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": true
+        },
+        {
+          "key": "DEV-4288",
+          "summary": "[FE] [3] Template Management Routes & Navigation",
+          "issueType": "Task",
+          "status": "Dev complete",
+          "assignee": "Jefferson Reis",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": true
+        },
+        {
+          "key": "DEV-4287",
+          "summary": "[FE] [2] Template Management UI - List & Builder",
+          "issueType": "Task",
+          "status": "Dev complete",
+          "assignee": "Jefferson Reis",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": true
+        },
+        {
+          "key": "DEV-4286",
+          "summary": "[FE] [1] Frontend Module Setup & Hooks",
+          "issueType": "Task",
+          "status": "Dev complete",
+          "assignee": "Jefferson Reis",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": true
+        },
+        {
+          "key": "DEV-4284",
+          "summary": "[FE] [8] PDF Export Integration",
+          "issueType": "Task",
+          "status": "Closed",
+          "assignee": "Unassigned",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": true
+        },
+        {
+          "key": "DEV-4283",
+          "summary": "[BE] [11] Extend Report Management API Endpoints",
+          "issueType": "Task",
+          "status": "Dev complete",
+          "assignee": "Juan Alcantara",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": true
+        },
+        {
+          "key": "DEV-4282",
+          "summary": "[BE] [10] Extend Report Generation Context Module",
+          "issueType": "Task",
+          "status": "Dev complete",
+          "assignee": "Juan Alcantara",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": true
+        },
+        {
+          "key": "DEV-4281",
+          "summary": "[BE] [6] Snapshot Data Extraction",
+          "issueType": "Task",
+          "status": "Dev complete",
+          "assignee": "Juan Alcantara",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": true
+        },
+        {
+          "key": "DEV-4280",
+          "summary": "[BE] [9] Advanced Widget Data Providers",
+          "issueType": "Task",
+          "status": "Dev complete",
+          "assignee": "Juan Alcantara",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": true
+        },
+        {
+          "key": "DEV-4279",
+          "summary": "[BE] [8] Risk Analysis Widget Data Providers",
+          "issueType": "Task",
+          "status": "Dev complete",
+          "assignee": "Juan Alcantara",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": true
+        },
+        {
+          "key": "DEV-4278",
+          "summary": "[BE] [7] Core Widget Data Providers",
+          "issueType": "Task",
+          "status": "Dev complete",
+          "assignee": "Juan Alcantara",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": true
+        },
+        {
+          "key": "DEV-4277",
+          "summary": "[BE] [5] Widget Data Registry & Orchestrator",
+          "issueType": "Task",
+          "status": "Dev complete",
+          "assignee": "Juan Alcantara",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": true
+        },
+        {
+          "key": "DEV-4276",
+          "summary": "[BE] [4] Template Management API Endpoints",
+          "issueType": "Task",
+          "status": "Dev complete",
+          "assignee": "Juan Alcantara",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": true
+        },
+        {
+          "key": "DEV-4275",
+          "summary": "[BE [3] Template Management Context Module",
+          "issueType": "Task",
+          "status": "Dev complete",
+          "assignee": "Juan Alcantara",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": true
+        },
+        {
+          "key": "DEV-4274",
+          "summary": "[BE] [2] Ecto Schemas & Relationships",
+          "issueType": "Task",
+          "status": "Dev complete",
+          "assignee": "Juan Alcantara",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": true
+        },
+        {
+          "key": "DEV-4273",
+          "summary": "[BE] [1] Database Schema & Migrations",
+          "issueType": "Task",
+          "status": "Dev complete",
+          "assignee": "Juan Alcantara",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": true
+        }
+      ]
+    },
+    {
+      "key": "DEV-4262",
+      "summary": "Improve asset usability through low lift improvements",
+      "status": "Open",
+      "totalTickets": 10,
+      "completedTickets": 2,
+      "progressPercent": 20,
+      "totalStoryPoints": 0,
+      "completedStoryPoints": 0,
+      "contributors": [],
+      "subTickets": [
+        {
+          "key": "DEV-4550",
+          "summary": "Asset search needs to be better - fuzzy matching / more robust",
+          "issueType": "Task",
+          "status": "Open",
+          "assignee": "Unassigned",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": false
+        },
+        {
+          "key": "DEV-4546",
+          "summary": "Policy pack base name should be able to be updated through version updates",
+          "issueType": "Task",
+          "status": "Open",
+          "assignee": "Unassigned",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": false
+        },
+        {
+          "key": "DEV-4545",
+          "summary": "Trigger risk level based on label and not number",
+          "issueType": "Task",
+          "status": "Open",
+          "assignee": "Unassigned",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": false
+        },
+        {
+          "key": "DEV-4544",
+          "summary": "Change default risk categories programatically as part of asset deployments",
+          "issueType": "Task",
+          "status": "Open",
+          "assignee": "Unassigned",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": false
+        },
+        {
+          "key": "DEV-4419",
+          "summary": "Policy Pack Sections",
+          "issueType": "Task",
+          "status": "Open",
+          "assignee": "Unassigned",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": false
+        },
+        {
+          "key": "DEV-4299",
+          "summary": "Policy Pack Description advanced formatting (markdown)",
+          "issueType": "Task",
+          "status": "Open",
+          "assignee": "Unassigned",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": false
+        },
+        {
+          "key": "DEV-4263",
+          "summary": "Controls within a policy pack can be linked to from other controls",
+          "issueType": "Task",
+          "status": "Open",
+          "assignee": "Unassigned",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": false
+        },
+        {
+          "key": "DEV-4260",
+          "summary": "Add options for default questionnaire answer choices.",
+          "issueType": "Story",
+          "status": "Open",
+          "assignee": "Unassigned",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": false
+        },
+        {
+          "key": "DEV-4431",
+          "summary": "Policy Pack requirement triggers/reveals. Questionnaire-like-logic",
+          "issueType": "Task",
+          "status": "Closed",
+          "assignee": "Unassigned",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": true
+        },
+        {
+          "key": "DEV-4259",
+          "summary": "Add a trigger-action that adds a questionnaire to a use case.",
+          "issueType": "Story",
+          "status": "Closed",
+          "assignee": "Unassigned",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": true
+        }
+      ]
+    },
+    {
+      "key": "DEV-4012",
+      "summary": "SSO for the External User Portal",
+      "status": "Open",
+      "totalTickets": 14,
+      "completedTickets": 6,
+      "progressPercent": 43,
+      "totalStoryPoints": 113,
+      "completedStoryPoints": 47,
+      "contributors": [
+        "Nate Faerber"
+      ],
+      "subTickets": [
+        {
+          "key": "DEV-4539",
+          "summary": "Feature Flags Infrastructure - Tags, Multi-Tag Filtering, and Capabilities System",
+          "issueType": "Story",
+          "status": "In Progress",
+          "assignee": "Unassigned",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": false
+        },
+        {
+          "key": "DEV-4230",
+          "summary": "Update External User view to show SSO-enabled users",
+          "issueType": "Story",
+          "status": "Open",
+          "assignee": "Unassigned",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": false
+        },
+        {
+          "key": "DEV-4212",
+          "summary": "[DEV-4012] Documentation, UAT & Deployment",
+          "issueType": "Story",
+          "status": "Open",
+          "assignee": "Nate Faerber",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 12,
+          "isCompleted": false
+        },
+        {
+          "key": "DEV-4211",
+          "summary": "[DEV-4012] Security Review & Performance Testing",
+          "issueType": "Story",
+          "status": "Open",
+          "assignee": "Nate Faerber",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 10,
+          "isCompleted": false
+        },
+        {
+          "key": "DEV-4210",
+          "summary": "[DEV-4012] Integration & E2E Testing",
+          "issueType": "Story",
+          "status": "Open",
+          "assignee": "Nate Faerber",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 10,
+          "isCompleted": false
+        },
+        {
+          "key": "DEV-4209",
+          "summary": "[DEV-4012] Vendor Portal UI Components",
+          "issueType": "Story",
+          "status": "Open",
+          "assignee": "Nate Faerber",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 18,
+          "isCompleted": false
+        },
+        {
+          "key": "DEV-4208",
+          "summary": "[DEV-4012] AI Governance Admin Visibility & Audit Logs",
+          "issueType": "Story",
+          "status": "Open",
+          "assignee": "Nate Faerber",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 8,
+          "isCompleted": false
+        },
+        {
+          "key": "DEV-4207",
+          "summary": "[DEV-4012] Platform Engineering Admin API",
+          "issueType": "Story",
+          "status": "Open",
+          "assignee": "Nate Faerber",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 8,
+          "isCompleted": false
+        },
+        {
+          "key": "DEV-4037",
+          "summary": "TDD: SSO for External User Portal",
+          "issueType": "Story",
+          "status": "Closed",
+          "assignee": "Nate Faerber",
+          "priority": "High",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": true
+        },
+        {
+          "key": "DEV-4013",
+          "summary": "Create Implementation tickets for SSO for External User Portal",
+          "issueType": "Story",
+          "status": "Closed",
+          "assignee": "Nate Faerber",
+          "priority": "High",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": true
+        },
+        {
+          "key": "DEV-4206",
+          "summary": "[DEV-4012] User Provisioning & Claim Synchronization",
+          "issueType": "Story",
+          "status": "Dev complete",
+          "assignee": "Nate Faerber",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 8,
+          "isCompleted": true
+        },
+        {
+          "key": "DEV-4205",
+          "summary": "[DEV-4012] External User Authentication Endpoints",
+          "issueType": "Story",
+          "status": "Dev complete",
+          "assignee": "Nate Faerber",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 13,
+          "isCompleted": true
+        },
+        {
+          "key": "DEV-4204",
+          "summary": "[DEV-4012] Core OIDC Provider Integration",
+          "issueType": "Story",
+          "status": "Dev complete",
+          "assignee": "Nate Faerber",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 18,
+          "isCompleted": true
+        },
+        {
+          "key": "DEV-4203",
+          "summary": "[DEV-4012] Database Schema and Migrations",
+          "issueType": "Story",
+          "status": "Dev complete",
+          "assignee": "Nate Faerber",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 8,
+          "isCompleted": true
+        }
+      ]
+    },
+    {
+      "key": "DEV-4187",
+      "summary": "Generic Audit Log / Audit Trail for Tenant Changes (Phase 2)",
+      "status": "Open",
+      "totalTickets": 9,
+      "completedTickets": 2,
+      "progressPercent": 22,
+      "totalStoryPoints": 0,
+      "completedStoryPoints": 0,
+      "contributors": [
+        "Patrick Higgins"
+      ],
+      "subTickets": [
+        {
+          "key": "DEV-4188",
+          "summary": "[BE] Audit log filter functionality should support search",
+          "issueType": "Story",
+          "status": "In Progress",
+          "assignee": "Patrick Higgins",
+          "priority": "High",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": false
+        },
+        {
+          "key": "DEV-4254",
+          "summary": "Standardize schema for \"Metadata\" column in Audit Logs",
+          "issueType": "Story",
+          "status": "Open",
+          "assignee": "Unassigned",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": false
+        },
+        {
+          "key": "DEV-4253",
+          "summary": "Additional Audit logs for Auth - Authentication - General",
+          "issueType": "Story",
+          "status": "Open",
+          "assignee": "Unassigned",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": false
+        },
+        {
+          "key": "DEV-4252",
+          "summary": "Additional Audit logs for Settings - API Tokens - General",
+          "issueType": "Story",
+          "status": "Open",
+          "assignee": "Unassigned",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": false
+        },
+        {
+          "key": "DEV-4251",
+          "summary": "Additional Audit logs for Governance Center - Questionnaire - General",
+          "issueType": "Story",
+          "status": "Open",
+          "assignee": "Unassigned",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": false
+        },
+        {
+          "key": "DEV-4250",
+          "summary": "Additional Audit logs for AI Registry - Use Case - Governance Lifecycle (Stages, Statuses)",
+          "issueType": "Story",
+          "status": "Open",
+          "assignee": "Unassigned",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": false
+        },
+        {
+          "key": "DEV-4248",
+          "summary": "Additional Audit logs for AI Registry - Use Case - Stakeholder, Reviewer",
+          "issueType": "Story",
+          "status": "Open",
+          "assignee": "Unassigned",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": false
+        },
+        {
+          "key": "DEV-4235",
+          "summary": "[BE] Support multi-selection in enumerated audit logs filters ",
+          "issueType": "Story",
+          "status": "Closed",
+          "assignee": "Patrick Higgins",
+          "priority": "High",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": true
+        },
+        {
+          "key": "DEV-4192",
+          "summary": "[FE] Audit log filters should support multi-selection",
+          "issueType": "Story",
+          "status": "Dev complete",
+          "assignee": "Patrick Higgins",
+          "priority": "High",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": true
+        }
+      ]
+    },
+    {
+      "key": "DEV-4339",
+      "summary": "SDK Hosting ",
+      "status": "Open",
+      "totalTickets": 4,
+      "completedTickets": 0,
+      "progressPercent": 0,
+      "totalStoryPoints": 0,
+      "completedStoryPoints": 0,
+      "contributors": [
+        "Patrick Higgins"
+      ],
+      "subTickets": [
+        {
+          "key": "DEV-4448",
+          "summary": "Publish SDK Docs",
+          "issueType": "Task",
+          "status": "In Progress",
+          "assignee": "Unassigned",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": false
+        },
+        {
+          "key": "DEV-4342",
+          "summary": "“Sign” the SDK",
+          "issueType": "Story",
+          "status": "Ready for Sprint",
+          "assignee": "Unassigned",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": false
+        },
+        {
+          "key": "DEV-4341",
+          "summary": "Publish SDK",
+          "issueType": "Story",
+          "status": "In Progress",
+          "assignee": "Patrick Higgins",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": false
+        },
+        {
+          "key": "DEV-4340",
+          "summary": "Setup Repo for SDK",
+          "issueType": "Story",
+          "status": "In Progress",
+          "assignee": "Patrick Higgins",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "key": "DEV-4178",
+      "summary": "[Phase-2] Move APIs to OpenAPI 3.0 spec",
+      "status": "Open",
+      "totalTickets": 4,
+      "completedTickets": 0,
+      "progressPercent": 0,
+      "totalStoryPoints": 0,
+      "completedStoryPoints": 0,
+      "contributors": [
+        "Fabrizio Puletti"
+      ],
+      "subTickets": [
+        {
+          "key": "DEV-4464",
+          "summary": "First iteration: publish /models fields for production ",
+          "issueType": "Story",
+          "status": "Ready for Sprint",
+          "assignee": "Unassigned",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": false
+        },
+        {
+          "key": "DEV-4179",
+          "summary": "Update 1-line description for every input parameter and output field",
+          "issueType": "Story",
+          "status": "Open",
+          "assignee": "Fabrizio Puletti",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": false
+        },
+        {
+          "key": "DEV-4176",
+          "summary": "Public APIs to include in OpenAPI 3.0 spec (Phase-I)",
+          "issueType": "Story",
+          "status": "Ready for Sprint",
+          "assignee": "Fabrizio Puletti",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": false
+        },
+        {
+          "key": "DEV-3426",
+          "summary": "Deprecate Old Swagger API logic",
+          "issueType": "Story",
+          "status": "Open",
+          "assignee": "Unassigned",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "key": "DEV-3997",
+      "summary": "[Feature] Context Source Management",
+      "status": "In Progress",
+      "totalTickets": 9,
+      "completedTickets": 5,
+      "progressPercent": 56,
+      "totalStoryPoints": 0,
+      "completedStoryPoints": 0,
+      "contributors": [
+        "Anna Tovkun",
+        "Leonardo Lemos",
+        "Steven Barber"
+      ],
+      "subTickets": [
+        {
+          "key": "DEV-4306",
+          "summary": "[Context Hub][TDD] Azure AI Foundery integration ",
+          "issueType": "Story",
+          "status": "Open",
+          "assignee": "Unassigned",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": false
+        },
+        {
+          "key": "DEV-4304",
+          "summary": "[Context Hub][Optimization] Get tools list from Metorial APIs",
+          "issueType": "Story",
+          "status": "Open",
+          "assignee": "Anna Tovkun",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": false
+        },
+        {
+          "key": "DEV-4191",
+          "summary": "[Context Hub]  Integration Sources - Collaboration Tools (JIRA, confluence) POC",
+          "issueType": "Story",
+          "status": "Open",
+          "assignee": "Anna Tovkun",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": false
+        },
+        {
+          "key": "DEV-4092",
+          "summary": "MCP Gateway Scoping/Decision",
+          "issueType": "Story",
+          "status": "Ready for Sprint",
+          "assignee": "Unassigned",
+          "priority": "Low",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": false
+        },
+        {
+          "key": "DEV-4049",
+          "summary": "[BE] Text file as context source",
+          "issueType": "Story",
+          "status": "Dev complete",
+          "assignee": "Steven Barber",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": true
+        },
+        {
+          "key": "DEV-4047",
+          "summary": "[FE] GUI for Context Hub in Use Case",
+          "issueType": "Story",
+          "status": "Dev complete",
+          "assignee": "Leonardo Lemos",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": true
+        },
+        {
+          "key": "DEV-4021",
+          "summary": "[Context Hub] 1.1 MCP Server for Context",
+          "issueType": "Story",
+          "status": "Dev complete",
+          "assignee": "Anna Tovkun",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": true
+        },
+        {
+          "key": "DEV-4020",
+          "summary": "[Context Hub] 1.1 Context CRUD APIs",
+          "issueType": "Story",
+          "status": "Dev complete",
+          "assignee": "Anna Tovkun",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": true
+        },
+        {
+          "key": "DEV-4019",
+          "summary": "[FE] GUI for Save To Registry",
+          "issueType": "Story",
+          "status": "Dev complete",
+          "assignee": "Unassigned",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": true
+        }
+      ]
+    },
+    {
+      "key": "DEV-4485",
+      "summary": "Context Source: PDFs and Docs",
+      "status": "In Progress",
+      "totalTickets": 5,
+      "completedTickets": 2,
+      "progressPercent": 40,
+      "totalStoryPoints": 0,
+      "completedStoryPoints": 0,
+      "contributors": [
+        "Anna Tovkun",
+        "Eli Sherman",
+        "Leonardo Lemos"
+      ],
+      "subTickets": [
+        {
+          "key": "DEV-4531",
+          "summary": "[MCP] Add PDFs as context source",
+          "issueType": "Story",
+          "status": "Open",
+          "assignee": "Unassigned",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": false
+        },
+        {
+          "key": "DEV-4488",
+          "summary": "[GAIA] Add Docs and PDFs as context sources",
+          "issueType": "Story",
+          "status": "Open",
+          "assignee": "Unassigned",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": false
+        },
+        {
+          "key": "DEV-4486",
+          "summary": "[FE] Add Docs and PDFs as context sources",
+          "issueType": "Story",
+          "status": "Open",
+          "assignee": "Leonardo Lemos",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": false
+        },
+        {
+          "key": "DEV-4530",
+          "summary": "Scoping Doc",
+          "issueType": "Story",
+          "status": "Dev complete",
+          "assignee": "Eli Sherman",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": true
+        },
+        {
+          "key": "DEV-4487",
+          "summary": "[BE] Add Docs and PDFs as context sources",
+          "issueType": "Story",
+          "status": "Dev complete",
+          "assignee": "Anna Tovkun",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": true
+        }
+      ]
+    },
+    {
+      "key": "DEV-4264",
+      "summary": "Schema and Data Migrations Timeouts",
+      "status": "Open",
+      "totalTickets": 2,
+      "completedTickets": 0,
+      "progressPercent": 0,
+      "totalStoryPoints": 0,
+      "completedStoryPoints": 0,
+      "contributors": [],
+      "subTickets": [
+        {
+          "key": "DEV-4266",
+          "summary": "[TDD] Testing Strategy for Data Migrations",
+          "issueType": "Story",
+          "status": "Ready for Sprint",
+          "assignee": "Unassigned",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": false
+        },
+        {
+          "key": "DEV-4265",
+          "summary": "[TDD] Data Migration Practices To Avoid Timeouts",
+          "issueType": "Story",
+          "status": "Ready for Sprint",
+          "assignee": "Unassigned",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "key": "DEV-4261",
+      "summary": "Policy Packs improvements (triggers, consequences)",
+      "status": "Open",
+      "totalTickets": 2,
+      "completedTickets": 0,
+      "progressPercent": 0,
+      "totalStoryPoints": 0,
+      "completedStoryPoints": 0,
+      "contributors": [],
+      "subTickets": [
+        {
+          "key": "DEV-4541",
+          "summary": "Triggers within policy packs (adding other policy packs)",
+          "issueType": "Task",
+          "status": "Open",
+          "assignee": "Unassigned",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": false
+        },
+        {
+          "key": "DEV-4540",
+          "summary": "Raise consequence of non-compliance",
+          "issueType": "Task",
+          "status": "Open",
+          "assignee": "Unassigned",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "key": "DEV-4123",
+      "summary": "Improve DB query performance for critical API endpoints",
+      "status": "Open",
+      "totalTickets": 2,
+      "completedTickets": 0,
+      "progressPercent": 0,
+      "totalStoryPoints": 0,
+      "completedStoryPoints": 0,
+      "contributors": [
+        "Anna Tovkun",
+        "Juan Alcantara"
+      ],
+      "subTickets": [
+        {
+          "key": "DEV-4189",
+          "summary": "Capture metrics: identify critical endpoints by response time and frequency",
+          "issueType": "Story",
+          "status": "In Progress",
+          "assignee": "Anna Tovkun",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": false
+        },
+        {
+          "key": "DEV-4190",
+          "summary": "Correlate captured response time/frequency metrics with code smell findings",
+          "issueType": "Task",
+          "status": "In Progress",
+          "assignee": "Juan Alcantara",
+          "priority": "Low",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "key": "DEV-4007",
+      "summary": "Read-only admin role [RBAC Phase 1]",
+      "status": "Open",
+      "totalTickets": 17,
+      "completedTickets": 15,
+      "progressPercent": 88,
+      "totalStoryPoints": 0,
+      "completedStoryPoints": 0,
+      "contributors": [
+        "Alvaro Sanchez",
+        "Chanaveer Kadapatti",
+        "Patrick Higgins"
+      ],
+      "subTickets": [
+        {
+          "key": "DEV-4521",
+          "summary": "Convert existing users to Read-only Admins (followup to Read-Only Admin work)",
+          "issueType": "Story",
+          "status": "In Progress",
+          "assignee": "Patrick Higgins",
+          "priority": "High",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": false
+        },
+        {
+          "key": "DEV-4171",
+          "summary": "[BE] Security logging should support read-only admins",
+          "issueType": "Story",
+          "status": "In Refinement",
+          "assignee": "Chanaveer Kadapatti",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": false
+        },
+        {
+          "key": "DEV-4302",
+          "summary": "Upgrade user add dialog to support designating user type",
+          "issueType": "Story",
+          "status": "Dev complete",
+          "assignee": "Patrick Higgins",
+          "priority": "High",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": true
+        },
+        {
+          "key": "DEV-4008",
+          "summary": "[TDD] Read-only admin role",
+          "issueType": "Story",
+          "status": "Dev complete",
+          "assignee": "Patrick Higgins",
+          "priority": "High",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": true
+        },
+        {
+          "key": "DEV-4303",
+          "summary": "Forbid changing existing user type to read-only admin",
+          "issueType": "Story",
+          "status": "Dev complete",
+          "assignee": "Patrick Higgins",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": true
+        },
+        {
+          "key": "DEV-4241",
+          "summary": "Read-only admins should have access to tokens",
+          "issueType": "Story",
+          "status": "Dev complete",
+          "assignee": "Patrick Higgins",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": true
+        },
+        {
+          "key": "DEV-4240",
+          "summary": "Use case owners should be able to add read-only admins as observers",
+          "issueType": "Story",
+          "status": "Dev complete",
+          "assignee": "Patrick Higgins",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": true
+        },
+        {
+          "key": "DEV-4112",
+          "summary": "Update automated API tests for Read-Only Admins",
+          "issueType": "Story",
+          "status": "Dev complete",
+          "assignee": "Alvaro Sanchez",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": true
+        },
+        {
+          "key": "DEV-4111",
+          "summary": "[FE] ​​​Update route guards for Read-Only Admins",
+          "issueType": "Story",
+          "status": "Dev complete",
+          "assignee": "Patrick Higgins",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": true
+        },
+        {
+          "key": "DEV-4110",
+          "summary": "[FE] Update UI to support subscribe to use case for Read-Only Admins",
+          "issueType": "Story",
+          "status": "Dev complete",
+          "assignee": "Patrick Higgins",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": true
+        },
+        {
+          "key": "DEV-4109",
+          "summary": "[FE] Support Observer Stakeholder Role for Read-Only Admins",
+          "issueType": "Story",
+          "status": "Dev complete",
+          "assignee": "Patrick Higgins",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": true
+        },
+        {
+          "key": "DEV-4108",
+          "summary": "[FE] Update Permissions hooks for Read-Only Admins",
+          "issueType": "Story",
+          "status": "Dev complete",
+          "assignee": "Patrick Higgins",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": true
+        },
+        {
+          "key": "DEV-4107",
+          "summary": "[FE] Support Read-Only Admin user role from API",
+          "issueType": "Story",
+          "status": "Dev complete",
+          "assignee": "Patrick Higgins",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": true
+        },
+        {
+          "key": "DEV-4106",
+          "summary": "[BE] Add observer stakeholder role",
+          "issueType": "Story",
+          "status": "Dev complete",
+          "assignee": "Patrick Higgins",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": true
+        },
+        {
+          "key": "DEV-4105",
+          "summary": "[BE] Update GraphQL Resolvers to support Read-Only Admins",
+          "issueType": "Story",
+          "status": "Dev complete",
+          "assignee": "Patrick Higgins",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": true
+        },
+        {
+          "key": "DEV-4104",
+          "summary": "[BE] Update auth modules for Read-Only Admins",
+          "issueType": "Story",
+          "status": "Dev complete",
+          "assignee": "Patrick Higgins",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": true
+        },
+        {
+          "key": "DEV-4103",
+          "summary": "[BE] Create Read-Only Admin user role",
+          "issueType": "Story",
+          "status": "Dev complete",
+          "assignee": "Patrick Higgins",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": true
+        }
+      ]
+    },
+    {
+      "key": "DEV-3912",
+      "summary": "[FE] Fields Forms - MUI to Curakit Migration",
+      "status": "Open",
+      "totalTickets": 2,
+      "completedTickets": 0,
+      "progressPercent": 0,
+      "totalStoryPoints": 0,
+      "completedStoryPoints": 0,
+      "contributors": [],
+      "subTickets": [
+        {
+          "key": "DEV-3927",
+          "summary": "[FE] Migrate field-add-dialog-action.tsx from MUI to Curakit",
+          "issueType": "Task",
+          "status": "Open",
+          "assignee": "Unassigned",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": false
+        },
+        {
+          "key": "DEV-3926",
+          "summary": "[FE] Migrate fields-preview-dialog-action.tsx from MUI to Curakit",
+          "issueType": "Task",
+          "status": "Open",
+          "assignee": "Unassigned",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "key": "DEV-4528",
+      "summary": "Customizable RBAC [Phase 1]",
+      "status": "Open",
+      "totalTickets": 1,
+      "completedTickets": 0,
+      "progressPercent": 0,
+      "totalStoryPoints": 0,
+      "completedStoryPoints": 0,
+      "contributors": [],
+      "subTickets": [
+        {
+          "key": "DEV-4529",
+          "summary": "Blueprint: Configurable RBAC",
+          "issueType": "Story",
+          "status": "Open",
+          "assignee": "Unassigned",
+          "priority": "High",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "key": "DEV-4526",
+      "summary": "prompt security service",
+      "status": "Open",
+      "totalTickets": 1,
+      "completedTickets": 0,
+      "progressPercent": 0,
+      "totalStoryPoints": 0,
+      "completedStoryPoints": 0,
+      "contributors": [],
+      "subTickets": [
+        {
+          "key": "DEV-4527",
+          "summary": "Investigate Prompt Security Solution (e.g. Bedrock? Foundry?)",
+          "issueType": "Story",
+          "status": "Open",
+          "assignee": "Unassigned",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "key": "DEV-4498",
+      "summary": "Context Source: External tools via MCP Server",
+      "status": "Open",
+      "totalTickets": 1,
+      "completedTickets": 0,
+      "progressPercent": 0,
+      "totalStoryPoints": 0,
+      "completedStoryPoints": 0,
+      "contributors": [
+        "Anna Tovkun"
+      ],
+      "subTickets": [
+        {
+          "key": "DEV-4513",
+          "summary": "[Blueprint Document] External tools via MCP Server",
+          "issueType": "Story",
+          "status": "Ready for Sprint",
+          "assignee": "Anna Tovkun",
+          "priority": "High",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "key": "DEV-4417",
+      "summary": "Epic capturing tasks related to improving our asset deployment pipeline",
+      "status": "Open",
+      "totalTickets": 1,
+      "completedTickets": 0,
+      "progressPercent": 0,
+      "totalStoryPoints": 0,
+      "completedStoryPoints": 0,
+      "contributors": [],
+      "subTickets": [
+        {
+          "key": "DEV-4418",
+          "summary": "Import/export of custom policy packs",
+          "issueType": "Task",
+          "status": "Open",
+          "assignee": "Unassigned",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "key": "DEV-4382",
+      "summary": "AI Assist Robustness (December 2026)",
+      "status": "Open",
+      "totalTickets": 4,
+      "completedTickets": 3,
+      "progressPercent": 75,
+      "totalStoryPoints": 0,
+      "completedStoryPoints": 0,
+      "contributors": [
+        "Alvaro Sanchez",
+        "Anna Tovkun",
+        "Travis Mattera"
+      ],
+      "subTickets": [
+        {
+          "key": "DEV-4384",
+          "summary": "Test for Request Load",
+          "issueType": "Story",
+          "status": "Ready for Sprint",
+          "assignee": "Alvaro Sanchez",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": false
+        },
+        {
+          "key": "DEV-4386",
+          "summary": "Feature Flag Enablement",
+          "issueType": "Story",
+          "status": "Dev complete",
+          "assignee": "Anna Tovkun",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": true
+        },
+        {
+          "key": "DEV-4385",
+          "summary": "Monitor and Logging for MCP – Integrated Dashboard",
+          "issueType": "Story",
+          "status": "Closed",
+          "assignee": "Travis Mattera",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": true
+        },
+        {
+          "key": "DEV-4383",
+          "summary": "Deploy stable AI Assist build to Lab environment",
+          "issueType": "Story",
+          "status": "Dev complete",
+          "assignee": "Unassigned",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": true
+        }
+      ]
+    },
+    {
+      "key": "DEV-4357",
+      "summary": "[MEG] Add Risks, Controls, and Risk Classifications to models and vendors",
+      "status": "Open",
+      "totalTickets": 1,
+      "completedTickets": 0,
+      "progressPercent": 0,
+      "totalStoryPoints": 0,
+      "completedStoryPoints": 0,
+      "contributors": [
+        "Juan Alcantara"
+      ],
+      "subTickets": [
+        {
+          "key": "DEV-4554",
+          "summary": "[TDD/Blueprint] Add Risks, Controls, and Risk Classifications to models and vendors",
+          "issueType": "Story",
+          "status": "Ready for Sprint",
+          "assignee": "Juan Alcantara",
+          "priority": "High",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "key": "DEV-4336",
+      "summary": "Python SDK Generation",
+      "status": "In Progress",
+      "totalTickets": 4,
+      "completedTickets": 3,
+      "progressPercent": 75,
+      "totalStoryPoints": 0,
+      "completedStoryPoints": 0,
+      "contributors": [
+        "Patrick Higgins"
+      ],
+      "subTickets": [
+        {
+          "key": "DEV-4403",
+          "summary": "Generate SDK docs",
+          "issueType": "Story",
+          "status": "In Progress",
+          "assignee": "Patrick Higgins",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": false
+        },
+        {
+          "key": "DEV-4497",
+          "summary": "Host SDK docs",
+          "issueType": "Task",
+          "status": "Closed",
+          "assignee": "Unassigned",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": true
+        },
+        {
+          "key": "DEV-4338",
+          "summary": "Customize SDK (auth, etc)",
+          "issueType": "Story",
+          "status": "Closed",
+          "assignee": "Unassigned",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": true
+        },
+        {
+          "key": "DEV-4337",
+          "summary": "Generate SDK via openapi-python-client",
+          "issueType": "Story",
+          "status": "Dev complete",
+          "assignee": "Patrick Higgins",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": true
+        }
+      ]
+    },
+    {
+      "key": "DEV-4231",
+      "summary": "Enable admins to make a use case visible to all",
+      "status": "Open",
+      "totalTickets": 1,
+      "completedTickets": 0,
+      "progressPercent": 0,
+      "totalStoryPoints": 0,
+      "completedStoryPoints": 0,
+      "contributors": [
+        "Patrick Higgins"
+      ],
+      "subTickets": [
+        {
+          "key": "DEV-4297",
+          "summary": "TDD: Enable admins to make a use case visible to all",
+          "issueType": "Story",
+          "status": "In Progress",
+          "assignee": "Patrick Higgins",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "key": "DEV-4089",
+      "summary": "Authorization Service",
+      "status": "In Progress",
+      "totalTickets": 1,
+      "completedTickets": 0,
+      "progressPercent": 0,
+      "totalStoryPoints": 0,
+      "completedStoryPoints": 0,
+      "contributors": [],
+      "subTickets": [
+        {
+          "key": "DEV-4090",
+          "summary": "Authorization Service Scoping",
+          "issueType": "Story",
+          "status": "Ready for Sprint",
+          "assignee": "Unassigned",
+          "priority": "Low",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "key": "DEV-4067",
+      "summary": "[Feature] General Platform UX/UI Changes",
+      "status": "In Progress",
+      "totalTickets": 4,
+      "completedTickets": 3,
+      "progressPercent": 75,
+      "totalStoryPoints": 0,
+      "completedStoryPoints": 0,
+      "contributors": [
+        "Ed Morales"
+      ],
+      "subTickets": [
+        {
+          "key": "DEV-4070",
+          "summary": "Main nav re-organziation",
+          "issueType": "Story",
+          "status": "In Progress",
+          "assignee": "Ed Morales",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": false
+        },
+        {
+          "key": "DEV-4375",
+          "summary": "Review Bar",
+          "issueType": "Story",
+          "status": "Closed",
+          "assignee": "Ed Morales",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": true
+        },
+        {
+          "key": "DEV-4069",
+          "summary": "Use case reorganization (nested nav > tabs)",
+          "issueType": "Story",
+          "status": "Closed",
+          "assignee": "Ed Morales",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": true
+        },
+        {
+          "key": "DEV-4068",
+          "summary": "AI Assist/Comments panel + Review UI updates",
+          "issueType": "Story",
+          "status": "Closed",
+          "assignee": "Ed Morales",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": true
+        }
+      ]
+    },
+    {
+      "key": "DEV-4055",
+      "summary": "[GAIA] Production Readiness",
+      "status": "In Progress",
+      "totalTickets": 3,
+      "completedTickets": 2,
+      "progressPercent": 67,
+      "totalStoryPoints": 0,
+      "completedStoryPoints": 0,
+      "contributors": [
+        "Travis Mattera"
+      ],
+      "subTickets": [
+        {
+          "key": "DEV-4093",
+          "summary": "AuthN service scoping",
+          "issueType": "Story",
+          "status": "Ready for Sprint",
+          "assignee": "Unassigned",
+          "priority": "Low",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": false
+        },
+        {
+          "key": "DEV-4057",
+          "summary": "[Platform] Environment creation infrastructure for design partnership deployment",
+          "issueType": "Story",
+          "status": "Dev complete",
+          "assignee": "Travis Mattera",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": true
+        },
+        {
+          "key": "DEV-4056",
+          "summary": "[Platform] Auth Phase 2 ADR",
+          "issueType": "Story",
+          "status": "Closed",
+          "assignee": "Travis Mattera",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": true
+        }
+      ]
+    },
+    {
+      "key": "DEV-4009",
+      "summary": "Migrate configuration between tenants",
+      "status": "Open",
+      "totalTickets": 2,
+      "completedTickets": 1,
+      "progressPercent": 50,
+      "totalStoryPoints": 0,
+      "completedStoryPoints": 0,
+      "contributors": [
+        "Nate Faerber"
+      ],
+      "subTickets": [
+        {
+          "key": "DEV-4247",
+          "summary": "TDD - Duplicate Questionnaires between Tenants",
+          "issueType": "Story",
+          "status": "In Review",
+          "assignee": "Nate Faerber",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": false
+        },
+        {
+          "key": "DEV-4011",
+          "summary": "Migrate configuration between tenants [Phase 2]",
+          "issueType": "Story",
+          "status": "Closed",
+          "assignee": "Nate Faerber",
+          "priority": "High",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": true
+        }
+      ]
+    },
+    {
+      "key": "DEV-4001",
+      "summary": "Use Case Expedited Approval",
+      "status": "Ready for Sprint",
+      "totalTickets": 1,
+      "completedTickets": 0,
+      "progressPercent": 0,
+      "totalStoryPoints": 0,
+      "completedStoryPoints": 0,
+      "contributors": [
+        "Lisa Felten"
+      ],
+      "subTickets": [
+        {
+          "key": "DEV-4036",
+          "summary": "[TDD] Use Case Expedited Approval",
+          "issueType": "Task",
+          "status": "Ready for Sprint",
+          "assignee": "Lisa Felten",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "key": "DEV-3914",
+      "summary": "[FE] Control Library Forms - MUI to Curakit Migration",
+      "status": "Open",
+      "totalTickets": 1,
+      "completedTickets": 0,
+      "progressPercent": 0,
+      "totalStoryPoints": 0,
+      "completedStoryPoints": 0,
+      "contributors": [],
+      "subTickets": [
+        {
+          "key": "DEV-3928",
+          "summary": "[FE] Migrate controls/index.tsx from MUI to Curakit",
+          "issueType": "Task",
+          "status": "Open",
+          "assignee": "Unassigned",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "key": "DEV-4462",
+      "summary": "Scalibility Testing",
+      "status": "Open",
+      "totalTickets": 0,
+      "completedTickets": 0,
+      "progressPercent": 0,
+      "totalStoryPoints": 0,
+      "completedStoryPoints": 0,
+      "contributors": [],
+      "subTickets": []
+    },
+    {
+      "key": "DEV-4272",
+      "summary": "Custom Report Builder",
+      "status": "Open",
+      "totalTickets": 0,
+      "completedTickets": 0,
+      "progressPercent": 0,
+      "totalStoryPoints": 0,
+      "completedStoryPoints": 0,
+      "contributors": [],
+      "subTickets": []
+    },
+    {
+      "key": "DEV-4127",
+      "summary": "[GAIA] Add questionnaire answering framework",
+      "status": "Dev complete",
+      "totalTickets": 0,
+      "completedTickets": 0,
+      "progressPercent": 0,
+      "totalStoryPoints": 0,
+      "completedStoryPoints": 0,
+      "contributors": [],
+      "subTickets": []
+    },
+    {
+      "key": "DEV-4125",
+      "summary": "Update the Governance Center UI to represent and display all attributes of assets, enriching asset descriptiosn (e.g., risk type descriptions) and improving search",
+      "status": "Open",
+      "totalTickets": 0,
+      "completedTickets": 0,
+      "progressPercent": 0,
+      "totalStoryPoints": 0,
+      "completedStoryPoints": 0,
+      "contributors": [],
+      "subTickets": []
+    },
+    {
+      "key": "DEV-4122",
+      "summary": "Need product usage of assets to be logged and be used",
+      "status": "Open",
+      "totalTickets": 0,
+      "completedTickets": 0,
+      "progressPercent": 0,
+      "totalStoryPoints": 0,
+      "completedStoryPoints": 0,
+      "contributors": [],
+      "subTickets": []
+    },
+    {
+      "key": "DEV-4074",
+      "summary": "Organization as an Entity",
+      "status": "Open",
+      "totalTickets": 0,
+      "completedTickets": 0,
+      "progressPercent": 0,
+      "totalStoryPoints": 0,
+      "completedStoryPoints": 0,
+      "contributors": [],
+      "subTickets": []
+    },
+    {
+      "key": "DEV-4073",
+      "summary": "Harmonized Control Framework",
+      "status": "Open",
+      "totalTickets": 0,
+      "completedTickets": 0,
+      "progressPercent": 0,
+      "totalStoryPoints": 0,
+      "completedStoryPoints": 0,
+      "contributors": [],
+      "subTickets": []
+    },
+    {
+      "key": "DEV-4072",
+      "summary": "Customizable Implementation Guidance",
+      "status": "Open",
+      "totalTickets": 0,
+      "completedTickets": 0,
+      "progressPercent": 0,
+      "totalStoryPoints": 0,
+      "completedStoryPoints": 0,
+      "contributors": [],
+      "subTickets": []
+    },
+    {
+      "key": "DEV-4071",
+      "summary": "Policy Pack Schema Refactor",
+      "status": "Open",
+      "totalTickets": 0,
+      "completedTickets": 0,
+      "progressPercent": 0,
+      "totalStoryPoints": 0,
+      "completedStoryPoints": 0,
+      "contributors": [],
+      "subTickets": []
+    },
+    {
+      "key": "DEV-4000",
+      "summary": "[GAIA] AI-Recommend Risk Scenarios and Controls",
+      "status": "In Progress",
+      "totalTickets": 4,
+      "completedTickets": 4,
+      "progressPercent": 100,
+      "totalStoryPoints": 0,
+      "completedStoryPoints": 0,
+      "contributors": [
+        "Anna Tovkun",
+        "Eli Sherman",
+        "Leonardo Lemos"
+      ],
+      "subTickets": [
+        {
+          "key": "DEV-4258",
+          "summary": "[GAIA] Support multiple suggestion for risks and controls",
+          "issueType": "Story",
+          "status": "Dev complete",
+          "assignee": "Eli Sherman",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": true
+        },
+        {
+          "key": "DEV-4257",
+          "summary": "[FE] Support multiple suggestion for risks and controls",
+          "issueType": "Story",
+          "status": "Closed",
+          "assignee": "Leonardo Lemos",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": true
+        },
+        {
+          "key": "DEV-4249",
+          "summary": "[BE] Support multiple suggestion for risks and controls",
+          "issueType": "Story",
+          "status": "Dev complete",
+          "assignee": "Anna Tovkun",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": true
+        },
+        {
+          "key": "DEV-4201",
+          "summary": "[BE] Request risks_and_controls ai suggestion when creating a review",
+          "issueType": "Story",
+          "status": "Dev complete",
+          "assignee": "Anna Tovkun",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": true
+        }
+      ]
+    },
+    {
+      "key": "DEV-3998",
+      "summary": "[Feature] Smart Answer Suggestions",
+      "status": "In Progress",
+      "totalTickets": 2,
+      "completedTickets": 2,
+      "progressPercent": 100,
+      "totalStoryPoints": 0,
+      "completedStoryPoints": 0,
+      "contributors": [
+        "Leonardo Lemos",
+        "Steven Barber"
+      ],
+      "subTickets": [
+        {
+          "key": "DEV-4088",
+          "summary": "[FE] Questionnaire Answer Suggestions UI",
+          "issueType": "Story",
+          "status": "Closed",
+          "assignee": "Leonardo Lemos",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": true
+        },
+        {
+          "key": "DEV-4018",
+          "summary": "[BE & AI] Schema for Question Answer Suggestions",
+          "issueType": "Story",
+          "status": "Closed",
+          "assignee": "Steven Barber",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": true
+        }
+      ]
+    },
+    {
+      "key": "DEV-3987",
+      "summary": "External users see legal terms when logging in for the first time",
+      "status": "Open",
+      "totalTickets": 0,
+      "completedTickets": 0,
+      "progressPercent": 0,
+      "totalStoryPoints": 0,
+      "completedStoryPoints": 0,
+      "contributors": [],
+      "subTickets": []
+    },
+    {
+      "key": "DEV-3986",
+      "summary": "Add Legal Term Links to User Sign Up Flow",
+      "status": "Ready for Sprint",
+      "totalTickets": 2,
+      "completedTickets": 2,
+      "progressPercent": 100,
+      "totalStoryPoints": 0,
+      "completedStoryPoints": 0,
+      "contributors": [
+        "Nate Faerber"
+      ],
+      "subTickets": [
+        {
+          "key": "DEV-4225",
+          "summary": "Configure Legal Terms in Auth0 Login Flow",
+          "issueType": "Story",
+          "status": "Dev complete",
+          "assignee": "Nate Faerber",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": true
+        },
+        {
+          "key": "DEV-4223",
+          "summary": "CredoAI Developer Partnership Terms for Lab Environment",
+          "issueType": "Task",
+          "status": "Dev complete",
+          "assignee": "Nate Faerber",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": true
+        }
+      ]
+    },
+    {
+      "key": "DEV-3972",
+      "summary": "[Feature] Use Case Review Assistant",
+      "status": "Parking Lot",
+      "totalTickets": 0,
+      "completedTickets": 0,
+      "progressPercent": 0,
+      "totalStoryPoints": 0,
+      "completedStoryPoints": 0,
+      "contributors": [],
+      "subTickets": []
+    },
+    {
+      "key": "DEV-3947",
+      "summary": "[GAIA - Component] Context Hub",
+      "status": "In Progress",
+      "totalTickets": 1,
+      "completedTickets": 1,
+      "progressPercent": 100,
+      "totalStoryPoints": 0,
+      "completedStoryPoints": 0,
+      "contributors": [
+        "Anna Tovkun"
+      ],
+      "subTickets": [
+        {
+          "key": "DEV-3993",
+          "summary": "Context Hub Architecture Planning",
+          "issueType": "Story",
+          "status": "Dev complete",
+          "assignee": "Anna Tovkun",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": true
+        }
+      ]
+    },
+    {
+      "key": "DEV-3919",
+      "summary": "[FE] Vendors Forms - MUI to Curakit Migration",
+      "status": "Open",
+      "totalTickets": 0,
+      "completedTickets": 0,
+      "progressPercent": 0,
+      "totalStoryPoints": 0,
+      "completedStoryPoints": 0,
+      "contributors": [],
+      "subTickets": []
+    },
+    {
+      "key": "DEV-3918",
+      "summary": "[FE] Questionnaires Forms - MUI to Curakit Migration",
+      "status": "Open",
+      "totalTickets": 0,
+      "completedTickets": 0,
+      "progressPercent": 0,
+      "totalStoryPoints": 0,
+      "completedStoryPoints": 0,
+      "contributors": [],
+      "subTickets": []
+    },
+    {
+      "key": "DEV-3917",
+      "summary": "[FE] Triggers & Actions Forms - MUI to Curakit Migration",
+      "status": "Open",
+      "totalTickets": 0,
+      "completedTickets": 0,
+      "progressPercent": 0,
+      "totalStoryPoints": 0,
+      "completedStoryPoints": 0,
+      "contributors": [],
+      "subTickets": []
+    },
+    {
+      "key": "DEV-3916",
+      "summary": "[FE] Policy Packs Forms - MUI to Curakit Migration",
+      "status": "Open",
+      "totalTickets": 0,
+      "completedTickets": 0,
+      "progressPercent": 0,
+      "totalStoryPoints": 0,
+      "completedStoryPoints": 0,
+      "contributors": [],
+      "subTickets": []
+    },
+    {
+      "key": "DEV-3915",
+      "summary": "[FE] Risk Configuration Forms - MUI to Curakit Migration",
+      "status": "Open",
+      "totalTickets": 2,
+      "completedTickets": 2,
+      "progressPercent": 100,
+      "totalStoryPoints": 0,
+      "completedStoryPoints": 0,
+      "contributors": [
+        "Jefferson Reis"
+      ],
+      "subTickets": [
+        {
+          "key": "DEV-3930",
+          "summary": "[FE] Migrate risk-scenario-edit-dialog.tsx from MUI to Curakit",
+          "issueType": "Task",
+          "status": "Dev complete",
+          "assignee": "Jefferson Reis",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": true
+        },
+        {
+          "key": "DEV-3929",
+          "summary": "[FE] Migrate risk-scenario-add-dialog.tsx from MUI to Curakit",
+          "issueType": "Task",
+          "status": "Dev complete",
+          "assignee": "Jefferson Reis",
+          "priority": "Medium",
+          "featureFlag": null,
+          "storyPoints": 0,
+          "isCompleted": true
+        }
+      ]
+    }
+  ],
+  "lastUpdated": "2025-12-23T16:06:07.429Z",
+  "epicCount": 50
+}

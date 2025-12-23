@@ -15,10 +15,30 @@ const EngineeringDashboard = () => {
     prSizeDistribution: [],
     reviewTimeData: [],
   });
+  const [epics, setEpics] = useState([]);
+  const [expandedEpics, setExpandedEpics] = useState({});
+  const [epicPage, setEpicPage] = useState(1);
+  const epicsPerPage = 10;
 
   useEffect(() => {
     fetchGitHubData();
+    fetchJiraEpics();
   }, [timeRange]);
+
+  const fetchJiraEpics = async () => {
+    try {
+      const response = await fetch('/jira-epics.json');
+      if (!response.ok) {
+        console.log('[JIRA] No jira-epics.json found. Run: npm run fetch-jira');
+        return;
+      }
+      const data = await response.json();
+      setEpics(data.epics || []);
+      console.log(`[JIRA] Loaded ${data.epics?.length || 0} epics`);
+    } catch (error) {
+      console.error('[JIRA] Error loading jira-epics.json:', error);
+    }
+  };
 
   const fetchGitHubData = async () => {
     setLoading(true);
@@ -198,21 +218,248 @@ const EngineeringDashboard = () => {
         />
       </div>
 
-      {/* PR Activity Over Time */}
+      {/* Epic Progress */}
       <div className="bg-white rounded-lg shadow-md p-6 mb-6">
-        <h2 className="text-xl font-bold text-gray-900 mb-4">Weekly PR Activity</h2>
-        <ResponsiveContainer width="100%" height={300}>
-          <LineChart data={weeklyPRs}>
-            <CartesianGrid strokeDasharray="3 3" />
-            <XAxis dataKey="week" />
-            <YAxis />
-            <Tooltip />
-            <Legend />
-            <Line type="monotone" dataKey="prs" stroke="#3b82f6" strokeWidth={2} name="Created" />
-            <Line type="monotone" dataKey="merged" stroke="#10b981" strokeWidth={2} name="Merged" />
-            <Line type="monotone" dataKey="closed" stroke="#ef4444" strokeWidth={2} name="Closed" />
-          </LineChart>
-        </ResponsiveContainer>
+        <div className="flex items-center justify-between mb-4">
+          <h2 className="text-xl font-bold text-gray-900">Active Epics</h2>
+          <button
+            onClick={fetchJiraEpics}
+            className="px-3 py-1.5 text-sm bg-gray-100 text-gray-700 hover:bg-gray-200 rounded-lg transition-colors"
+          >
+            ↻ Refresh
+          </button>
+        </div>
+        {(() => {
+          const filteredEpics = epics.filter(epic => ['Ready for Sprint', 'In Progress'].includes(epic.status));
+
+          if (epics.length === 0) {
+            return <p className="text-gray-500 text-center py-8">No active epics found. Run <code className="bg-gray-100 px-2 py-1 rounded">npm run fetch-jira</code> to load epic data.</p>;
+          }
+
+          if (filteredEpics.length === 0) {
+            return <p className="text-gray-500 text-center py-8">No epics with status "Ready for Sprint" or "In Progress" found.</p>;
+          }
+
+          // Pagination
+          const totalPages = Math.ceil(filteredEpics.length / epicsPerPage);
+          const startIndex = (epicPage - 1) * epicsPerPage;
+          const paginatedEpics = filteredEpics.slice(startIndex, startIndex + epicsPerPage);
+
+          return (
+          <div>
+            <div className="overflow-x-auto">
+              <table className="min-w-full divide-y divide-gray-200">
+                <thead className="bg-gray-50">
+                  <tr>
+                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Epic</th>
+                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Status</th>
+                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Progress</th>
+                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Story Points</th>
+                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Contributors</th>
+                    <th className="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Sub-tickets</th>
+                  </tr>
+                </thead>
+                <tbody className="bg-white divide-y divide-gray-200">
+                  {paginatedEpics.map((epic) => {
+                    const jiraUrl = import.meta.env.VITE_JIRA_URL;
+                    const epicUrl = jiraUrl ? `${jiraUrl.replace(/\/$/, '')}/browse/${epic.key}` : null;
+                    const isExpanded = expandedEpics[epic.key];
+
+                    return (
+                      <React.Fragment key={epic.key}>
+                        <tr className="hover:bg-gray-50">
+                          <td className="px-6 py-4">
+                            <div>
+                              {epicUrl ? (
+                                <a
+                                  href={epicUrl}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="text-sm font-semibold text-purple-600 hover:text-purple-800"
+                                >
+                                  {epic.key}
+                                </a>
+                              ) : (
+                                <div className="text-sm font-semibold text-purple-600">{epic.key}</div>
+                              )}
+                              <div className="text-xs text-gray-600 mt-1">{epic.summary}</div>
+                            </div>
+                          </td>
+                          <td className="px-6 py-4 whitespace-nowrap">
+                            <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-blue-100 text-blue-800">
+                              {epic.status}
+                            </span>
+                          </td>
+                          <td className="px-6 py-4">
+                            <div className="flex items-center gap-2">
+                              <div className="flex-1 min-w-0">
+                                <div className="w-full bg-gray-200 rounded-full h-2">
+                                  <div
+                                    className="bg-green-500 h-2 rounded-full transition-all"
+                                    style={{ width: `${epic.progressPercent}%` }}
+                                  ></div>
+                                </div>
+                              </div>
+                              <span className="text-xs text-gray-600 whitespace-nowrap">{epic.completedTickets}/{epic.totalTickets}</span>
+                            </div>
+                            <div className="text-xs text-gray-500 mt-1">{epic.progressPercent}%</div>
+                          </td>
+                          <td className="px-6 py-4 whitespace-nowrap">
+                            {epic.totalStoryPoints > 0 ? (
+                              <div className="text-sm text-gray-900">{epic.completedStoryPoints}/{epic.totalStoryPoints}</div>
+                            ) : (
+                              <span className="text-xs text-gray-400">N/A</span>
+                            )}
+                          </td>
+                          <td className="px-6 py-4">
+                            <div className="flex flex-wrap gap-1 max-w-xs">
+                              {epic.contributors.length > 0 ? epic.contributors.slice(0, 3).map((contributor, idx) => (
+                                <span key={idx} className="inline-flex items-center px-1.5 py-0.5 rounded text-xs bg-gray-100 text-gray-700">
+                                  {contributor}
+                                </span>
+                              )) : (
+                                <span className="text-xs text-gray-400 italic">No assignees</span>
+                              )}
+                              {epic.contributors.length > 3 && (
+                                <span className="inline-flex items-center px-1.5 py-0.5 rounded text-xs bg-gray-100 text-gray-700">
+                                  +{epic.contributors.length - 3}
+                                </span>
+                              )}
+                            </div>
+                          </td>
+                          <td className="px-6 py-4 text-center">
+                            {epic.totalTickets > 0 && (
+                              <button
+                                onClick={() => setExpandedEpics(prev => ({ ...prev, [epic.key]: !prev[epic.key] }))}
+                                className="px-3 py-1 text-xs font-medium text-blue-600 hover:text-blue-800 hover:bg-blue-50 rounded transition-colors"
+                              >
+                                {isExpanded ? '▼ Hide' : '▶ Show'} ({epic.totalTickets})
+                              </button>
+                            )}
+                          </td>
+                        </tr>
+
+                        {/* Expandable Sub-tickets Row */}
+                        {isExpanded && (
+                          <tr>
+                            <td colSpan="6" className="px-6 py-4 bg-gray-50">
+                              <div className="border-t border-gray-200 pt-4">
+                                <h4 className="font-semibold text-gray-900 mb-3">Sub-tickets:</h4>
+                                <div className="space-y-2">
+                                  {epic.subTickets.map((ticket, idx) => {
+                                    const ticketUrl = jiraUrl ? `${jiraUrl.replace(/\/$/, '')}/browse/${ticket.key}` : null;
+
+                                    return (
+                                      <div
+                                        key={idx}
+                                        className={`p-3 rounded-lg border transition-all ${
+                                          ticket.isCompleted
+                                            ? 'bg-green-50 border-green-200'
+                                            : 'bg-white border-gray-200 hover:border-blue-300'
+                                        }`}
+                                      >
+                                        <div className="flex items-start gap-3">
+                                          <div className="flex-shrink-0 mt-1">
+                                            <span className={`inline-flex items-center px-2 py-0.5 rounded text-xs font-medium ${
+                                              ticket.issueType === 'Bug' ? 'bg-red-100 text-red-800' :
+                                              ticket.issueType === 'Story' ? 'bg-blue-100 text-blue-800' :
+                                              ticket.issueType === 'Task' ? 'bg-green-100 text-green-800' :
+                                              'bg-gray-100 text-gray-800'
+                                            }`}>
+                                              {ticket.issueType}
+                                            </span>
+                                          </div>
+                                          <div className="flex-1 min-w-0">
+                                            {ticketUrl ? (
+                                              <a
+                                                href={ticketUrl}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="text-sm font-semibold text-purple-600 hover:text-purple-800"
+                                              >
+                                                {ticket.key}: {ticket.summary}
+                                              </a>
+                                            ) : (
+                                              <div className="text-sm font-semibold text-purple-600">
+                                                {ticket.key}: {ticket.summary}
+                                              </div>
+                                            )}
+                                            <div className="flex items-center gap-3 text-xs mt-1.5 text-gray-600">
+                                              <span className={`inline-flex items-center px-2 py-0.5 rounded font-medium ${
+                                                ticket.isCompleted ? 'bg-green-100 text-green-800' :
+                                                ticket.status === 'In Progress' ? 'bg-yellow-100 text-yellow-800' :
+                                                'bg-gray-100 text-gray-800'
+                                              }`}>
+                                                {ticket.status}
+                                              </span>
+                                              <span>👤 {ticket.assignee}</span>
+                                              {ticket.storyPoints > 0 && (
+                                                <span className="inline-flex items-center px-2 py-0.5 rounded font-medium bg-blue-50 text-blue-700 border border-blue-200">
+                                                  📊 {ticket.storyPoints} pts
+                                                </span>
+                                              )}
+                                              {ticket.priority && ticket.priority !== 'None' && (
+                                                <span className={`inline-flex items-center px-2 py-0.5 rounded text-xs font-medium ${
+                                                  ticket.priority === 'High' || ticket.priority === 'Highest' ? 'bg-red-50 text-red-700 border border-red-200' :
+                                                  ticket.priority === 'Medium' ? 'bg-yellow-50 text-yellow-700 border border-yellow-200' :
+                                                  'bg-gray-50 text-gray-700 border border-gray-200'
+                                                }`}>
+                                                  {ticket.priority}
+                                                </span>
+                                              )}
+                                              {ticket.featureFlag && (
+                                                <span className="inline-flex items-center px-2 py-0.5 rounded font-medium bg-indigo-50 text-indigo-700 border border-indigo-200">
+                                                  🚩 {ticket.featureFlag}
+                                                </span>
+                                              )}
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    );
+                                  })}
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                        )}
+                      </React.Fragment>
+                    );
+                  })}
+                </tbody>
+              </table>
+            </div>
+
+            {/* Pagination Controls */}
+            {totalPages > 1 && (
+              <div className="flex items-center justify-between mt-4 px-2">
+                <div className="text-sm text-gray-600">
+                  Showing {startIndex + 1} to {Math.min(startIndex + epicsPerPage, filteredEpics.length)} of {filteredEpics.length} epics
+                </div>
+                <div className="flex gap-2">
+                  <button
+                    onClick={() => setEpicPage(p => Math.max(1, p - 1))}
+                    disabled={epicPage === 1}
+                    className="px-3 py-1 text-sm border border-gray-300 rounded hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
+                  >
+                    ← Previous
+                  </button>
+                  <span className="px-3 py-1 text-sm text-gray-700">
+                    Page {epicPage} of {totalPages}
+                  </span>
+                  <button
+                    onClick={() => setEpicPage(p => Math.min(totalPages, p + 1))}
+                    disabled={epicPage === totalPages}
+                    className="px-3 py-1 text-sm border border-gray-300 rounded hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
+                  >
+                    Next →
+                  </button>
+                </div>
+              </div>
+            )}
+          </div>
+          )
+        })()}
       </div>
 
       {/* PR Statistics Grid */}
@@ -279,52 +526,73 @@ const EngineeringDashboard = () => {
               </tr>
             </thead>
             <tbody className="bg-white divide-y divide-gray-200">
-              {prData.map((author, index) => (
-                <tr key={index} className="hover:bg-gray-50">
-                  <td className="px-6 py-4 whitespace-nowrap">
-                    <div className="flex items-center">
-                      {author.avatarUrl ? (
-                        <img
-                          src={author.avatarUrl}
-                          alt={author.author}
-                          className="flex-shrink-0 h-10 w-10 rounded-full"
-                        />
-                      ) : (
-                        <div className="flex-shrink-0 h-10 w-10 bg-blue-500 rounded-full flex items-center justify-center text-white font-semibold">
-                          {author.author.split(' ').map(n => n[0]).join('')}
+              {prData.map((author, index) => {
+                const org = import.meta.env.VITE_GITHUB_ORG;
+                const repos = import.meta.env.VITE_GITHUB_REPOS?.split(',').filter(Boolean) || [];
+                // Create GitHub search URL for this author's PRs
+                const repoQuery = repos.map(r => `repo:${org}/${r}`).join(' ');
+                const authorSearchUrl = `https://github.com/search?q=${encodeURIComponent(`is:pr author:${author.login || author.author} ${repoQuery}`)}&type=pullrequests`;
+                const profileUrl = author.login ? `https://github.com/${author.login}` : authorSearchUrl;
+
+                return (
+                  <tr key={index} className="hover:bg-gray-50">
+                    <td className="px-6 py-4 whitespace-nowrap">
+                      <a
+                        href={profileUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center hover:opacity-80 transition-opacity"
+                      >
+                        {author.avatarUrl ? (
+                          <img
+                            src={author.avatarUrl}
+                            alt={author.author}
+                            className="flex-shrink-0 h-10 w-10 rounded-full"
+                          />
+                        ) : (
+                          <div className="flex-shrink-0 h-10 w-10 bg-blue-500 rounded-full flex items-center justify-center text-white font-semibold">
+                            {author.author.split(' ').map(n => n[0]).join('')}
+                          </div>
+                        )}
+                        <div className="ml-4">
+                          <div className="text-sm font-medium text-blue-600 hover:text-blue-800">{author.author}</div>
                         </div>
-                      )}
-                      <div className="ml-4">
-                        <div className="text-sm font-medium text-gray-900">{author.author}</div>
+                      </a>
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap">
+                      <a
+                        href={authorSearchUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-sm text-blue-600 hover:text-blue-800 font-semibold underline"
+                      >
+                        {author.count}
+                      </a>
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap">
+                      <div className="text-sm text-gray-900">{author.avgSize} lines</div>
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap">
+                      <div className={`text-sm font-medium ${author.avgReviewTime < 3 ? 'text-green-600' : author.avgReviewTime < 5 ? 'text-yellow-600' : 'text-red-600'}`}>
+                        {author.avgReviewTime}h
                       </div>
-                    </div>
-                  </td>
-                  <td className="px-6 py-4 whitespace-nowrap">
-                    <div className="text-sm text-gray-900 font-semibold">{author.count}</div>
-                  </td>
-                  <td className="px-6 py-4 whitespace-nowrap">
-                    <div className="text-sm text-gray-900">{author.avgSize} lines</div>
-                  </td>
-                  <td className="px-6 py-4 whitespace-nowrap">
-                    <div className={`text-sm font-medium ${author.avgReviewTime < 3 ? 'text-green-600' : author.avgReviewTime < 5 ? 'text-yellow-600' : 'text-red-600'}`}>
-                      {author.avgReviewTime}h
-                    </div>
-                  </td>
-                  <td className="px-6 py-4 whitespace-nowrap">
-                    {author.avgReviewTime < 3 ? (
-                      <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
-                        <CheckCircle className="w-3 h-3 mr-1" />
-                        Fast
-                      </span>
-                    ) : (
-                      <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800">
-                        <AlertCircle className="w-3 h-3 mr-1" />
-                        Normal
-                      </span>
-                    )}
-                  </td>
-                </tr>
-              ))}
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap">
+                      {author.avgReviewTime < 3 ? (
+                        <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                          <CheckCircle className="w-3 h-3 mr-1" />
+                          Fast
+                        </span>
+                      ) : (
+                        <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800">
+                          <AlertCircle className="w-3 h-3 mr-1" />
+                          Normal
+                        </span>
+                      )}
+                    </td>
+                  </tr>
+                );
+              })}
             </tbody>
           </table>
         </div>
@@ -333,17 +601,72 @@ const EngineeringDashboard = () => {
       {/* Repository Stats */}
       <div className="bg-white rounded-lg shadow-md p-6">
         <h2 className="text-xl font-bold text-gray-900 mb-4">Repository Activity</h2>
-        <ResponsiveContainer width="100%" height={300}>
-          <BarChart data={repositoryStats} layout="vertical">
-            <CartesianGrid strokeDasharray="3 3" />
-            <XAxis type="number" />
-            <YAxis dataKey="repo" type="category" width={150} />
-            <Tooltip />
-            <Legend />
-            <Bar dataKey="prs" fill="#3b82f6" name="Total PRs" radius={[0, 8, 8, 0]} />
-            <Bar dataKey="openPRs" fill="#f59e0b" name="Open PRs" radius={[0, 8, 8, 0]} />
-          </BarChart>
-        </ResponsiveContainer>
+        <div className="overflow-x-auto">
+          <table className="min-w-full divide-y divide-gray-200">
+            <thead className="bg-gray-50">
+              <tr>
+                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Repository</th>
+                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Total PRs</th>
+                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Open PRs</th>
+                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Activity</th>
+              </tr>
+            </thead>
+            <tbody className="bg-white divide-y divide-gray-200">
+              {repositoryStats.map((repo, index) => {
+                const org = import.meta.env.VITE_GITHUB_ORG;
+                const repoUrl = `https://github.com/${org}/${repo.repo}`;
+                const allPRsUrl = `https://github.com/${org}/${repo.repo}/pulls?q=is%3Apr`;
+                const openPRsUrl = `https://github.com/${org}/${repo.repo}/pulls?q=is%3Apr+is%3Aopen`;
+
+                return (
+                  <tr key={index} className="hover:bg-gray-50">
+                    <td className="px-6 py-4 whitespace-nowrap">
+                      <a
+                        href={repoUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-sm font-medium text-blue-600 hover:text-blue-800"
+                      >
+                        {repo.repo}
+                      </a>
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap">
+                      <a
+                        href={allPRsUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-sm text-blue-600 hover:text-blue-800 font-semibold underline"
+                      >
+                        {repo.prs}
+                      </a>
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap">
+                      <a
+                        href={openPRsUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-sm text-orange-600 hover:text-orange-800 font-semibold underline"
+                      >
+                        {repo.openPRs}
+                      </a>
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap">
+                      <div className="flex items-center">
+                        <div className="w-full bg-gray-200 rounded-full h-2 mr-2" style={{ width: '100px' }}>
+                          <div
+                            className="bg-blue-500 h-2 rounded-full"
+                            style={{ width: `${Math.min((repo.prs / Math.max(...repositoryStats.map(r => r.prs))) * 100, 100)}%` }}
+                          ></div>
+                        </div>
+                        <span className="text-xs text-gray-500">{repo.prs}</span>
+                      </div>
+                    </td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        </div>
       </div>
 
       {/* Footer */}

@@ -707,25 +707,42 @@ const ReleaseComparison = () => {
               )}
 
               {/* JIRA Tickets List */}
-              {sortedTickets.length > 0 && (
+              {sortedTickets.length > 0 && (() => {
+                const filteredTickets = sortedTickets.filter(ticket => {
+                  const filter = selectedEngineerFilter[releaseKey];
+                  if (!filter || filter === 'all') return true;
+                  return ticket.assignee === filter;
+                });
+
+                return (
                 <div className="mb-6">
                   <div className="flex items-center justify-between mb-3">
-                    <h3 className={`text-lg font-semibold ${darkMode ? 'text-white' : 'text-gray-900'}`}>JIRA Tickets in this Release</h3>
+                    <h3 className={`text-lg font-semibold ${darkMode ? 'text-white' : 'text-gray-900'}`}>
+                      JIRA Tickets in this Release
+                      {selectedEngineerFilter[releaseKey] && selectedEngineerFilter[releaseKey] !== 'all' && (
+                        <span className={`ml-2 text-sm font-normal ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
+                          (Showing {filteredTickets.length} of {sortedTickets.length})
+                        </span>
+                      )}
+                    </h3>
                     <div className="flex items-center gap-2">
                       <span className={`text-xs ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>Filter by engineer:</span>
                       <select
                         value={selectedEngineerFilter[releaseKey] || 'all'}
-                        onChange={(e) => setSelectedEngineerFilter(prev => ({
-                          ...prev,
-                          [releaseKey]: e.target.value
-                        }))}
+                        onChange={(e) => {
+                          console.log('Filter changed:', e.target.value, 'for release:', releaseKey);
+                          setSelectedEngineerFilter(prev => ({
+                            ...prev,
+                            [releaseKey]: e.target.value
+                          }));
+                        }}
                         className={`text-xs border rounded px-2 py-1 ${
                           darkMode
                             ? 'bg-gray-700 border-gray-600 text-gray-200'
                             : 'bg-white border-gray-300 text-gray-900'
                         }`}
                       >
-                        <option value="all">All Engineers</option>
+                        <option value="all">All Engineers ({sortedTickets.length})</option>
                         {engineerChartData.map(eng => (
                           <option key={eng.name} value={eng.name}>{eng.name} ({eng.value})</option>
                         ))}
@@ -733,13 +750,7 @@ const ReleaseComparison = () => {
                     </div>
                   </div>
                   <div className="space-y-2">
-                    {sortedTickets
-                      .filter(ticket => {
-                        const filter = selectedEngineerFilter[releaseKey];
-                        if (!filter || filter === 'all') return true;
-                        return ticket.assignee === filter;
-                      })
-                      .map((ticket, idx) => {
+                    {filteredTickets.length > 0 ? filteredTickets.map((ticket, idx) => {
                       const jiraUrl = import.meta.env.VITE_JIRA_URL;
                       const ticketUrl = jiraUrl ? `${jiraUrl.replace(/\/$/, '')}/browse/${ticket.key}` : null;
                       const hasCommit = allCommitMessages.includes(ticket.key);
@@ -833,10 +844,15 @@ const ReleaseComparison = () => {
                           </div>
                         </div>
                       );
-                    })}
+                    }) : (
+                      <div className={`text-center py-8 ${darkMode ? 'text-gray-400' : 'text-gray-500'}`}>
+                        <p>No tickets found for the selected engineer</p>
+                      </div>
+                    )}
                   </div>
                 </div>
-              )}
+              );
+              })()}
 
               <h3 className={`text-lg font-semibold mb-3 ${darkMode ? 'text-white' : 'text-gray-900'}`}>GitHub Changes by Repository</h3>
               <div className="overflow-x-auto rounded-xl">
