@@ -3906,7 +3906,7 @@
         "key": "DEV-3159",
         "summary": "\"Add questionnaire\" in approve/close review modal",
         "issueType": "Epic",
-        "status": "Ready for Sprint",
+        "status": "In Production (GA)",
         "isEpic": true,
         "assignee": "Ehrik Aldana",
         "priority": "Medium",
@@ -4016,7 +4016,7 @@
         "key": "DEV-2542",
         "summary": "Scheduled Use Case Reviews",
         "issueType": "Epic",
-        "status": "In Progress",
+        "status": "In Production (GA)",
         "isEpic": true,
         "assignee": "Ehrik Aldana",
         "priority": "Medium",
@@ -5373,7 +5373,7 @@
         "key": "DEV-3121",
         "summary": "Implement Enhanced Governance Workflow Stages Progress Indicator",
         "issueType": "Epic",
-        "status": "Ready for Release",
+        "status": "In Production (GA)",
         "isEpic": true,
         "assignee": "Ehrik Aldana",
         "priority": "Medium",
@@ -6828,8 +6828,9 @@
         "Closed Verified": 27,
         "Open": 6,
         "Dev complete": 23,
-        "In Progress": 4,
-        "Ready for Sprint": 3
+        "In Progress": 3,
+        "In Production (GA)": 2,
+        "Ready for Sprint": 2
       }
     },
     "v19.0": {
@@ -6857,7 +6858,8 @@
       "byStatus": {
         "Closed": 5,
         "Closed Verified": 22,
-        "Ready for Release": 5,
+        "Ready for Release": 4,
+        "In Production (GA)": 1,
         "In Progress": 2
       }
     },
@@ -6905,7 +6907,7 @@
       }
     }
   },
-  "lastUpdated": "2025-12-23T16:29:17.642Z",
+  "lastUpdated": "2025-12-23T17:34:58.291Z",
   "releaseCount": 15,
   "totalTickets": 605
 }

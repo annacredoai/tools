@@ -347,7 +347,10 @@ async function main() {
   const topEngineers = activeWork.slice(0, 5);
   for (const eng of topEngineers) {
     console.log(`\n${eng.engineer}: ${eng.tickets.length} active tickets (${eng.totalStoryPoints} points)`);
-    console.log(`  In epics: ${eng.tickets.filter(t => t.epicKey).length}`);
+    console.log(`  In epics: ${eng.ticketsInEpics}, In progress: ${eng.ticketsInProgress}`);
+    if (eng.longestInProgressDays > 0) {
+      console.log(`  Longest in progress: ${eng.longestInProgressDays} days`);
+    }
   }
 
   console.log('\n' + '='.repeat(60));
@@ -362,7 +365,8 @@ async function fetchActiveWorkByEngineer() {
   const payload = {
     jql,
     maxResults: 500,
-    fields: ['issuetype', 'summary', 'status', 'assignee', 'priority', 'customfield_10037', 'customfield_10016', 'parent']
+    fields: ['issuetype', 'summary', 'status', 'assignee', 'priority', 'customfield_10037', 'customfield_10016', 'parent'],
+    expand: 'changelog'
   };
 
   const auth = Buffer.from(`${JIRA_EMAIL}:${JIRA_API_TOKEN}`).toString('base64');
@@ -400,6 +404,26 @@ async function fetchActiveWorkByEngineer() {
         epicSummary = parent.fields.summary;
       }
 
+      // Find when the ticket was moved to "In Progress"
+      let inProgressSince = null;
+      let daysInProgress = null;
+      if (issue.fields.status.name === 'In Progress' && issue.changelog && issue.changelog.histories) {
+        // Find the most recent status change to "In Progress"
+        for (let i = issue.changelog.histories.length - 1; i >= 0; i--) {
+          const history = issue.changelog.histories[i];
+          for (const item of history.items || []) {
+            if (item.field === 'status' && item.toString === 'In Progress') {
+              inProgressSince = history.created;
+              const startDate = new Date(history.created);
+              const now = new Date();
+              daysInProgress = Math.floor((now - startDate) / (1000 * 60 * 60 * 24));
+              break;
+            }
+          }
+          if (inProgressSince) break;
+        }
+      }
+
       const ticket = {
         key: issue.key,
         summary: issue.fields.summary,
@@ -409,7 +433,9 @@ async function fetchActiveWorkByEngineer() {
         featureFlag: issue.fields.customfield_10037 || null,
         storyPoints: storyPoints,
         epicKey: epicKey,
-        epicSummary: epicSummary
+        epicSummary: epicSummary,
+        inProgressSince: inProgressSince,
+        daysInProgress: daysInProgress
       };
 
       if (!engineerMap.has(assignee)) {
@@ -417,7 +443,9 @@ async function fetchActiveWorkByEngineer() {
           engineer: assignee,
           tickets: [],
           totalStoryPoints: 0,
-          ticketsInEpics: 0
+          ticketsInEpics: 0,
+          ticketsInProgress: 0,
+          longestInProgressDays: 0
         });
       }
 
@@ -426,6 +454,12 @@ async function fetchActiveWorkByEngineer() {
       engineerData.totalStoryPoints += storyPoints;
       if (epicKey) {
         engineerData.ticketsInEpics++;
+      }
+      if (issue.fields.status.name === 'In Progress') {
+        engineerData.ticketsInProgress++;
+        if (daysInProgress && daysInProgress > engineerData.longestInProgressDays) {
+          engineerData.longestInProgressDays = daysInProgress;
+        }
       }
     }
 

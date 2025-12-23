@@ -493,7 +493,8 @@ const EngineeringDashboard = () => {
                 <tr>
                   <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Engineer</th>
                   <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Active Tickets</th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">In Epics</th>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">In Progress</th>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Longest</th>
                   <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Story Points</th>
                   <th className="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Details</th>
                 </tr>
@@ -512,7 +513,21 @@ const EngineeringDashboard = () => {
                           <div className="text-sm text-gray-900 font-semibold">{eng.tickets.length}</div>
                         </td>
                         <td className="px-6 py-4 whitespace-nowrap">
-                          <div className="text-sm text-gray-600">{eng.ticketsInEpics}</div>
+                          <div className="text-sm text-gray-900">{eng.ticketsInProgress || 0}</div>
+                        </td>
+                        <td className="px-6 py-4 whitespace-nowrap">
+                          {eng.longestInProgressDays > 0 ? (
+                            <div className={`text-sm font-medium ${
+                              eng.longestInProgressDays > 90 ? 'text-red-600' :
+                              eng.longestInProgressDays > 30 ? 'text-orange-600' :
+                              eng.longestInProgressDays > 14 ? 'text-yellow-600' :
+                              'text-green-600'
+                            }`}>
+                              {eng.longestInProgressDays}d
+                            </div>
+                          ) : (
+                            <div className="text-sm text-gray-400">-</div>
+                          )}
                         </td>
                         <td className="px-6 py-4 whitespace-nowrap">
                           <div className="text-sm text-gray-900">{eng.totalStoryPoints || 0}</div>
@@ -530,7 +545,7 @@ const EngineeringDashboard = () => {
                       {/* Expandable Tickets Row */}
                       {isExpanded && (
                         <tr>
-                          <td colSpan="5" className="px-6 py-4 bg-gray-50">
+                          <td colSpan="6" className="px-6 py-4 bg-gray-50">
                             <div className="space-y-2">
                               {eng.tickets.map((ticket, idx) => {
                                 const jiraUrl = import.meta.env.VITE_JIRA_URL;
@@ -580,6 +595,16 @@ const EngineeringDashboard = () => {
                                           }`}>
                                             {ticket.status}
                                           </span>
+                                          {ticket.daysInProgress !== null && ticket.daysInProgress !== undefined && (
+                                            <span className={`inline-flex items-center px-2 py-0.5 rounded font-medium border ${
+                                              ticket.daysInProgress > 90 ? 'bg-red-50 text-red-700 border-red-300' :
+                                              ticket.daysInProgress > 30 ? 'bg-orange-50 text-orange-700 border-orange-300' :
+                                              ticket.daysInProgress > 14 ? 'bg-yellow-50 text-yellow-700 border-yellow-300' :
+                                              'bg-green-50 text-green-700 border-green-300'
+                                            }`}>
+                                              ⏱️ {ticket.daysInProgress}d in progress
+                                            </span>
+                                          )}
                                           {ticket.storyPoints > 0 && (
                                             <span className="inline-flex items-center px-2 py-0.5 rounded font-medium bg-blue-50 text-blue-700 border border-blue-200">
                                               📊 {ticket.storyPoints} pts
