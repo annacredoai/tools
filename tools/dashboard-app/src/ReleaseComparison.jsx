@@ -381,7 +381,7 @@ const ReleaseComparison = () => {
   };
 
   return (
-    <div className={`min-h-screen p-8 ${darkMode ? 'bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900' : 'bg-gradient-to-br from-gray-50 to-blue-50'}`}>
+    <div className={`min-h-screen p-8 ${darkMode ? 'bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900' : 'bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50'}`}>
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="mb-8">
@@ -433,7 +433,7 @@ const ReleaseComparison = () => {
         </div>
 
         {/* Debug Info */}
-        <div className={`rounded-lg p-4 mb-6 ${darkMode ? 'bg-yellow-900/20 border border-yellow-700/30' : 'bg-yellow-50 border border-yellow-200'}`}>
+        <div className={`rounded-xl p-4 mb-6 ${darkMode ? 'bg-yellow-900/20 border border-yellow-700/30' : 'bg-gradient-to-br from-amber-50/80 to-yellow-50/60 backdrop-blur-sm border border-amber-200/50 shadow-sm'}`}>
           <h3 className={`text-sm font-semibold mb-2 ${darkMode ? 'text-yellow-300' : 'text-yellow-800'}`}>Debug Info:</h3>
           <div className={`text-xs space-y-1 ${darkMode ? 'text-yellow-200' : 'text-yellow-700'}`}>
             <p>Available releases: {Object.keys(availableReleases).length} repos</p>
@@ -453,7 +453,7 @@ const ReleaseComparison = () => {
 
         {/* Loading State */}
         {loadingSummary && releaseSummary.length === 0 && (
-          <div className={`rounded-lg shadow-xl p-6 mb-6 ${darkMode ? 'bg-gray-800 border border-gray-700' : 'bg-white border border-gray-200'}`}>
+          <div className={`rounded-xl p-6 mb-6 ${darkMode ? 'bg-gray-800 border border-gray-700 shadow-xl' : 'bg-white/80 backdrop-blur-sm shadow-lg border border-slate-200/50'}`}>
             <div className="flex items-center justify-center py-12">
               <div className="text-center">
                 <Loader2 className={`w-10 h-10 animate-spin mx-auto mb-3 ${darkMode ? 'text-blue-400' : 'text-blue-500'}`} />
@@ -593,7 +593,7 @@ const ReleaseComparison = () => {
               }));
 
             return (
-            <div key={releaseKey} className={`rounded-lg shadow-xl p-6 mb-6 ${darkMode ? 'bg-gray-800 border border-gray-700' : 'bg-white border border-gray-200'}`}>
+            <div key={releaseKey} className={`rounded-xl p-6 mb-6 transition-shadow ${darkMode ? 'bg-gray-800 border border-gray-700 shadow-xl' : 'bg-white/80 backdrop-blur-sm shadow-lg hover:shadow-xl border border-white/50'}`}>
               <div className="flex items-center justify-between mb-4">
                 <div>
                   <h2 className={`text-xl font-bold ${darkMode ? 'text-white' : 'text-gray-900'}`}>Release {headVersion}</h2>
@@ -609,7 +609,7 @@ const ReleaseComparison = () => {
                             changeCount: 0,
                             jiraTickets: allTickets,
                           })}
-                          className="text-sm text-purple-400 hover:text-purple-300 font-semibold underline cursor-pointer"
+                          className={`text-sm font-semibold underline cursor-pointer ${darkMode ? 'text-purple-400 hover:text-purple-300' : 'text-purple-600 hover:text-purple-800'}`}
                         >
                           {allTickets.length} JIRA ticket{allTickets.length !== 1 ? 's' : ''}
                         </button>
@@ -661,7 +661,7 @@ const ReleaseComparison = () => {
 
               {/* Ticket Type Breakdown Chart */}
               {chartData.length > 0 && (
-                <div className={`rounded-lg p-4 mb-6 ${darkMode ? 'bg-gray-900/50 border border-gray-700' : 'bg-gray-50 border border-gray-200'}`}>
+                <div className={`rounded-xl p-5 mb-6 ${darkMode ? 'bg-gray-900/50 border border-gray-700' : 'bg-gradient-to-br from-white/60 to-blue-50/40 backdrop-blur-sm border border-blue-100/50 shadow-md'}`}>
                   <h3 className={`text-lg font-semibold mb-4 ${darkMode ? 'text-white' : 'text-gray-900'}`}>Ticket Type Breakdown</h3>
                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                     <ResponsiveContainer width="100%" height={250}>
@@ -687,7 +687,7 @@ const ReleaseComparison = () => {
                       {chartData.map((entry, index) => (
                         <div
                           key={index}
-                          className={`flex items-center justify-between p-2 rounded ${darkMode ? 'bg-gray-800' : 'bg-white border border-gray-200'}`}
+                          className={`flex items-center justify-between p-2.5 rounded-lg transition-all ${darkMode ? 'bg-gray-800' : 'bg-white border border-slate-200/60 hover:shadow-sm'}`}
                         >
                           <div className="flex items-center gap-2">
                             <div
@@ -745,10 +745,10 @@ const ReleaseComparison = () => {
                       const hasCommit = allCommitMessages.includes(ticket.key);
 
                       return (
-                        <div key={idx} className={`p-3 rounded-lg border transition-colors ${
+                        <div key={idx} className={`p-4 rounded-xl transition-all ${
                           darkMode
-                            ? 'bg-purple-900/20 border-purple-700/50 hover:border-purple-600'
-                            : 'bg-purple-50 border-purple-200 hover:border-purple-300'
+                            ? 'bg-purple-900/20 border border-purple-700/50 hover:border-purple-600'
+                            : 'bg-gradient-to-br from-white to-slate-50 border border-slate-200/60 hover:shadow-md hover:border-blue-300/50 shadow-sm'
                         }`}>
                           <div className="flex items-start gap-3">
                             <div className="flex-shrink-0 mt-1">
@@ -839,9 +839,9 @@ const ReleaseComparison = () => {
               )}
 
               <h3 className={`text-lg font-semibold mb-3 ${darkMode ? 'text-white' : 'text-gray-900'}`}>GitHub Changes by Repository</h3>
-              <div className="overflow-x-auto">
-                <table className={`min-w-full divide-y ${darkMode ? 'divide-gray-700' : 'divide-gray-200'}`}>
-                  <thead className={darkMode ? 'bg-gray-900/50' : 'bg-gray-50'}>
+              <div className="overflow-x-auto rounded-xl">
+                <table className={`min-w-full divide-y ${darkMode ? 'divide-gray-700' : 'divide-slate-200'}`}>
+                  <thead className={darkMode ? 'bg-gray-900/50' : 'bg-gradient-to-r from-slate-50 to-blue-50/50'}>
                     <tr>
                       <th className={`px-6 py-3 text-left text-xs font-medium uppercase tracking-wider ${darkMode ? 'text-gray-400' : 'text-gray-500'}`}>App</th>
                       <th className={`px-6 py-3 text-left text-xs font-medium uppercase tracking-wider ${darkMode ? 'text-gray-400' : 'text-gray-500'}`}>DB Migration</th>
@@ -927,11 +927,11 @@ const ReleaseComparison = () => {
                           </tr>
                           {isExpanded && item.commits && item.commits.length > 0 && (
                             <tr>
-                              <td colSpan="4" className={`px-6 py-4 ${darkMode ? 'bg-gray-900/70' : 'bg-gray-50'}`}>
+                              <td colSpan="4" className={`px-6 py-4 ${darkMode ? 'bg-gray-900/70' : 'bg-gradient-to-r from-slate-50/50 to-blue-50/30'}`}>
                                 <div className="space-y-2">
                                   <h4 className={`font-semibold text-sm mb-3 ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>Commits ({item.commits.length}):</h4>
                                   {item.commits.map((commit, commitIdx) => (
-                                    <div key={commitIdx} className={`flex items-start gap-3 p-3 rounded-lg border ${darkMode ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'}`}>
+                                    <div key={commitIdx} className={`flex items-start gap-3 p-3 rounded-lg border transition-shadow ${darkMode ? 'bg-gray-800 border-gray-700' : 'bg-white border-slate-200/60 hover:shadow-sm'}`}>
                                       <code className={`text-xs font-mono mt-0.5 ${darkMode ? 'text-gray-400' : 'text-gray-500'}`}>{commit.sha}</code>
                                       <div className="flex-1 min-w-0">
                                         <p className={`text-sm ${darkMode ? 'text-gray-200' : 'text-gray-900'}`}>{renderMessageWithJiraLinks(commit.message)}</p>
