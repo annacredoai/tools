@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { GitPullRequest, Loader2 } from 'lucide-react';
+import { PieChart, Pie, Cell, ResponsiveContainer, Legend, Tooltip } from 'recharts';
 import GitHubAPI from './services/githubApi';
 
 const ReleaseComparison = () => {
@@ -114,6 +115,101 @@ const ReleaseComparison = () => {
     });
 
     return migrationsFound.length > 0 ? migrationsFound : null;
+  };
+
+  const categorizeCommitByPrefix = (message) => {
+    const lowerMessage = message.toLowerCase();
+
+    // Check for common prefixes
+    if (lowerMessage.startsWith('feat:') || lowerMessage.startsWith('feature:')) return 'feat';
+    if (lowerMessage.startsWith('fix:')) return 'fix';
+    if (lowerMessage.startsWith('chore:')) return 'chore';
+    if (lowerMessage.startsWith('docs:')) return 'docs';
+    if (lowerMessage.startsWith('refactor:')) return 'refactor';
+    if (lowerMessage.startsWith('test:')) return 'test';
+    if (lowerMessage.startsWith('style:')) return 'style';
+    if (lowerMessage.startsWith('perf:')) return 'perf';
+    if (lowerMessage.startsWith('ci:')) return 'ci';
+    if (lowerMessage.startsWith('build:')) return 'build';
+
+    return 'other';
+  };
+
+  const getCommitTypeStats = (commits) => {
+    const typeCounts = {
+      feat: 0,
+      fix: 0,
+      chore: 0,
+      docs: 0,
+      refactor: 0,
+      test: 0,
+      style: 0,
+      perf: 0,
+      ci: 0,
+      build: 0,
+      other: 0,
+    };
+
+    commits.forEach(commit => {
+      const type = categorizeCommitByPrefix(commit.message);
+      typeCounts[type]++;
+    });
+
+    // Convert to array format for recharts and filter out zero counts and "other"
+    return Object.entries(typeCounts)
+      .filter(([type, count]) => count > 0 && type !== 'other')
+      .map(([type, count]) => ({
+        name: type.charAt(0).toUpperCase() + type.slice(1),
+        value: count,
+        type: type,
+      }))
+      .sort((a, b) => b.value - a.value);
+  };
+
+  const renderMessageWithJiraLinks = (message) => {
+    const jiraUrl = import.meta.env.VITE_JIRA_URL;
+    if (!jiraUrl) {
+      return message;
+    }
+
+    // Match JIRA ticket patterns like DEV-1234, ENG-456, PROD-789
+    const jiraPattern = /([A-Z]+-\d+)/g;
+    const parts = [];
+    let lastIndex = 0;
+    let match;
+
+    while ((match = jiraPattern.exec(message)) !== null) {
+      // Add text before the match
+      if (match.index > lastIndex) {
+        parts.push(message.substring(lastIndex, match.index));
+      }
+
+      // Add the JIRA ticket as a clickable span (not a link to avoid nested <a> tags)
+      const ticket = match[1];
+      const ticketUrl = `${jiraUrl.replace(/\/$/, '')}/browse/${ticket}`;
+      parts.push(
+        <span
+          key={`${ticket}-${match.index}`}
+          className="text-blue-600 hover:text-blue-800 font-medium cursor-pointer underline"
+          onClick={(e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            window.open(ticketUrl, '_blank');
+          }}
+        >
+          {ticket}
+        </span>
+      );
+
+      lastIndex = match.index + match[0].length;
+    }
+
+    // Add remaining text
+    if (lastIndex < message.length) {
+      parts.push(message.substring(lastIndex));
+    }
+
+    return parts.length > 0 ? parts : message;
   };
 
   const fetchReleaseSummary = async () => {
@@ -316,6 +412,110 @@ const ReleaseComparison = () => {
           </div>
         </div>
 
+        {/* Commit Type Distribution Chart */}
+        {releaseSummary.length > 0 && (() => {
+          // Collect all commits across all releases
+          const allCommits = releaseSummary
+            .filter(item => item.commits && item.commits.length > 0)
+            .flatMap(item => item.commits);
+
+          if (allCommits.length === 0) return null;
+
+          const typeStats = getCommitTypeStats(allCommits);
+
+          const COLORS = {
+            feat: '#10b981',      // green
+            fix: '#ef4444',       // red
+            chore: '#6366f1',     // indigo
+            docs: '#3b82f6',      // blue
+            refactor: '#f59e0b',  // amber
+            test: '#8b5cf6',      // violet
+            style: '#ec4899',     // pink
+            perf: '#14b8a6',      // teal
+            ci: '#06b6d4',        // cyan
+            build: '#84cc16',     // lime
+            other: '#6b7280',     // gray
+          };
+
+          return (
+            <div className="bg-white rounded-lg shadow-md p-6 mb-6">
+              <h2 className="text-xl font-bold text-gray-900 mb-4">
+                Commit Types Distribution ({allCommits.length} total commits)
+              </h2>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <div>
+                  <ResponsiveContainer width="100%" height={300}>
+                    <PieChart>
+                      <Pie
+                        data={typeStats}
+                        cx="50%"
+                        cy="50%"
+                        labelLine={false}
+                        label={({ name, percent }) => `${name}: ${(percent * 100).toFixed(0)}%`}
+                        outerRadius={100}
+                        fill="#8884d8"
+                        dataKey="value"
+                        onClick={(data) => {
+                          const org = import.meta.env.VITE_GITHUB_ORG;
+                          let searchQuery;
+                          if (data.type === 'other') {
+                            // Exclude all known prefixes to show "other"
+                            searchQuery = `org:${org} is:pr NOT "feat:" NOT "fix:" NOT "chore:" NOT "docs:" NOT "refactor:" NOT "test:" NOT "style:" NOT "perf:" NOT "ci:" NOT "build:"`;
+                          } else {
+                            searchQuery = `org:${org} is:pr in:title "${data.type}:"`;
+                          }
+                          const url = `https://github.com/search?q=${encodeURIComponent(searchQuery)}&type=pullrequests`;
+                          window.open(url, '_blank');
+                        }}
+                        style={{ cursor: 'pointer' }}
+                      >
+                        {typeStats.map((entry, index) => (
+                          <Cell key={`cell-${index}`} fill={COLORS[entry.type]} />
+                        ))}
+                      </Pie>
+                      <Tooltip />
+                    </PieChart>
+                  </ResponsiveContainer>
+                </div>
+                <div className="space-y-2">
+                  {typeStats.map((stat) => {
+                    const org = import.meta.env.VITE_GITHUB_ORG;
+                    let searchQuery;
+                    if (stat.type === 'other') {
+                      // Exclude all known prefixes to show "other"
+                      searchQuery = `org:${org} is:pr NOT "feat:" NOT "fix:" NOT "chore:" NOT "docs:" NOT "refactor:" NOT "test:" NOT "style:" NOT "perf:" NOT "ci:" NOT "build:"`;
+                    } else {
+                      searchQuery = `org:${org} is:pr in:title "${stat.type}:"`;
+                    }
+                    const url = `https://github.com/search?q=${encodeURIComponent(searchQuery)}&type=pullrequests`;
+
+                    return (
+                      <a
+                        key={stat.type}
+                        href={url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center justify-between p-2 bg-gray-50 rounded hover:bg-gray-100 transition-colors cursor-pointer"
+                      >
+                        <div className="flex items-center gap-2">
+                          <div
+                            className="w-4 h-4 rounded"
+                            style={{ backgroundColor: COLORS[stat.type] }}
+                          ></div>
+                          <span className="font-medium text-sm">{stat.name}</span>
+                        </div>
+                        <span className="text-sm text-gray-600">
+                          {stat.value} ({((stat.value / allCommits.length) * 100).toFixed(1)}%)
+                        </span>
+                      </a>
+                    );
+                  })}
+                </div>
+              </div>
+            </div>
+          );
+        })()}
+
         {/* Loading State */}
         {loadingSummary && releaseSummary.length === 0 && (
           <div className="bg-white rounded-lg shadow-md p-6 mb-6">
@@ -471,7 +671,7 @@ const ReleaseComparison = () => {
                                     <div key={commitIdx} className="flex items-start gap-3 p-3 bg-white rounded-lg border border-gray-200">
                                       <code className="text-xs text-gray-500 font-mono mt-0.5">{commit.sha}</code>
                                       <div className="flex-1 min-w-0">
-                                        <p className="text-sm text-gray-900">{commit.message}</p>
+                                        <p className="text-sm text-gray-900">{renderMessageWithJiraLinks(commit.message)}</p>
                                         <div className="flex items-center gap-3 mt-1 text-xs text-gray-500">
                                           <span>{commit.author}</span>
                                           <span>{new Date(commit.date).toLocaleDateString()}</span>
@@ -553,7 +753,7 @@ const ReleaseComparison = () => {
                       <div key={idx} className="flex items-start gap-3 p-4 bg-gray-50 rounded-lg border border-gray-200 hover:border-blue-300 transition-colors">
                         <code className="text-xs text-gray-500 font-mono mt-0.5 flex-shrink-0">{commit.sha}</code>
                         <div className="flex-1 min-w-0">
-                          <p className="text-sm text-gray-900 font-medium">{commit.message}</p>
+                          <p className="text-sm text-gray-900 font-medium">{renderMessageWithJiraLinks(commit.message)}</p>
                           <div className="flex items-center gap-3 mt-2 text-xs text-gray-500">
                             <span className="flex items-center gap-1">
                               <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">

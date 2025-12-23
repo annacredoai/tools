@@ -3,11 +3,17 @@ class JiraAPI {
     this.url = url;
     this.email = email;
     this.token = token;
+    // Use proxy in development to avoid CORS issues
+    this.baseUrl = import.meta.env.DEV ? '/api/jira' : url;
     this.headers = {
-      'Authorization': `Basic ${btoa(`${email}:${token}`)}`,
       'Accept': 'application/json',
       'Content-Type': 'application/json',
+      'X-Atlassian-Token': 'no-check', // Bypass XSRF check for API calls
     };
+    // Only add auth headers when not using proxy (production)
+    if (!import.meta.env.DEV) {
+      this.headers['Authorization'] = `Basic ${btoa(`${email}:${token}`)}`;
+    }
     this.cache = {}; // Cache issue types to avoid repeated API calls
   }
 
@@ -18,7 +24,7 @@ class JiraAPI {
         return this.cache[issueKey];
       }
 
-      const response = await fetch(`${this.url}/rest/api/3/issue/${issueKey}?fields=issuetype,summary`, {
+      const response = await fetch(`${this.baseUrl}/rest/api/3/issue/${issueKey}?fields=issuetype,summary`, {
         headers: this.headers,
       });
 
@@ -60,18 +66,43 @@ class JiraAPI {
         return uniqueKeys.map(key => this.cache[key]).filter(Boolean);
       }
 
-      // JIRA allows searching for multiple issues using JQL
+      console.log(`[JIRA] Fetching ${uncachedKeys.length} uncached tickets using POST /search/jql...`);
+
+      // Use POST to /rest/api/3/search/jql (same as working Python script)
       const jql = `key in (${uncachedKeys.join(',')})`;
+
+      const payload = {
+        jql: jql,
+        maxResults: 100,
+        fields: ['issuetype', 'summary']
+      };
+
+      console.log('[JIRA] POST payload:', payload);
+
       const response = await fetch(
-        `${this.url}/rest/api/3/search?jql=${encodeURIComponent(jql)}&fields=issuetype,summary&maxResults=100`,
-        { headers: this.headers }
+        `${this.baseUrl}/rest/api/3/search/jql`,
+        {
+          method: 'POST',
+          headers: this.headers,
+          body: JSON.stringify(payload),
+          credentials: 'omit'  // Don't send cookies - prevents XSRF issues
+        }
       );
 
+      console.log(`[JIRA] POST response:`, {
+        status: response.status,
+        statusText: response.statusText,
+        ok: response.ok
+      });
+
       if (!response.ok) {
-        throw new Error(`JIRA API error: ${response.status}`);
+        const errorText = await response.text();
+        console.error(`[JIRA] Error response body:`, errorText);
+        throw new Error(`JIRA API error: ${response.status} ${response.statusText}`);
       }
 
       const data = await response.json();
+      console.log(`[JIRA] Successfully fetched ${data.issues?.length || 0} issues`);
 
       // Cache all results
       data.issues.forEach(issue => {
@@ -82,12 +113,13 @@ class JiraAPI {
           isEpic: issue.fields.issuetype.name.toLowerCase() === 'epic',
         };
         this.cache[issue.key] = issueInfo;
+        console.log(`[JIRA] Cached ${issue.key}: ${issue.fields.summary}`);
       });
 
       // Return all requested issues (including previously cached ones)
       return uniqueKeys.map(key => this.cache[key]).filter(Boolean);
     } catch (error) {
-      console.error('Error fetching JIRA issues in batch:', error);
+      console.error('[JIRA] Error in getIssuesInBatch:', error);
       return [];
     }
   }

@@ -558,25 +558,27 @@ class GitHubAPI {
               url: `https://github.com/${this.org}/${repo}/pull/${pr.number}`,
             });
 
-            // Track work by JIRA project
-            const jiraProject = this.extractJiraProject(pr.title);
-            if (jiraProject) {
-              if (!allMetrics.projectWork[jiraProject]) {
-                allMetrics.projectWork[jiraProject] = {
-                  project: jiraProject,
+            // Track work by JIRA ticket
+            const jiraTicket = this.extractJiraTicket(pr.title);
+            if (jiraTicket) {
+              if (!allMetrics.projectWork[jiraTicket]) {
+                allMetrics.projectWork[jiraTicket] = {
+                  ticket: jiraTicket,
                   prCount: 0,
                   merged: 0,
                   open: 0,
                   closed: 0,
+                  contributors: new Set(),
                 };
               }
-              allMetrics.projectWork[jiraProject].prCount++;
+              allMetrics.projectWork[jiraTicket].prCount++;
+              allMetrics.projectWork[jiraTicket].contributors.add(pr.user.login);
               if (pr.merged_at) {
-                allMetrics.projectWork[jiraProject].merged++;
+                allMetrics.projectWork[jiraTicket].merged++;
               } else if (pr.state === 'open') {
-                allMetrics.projectWork[jiraProject].open++;
+                allMetrics.projectWork[jiraTicket].open++;
               } else if (pr.closed_at) {
-                allMetrics.projectWork[jiraProject].closed++;
+                allMetrics.projectWork[jiraTicket].closed++;
               }
             }
 
@@ -792,8 +794,12 @@ class GitHubAPI {
 
     // Format project work data
     const projectWorkData = Object.values(metrics.projectWork)
+      .map(item => ({
+        ...item,
+        contributors: Array.from(item.contributors), // Convert Set to Array
+      }))
       .sort((a, b) => b.prCount - a.prCount)
-      .slice(0, 10); // Top 10 projects
+      .slice(0, 10); // Top 10 tickets
 
     // Format epic work data
     const epicWorkData = Object.values(metrics.epicWork)

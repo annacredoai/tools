@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { BarChart, Bar, LineChart, Line, PieChart, Pie, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import { Calendar, GitPullRequest, Clock, Users, TrendingUp, Activity, AlertCircle, CheckCircle, Loader2 } from 'lucide-react';
 import GitHubAPI from './services/githubApi';
+import JiraAPI from './services/jiraApi';
 
 const EngineeringDashboard = () => {
   const [selectedTeam, setSelectedTeam] = useState('all');
@@ -10,11 +11,13 @@ const EngineeringDashboard = () => {
   const [error, setError] = useState(null);
   const [selectedContributor, setSelectedContributor] = useState(null);
   const [selectedWeeklyContributor, setSelectedWeeklyContributor] = useState('all');
+  const [selectedPRTypeContributor, setSelectedPRTypeContributor] = useState('all');
   const [loadingProgress, setLoadingProgress] = useState({ current: 0, total: 0, repo: '' });
   const [usingCache, setUsingCache] = useState(false);
   const [releaseData, setReleaseData] = useState([]);
   const [loadingReleases, setLoadingReleases] = useState(false);
   const [expandedRelease, setExpandedRelease] = useState(null);
+  const [jiraTicketInfo, setJiraTicketInfo] = useState({});
   const [data, setData] = useState({
     contributors: [],
     repositories: [],
@@ -29,6 +32,31 @@ const EngineeringDashboard = () => {
   useEffect(() => {
     fetchGitHubData();
   }, [timeRange]);
+
+  // Disabled JIRA API fetching due to browser XSRF issues
+  // Users can click the ticket links to view summaries directly in JIRA
+  // useEffect(() => {
+  //   const fetchJiraTicketInfo = async () => {
+  //     if (!data.projectWorkData || data.projectWorkData.length === 0) return;
+  //     const jiraUrl = import.meta.env.VITE_JIRA_URL;
+  //     const jiraEmail = import.meta.env.VITE_JIRA_EMAIL;
+  //     const jiraToken = import.meta.env.VITE_JIRA_TOKEN;
+  //     if (!jiraUrl || !jiraEmail || !jiraToken) return;
+  //     const jiraApi = new JiraAPI(jiraUrl, jiraEmail, jiraToken);
+  //     const tickets = data.projectWorkData.map(item => item.ticket).filter(t => t !== 'DEV-0000');
+  //     try {
+  //       const ticketInfos = await jiraApi.getIssuesInBatch(tickets);
+  //       const infoMap = {};
+  //       ticketInfos.forEach(info => {
+  //         if (info) infoMap[info.key] = info;
+  //       });
+  //       setJiraTicketInfo(infoMap);
+  //     } catch (error) {
+  //       console.error('[JIRA] Error fetching ticket info:', error);
+  //     }
+  //   };
+  //   fetchJiraTicketInfo();
+  // }, [data.projectWorkData]);
 
   const getCacheKey = (org, repos, timeRange) => {
     const reposKey = repos?.join(',') || 'all';
@@ -348,6 +376,111 @@ const EngineeringDashboard = () => {
     }
   };
 
+  const categorizeCommitByPrefix = (title) => {
+    const lowerTitle = title.toLowerCase();
+
+    // Check for common prefixes
+    if (lowerTitle.startsWith('feat:') || lowerTitle.startsWith('feature:')) return 'feat';
+    if (lowerTitle.startsWith('fix:')) return 'fix';
+    if (lowerTitle.startsWith('chore:')) return 'chore';
+    if (lowerTitle.startsWith('docs:')) return 'docs';
+    if (lowerTitle.startsWith('refactor:')) return 'refactor';
+    if (lowerTitle.startsWith('test:')) return 'test';
+    if (lowerTitle.startsWith('style:')) return 'style';
+    if (lowerTitle.startsWith('perf:')) return 'perf';
+    if (lowerTitle.startsWith('ci:')) return 'ci';
+    if (lowerTitle.startsWith('build:')) return 'build';
+
+    return 'other';
+  };
+
+  const getPRTypeStats = (contributors, selectedContributorName = 'all') => {
+    const typeCounts = {
+      feat: 0,
+      fix: 0,
+      chore: 0,
+      docs: 0,
+      refactor: 0,
+      test: 0,
+      style: 0,
+      perf: 0,
+      ci: 0,
+      build: 0,
+      other: 0,
+    };
+
+    // Filter contributors if specific one is selected
+    const contributorsToAnalyze = selectedContributorName === 'all'
+      ? contributors
+      : contributors.filter(c => c.author === selectedContributorName);
+
+    // Iterate through all PRs from selected contributors
+    contributorsToAnalyze.forEach(contributor => {
+      if (contributor.prs) {
+        contributor.prs.forEach(pr => {
+          const type = categorizeCommitByPrefix(pr.title);
+          typeCounts[type]++;
+        });
+      }
+    });
+
+    // Convert to array format for recharts and filter out zero counts and "other"
+    return Object.entries(typeCounts)
+      .filter(([type, count]) => count > 0 && type !== 'other')
+      .map(([type, count]) => ({
+        name: type.charAt(0).toUpperCase() + type.slice(1),
+        value: count,
+        type: type,
+      }))
+      .sort((a, b) => b.value - a.value);
+  };
+
+  const renderPRTitleWithJiraLinks = (title) => {
+    const jiraUrl = import.meta.env.VITE_JIRA_URL;
+    if (!jiraUrl) {
+      return title;
+    }
+
+    // Match JIRA ticket patterns like DEV-1234, ENG-456, PROD-789
+    const jiraPattern = /([A-Z]+-\d+)/g;
+    const parts = [];
+    let lastIndex = 0;
+    let match;
+
+    while ((match = jiraPattern.exec(title)) !== null) {
+      // Add text before the match
+      if (match.index > lastIndex) {
+        parts.push(title.substring(lastIndex, match.index));
+      }
+
+      // Add the JIRA ticket as a clickable span (not a link to avoid nested <a> tags)
+      const ticket = match[1];
+      const ticketUrl = `${jiraUrl.replace(/\/$/, '')}/browse/${ticket}`;
+      parts.push(
+        <span
+          key={`${ticket}-${match.index}`}
+          className="text-blue-600 hover:text-blue-800 font-medium cursor-pointer underline"
+          onClick={(e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            window.open(ticketUrl, '_blank');
+          }}
+        >
+          {ticket}
+        </span>
+      );
+
+      lastIndex = match.index + match[0].length;
+    }
+
+    // Add remaining text
+    if (lastIndex < title.length) {
+      parts.push(title.substring(lastIndex));
+    }
+
+    return parts.length > 0 ? parts : title;
+  };
+
   const fetchGitHubData = async () => {
     setLoading(true);
     setError(null);
@@ -618,6 +751,94 @@ const EngineeringDashboard = () => {
         />
       </div>
 
+      {/* Top JIRA Tickets */}
+      {data.projectWorkData && data.projectWorkData.length > 0 && (
+        <div className="bg-white rounded-lg shadow-md p-6 mb-6">
+          <h2 className="text-xl font-bold text-gray-900 mb-4">Top JIRA Tickets</h2>
+          <div className="overflow-x-auto">
+            <table className="min-w-full divide-y divide-gray-200">
+              <thead className="bg-gray-50">
+                <tr>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Ticket</th>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Contributors</th>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Total PRs</th>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Merged</th>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Open</th>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Closed</th>
+                </tr>
+              </thead>
+              <tbody className="bg-white divide-y divide-gray-200">
+                {data.projectWorkData.filter(item => item.ticket !== 'DEV-0000').map((item, index) => {
+                  const jiraUrl = import.meta.env.VITE_JIRA_URL;
+                  const ticketUrl = jiraUrl ? `${jiraUrl.replace(/\/$/, '')}/browse/${item.ticket}` : null;
+                  const ticketInfo = jiraTicketInfo[item.ticket];
+
+                  return (
+                    <tr key={index} className="hover:bg-gray-50">
+                      <td className="px-6 py-4 whitespace-nowrap">
+                        {ticketUrl ? (
+                          <a
+                            href={ticketUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-blue-600 hover:text-blue-800 font-semibold"
+                          >
+                            {item.ticket}
+                          </a>
+                        ) : (
+                          <span className="font-semibold text-gray-900">{item.ticket}</span>
+                        )}
+                      </td>
+                      <td className="px-6 py-4">
+                        <div className="flex flex-wrap gap-1">
+                          {item.contributors && item.contributors.length > 0 ? (
+                            <>
+                              {item.contributors.slice(0, 3).map((contributor, idx) => (
+                                <span
+                                  key={idx}
+                                  className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-purple-100 text-purple-800"
+                                >
+                                  {contributor}
+                                </span>
+                              ))}
+                              {item.contributors.length > 3 && (
+                                <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-gray-100 text-gray-600">
+                                  +{item.contributors.length - 3}
+                                </span>
+                              )}
+                            </>
+                          ) : (
+                            <span className="text-sm text-gray-400 italic">Clear cache to load</span>
+                          )}
+                        </div>
+                      </td>
+                      <td className="px-6 py-4 whitespace-nowrap">
+                        <span className="text-sm font-medium text-gray-900">{item.prCount}</span>
+                      </td>
+                      <td className="px-6 py-4 whitespace-nowrap">
+                        <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                          {item.merged}
+                        </span>
+                      </td>
+                      <td className="px-6 py-4 whitespace-nowrap">
+                        <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
+                          {item.open}
+                        </span>
+                      </td>
+                      <td className="px-6 py-4 whitespace-nowrap">
+                        <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800">
+                          {item.closed}
+                        </span>
+                      </td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      )}
+
       {/* PR Activity Over Time */}
       <div className="bg-white rounded-lg shadow-md p-6 mb-6">
         <div className="flex items-center justify-between mb-4">
@@ -700,6 +921,123 @@ const EngineeringDashboard = () => {
           </ResponsiveContainer>
         </div>
       </div>
+
+      {/* PR Type Distribution Chart */}
+      {data.contributors.length > 0 && (() => {
+        const typeStats = getPRTypeStats(data.contributors, selectedPRTypeContributor);
+        const totalPRs = typeStats.reduce((sum, stat) => sum + stat.value, 0);
+
+        if (totalPRs === 0) return null;
+
+        const COLORS = {
+          feat: '#10b981',      // green
+          fix: '#ef4444',       // red
+          chore: '#6366f1',     // indigo
+          docs: '#3b82f6',      // blue
+          refactor: '#f59e0b',  // amber
+          test: '#8b5cf6',      // violet
+          style: '#ec4899',     // pink
+          perf: '#14b8a6',      // teal
+          ci: '#06b6d4',        // cyan
+          build: '#84cc16',     // lime
+          other: '#6b7280',     // gray
+        };
+
+        return (
+          <div className="bg-white rounded-lg shadow-md p-6 mb-6">
+            <div className="flex items-center justify-between mb-4">
+              <h2 className="text-xl font-bold text-gray-900">
+                PR Types Distribution ({totalPRs} total PRs)
+              </h2>
+              <div className="flex items-center gap-2">
+                <label className="text-sm font-medium text-gray-700">Contributor:</label>
+                <select
+                  value={selectedPRTypeContributor}
+                  onChange={(e) => setSelectedPRTypeContributor(e.target.value)}
+                  className="px-3 py-1.5 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                >
+                  <option value="all">All Contributors</option>
+                  {prData.map((contributor, index) => (
+                    <option key={index} value={contributor.author}>
+                      {contributor.author}
+                    </option>
+                  ))}
+                </select>
+              </div>
+            </div>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              <div>
+                <ResponsiveContainer width="100%" height={300}>
+                  <PieChart>
+                    <Pie
+                      data={typeStats}
+                      cx="50%"
+                      cy="50%"
+                      labelLine={false}
+                      label={({ name, percent }) => `${name}: ${(percent * 100).toFixed(0)}%`}
+                      outerRadius={100}
+                      fill="#8884d8"
+                      dataKey="value"
+                      onClick={(data) => {
+                        const org = import.meta.env.VITE_GITHUB_ORG;
+                        let searchQuery;
+                        if (data.type === 'other') {
+                          // Exclude all known prefixes to show "other"
+                          searchQuery = `org:${org} is:pr NOT "feat:" NOT "fix:" NOT "chore:" NOT "docs:" NOT "refactor:" NOT "test:" NOT "style:" NOT "perf:" NOT "ci:" NOT "build:"`;
+                        } else {
+                          searchQuery = `org:${org} is:pr in:title "${data.type}:"`;
+                        }
+                        const url = `https://github.com/search?q=${encodeURIComponent(searchQuery)}&type=pullrequests`;
+                        window.open(url, '_blank');
+                      }}
+                      style={{ cursor: 'pointer' }}
+                    >
+                      {typeStats.map((entry, index) => (
+                        <Cell key={`cell-${index}`} fill={COLORS[entry.type]} />
+                      ))}
+                    </Pie>
+                    <Tooltip />
+                  </PieChart>
+                </ResponsiveContainer>
+              </div>
+              <div className="space-y-2">
+                {typeStats.map((stat) => {
+                  const org = import.meta.env.VITE_GITHUB_ORG;
+                  let searchQuery;
+                  if (stat.type === 'other') {
+                    // Exclude all known prefixes to show "other"
+                    searchQuery = `org:${org} is:pr NOT "feat:" NOT "fix:" NOT "chore:" NOT "docs:" NOT "refactor:" NOT "test:" NOT "style:" NOT "perf:" NOT "ci:" NOT "build:"`;
+                  } else {
+                    searchQuery = `org:${org} is:pr in:title "${stat.type}:"`;
+                  }
+                  const url = `https://github.com/search?q=${encodeURIComponent(searchQuery)}&type=pullrequests`;
+
+                  return (
+                    <a
+                      key={stat.type}
+                      href={url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-between p-2 bg-gray-50 rounded hover:bg-gray-100 transition-colors cursor-pointer"
+                    >
+                      <div className="flex items-center gap-2">
+                        <div
+                          className="w-4 h-4 rounded"
+                          style={{ backgroundColor: COLORS[stat.type] }}
+                        ></div>
+                        <span className="font-medium text-sm">{stat.name}</span>
+                      </div>
+                      <span className="text-sm text-gray-600">
+                        {stat.value} ({((stat.value / totalPRs) * 100).toFixed(1)}%)
+                      </span>
+                    </a>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
+        );
+      })()}
 
       {/* Top Contributors */}
       <div className="bg-white rounded-lg shadow-md p-6 mb-6">
@@ -815,7 +1153,7 @@ const EngineeringDashboard = () => {
                         <div className="flex-1 min-w-0">
                           <div className="flex items-center gap-2 mb-1">
                             <span className="text-sm font-medium text-blue-600 hover:text-blue-800">#{pr.number}</span>
-                            <span className="text-sm text-gray-700 truncate">{pr.title}</span>
+                            <span className="text-sm text-gray-700 truncate">{renderPRTitleWithJiraLinks(pr.title)}</span>
                           </div>
                           <div className="flex items-center gap-3 text-xs text-gray-500">
                             <span>{pr.user.login}</span>
@@ -913,7 +1251,7 @@ const EngineeringDashboard = () => {
                         <div className="flex-1 min-w-0">
                           <div className="flex items-center gap-2 mb-2">
                             <span className="text-sm font-semibold text-blue-600 hover:text-blue-800">#{pr.number}</span>
-                            <span className="text-sm text-gray-700">{pr.title}</span>
+                            <span className="text-sm text-gray-700">{renderPRTitleWithJiraLinks(pr.title)}</span>
                           </div>
                           <div className="flex items-center gap-4 text-xs text-gray-500">
                             <span className="font-medium">{pr.repository}</span>
