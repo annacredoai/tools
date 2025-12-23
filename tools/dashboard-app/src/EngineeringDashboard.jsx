@@ -4,7 +4,6 @@ import { Calendar, GitPullRequest, Clock, Users, TrendingUp, Activity, AlertCirc
 import GitHubAPI from './services/githubApi';
 
 const EngineeringDashboard = () => {
-  const [selectedTeam, setSelectedTeam] = useState('all');
   const [timeRange, setTimeRange] = useState('30d');
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -123,21 +122,8 @@ const EngineeringDashboard = () => {
       {/* Filters */}
       <div className="bg-white rounded-lg shadow-md p-4 mb-6 flex gap-4">
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-2">Team</label>
-          <select 
-            value={selectedTeam}
-            onChange={(e) => setSelectedTeam(e.target.value)}
-            className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-          >
-            <option value="all">All Teams</option>
-            <option value="backend">Backend</option>
-            <option value="frontend">Frontend</option>
-            <option value="platform">Platform</option>
-          </select>
-        </div>
-        <div>
           <label className="block text-sm font-medium text-gray-700 mb-2">Time Range</label>
-          <select 
+          <select
             value={timeRange}
             onChange={(e) => setTimeRange(e.target.value)}
             className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
