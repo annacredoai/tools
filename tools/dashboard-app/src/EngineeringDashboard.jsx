@@ -621,28 +621,40 @@ const EngineeringDashboard = () => {
   const totalRepos = repositoryStats.length;
   const openPRs = repositoryStats.reduce((sum, repo) => sum + repo.openPRs, 0);
 
-  const StatCard = ({ title, value, subtitle, icon: Icon, trend, color = "blue" }) => (
-    <div className="bg-white rounded-lg shadow-md p-6 border-l-4" style={{ borderColor: color }}>
-      <div className="flex items-start justify-between">
-        <div className="flex-1">
-          <p className="text-sm font-medium text-gray-600">{title}</p>
-          <p className="text-3xl font-bold text-gray-900 mt-2">{value}</p>
-          {subtitle && <p className="text-sm text-gray-500 mt-1">{subtitle}</p>}
-          {trend && (
-            <div className={`flex items-center mt-2 text-sm ${trend > 0 ? 'text-green-600' : 'text-red-600'}`}>
-              <TrendingUp className="w-4 h-4 mr-1" />
-              {trend > 0 ? '+' : ''}{trend}% vs last period
+  const StatCard = ({ title, value, subtitle, icon: Icon, trend, color = "#3b82f6" }) => {
+    // Convert color name to hex if needed
+    const colorMap = {
+      blue: '#3b82f6',
+      green: '#10b981',
+      purple: '#8b5cf6',
+      red: '#ef4444',
+      orange: '#f97316'
+    };
+    const hexColor = colorMap[color] || color;
+
+    return (
+      <div className="bg-white rounded-lg shadow-md p-6 border-l-4" style={{ borderColor: hexColor }}>
+        <div className="flex items-start justify-between">
+          <div className="flex-1">
+            <p className="text-sm font-medium text-gray-600">{title}</p>
+            <p className="text-3xl font-bold text-gray-900 mt-2">{value}</p>
+            {subtitle && <p className="text-sm text-gray-500 mt-1">{subtitle}</p>}
+            {trend && (
+              <div className={`flex items-center mt-2 text-sm ${trend > 0 ? 'text-green-600' : 'text-red-600'}`}>
+                <TrendingUp className="w-4 h-4 mr-1" />
+                {trend > 0 ? '+' : ''}{trend}% vs last period
+              </div>
+            )}
+          </div>
+          {Icon && (
+            <div className="p-3 rounded-lg" style={{ backgroundColor: `${hexColor}20` }}>
+              <Icon className="w-6 h-6" style={{ color: hexColor }} />
             </div>
           )}
         </div>
-        {Icon && (
-          <div className="p-3 rounded-lg" style={{ backgroundColor: `${color}20` }}>
-            <Icon className="w-6 h-6" style={{ color }} />
-          </div>
-        )}
       </div>
-    </div>
-  );
+    );
+  };
 
   return (
     <div className="min-h-screen bg-gray-50 p-6">
@@ -1040,7 +1052,7 @@ const EngineeringDashboard = () => {
                       }}
                     >
                       {typeStats.map((entry, index) => (
-                        <Cell key={`cell-${index}`} fill={COLORS[entry.type]} />
+                        <Cell key={`cell-${index}`} fill={COLORS[entry.type] || '#6b7280'} />
                       ))}
                     </Pie>
                     <Tooltip />
@@ -1070,7 +1082,7 @@ const EngineeringDashboard = () => {
                       <div className="flex items-center gap-2">
                         <div
                           className="w-4 h-4 rounded"
-                          style={{ backgroundColor: COLORS[stat.type] }}
+                          style={{ backgroundColor: COLORS[stat.type] || '#6b7280' }}
                         ></div>
                         <span className="font-medium text-sm">{stat.name}</span>
                       </div>

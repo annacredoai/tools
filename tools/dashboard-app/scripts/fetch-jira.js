@@ -4,9 +4,14 @@
  * This script uses Node.js and can be integrated into the npm workflow.
  */
 
+import 'dotenv/config';
 import { writeFileSync, mkdirSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
+import { config } from 'dotenv';
+
+// Load .env.local file
+config({ path: '.env.local' });
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -132,7 +137,7 @@ async function fetchJiraTicketsByFixVersion(fixVersion) {
   const payload = {
     jql,
     maxResults: 100,
-    fields: ['issuetype', 'summary', 'status', 'assignee', 'priority']
+    fields: ['issuetype', 'summary', 'status', 'assignee', 'priority', 'customfield_10037', 'customfield_10016']  // customfield_10037 is Feature Flag Name, customfield_10016 is Story Points
   };
 
   const auth = Buffer.from(`${JIRA_EMAIL}:${JIRA_API_TOKEN}`).toString('base64');
@@ -165,7 +170,9 @@ async function fetchJiraTicketsByFixVersion(fixVersion) {
         status: issue.fields.status.name,
         isEpic: issue.fields.issuetype.name.toLowerCase() === 'epic',
         assignee: issue.fields.assignee ? issue.fields.assignee.displayName : 'Unassigned',
-        priority: issue.fields.priority ? issue.fields.priority.name : 'None'
+        priority: issue.fields.priority ? issue.fields.priority.name : 'None',
+        featureFlag: issue.fields.customfield_10037 || null,
+        storyPoints: issue.fields.customfield_10016 || null
       });
     }
 

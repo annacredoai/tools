@@ -8,7 +8,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Leonardo Lemos",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       }
     ],
     "v25.0": [
@@ -19,7 +21,9 @@
         "status": "In Progress",
         "isEpic": false,
         "assignee": "Patrick Higgins",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-4515",
@@ -28,7 +32,9 @@
         "status": "Ready for Sprint",
         "isEpic": false,
         "assignee": "Leonardo Lemos",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-4483",
@@ -37,7 +43,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Leonardo Lemos",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-4482",
@@ -46,7 +54,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Leonardo Lemos",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-4460",
@@ -55,7 +65,9 @@
         "status": "In Progress",
         "isEpic": false,
         "assignee": "Anna Tovkun",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-4423",
@@ -64,7 +76,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Anna Tovkun",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-4362",
@@ -73,7 +87,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Ed Morales",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       }
     ],
     "v24.0": [
@@ -84,7 +100,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Anna Tovkun",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-4478",
@@ -93,7 +111,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Lisa Felten",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-4361",
@@ -102,7 +122,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Ed Morales",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-4310",
@@ -111,7 +133,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Eli Sherman",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-4249",
@@ -120,7 +144,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Anna Tovkun",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-4188",
@@ -129,7 +155,9 @@
         "status": "In Progress",
         "isEpic": false,
         "assignee": "Patrick Higgins",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3922",
@@ -138,7 +166,9 @@
         "status": "In Review",
         "isEpic": false,
         "assignee": "Leonardo Lemos",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3564",
@@ -147,7 +177,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Lisa Felten",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2499",
@@ -156,7 +188,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Ed Morales",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       }
     ],
     "v23.0": [
@@ -167,7 +201,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Unassigned",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-4491",
@@ -176,7 +212,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Wesley Candido",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-4489",
@@ -185,7 +223,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Juan Alcantara",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-4475",
@@ -194,7 +234,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Wesley Candido",
-        "priority": "Highest"
+        "priority": "Highest",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-4470",
@@ -203,7 +245,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Patrick Higgins",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-4469",
@@ -212,7 +256,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Patrick Higgins",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-4466",
@@ -221,7 +267,9 @@
         "status": "Open",
         "isEpic": false,
         "assignee": "Unassigned",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-4465",
@@ -230,7 +278,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Patrick Higgins",
-        "priority": "Highest"
+        "priority": "Highest",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-4414",
@@ -239,7 +289,9 @@
         "status": "Open",
         "isEpic": false,
         "assignee": "Unassigned",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-4401",
@@ -248,7 +300,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Anna Tovkun",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-4393",
@@ -257,7 +311,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Patrick Higgins",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-4392",
@@ -266,7 +322,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Patrick Higgins",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-4391",
@@ -275,7 +333,9 @@
         "status": "Open",
         "isEpic": false,
         "assignee": "Unassigned",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-4376",
@@ -284,7 +344,9 @@
         "status": "In Progress",
         "isEpic": false,
         "assignee": "Jefferson Reis",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-4375",
@@ -293,7 +355,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Ed Morales",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-4370",
@@ -302,7 +366,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Fabrizio Puletti",
-        "priority": "Highest"
+        "priority": "Highest",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-4356",
@@ -311,7 +377,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Juan Alcantara",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-4308",
@@ -320,7 +388,9 @@
         "status": "In Progress",
         "isEpic": false,
         "assignee": "Barbara Jaber",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-4246",
@@ -329,7 +399,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Barbara Jaber",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-4084",
@@ -338,7 +410,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Wesley Candido",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2339",
@@ -347,7 +421,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Jefferson Reis",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       }
     ],
     "v22.0": [
@@ -358,7 +434,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Steven Barber",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-4463",
@@ -367,7 +445,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Wesley Candido",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-4386",
@@ -376,7 +456,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Anna Tovkun",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-4366",
@@ -385,7 +467,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Leonardo Lemos",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-4358",
@@ -394,7 +478,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Wesley Candido",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-4319",
@@ -403,7 +489,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Patrick Higgins",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-4318",
@@ -412,7 +500,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Patrick Higgins",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-4317",
@@ -421,7 +511,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Patrick Higgins",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-4316",
@@ -430,7 +522,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Patrick Higgins",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-4315",
@@ -439,7 +533,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Patrick Higgins",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-4314",
@@ -448,7 +544,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Ed Morales",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-4312",
@@ -457,7 +555,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Leonardo Lemos",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-4302",
@@ -466,7 +566,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Patrick Higgins",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-4296",
@@ -475,7 +577,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Patrick Higgins",
-        "priority": "Highest"
+        "priority": "Highest",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-4295",
@@ -484,7 +588,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Patrick Higgins",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-4294",
@@ -493,7 +599,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Patrick Higgins",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-4245",
@@ -502,7 +610,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Barbara Jaber",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-4241",
@@ -511,7 +621,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Patrick Higgins",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-4235",
@@ -520,7 +632,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Patrick Higgins",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-4195",
@@ -529,7 +643,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Lisa Felten",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-4193",
@@ -538,7 +654,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Patrick Higgins",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-4192",
@@ -547,7 +665,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Patrick Higgins",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-4167",
@@ -556,7 +676,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Anna Tovkun",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-4069",
@@ -565,7 +687,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Ed Morales",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-4068",
@@ -574,7 +698,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Ed Morales",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-4007",
@@ -583,7 +709,9 @@
         "status": "Open",
         "isEpic": true,
         "assignee": "Unassigned",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3925",
@@ -592,7 +720,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Wesley Candido",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-1182",
@@ -601,7 +731,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Barbara Jaber",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       }
     ],
     "v21.1": [
@@ -612,7 +744,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Nick Cemenenkoff",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": 1
       },
       {
         "key": "DEV-4213",
@@ -621,7 +755,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Juan Alcantara",
-        "priority": "Highest"
+        "priority": "Highest",
+        "featureFlag": null,
+        "storyPoints": 4
       },
       {
         "key": "DEV-4194",
@@ -630,7 +766,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Lisa Felten",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-4094",
@@ -639,7 +777,9 @@
         "status": "Closed",
         "isEpic": true,
         "assignee": "Ed Morales",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-4063",
@@ -648,7 +788,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Patrick Higgins",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       }
     ],
     "v21.0": [
@@ -659,7 +801,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Travis Mattera",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-4198",
@@ -668,7 +812,9 @@
         "status": "In Refinement",
         "isEpic": false,
         "assignee": "Lisa Felten",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-4197",
@@ -677,7 +823,9 @@
         "status": "Ready for Sprint",
         "isEpic": false,
         "assignee": "Unassigned",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-4196",
@@ -686,7 +834,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Wesley Candido",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-4185",
@@ -695,7 +845,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Jefferson Reis",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-4184",
@@ -704,7 +856,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Jefferson Reis",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-4174",
@@ -713,7 +867,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Lisa Felten",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-4151",
@@ -722,7 +878,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Wesley Candido",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-4140",
@@ -731,7 +889,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Unassigned",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-4139",
@@ -740,7 +900,9 @@
         "status": "Open",
         "isEpic": false,
         "assignee": "Unassigned",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-4138",
@@ -749,7 +911,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Anna Tovkun",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-4137",
@@ -758,7 +922,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Anna Tovkun",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-4136",
@@ -767,7 +933,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Wesley Candido",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-4133",
@@ -776,7 +944,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Fabrizio Puletti",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-4131",
@@ -785,7 +955,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Jefferson Reis",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-4128",
@@ -794,7 +966,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Patrick Higgins",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-4120",
@@ -803,7 +977,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Jefferson Reis",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-4118",
@@ -812,7 +988,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Patrick Higgins",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-4117",
@@ -821,7 +999,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Fabrizio Puletti",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-4115",
@@ -830,7 +1010,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Wesley Candido",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-4102",
@@ -839,7 +1021,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Ed Morales",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-4101",
@@ -848,7 +1032,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Patrick Higgins",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-4100",
@@ -857,7 +1043,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Patrick Higgins",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-4099",
@@ -866,7 +1054,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Patrick Higgins",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-4098",
@@ -875,7 +1065,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Ed Morales",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-4096",
@@ -884,7 +1076,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Lisa Felten",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-4095",
@@ -893,7 +1087,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Patrick Higgins",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-4085",
@@ -902,7 +1098,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Patrick Higgins",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-4081",
@@ -911,7 +1109,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Juan Alcantara",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-4080",
@@ -920,7 +1120,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Lisa Felten",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-4079",
@@ -929,7 +1131,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Unassigned",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-4077",
@@ -938,7 +1142,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Lisa Felten",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-4064",
@@ -947,7 +1153,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Ed Morales",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-4032",
@@ -956,7 +1164,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Lisa Felten",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-4028",
@@ -965,7 +1175,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Steven Barber",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3987",
@@ -974,7 +1186,9 @@
         "status": "Open",
         "isEpic": true,
         "assignee": "Unassigned",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3986",
@@ -983,7 +1197,9 @@
         "status": "Ready for Sprint",
         "isEpic": true,
         "assignee": "Unassigned",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3950",
@@ -992,7 +1208,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Leonardo Lemos",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3884",
@@ -1001,7 +1219,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Patrick Higgins",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3879",
@@ -1010,7 +1230,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Steven Barber",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3878",
@@ -1019,7 +1241,9 @@
         "status": "Open",
         "isEpic": true,
         "assignee": "Unassigned",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3877",
@@ -1028,7 +1252,9 @@
         "status": "Open",
         "isEpic": false,
         "assignee": "Unassigned",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3871",
@@ -1037,7 +1263,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Unassigned",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3870",
@@ -1046,7 +1274,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Unassigned",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3869",
@@ -1055,7 +1285,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Wesley Candido",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3868",
@@ -1064,7 +1296,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Unassigned",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3867",
@@ -1073,7 +1307,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Wesley Candido",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3866",
@@ -1082,7 +1318,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Wesley Candido",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3861",
@@ -1091,7 +1329,9 @@
         "status": "Ready for Sprint",
         "isEpic": false,
         "assignee": "Unassigned",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3860",
@@ -1100,7 +1340,9 @@
         "status": "Ready for Sprint",
         "isEpic": false,
         "assignee": "Unassigned",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3859",
@@ -1109,7 +1351,9 @@
         "status": "Ready for Sprint",
         "isEpic": false,
         "assignee": "Unassigned",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3858",
@@ -1118,7 +1362,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Wesley Candido",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3857",
@@ -1127,7 +1373,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Wesley Candido",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3856",
@@ -1136,7 +1384,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Wesley Candido",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3855",
@@ -1145,7 +1395,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Wesley Candido",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3854",
@@ -1154,7 +1406,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Wesley Candido",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3853",
@@ -1163,7 +1417,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Wesley Candido",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3852",
@@ -1172,7 +1428,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Lisa Felten",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3851",
@@ -1181,7 +1439,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Juan Alcantara",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3850",
@@ -1190,7 +1450,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Juan Alcantara",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3849",
@@ -1199,7 +1461,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Juan Alcantara",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3848",
@@ -1208,7 +1472,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Lisa Felten",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3845",
@@ -1217,7 +1483,9 @@
         "status": "Open",
         "isEpic": false,
         "assignee": "Unassigned",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3844",
@@ -1226,7 +1494,9 @@
         "status": "Open",
         "isEpic": false,
         "assignee": "Unassigned",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3831",
@@ -1235,7 +1505,9 @@
         "status": "Open",
         "isEpic": true,
         "assignee": "Unassigned",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3828",
@@ -1244,7 +1516,9 @@
         "status": "Blocked",
         "isEpic": false,
         "assignee": "Unassigned",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3782",
@@ -1253,7 +1527,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Leonardo Lemos",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3781",
@@ -1262,7 +1538,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Leonardo Lemos",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3780",
@@ -1271,7 +1549,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Leonardo Lemos",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3779",
@@ -1280,7 +1560,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Leonardo Lemos",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3778",
@@ -1289,7 +1571,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Leonardo Lemos",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3777",
@@ -1298,7 +1582,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Leonardo Lemos",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3776",
@@ -1307,7 +1593,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Leonardo Lemos",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3774",
@@ -1316,7 +1604,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Leonardo Lemos",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3773",
@@ -1325,7 +1615,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Leonardo Lemos",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3772",
@@ -1334,7 +1626,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Leonardo Lemos",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3771",
@@ -1343,7 +1637,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Leonardo Lemos",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3770",
@@ -1352,7 +1648,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Leonardo Lemos",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3762",
@@ -1361,7 +1659,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Lisa Felten",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3761",
@@ -1370,7 +1670,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Lisa Felten",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3760",
@@ -1379,7 +1681,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Juan Alcantara",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3759",
@@ -1388,7 +1692,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Juan Alcantara",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3758",
@@ -1397,7 +1703,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Juan Alcantara",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3757",
@@ -1406,7 +1714,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Juan Alcantara",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3756",
@@ -1415,7 +1725,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Wesley Candido",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3755",
@@ -1424,7 +1736,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Wesley Candido",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3753",
@@ -1433,7 +1747,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Jefferson Reis",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3752",
@@ -1442,7 +1758,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Jefferson Reis",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3741",
@@ -1451,7 +1769,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Lisa Felten",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3740",
@@ -1460,7 +1780,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Lisa Felten",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3739",
@@ -1469,7 +1791,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Juan Alcantara",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3738",
@@ -1478,7 +1802,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Juan Alcantara",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3737",
@@ -1487,7 +1813,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Juan Alcantara",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3736",
@@ -1496,7 +1824,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Lisa Felten",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3735",
@@ -1505,7 +1835,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Lisa Felten",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3734",
@@ -1514,7 +1846,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Juan Alcantara",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3733",
@@ -1523,7 +1857,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Juan Alcantara",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3728",
@@ -1532,7 +1868,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Patrick Higgins",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3726",
@@ -1541,7 +1879,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Patrick Higgins",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3725",
@@ -1550,7 +1890,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Patrick Higgins",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       }
     ],
     "v20.1": [
@@ -1561,7 +1903,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Patrick Higgins",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3996",
@@ -1570,7 +1914,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Anna Tovkun",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3994",
@@ -1579,7 +1925,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Unassigned",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3992",
@@ -1588,7 +1936,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Lisa Felten",
-        "priority": "Highest"
+        "priority": "Highest",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3953",
@@ -1597,7 +1947,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Patrick Higgins",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3948",
@@ -1606,7 +1958,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Patrick Higgins",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3898",
@@ -1615,7 +1969,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Anna Tovkun",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3893",
@@ -1624,7 +1980,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Patrick Higgins",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3839",
@@ -1633,7 +1991,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Patrick Higgins",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3832",
@@ -1642,7 +2002,9 @@
         "status": "Open",
         "isEpic": true,
         "assignee": "Unassigned",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3751",
@@ -1651,7 +2013,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Patrick Higgins",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3706",
@@ -1660,7 +2024,9 @@
         "status": "Dev complete",
         "isEpic": true,
         "assignee": "Juan Alcantara",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3526",
@@ -1669,7 +2035,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Leonardo Lemos",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3115",
@@ -1678,7 +2046,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Anna Tovkun",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       }
     ],
     "v20.0": [
@@ -1689,7 +2059,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Unassigned",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3843",
@@ -1698,7 +2070,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Patrick Higgins",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3842",
@@ -1707,7 +2081,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Patrick Higgins",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3841",
@@ -1716,7 +2092,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Patrick Higgins",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3833",
@@ -1725,7 +2103,9 @@
         "status": "Open",
         "isEpic": false,
         "assignee": "Unassigned",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3822",
@@ -1734,7 +2114,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Fabrizio Puletti",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3819",
@@ -1743,7 +2125,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Leonardo Lemos",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3818",
@@ -1752,7 +2136,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Patrick Higgins",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3817",
@@ -1761,7 +2147,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Patrick Higgins",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3815",
@@ -1770,7 +2158,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Barbara Jaber",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3812",
@@ -1779,7 +2169,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Leonardo Lemos",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3811",
@@ -1788,7 +2180,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Jefferson Reis",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3810",
@@ -1797,7 +2191,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Patrick Higgins",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3809",
@@ -1806,7 +2202,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Patrick Higgins",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3808",
@@ -1815,7 +2213,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Leonardo Lemos",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3807",
@@ -1824,7 +2224,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Fabrizio Puletti",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3806",
@@ -1833,7 +2235,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Juan Alcantara",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3801",
@@ -1842,7 +2246,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Anna Tovkun",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3799",
@@ -1851,7 +2257,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Anna Tovkun",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3793",
@@ -1860,7 +2268,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Unassigned",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3792",
@@ -1869,7 +2279,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Jefferson Reis",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3788",
@@ -1878,7 +2290,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Wesley Candido",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3783",
@@ -1887,7 +2301,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Wesley Candido",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3768",
@@ -1896,7 +2312,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Patrick Higgins",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3767",
@@ -1905,7 +2323,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Wesley Candido",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3766",
@@ -1914,7 +2334,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Unassigned",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3765",
@@ -1923,7 +2345,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Leonardo Lemos",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3749",
@@ -1932,7 +2356,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Jefferson Reis",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3747",
@@ -1941,7 +2367,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Patrick Higgins",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3745",
@@ -1950,7 +2378,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Jefferson Reis",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3743",
@@ -1959,7 +2389,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Leonardo Lemos",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3717",
@@ -1968,7 +2400,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Ehrik Aldana",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3716",
@@ -1977,7 +2411,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Steven Barber",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3710",
@@ -1986,7 +2422,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Fabrizio Puletti",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3701",
@@ -1995,7 +2433,9 @@
         "status": "Open",
         "isEpic": false,
         "assignee": "Unassigned",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3700",
@@ -2004,7 +2444,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Jefferson Reis",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3681",
@@ -2013,7 +2455,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Wesley Candido",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3678",
@@ -2022,7 +2466,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Wesley Candido",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3677",
@@ -2031,7 +2477,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Anna Tovkun",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3672",
@@ -2040,7 +2488,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Juan Alcantara",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3669",
@@ -2049,7 +2499,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Juan Alcantara",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3659",
@@ -2058,7 +2510,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Lisa Felten",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3658",
@@ -2067,7 +2521,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Lisa Felten",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3653",
@@ -2076,7 +2532,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Ed Morales",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3646",
@@ -2085,7 +2543,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Patrick Higgins",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3645",
@@ -2094,7 +2554,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Steven Barber",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3643",
@@ -2103,7 +2565,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Unassigned",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3636",
@@ -2112,7 +2576,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Fabrizio Puletti",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3635",
@@ -2121,7 +2587,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Anna Tovkun",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3626",
@@ -2130,7 +2598,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Jefferson Reis",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3615",
@@ -2139,7 +2609,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Fabrizio Puletti",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3614",
@@ -2148,7 +2620,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Fabrizio Puletti",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3613",
@@ -2157,7 +2631,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Leonardo Lemos",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3612",
@@ -2166,7 +2642,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Anna Tovkun",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3611",
@@ -2175,7 +2653,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Anna Tovkun",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3610",
@@ -2184,7 +2664,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Fabrizio Puletti",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3598",
@@ -2193,7 +2675,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Jefferson Reis",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3593",
@@ -2202,7 +2686,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Unassigned",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3591",
@@ -2211,7 +2697,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Unassigned",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3587",
@@ -2220,7 +2708,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Lisa Felten",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3585",
@@ -2229,7 +2719,9 @@
         "status": "Blocked",
         "isEpic": false,
         "assignee": "Unassigned",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3579",
@@ -2238,7 +2730,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Patrick Higgins",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3505",
@@ -2247,7 +2741,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Wesley Candido",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3501",
@@ -2256,7 +2752,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Juan Alcantara",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3499",
@@ -2265,7 +2763,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Juan Alcantara",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3498",
@@ -2274,7 +2774,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Anna Tovkun",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3497",
@@ -2283,7 +2785,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Juan Alcantara",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3477",
@@ -2292,7 +2796,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Leonardo Lemos",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3476",
@@ -2301,7 +2807,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Leonardo Lemos",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3474",
@@ -2310,7 +2818,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Leonardo Lemos",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3473",
@@ -2319,7 +2829,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Leonardo Lemos",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3472",
@@ -2328,7 +2840,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Ed Morales",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3471",
@@ -2337,7 +2851,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Wesley Candido",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3470",
@@ -2346,7 +2862,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Ed Morales",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3468",
@@ -2355,7 +2873,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Ed Morales",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3467",
@@ -2364,7 +2884,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Jefferson Reis",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3466",
@@ -2373,7 +2895,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Jefferson Reis",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3465",
@@ -2382,7 +2906,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Jefferson Reis",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3464",
@@ -2391,7 +2917,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Jefferson Reis",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3463",
@@ -2400,7 +2928,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Jefferson Reis",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3430",
@@ -2409,7 +2939,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Barbara Jaber",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3429",
@@ -2418,7 +2950,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Barbara Jaber",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3420",
@@ -2427,7 +2961,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Unassigned",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3390",
@@ -2436,7 +2972,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Alberto Paneda",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": 3
       },
       {
         "key": "DEV-3389",
@@ -2445,7 +2983,9 @@
         "status": "Ready for Sprint",
         "isEpic": false,
         "assignee": "nikita.jamrovskis",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": 5
       },
       {
         "key": "DEV-3388",
@@ -2454,7 +2994,9 @@
         "status": "Ready for Sprint",
         "isEpic": false,
         "assignee": "Katerina Zaprova",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": 8
       },
       {
         "key": "DEV-3387",
@@ -2463,7 +3005,9 @@
         "status": "Ready for Sprint",
         "isEpic": false,
         "assignee": "Unassigned",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": 2
       },
       {
         "key": "DEV-3386",
@@ -2472,7 +3016,9 @@
         "status": "Open",
         "isEpic": true,
         "assignee": "Chanaveer Kadapatti",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3376",
@@ -2481,7 +3027,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Fabrizio Puletti",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3372",
@@ -2490,7 +3038,9 @@
         "status": "Closed",
         "isEpic": true,
         "assignee": "Fabrizio Puletti",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3350",
@@ -2499,7 +3049,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Steven Barber",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3348",
@@ -2508,7 +3060,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Ed Morales",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3347",
@@ -2517,7 +3071,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Barbara Jaber",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3346",
@@ -2526,7 +3082,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Ed Morales",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3345",
@@ -2535,7 +3093,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Steven Barber",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3344",
@@ -2544,7 +3104,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Anna Tovkun",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3343",
@@ -2553,7 +3115,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Anna Tovkun",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3342",
@@ -2562,7 +3126,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Barbara Jaber",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3309",
@@ -2571,7 +3137,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Jefferson Reis",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3290",
@@ -2580,7 +3148,9 @@
         "status": "In Progress",
         "isEpic": true,
         "assignee": "Unassigned",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       }
     ],
     "v19.1": [
@@ -2591,7 +3161,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Unassigned",
-        "priority": "Highest"
+        "priority": "Highest",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3624",
@@ -2600,7 +3172,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Steven Barber",
-        "priority": "Highest"
+        "priority": "Highest",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3592",
@@ -2609,7 +3183,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Steven Barber",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3575",
@@ -2618,7 +3194,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Anna Tovkun",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3574",
@@ -2627,7 +3205,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Wesley Candido",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3573",
@@ -2636,7 +3216,9 @@
         "status": "Open",
         "isEpic": false,
         "assignee": "Unassigned",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3572",
@@ -2645,7 +3227,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Steven Barber",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3568",
@@ -2654,7 +3238,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Anna Tovkun",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3563",
@@ -2663,7 +3249,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Unassigned",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3562",
@@ -2672,7 +3260,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Barbara Jaber",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3561",
@@ -2681,7 +3271,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Barbara Jaber",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3560",
@@ -2690,7 +3282,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Jefferson Reis",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3556",
@@ -2699,7 +3293,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Anna Tovkun",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3555",
@@ -2708,7 +3304,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Leonardo Lemos",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3554",
@@ -2717,7 +3315,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Anna Tovkun",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3553",
@@ -2726,7 +3326,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Juan Alcantara",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3552",
@@ -2735,7 +3337,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Wesley Candido",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3546",
@@ -2744,7 +3348,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Jefferson Reis",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3538",
@@ -2753,7 +3359,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Anna Tovkun",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3537",
@@ -2762,7 +3370,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Anna Tovkun",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3536",
@@ -2771,7 +3381,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Jefferson Reis",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3525",
@@ -2780,7 +3392,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Wesley Candido",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3512",
@@ -2789,7 +3403,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Lisa Felten",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3511",
@@ -2798,7 +3414,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Steven Barber",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3508",
@@ -2807,7 +3425,9 @@
         "status": "Open",
         "isEpic": false,
         "assignee": "Unassigned",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3507",
@@ -2816,7 +3436,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Jefferson Reis",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3457",
@@ -2825,7 +3447,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Anna Tovkun",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3456",
@@ -2834,7 +3458,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Anna Tovkun",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3455",
@@ -2843,7 +3469,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Anna Tovkun",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3452",
@@ -2852,7 +3480,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Leonardo Lemos",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3448",
@@ -2861,7 +3491,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Jefferson Reis",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3445",
@@ -2870,7 +3502,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Jefferson Reis",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3443",
@@ -2879,7 +3513,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Leonardo Lemos",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3442",
@@ -2888,7 +3524,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Lisa Felten",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3441",
@@ -2897,7 +3535,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Anna Tovkun",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3421",
@@ -2906,7 +3546,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Lisa Felten",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3419",
@@ -2915,7 +3557,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Barbara Jaber",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3418",
@@ -2924,7 +3568,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Barbara Jaber",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3412",
@@ -2933,7 +3579,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Jefferson Reis",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3409",
@@ -2942,7 +3590,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Juan Alcantara",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3377",
@@ -2951,7 +3601,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Fabrizio Puletti",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3372",
@@ -2960,7 +3612,9 @@
         "status": "Closed",
         "isEpic": true,
         "assignee": "Fabrizio Puletti",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3369",
@@ -2969,7 +3623,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Jefferson Reis",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3341",
@@ -2978,7 +3634,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Leonardo Lemos",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3339",
@@ -2987,7 +3645,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Juan Alcantara",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3334",
@@ -2996,7 +3656,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Unassigned",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3330",
@@ -3005,7 +3667,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Jefferson Reis",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3329",
@@ -3014,7 +3678,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Leonardo Lemos",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3327",
@@ -3023,7 +3689,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Juan Alcantara",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3325",
@@ -3032,7 +3700,9 @@
         "status": "Open",
         "isEpic": false,
         "assignee": "Unassigned",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3323",
@@ -3041,7 +3711,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Jefferson Reis",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3286",
@@ -3050,7 +3722,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Lisa Felten",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3271",
@@ -3059,7 +3733,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Ed Morales",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3253",
@@ -3068,7 +3744,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Wesley Candido",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3246",
@@ -3077,7 +3755,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Anna Tovkun",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3245",
@@ -3086,7 +3766,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Anna Tovkun",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3240",
@@ -3095,7 +3777,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Wesley Candido",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3239",
@@ -3104,7 +3788,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Wesley Candido",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3238",
@@ -3113,7 +3799,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Wesley Candido",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3237",
@@ -3122,7 +3810,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Wesley Candido",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3236",
@@ -3131,7 +3821,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Wesley Candido",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3234",
@@ -3140,7 +3832,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Anna Tovkun",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3233",
@@ -3149,7 +3843,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Wesley Candido",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3232",
@@ -3158,7 +3854,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Anna Tovkun",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3231",
@@ -3167,7 +3865,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Anna Tovkun",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3203",
@@ -3176,7 +3876,9 @@
         "status": "Closed",
         "isEpic": true,
         "assignee": "Chanaveer Kadapatti",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3202",
@@ -3185,7 +3887,9 @@
         "status": "In Progress",
         "isEpic": true,
         "assignee": "Chanaveer Kadapatti",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3201",
@@ -3194,7 +3898,9 @@
         "status": "In Progress",
         "isEpic": true,
         "assignee": "Chanaveer Kadapatti",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3159",
@@ -3203,7 +3909,9 @@
         "status": "Ready for Sprint",
         "isEpic": true,
         "assignee": "Ehrik Aldana",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3154",
@@ -3212,7 +3920,9 @@
         "status": "In Progress",
         "isEpic": true,
         "assignee": "Chanaveer Kadapatti",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3138",
@@ -3221,7 +3931,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Unassigned",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3024",
@@ -3230,7 +3942,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Barbara Jaber",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2886",
@@ -3239,7 +3953,9 @@
         "status": "Open",
         "isEpic": false,
         "assignee": "Unassigned",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2852",
@@ -3248,7 +3964,9 @@
         "status": "Open",
         "isEpic": false,
         "assignee": "Leonardo Lemos",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2752",
@@ -3257,7 +3975,9 @@
         "status": "Ready for Sprint",
         "isEpic": false,
         "assignee": "Leonardo Lemos",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2735",
@@ -3266,7 +3986,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Lisa Felten",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2644",
@@ -3275,7 +3997,9 @@
         "status": "Ready for Sprint",
         "isEpic": false,
         "assignee": "Unassigned",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2642",
@@ -3284,7 +4008,9 @@
         "status": "Open",
         "isEpic": false,
         "assignee": "Unassigned",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2542",
@@ -3293,7 +4019,9 @@
         "status": "In Progress",
         "isEpic": true,
         "assignee": "Ehrik Aldana",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       }
     ],
     "v19.0": [
@@ -3304,7 +4032,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Steven Barber",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3453",
@@ -3313,7 +4043,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Unassigned",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3447",
@@ -3322,7 +4054,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Steven Barber",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3427",
@@ -3331,7 +4065,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Lisa Felten",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3417",
@@ -3340,7 +4076,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Steven Barber",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3410",
@@ -3349,7 +4087,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Lisa Felten",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3406",
@@ -3358,7 +4098,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Fabrizio Puletti",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3396",
@@ -3367,7 +4109,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Lisa Felten",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3395",
@@ -3376,7 +4120,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Lisa Felten",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3393",
@@ -3385,7 +4131,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Jefferson Reis",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3392",
@@ -3394,7 +4142,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Lisa Felten",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3391",
@@ -3403,7 +4153,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Lisa Felten",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3383",
@@ -3412,7 +4164,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Ed Morales",
-        "priority": "Highest"
+        "priority": "Highest",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3368",
@@ -3421,7 +4175,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Jefferson Reis",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3367",
@@ -3430,7 +4186,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Jefferson Reis",
-        "priority": "Highest"
+        "priority": "Highest",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3360",
@@ -3439,7 +4197,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Leonardo Lemos",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3357",
@@ -3448,7 +4208,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Barbara Jaber",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3352",
@@ -3457,7 +4219,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Fabrizio Puletti",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3320",
@@ -3466,7 +4230,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Fabrizio Puletti",
-        "priority": "Highest"
+        "priority": "Highest",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3319",
@@ -3475,7 +4241,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Jefferson Reis",
-        "priority": "Highest"
+        "priority": "Highest",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3316",
@@ -3484,7 +4252,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Leonardo Lemos",
-        "priority": "Highest"
+        "priority": "Highest",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3315",
@@ -3493,7 +4263,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Leonardo Lemos",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3313",
@@ -3502,7 +4274,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Ed Morales",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3312",
@@ -3511,7 +4285,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Ed Morales",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3311",
@@ -3520,7 +4296,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Ed Morales",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3310",
@@ -3529,7 +4307,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Ed Morales",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3308",
@@ -3538,7 +4318,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Ed Morales",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3307",
@@ -3547,7 +4329,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Fabrizio Puletti",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3306",
@@ -3556,7 +4340,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Ed Morales",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3305",
@@ -3565,7 +4351,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Ed Morales",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3302",
@@ -3574,7 +4362,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Ed Morales",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3300",
@@ -3583,7 +4373,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Ed Morales",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3299",
@@ -3592,7 +4384,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Jefferson Reis",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3298",
@@ -3601,7 +4395,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Lisa Felten",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3289",
@@ -3610,7 +4406,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Fabrizio Puletti",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3280",
@@ -3619,7 +4417,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Ed Morales",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3276",
@@ -3628,7 +4428,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Leonardo Lemos",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3275",
@@ -3637,7 +4439,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Leonardo Lemos",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3273",
@@ -3646,7 +4450,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Leonardo Lemos",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3272",
@@ -3655,7 +4461,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Steven Barber",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3257",
@@ -3664,7 +4472,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Leonardo Lemos",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3255",
@@ -3673,7 +4483,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Barbara Jaber",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3249",
@@ -3682,7 +4494,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Fabrizio Puletti",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3218",
@@ -3691,7 +4505,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Fabrizio Puletti",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3214",
@@ -3700,7 +4516,9 @@
         "status": "Ready for Sprint",
         "isEpic": false,
         "assignee": "Steven Barber",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3213",
@@ -3709,7 +4527,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Steven Barber",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3183",
@@ -3718,7 +4538,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Barbara Jaber",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3173",
@@ -3727,7 +4549,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Wesley Candido",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3166",
@@ -3736,7 +4560,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Leonardo Lemos",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3165",
@@ -3745,7 +4571,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Lisa Felten",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3164",
@@ -3754,7 +4582,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Leonardo Lemos",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3140",
@@ -3763,7 +4593,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Ed Morales",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3122",
@@ -3772,7 +4604,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Jefferson Reis",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3113",
@@ -3781,7 +4615,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Chika",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3112",
@@ -3790,7 +4626,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Barbara Jaber",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3111",
@@ -3799,7 +4637,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Nate Faerber",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3110",
@@ -3808,7 +4648,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Chika",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3109",
@@ -3817,7 +4659,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Chika",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3108",
@@ -3826,7 +4670,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Chika",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3105",
@@ -3835,7 +4681,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Lisa Felten",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3097",
@@ -3844,7 +4692,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Steven Barber",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3096",
@@ -3853,7 +4703,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Ed Morales",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3095",
@@ -3862,7 +4714,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Steven Barber",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3094",
@@ -3871,7 +4725,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Steven Barber",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3092",
@@ -3880,7 +4736,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Steven Barber",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3085",
@@ -3889,7 +4747,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Ed Morales",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3028",
@@ -3898,7 +4758,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Leonardo Lemos",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3016",
@@ -3907,7 +4769,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Jefferson Reis",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2972",
@@ -3916,7 +4780,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Fabrizio Puletti",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2946",
@@ -3925,7 +4791,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Fabrizio Puletti",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2922",
@@ -3934,7 +4802,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Anna Tovkun",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2918",
@@ -3943,7 +4813,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Leonardo Lemos",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2849",
@@ -3952,7 +4824,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Lisa Felten",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2814",
@@ -3961,7 +4835,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Steven Barber",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2813",
@@ -3970,7 +4846,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Steven Barber",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2791",
@@ -3979,7 +4857,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Fabrizio Puletti",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2786",
@@ -3988,7 +4868,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Leonardo Lemos",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2785",
@@ -3997,7 +4879,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Leonardo Lemos",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2784",
@@ -4006,7 +4890,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Leonardo Lemos",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2783",
@@ -4015,7 +4901,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Leonardo Lemos",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2782",
@@ -4024,7 +4912,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Leonardo Lemos",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2781",
@@ -4033,7 +4923,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Leonardo Lemos",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2780",
@@ -4042,7 +4934,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Wesley Candido",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2779",
@@ -4051,7 +4945,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Leonardo Lemos",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2778",
@@ -4060,7 +4956,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Leonardo Lemos",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2777",
@@ -4069,7 +4967,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Leonardo Lemos",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2776",
@@ -4078,7 +4978,9 @@
         "status": "Dev complete",
         "isEpic": false,
         "assignee": "Leonardo Lemos",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2761",
@@ -4087,7 +4989,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Paula Gluss",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2736",
@@ -4096,7 +5000,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Lisa Felten",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2734",
@@ -4105,7 +5011,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Lisa Felten",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2733",
@@ -4114,7 +5022,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Lisa Felten",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2732",
@@ -4123,7 +5033,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Lisa Felten",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2731",
@@ -4132,7 +5044,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Lisa Felten",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2730",
@@ -4141,7 +5055,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Lisa Felten",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2729",
@@ -4150,7 +5066,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Lisa Felten",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2728",
@@ -4159,7 +5077,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Lisa Felten",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2653",
@@ -4168,7 +5088,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Paula Gluss",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2652",
@@ -4177,7 +5099,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Paula Gluss",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2543",
@@ -4186,7 +5110,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Anna Tovkun",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2528",
@@ -4195,7 +5121,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Paula Gluss",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       }
     ],
     "v18.2": [
@@ -4206,7 +5134,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Unassigned",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3243",
@@ -4215,7 +5145,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Ed Morales",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3242",
@@ -4224,7 +5156,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Ed Morales",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3241",
@@ -4233,7 +5167,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Barbara Jaber",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3226",
@@ -4242,7 +5178,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Ed Morales",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3217",
@@ -4251,7 +5189,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Anna Tovkun",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3212",
@@ -4260,7 +5200,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Barbara Jaber",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3195",
@@ -4269,7 +5211,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Ed Morales",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3194",
@@ -4278,7 +5222,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Unassigned",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3193",
@@ -4287,7 +5233,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Barbara Jaber",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3192",
@@ -4296,7 +5244,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Barbara Jaber",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3190",
@@ -4305,7 +5255,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Fabrizio Puletti",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3189",
@@ -4314,7 +5266,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Fabrizio Puletti",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3185",
@@ -4323,7 +5277,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Barbara Jaber",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3184",
@@ -4332,7 +5288,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Ed Morales",
-        "priority": "Low"
+        "priority": "Low",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3175",
@@ -4341,7 +5299,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Steven Barber",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3163",
@@ -4350,7 +5310,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Eli Sherman",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3161",
@@ -4359,7 +5321,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Ed Morales",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3152",
@@ -4368,7 +5332,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Juan Alcantara",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3149",
@@ -4377,7 +5343,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Ed Morales",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3145",
@@ -4386,7 +5354,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Ed Morales",
-        "priority": "Low"
+        "priority": "Low",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3134",
@@ -4395,7 +5365,9 @@
         "status": "Ready for Release",
         "isEpic": false,
         "assignee": "Fred Chung",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3121",
@@ -4404,7 +5376,9 @@
         "status": "Ready for Release",
         "isEpic": true,
         "assignee": "Ehrik Aldana",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3090",
@@ -4413,7 +5387,9 @@
         "status": "In Progress",
         "isEpic": true,
         "assignee": "Chanaveer Kadapatti",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3070",
@@ -4422,7 +5398,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Lisa Felten",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3067",
@@ -4431,7 +5409,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Fabrizio Puletti",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3037",
@@ -4440,7 +5420,9 @@
         "status": "Ready for Release",
         "isEpic": true,
         "assignee": "Ehrik Aldana",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3036",
@@ -4449,7 +5431,9 @@
         "status": "Ready for Release",
         "isEpic": true,
         "assignee": "Ehrik Aldana",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2949",
@@ -4458,7 +5442,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Paula Gluss",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2915",
@@ -4467,7 +5453,9 @@
         "status": "Closed",
         "isEpic": true,
         "assignee": "Ehrik Aldana",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2692",
@@ -4476,7 +5464,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Ed Morales",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2665",
@@ -4485,7 +5475,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Barbara Jaber",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2206",
@@ -4494,7 +5486,9 @@
         "status": "In Progress",
         "isEpic": true,
         "assignee": "Unassigned",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2150",
@@ -4503,7 +5497,9 @@
         "status": "Ready for Release",
         "isEpic": false,
         "assignee": "Anna Tovkun",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       }
     ],
     "v18.0": [
@@ -4514,7 +5510,9 @@
         "status": "DONE",
         "isEpic": false,
         "assignee": "Unassigned",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "TCR-965",
@@ -4523,7 +5521,9 @@
         "status": "DONE",
         "isEpic": false,
         "assignee": "Unassigned",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3125",
@@ -4532,7 +5532,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Steven Barber",
-        "priority": "Highest"
+        "priority": "Highest",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3120",
@@ -4541,7 +5543,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Steven Barber",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3117",
@@ -4550,7 +5554,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Fabrizio Puletti",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3098",
@@ -4559,7 +5565,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Ed Morales",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3091",
@@ -4568,7 +5576,9 @@
         "status": "Ready for Release",
         "isEpic": false,
         "assignee": "Eli Sherman",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3089",
@@ -4577,7 +5587,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Ed Morales",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3088",
@@ -4586,7 +5598,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Ed Morales",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3083",
@@ -4595,7 +5609,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Ed Morales",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3082",
@@ -4604,7 +5620,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Anna Tovkun",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3075",
@@ -4613,7 +5631,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Wesley Candido",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3071",
@@ -4622,7 +5642,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Ed Morales",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3069",
@@ -4631,7 +5653,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Fabrizio Puletti",
-        "priority": "Low"
+        "priority": "Low",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3063",
@@ -4640,7 +5664,9 @@
         "status": "Ready for Release",
         "isEpic": false,
         "assignee": "Unassigned",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3062",
@@ -4649,7 +5675,9 @@
         "status": "Ready for Release",
         "isEpic": false,
         "assignee": "Unassigned",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3059",
@@ -4658,7 +5686,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Ed Morales",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3058",
@@ -4667,7 +5697,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Leonardo Lemos",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3057",
@@ -4676,7 +5708,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Steven Barber",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3054",
@@ -4685,7 +5719,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Anna Tovkun",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3053",
@@ -4694,7 +5730,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Steven Barber",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3052",
@@ -4703,7 +5741,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Steven Barber",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3045",
@@ -4712,7 +5752,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Anna Tovkun",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3035",
@@ -4721,7 +5763,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Steven Barber",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3034",
@@ -4730,7 +5774,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Steven Barber",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3033",
@@ -4739,7 +5785,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Steven Barber",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3032",
@@ -4748,7 +5796,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Susannah Shattuck",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3031",
@@ -4757,7 +5807,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Steven Barber",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3003",
@@ -4766,7 +5818,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Anna Tovkun",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-3000",
@@ -4775,7 +5829,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Wesley Candido",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2995",
@@ -4784,7 +5840,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Wesley Candido",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2986",
@@ -4793,7 +5851,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Steven Barber",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2953",
@@ -4802,7 +5862,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Leonardo Lemos",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2948",
@@ -4811,7 +5873,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Steven Barber",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2947",
@@ -4820,7 +5884,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Steven Barber",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2935",
@@ -4829,7 +5895,9 @@
         "status": "Ready for Release",
         "isEpic": false,
         "assignee": "Paula Gluss",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2933",
@@ -4838,7 +5906,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Wesley Candido",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2931",
@@ -4847,7 +5917,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Jefferson Reis",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2929",
@@ -4856,7 +5928,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Anna Tovkun",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2928",
@@ -4865,7 +5939,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Paula Gluss",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2924",
@@ -4874,7 +5950,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Steven Barber",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2919",
@@ -4883,7 +5961,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Ed Morales",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2903",
@@ -4892,7 +5972,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Steven Barber",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2884",
@@ -4901,7 +5983,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Steven Barber",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2883",
@@ -4910,7 +5994,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Steven Barber",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2881",
@@ -4919,7 +6005,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Ed Morales",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2880",
@@ -4928,7 +6016,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Leonardo Lemos",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2870",
@@ -4937,7 +6027,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Leonardo Lemos",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2869",
@@ -4946,7 +6038,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Leonardo Lemos",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2839",
@@ -4955,7 +6049,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Fabrizio Puletti",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2836",
@@ -4964,7 +6060,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Fabrizio Puletti",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2827",
@@ -4973,7 +6071,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Steven Barber",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2806",
@@ -4982,7 +6082,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Anna Tovkun",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2805",
@@ -4991,7 +6093,9 @@
         "status": "In Production (GA)",
         "isEpic": false,
         "assignee": "Ed Morales",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2804",
@@ -5000,7 +6104,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Anna Tovkun",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2788",
@@ -5009,7 +6115,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Anna Tovkun",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2773",
@@ -5018,7 +6126,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Steven Barber",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2772",
@@ -5027,7 +6137,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Steven Barber",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2745",
@@ -5036,7 +6148,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Juan Alcantara",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2693",
@@ -5045,7 +6159,9 @@
         "status": "In Production (GA)",
         "isEpic": false,
         "assignee": "Unassigned",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2691",
@@ -5054,7 +6170,9 @@
         "status": "Ready for Release",
         "isEpic": false,
         "assignee": "Anna Tovkun",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2690",
@@ -5063,7 +6181,9 @@
         "status": "Ready for Release",
         "isEpic": false,
         "assignee": "Unassigned",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2689",
@@ -5072,7 +6192,9 @@
         "status": "Ready for Release",
         "isEpic": false,
         "assignee": "Unassigned",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2688",
@@ -5081,7 +6203,9 @@
         "status": "Ready for Release",
         "isEpic": false,
         "assignee": "Unassigned",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2687",
@@ -5090,7 +6214,9 @@
         "status": "In Production (GA)",
         "isEpic": false,
         "assignee": "Unassigned",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2680",
@@ -5099,7 +6225,9 @@
         "status": "In Production (GA)",
         "isEpic": false,
         "assignee": "Unassigned",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2662",
@@ -5108,7 +6236,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Steven Barber",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2603",
@@ -5117,7 +6247,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Ed Morales",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2533",
@@ -5126,7 +6258,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Ed Morales",
-        "priority": "Highest"
+        "priority": "Highest",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2532",
@@ -5135,7 +6269,9 @@
         "status": "In Production (GA)",
         "isEpic": true,
         "assignee": "Chanaveer Kadapatti",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2480",
@@ -5144,7 +6280,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Anna Tovkun",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2450",
@@ -5153,7 +6291,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Wesley Candido",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2349",
@@ -5162,7 +6302,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Wesley Candido",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2287",
@@ -5171,7 +6313,9 @@
         "status": "In Production (GA)",
         "isEpic": true,
         "assignee": "Ehrik Aldana",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2286",
@@ -5180,7 +6324,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Unassigned",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2283",
@@ -5189,7 +6335,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Ed Morales",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2237",
@@ -5198,7 +6346,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Jefferson Reis",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2099",
@@ -5207,7 +6357,9 @@
         "status": "In Production (GA)",
         "isEpic": false,
         "assignee": "Leonardo Lemos",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       }
     ],
     "v17.1": [
@@ -5218,7 +6370,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Anna Tovkun",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2909",
@@ -5227,7 +6381,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Fabrizio Puletti",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2895",
@@ -5236,7 +6392,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Fabrizio Puletti",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2874",
@@ -5245,7 +6403,9 @@
         "status": "In Production (GA)",
         "isEpic": false,
         "assignee": "Lucia Gamboa",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2873",
@@ -5254,7 +6414,9 @@
         "status": "In Production (GA)",
         "isEpic": false,
         "assignee": "Alvaro Sanchez",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2872",
@@ -5263,7 +6425,9 @@
         "status": "In Production (GA)",
         "isEpic": false,
         "assignee": "Lucia Gamboa",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2871",
@@ -5272,7 +6436,9 @@
         "status": "In Production (GA)",
         "isEpic": false,
         "assignee": "Lucia Gamboa",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2861",
@@ -5281,7 +6447,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Unassigned",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       }
     ],
     "v17.0": [
@@ -5292,7 +6460,9 @@
         "status": "In Production (GA)",
         "isEpic": false,
         "assignee": "Ed Morales",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2882",
@@ -5301,7 +6471,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Ed Morales",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2868",
@@ -5310,7 +6482,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Ed Morales",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2863",
@@ -5319,7 +6493,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Ed Morales",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2860",
@@ -5328,7 +6504,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Ed Morales",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2858",
@@ -5337,7 +6515,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Fabrizio Puletti",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2857",
@@ -5346,7 +6526,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Paula Gluss",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2855",
@@ -5355,7 +6537,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Ed Morales",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2854",
@@ -5364,7 +6548,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Leonardo Lemos",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2853",
@@ -5373,7 +6559,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Ed Morales",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2851",
@@ -5382,7 +6570,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Ed Morales",
-        "priority": "Highest"
+        "priority": "Highest",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2850",
@@ -5391,7 +6581,9 @@
         "status": "Closed Verified",
         "isEpic": false,
         "assignee": "Lisa Felten",
-        "priority": "Highest"
+        "priority": "Highest",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2767",
@@ -5400,7 +6592,9 @@
         "status": "Closed",
         "isEpic": true,
         "assignee": "Fabrizio Puletti",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2753",
@@ -5409,7 +6603,9 @@
         "status": "In Production (GA)",
         "isEpic": false,
         "assignee": "Travis Mattera",
-        "priority": "High"
+        "priority": "High",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2723",
@@ -5418,7 +6614,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Paula Gluss",
-        "priority": "Highest"
+        "priority": "Highest",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2721",
@@ -5427,7 +6625,9 @@
         "status": "In Production (GA)",
         "isEpic": false,
         "assignee": "Lisa Felten",
-        "priority": "Highest"
+        "priority": "Highest",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2702",
@@ -5436,7 +6636,9 @@
         "status": "In Production (GA)",
         "isEpic": false,
         "assignee": "Alberto Paneda",
-        "priority": "Highest"
+        "priority": "Highest",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2466",
@@ -5445,7 +6647,9 @@
         "status": "In Production (GA)",
         "isEpic": false,
         "assignee": "Fabrizio Puletti",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2409",
@@ -5454,7 +6658,9 @@
         "status": "In Production (GA)",
         "isEpic": false,
         "assignee": "Ed Morales",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-2408",
@@ -5463,7 +6669,9 @@
         "status": "In Production (GA)",
         "isEpic": false,
         "assignee": "Anna Tovkun",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       },
       {
         "key": "DEV-1747",
@@ -5472,7 +6680,9 @@
         "status": "Closed",
         "isEpic": false,
         "assignee": "Anna Tovkun",
-        "priority": "Medium"
+        "priority": "Medium",
+        "featureFlag": null,
+        "storyPoints": null
       }
     ]
   },
@@ -5695,7 +6905,7 @@
       }
     }
   },
-  "lastUpdated": "2025-12-23T03:16:52.118Z",
+  "lastUpdated": "2025-12-23T15:22:16.156Z",
   "releaseCount": 15,
   "totalTickets": 605
 }

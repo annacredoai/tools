@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { GitPullRequest, Loader2 } from 'lucide-react';
-import { PieChart, Pie, Cell, ResponsiveContainer, Legend, Tooltip } from 'recharts';
+import { PieChart, Pie, Cell, ResponsiveContainer, Legend, Tooltip, BarChart, Bar, XAxis, YAxis, CartesianGrid } from 'recharts';
 import GitHubAPI from './services/githubApi';
 
 const ReleaseComparison = () => {
@@ -11,6 +11,8 @@ const ReleaseComparison = () => {
   const [modalData, setModalData] = useState(null);
   const [jiraReleaseTickets, setJiraReleaseTickets] = useState({});
   const [jiraReleaseSummaries, setJiraReleaseSummaries] = useState({});
+  const [selectedEngineerFilter, setSelectedEngineerFilter] = useState({});
+  const [darkMode, setDarkMode] = useState(false);
 
   useEffect(() => {
     fetchAvailableReleases();
@@ -379,28 +381,40 @@ const ReleaseComparison = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50 p-8">
+    <div className={`min-h-screen p-8 ${darkMode ? 'bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900' : 'bg-gradient-to-br from-gray-50 to-blue-50'}`}>
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="mb-8">
           <div className="flex items-center justify-between mb-4">
-            <h1 className="text-4xl font-bold text-gray-900">Release Comparisons</h1>
-            <a
-              href="https://grafana.prod-uswe2.credoai.net/d/b706faef-e10b-4f71-ac65-dfsdfsfwsf43q234/credoai-workloads"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors flex items-center gap-2 text-sm"
-            >
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-              </svg>
-              <span>CredoAI Workflows</span>
-              <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-              </svg>
-            </a>
+            <h1 className={`text-4xl font-bold ${darkMode ? 'text-white' : 'text-gray-900'}`}>Release Comparisons</h1>
+            <div className="flex items-center gap-3">
+              <button
+                onClick={() => setDarkMode(!darkMode)}
+                className={`px-3 py-2 rounded-lg transition-colors flex items-center gap-2 text-sm ${
+                  darkMode
+                    ? 'bg-gray-700 text-gray-200 hover:bg-gray-600'
+                    : 'bg-gray-200 text-gray-800 hover:bg-gray-300'
+                }`}
+              >
+                {darkMode ? '☀️ Light Mode' : '🌙 Dark Mode'}
+              </button>
+              <a
+                href="https://grafana.prod-uswe2.credoai.net/d/b706faef-e10b-4f71-ac65-dfsdfsfwsf43q234/credoai-workloads"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors flex items-center gap-2 text-sm"
+              >
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                </svg>
+                <span>CredoAI Workflows</span>
+                <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+              </a>
+            </div>
           </div>
-          <p className="text-gray-600">
+          <p className={darkMode ? 'text-gray-300' : 'text-gray-600'}>
             {releaseSummary.length > 0 ? (
               (() => {
                 // Get unique release comparisons
@@ -419,16 +433,16 @@ const ReleaseComparison = () => {
         </div>
 
         {/* Debug Info */}
-        <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4 mb-6">
-          <h3 className="text-sm font-semibold text-yellow-800 mb-2">Debug Info:</h3>
-          <div className="text-xs text-yellow-700 space-y-1">
+        <div className={`rounded-lg p-4 mb-6 ${darkMode ? 'bg-yellow-900/20 border border-yellow-700/30' : 'bg-yellow-50 border border-yellow-200'}`}>
+          <h3 className={`text-sm font-semibold mb-2 ${darkMode ? 'text-yellow-300' : 'text-yellow-800'}`}>Debug Info:</h3>
+          <div className={`text-xs space-y-1 ${darkMode ? 'text-yellow-200' : 'text-yellow-700'}`}>
             <p>Available releases: {Object.keys(availableReleases).length} repos</p>
             <p>Release summary: {releaseSummary.length} items</p>
             <p>Loading summary: {loadingSummary ? 'Yes' : 'No'}</p>
             {releaseSummary.length > 0 && (
               <details className="mt-2">
                 <summary className="cursor-pointer font-semibold">Show raw summary data</summary>
-                <pre className="mt-2 text-xs bg-white p-2 rounded overflow-auto max-h-40">
+                <pre className={`mt-2 text-xs p-2 rounded overflow-auto max-h-40 ${darkMode ? 'bg-gray-800' : 'bg-white'}`}>
                   {JSON.stringify(releaseSummary, null, 2)}
                 </pre>
               </details>
@@ -436,117 +450,15 @@ const ReleaseComparison = () => {
           </div>
         </div>
 
-        {/* Commit Type Distribution Chart */}
-        {releaseSummary.length > 0 && (() => {
-          // Collect all commits across all releases
-          const allCommits = releaseSummary
-            .filter(item => item.commits && item.commits.length > 0)
-            .flatMap(item => item.commits);
-
-          if (allCommits.length === 0) return null;
-
-          const typeStats = getCommitTypeStats(allCommits);
-
-          const COLORS = {
-            feat: '#10b981',      // green
-            fix: '#ef4444',       // red
-            chore: '#6366f1',     // indigo
-            docs: '#3b82f6',      // blue
-            refactor: '#f59e0b',  // amber
-            test: '#8b5cf6',      // violet
-            style: '#ec4899',     // pink
-            perf: '#14b8a6',      // teal
-            ci: '#06b6d4',        // cyan
-            build: '#84cc16',     // lime
-            other: '#6b7280',     // gray
-          };
-
-          return (
-            <div className="bg-white rounded-lg shadow-md p-6 mb-6">
-              <h2 className="text-xl font-bold text-gray-900 mb-4">
-                Commit Types Distribution ({allCommits.length} total commits)
-              </h2>
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                <div>
-                  <ResponsiveContainer width="100%" height={300}>
-                    <PieChart>
-                      <Pie
-                        data={typeStats}
-                        cx="50%"
-                        cy="50%"
-                        labelLine={false}
-                        label={({ name, percent }) => `${name}: ${(percent * 100).toFixed(0)}%`}
-                        outerRadius={100}
-                        fill="#8884d8"
-                        dataKey="value"
-                        onClick={(data) => {
-                          const org = import.meta.env.VITE_GITHUB_ORG;
-                          let searchQuery;
-                          if (data.type === 'other') {
-                            // Exclude all known prefixes to show "other"
-                            searchQuery = `org:${org} is:pr NOT "feat:" NOT "fix:" NOT "chore:" NOT "docs:" NOT "refactor:" NOT "test:" NOT "style:" NOT "perf:" NOT "ci:" NOT "build:"`;
-                          } else {
-                            searchQuery = `org:${org} is:pr in:title "${data.type}:"`;
-                          }
-                          const url = `https://github.com/search?q=${encodeURIComponent(searchQuery)}&type=pullrequests`;
-                          window.open(url, '_blank');
-                        }}
-                      >
-                        {typeStats.map((entry, index) => (
-                          <Cell key={`cell-${index}`} fill={COLORS[entry.type]} />
-                        ))}
-                      </Pie>
-                      <Tooltip />
-                    </PieChart>
-                  </ResponsiveContainer>
-                </div>
-                <div className="space-y-2">
-                  {typeStats.map((stat) => {
-                    const org = import.meta.env.VITE_GITHUB_ORG;
-                    let searchQuery;
-                    if (stat.type === 'other') {
-                      // Exclude all known prefixes to show "other"
-                      searchQuery = `org:${org} is:pr NOT "feat:" NOT "fix:" NOT "chore:" NOT "docs:" NOT "refactor:" NOT "test:" NOT "style:" NOT "perf:" NOT "ci:" NOT "build:"`;
-                    } else {
-                      searchQuery = `org:${org} is:pr in:title "${stat.type}:"`;
-                    }
-                    const url = `https://github.com/search?q=${encodeURIComponent(searchQuery)}&type=pullrequests`;
-
-                    return (
-                      <a
-                        key={stat.type}
-                        href={url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center justify-between p-2 bg-gray-50 rounded hover:bg-gray-100 transition-colors cursor-pointer"
-                      >
-                        <div className="flex items-center gap-2">
-                          <div
-                            className="w-4 h-4 rounded"
-                            style={{ backgroundColor: COLORS[stat.type] }}
-                          ></div>
-                          <span className="font-medium text-sm">{stat.name}</span>
-                        </div>
-                        <span className="text-sm text-gray-600">
-                          {stat.value} ({((stat.value / allCommits.length) * 100).toFixed(1)}%)
-                        </span>
-                      </a>
-                    );
-                  })}
-                </div>
-              </div>
-            </div>
-          );
-        })()}
 
         {/* Loading State */}
         {loadingSummary && releaseSummary.length === 0 && (
-          <div className="bg-white rounded-lg shadow-md p-6 mb-6">
+          <div className={`rounded-lg shadow-xl p-6 mb-6 ${darkMode ? 'bg-gray-800 border border-gray-700' : 'bg-white border border-gray-200'}`}>
             <div className="flex items-center justify-center py-12">
               <div className="text-center">
-                <Loader2 className="w-10 h-10 text-blue-500 animate-spin mx-auto mb-3" />
-                <p className="text-gray-600">Loading release status overview...</p>
-                <p className="text-gray-500 text-sm mt-1">Analyzing releases across all repositories</p>
+                <Loader2 className={`w-10 h-10 animate-spin mx-auto mb-3 ${darkMode ? 'text-blue-400' : 'text-blue-500'}`} />
+                <p className={darkMode ? 'text-gray-300' : 'text-gray-600'}>Loading release status overview...</p>
+                <p className={`text-sm mt-1 ${darkMode ? 'text-gray-400' : 'text-gray-500'}`}>Analyzing releases across all repositories</p>
               </div>
             </div>
           </div>
@@ -614,11 +526,77 @@ const ReleaseComparison = () => {
               return !allCommitMessages.includes(ticket.key);
             });
 
+            // Sort tickets: Bugs first (by priority), then Stories, then Tasks, then others
+            const priorityOrder = { 'Highest': 0, 'High': 1, 'Medium': 2, 'Low': 3, 'Lowest': 4, 'None': 5 };
+            const typeOrder = { 'Bug': 0, 'Story': 1, 'Task': 2, 'Epic': 3 };
+
+            const sortedTickets = [...allTickets].sort((a, b) => {
+              // First sort by type
+              const typeA = typeOrder[a.issueType] ?? 99;
+              const typeB = typeOrder[b.issueType] ?? 99;
+              if (typeA !== typeB) return typeA - typeB;
+
+              // Then sort by priority within the same type
+              const priorityA = priorityOrder[a.priority] ?? 99;
+              const priorityB = priorityOrder[b.priority] ?? 99;
+              return priorityA - priorityB;
+            });
+
+            // Create breakdown data for charts
+            const bugsByPriority = {};
+            const ticketsByEngineer = {};
+            let storyCount = 0;
+            let taskCount = 0;
+            let epicCount = 0;
+
+            allTickets.forEach(ticket => {
+              // Count by type
+              if (ticket.issueType === 'Bug') {
+                const priority = ticket.priority || 'None';
+                bugsByPriority[priority] = (bugsByPriority[priority] || 0) + 1;
+              } else if (ticket.issueType === 'Story') {
+                storyCount++;
+              } else if (ticket.issueType === 'Task') {
+                taskCount++;
+              } else if (ticket.issueType === 'Epic') {
+                epicCount++;
+              }
+
+              // Count by engineer
+              const engineer = ticket.assignee || 'Unassigned';
+              ticketsByEngineer[engineer] = (ticketsByEngineer[engineer] || 0) + 1;
+            });
+
+            const chartData = [
+              ...Object.entries(bugsByPriority).map(([priority, count]) => ({
+                name: `${priority} Priority Bugs`,
+                value: count,
+                color: priority === 'Highest' ? '#7f1d1d' :
+                       priority === 'High' ? '#dc2626' :
+                       priority === 'Medium' ? '#f59e0b' :
+                       priority === 'Low' ? '#fbbf24' :
+                       '#ef4444'
+              })),
+              ...(storyCount > 0 ? [{ name: 'Stories', value: storyCount, color: '#3b82f6' }] : []),
+              ...(taskCount > 0 ? [{ name: 'Tasks', value: taskCount, color: '#10b981' }] : []),
+              ...(epicCount > 0 ? [{ name: 'Epics', value: epicCount, color: '#8b5cf6' }] : [])
+            ];
+
+            // Engineer breakdown data
+            const engineerColors = ['#3b82f6', '#10b981', '#f59e0b', '#8b5cf6', '#ec4899', '#06b6d4', '#84cc16', '#f97316'];
+            const engineerChartData = Object.entries(ticketsByEngineer)
+              .sort(([,a], [,b]) => b - a)
+              .map(([engineer, count], index) => ({
+                name: engineer,
+                value: count,
+                color: engineerColors[index % engineerColors.length]
+              }));
+
             return (
-            <div key={releaseKey} className="bg-white rounded-lg shadow-md p-6 mb-6">
+            <div key={releaseKey} className={`rounded-lg shadow-xl p-6 mb-6 ${darkMode ? 'bg-gray-800 border border-gray-700' : 'bg-white border border-gray-200'}`}>
               <div className="flex items-center justify-between mb-4">
                 <div>
-                  <h2 className="text-xl font-bold text-gray-900">Release {headVersion}</h2>
+                  <h2 className={`text-xl font-bold ${darkMode ? 'text-white' : 'text-gray-900'}`}>Release {headVersion}</h2>
                   {allTickets.length > 0 && (
                     <div className="space-y-2 mt-2">
                       <div className="flex items-center gap-2">
@@ -631,7 +609,7 @@ const ReleaseComparison = () => {
                             changeCount: 0,
                             jiraTickets: allTickets,
                           })}
-                          className="text-sm text-purple-600 hover:text-purple-800 font-semibold underline cursor-pointer"
+                          className="text-sm text-purple-400 hover:text-purple-300 font-semibold underline cursor-pointer"
                         >
                           {allTickets.length} JIRA ticket{allTickets.length !== 1 ? 's' : ''}
                         </button>
@@ -640,11 +618,17 @@ const ReleaseComparison = () => {
                             <span
                               key={type}
                               className={`inline-flex items-center px-2 py-0.5 rounded text-xs font-medium ${
-                                type === 'Bug' ? 'bg-red-100 text-red-700' :
-                                type === 'Story' ? 'bg-blue-100 text-blue-700' :
-                                type === 'Epic' ? 'bg-purple-100 text-purple-700' :
-                                type === 'Task' ? 'bg-green-100 text-green-700' :
-                                'bg-gray-100 text-gray-700'
+                                darkMode
+                                  ? type === 'Bug' ? 'bg-red-900/50 text-red-300' :
+                                    type === 'Story' ? 'bg-blue-900/50 text-blue-300' :
+                                    type === 'Epic' ? 'bg-purple-900/50 text-purple-300' :
+                                    type === 'Task' ? 'bg-green-900/50 text-green-300' :
+                                    'bg-gray-700 text-gray-300'
+                                  : type === 'Bug' ? 'bg-red-100 text-red-700' :
+                                    type === 'Story' ? 'bg-blue-100 text-blue-700' :
+                                    type === 'Epic' ? 'bg-purple-100 text-purple-700' :
+                                    type === 'Task' ? 'bg-green-100 text-green-700' :
+                                    'bg-gray-100 text-gray-700'
                               }`}
                             >
                               {count} {type}
@@ -652,32 +636,17 @@ const ReleaseComparison = () => {
                           ))}
                         </div>
                       </div>
-                      <div className="flex items-center gap-1 text-xs text-gray-600">
-                        <span>Status:</span>
-                        {Object.entries(combinedSummary.byStatus)
-                          .sort(([,a], [,b]) => b - a)
-                          .map(([status, count]) => (
-                            <span
-                              key={status}
-                              className={`inline-flex items-center px-2 py-0.5 rounded font-medium ${
-                                status === 'Done' || status === 'Closed' || status === 'Closed Verified'
-                                  ? 'bg-green-50 text-green-700 border border-green-200' :
-                                status === 'In Progress' || status === 'Dev complete' || status === 'In Review'
-                                  ? 'bg-yellow-50 text-yellow-700 border border-yellow-200' :
-                                  'bg-gray-50 text-gray-700 border border-gray-200'
-                              }`}
-                            >
-                              {count} {status}
-                            </span>
-                          ))}
-                      </div>
                     </div>
                   )}
                 </div>
                 <button
                   onClick={fetchReleaseSummary}
                   disabled={loadingSummary}
-                  className="px-3 py-1.5 text-sm bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors disabled:bg-gray-50 disabled:cursor-not-allowed flex items-center gap-2"
+                  className={`px-3 py-1.5 text-sm rounded-lg transition-colors disabled:cursor-not-allowed flex items-center gap-2 ${
+                    darkMode
+                      ? 'bg-gray-700 text-gray-200 hover:bg-gray-600 disabled:bg-gray-800'
+                      : 'bg-gray-100 text-gray-700 hover:bg-gray-200 disabled:bg-gray-50'
+                  }`}
                 >
                   {loadingSummary ? (
                     <>
@@ -690,30 +659,111 @@ const ReleaseComparison = () => {
                 </button>
               </div>
 
+              {/* Ticket Type Breakdown Chart */}
+              {chartData.length > 0 && (
+                <div className={`rounded-lg p-4 mb-6 ${darkMode ? 'bg-gray-900/50 border border-gray-700' : 'bg-gray-50 border border-gray-200'}`}>
+                  <h3 className={`text-lg font-semibold mb-4 ${darkMode ? 'text-white' : 'text-gray-900'}`}>Ticket Type Breakdown</h3>
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    <ResponsiveContainer width="100%" height={250}>
+                      <PieChart>
+                        <Pie
+                          data={chartData}
+                          cx="50%"
+                          cy="50%"
+                          labelLine={false}
+                          label={({ name, percent }) => `${(percent * 100).toFixed(0)}%`}
+                          outerRadius={80}
+                          fill="#8884d8"
+                          dataKey="value"
+                        >
+                          {chartData.map((entry, index) => (
+                            <Cell key={`cell-${index}`} fill={entry.color} />
+                          ))}
+                        </Pie>
+                        <Tooltip contentStyle={darkMode ? { backgroundColor: '#374151', border: '1px solid #6b7280', color: '#f3f4f6' } : { backgroundColor: '#fff', border: '1px solid #e5e7eb', color: '#1f2937' }} />
+                      </PieChart>
+                    </ResponsiveContainer>
+                    <div className="space-y-1 flex flex-col justify-center">
+                      {chartData.map((entry, index) => (
+                        <div
+                          key={index}
+                          className={`flex items-center justify-between p-2 rounded ${darkMode ? 'bg-gray-800' : 'bg-white border border-gray-200'}`}
+                        >
+                          <div className="flex items-center gap-2">
+                            <div
+                              className="w-3 h-3 rounded"
+                              style={{ backgroundColor: entry.color }}
+                            ></div>
+                            <span className={`font-medium text-xs ${darkMode ? 'text-gray-200' : 'text-gray-800'}`}>{entry.name}</span>
+                          </div>
+                          <span className={`text-xs ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
+                            {entry.value}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              )}
+
               {/* JIRA Tickets List */}
-              {allTickets.length > 0 && (
+              {sortedTickets.length > 0 && (
                 <div className="mb-6">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-3">JIRA Tickets in this Release</h3>
+                  <div className="flex items-center justify-between mb-3">
+                    <h3 className={`text-lg font-semibold ${darkMode ? 'text-white' : 'text-gray-900'}`}>JIRA Tickets in this Release</h3>
+                    <div className="flex items-center gap-2">
+                      <span className={`text-xs ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>Filter by engineer:</span>
+                      <select
+                        value={selectedEngineerFilter[releaseKey] || 'all'}
+                        onChange={(e) => setSelectedEngineerFilter(prev => ({
+                          ...prev,
+                          [releaseKey]: e.target.value
+                        }))}
+                        className={`text-xs border rounded px-2 py-1 ${
+                          darkMode
+                            ? 'bg-gray-700 border-gray-600 text-gray-200'
+                            : 'bg-white border-gray-300 text-gray-900'
+                        }`}
+                      >
+                        <option value="all">All Engineers</option>
+                        {engineerChartData.map(eng => (
+                          <option key={eng.name} value={eng.name}>{eng.name} ({eng.value})</option>
+                        ))}
+                      </select>
+                    </div>
+                  </div>
                   <div className="space-y-2">
-                    {allTickets.map((ticket, idx) => {
+                    {sortedTickets
+                      .filter(ticket => {
+                        const filter = selectedEngineerFilter[releaseKey];
+                        if (!filter || filter === 'all') return true;
+                        return ticket.assignee === filter;
+                      })
+                      .map((ticket, idx) => {
                       const jiraUrl = import.meta.env.VITE_JIRA_URL;
                       const ticketUrl = jiraUrl ? `${jiraUrl.replace(/\/$/, '')}/browse/${ticket.key}` : null;
                       const hasCommit = allCommitMessages.includes(ticket.key);
 
                       return (
                         <div key={idx} className={`p-3 rounded-lg border transition-colors ${
-                          !hasCommit
-                            ? 'bg-yellow-50 border-yellow-300'
+                          darkMode
+                            ? 'bg-purple-900/20 border-purple-700/50 hover:border-purple-600'
                             : 'bg-purple-50 border-purple-200 hover:border-purple-300'
                         }`}>
                           <div className="flex items-start gap-3">
                             <div className="flex-shrink-0 mt-1">
                               <span className={`inline-flex items-center px-2 py-0.5 rounded text-xs font-medium ${
-                                ticket.issueType === 'Bug' ? 'bg-red-100 text-red-800' :
-                                ticket.issueType === 'Story' ? 'bg-blue-100 text-blue-800' :
-                                ticket.issueType === 'Epic' ? 'bg-purple-100 text-purple-800' :
-                                ticket.issueType === 'Task' ? 'bg-green-100 text-green-800' :
-                                'bg-gray-100 text-gray-800'
+                                darkMode
+                                  ? ticket.issueType === 'Bug' ? 'bg-red-900/50 text-red-300 border border-red-700' :
+                                    ticket.issueType === 'Story' ? 'bg-blue-900/50 text-blue-300 border border-blue-700' :
+                                    ticket.issueType === 'Epic' ? 'bg-purple-900/50 text-purple-300 border border-purple-700' :
+                                    ticket.issueType === 'Task' ? 'bg-green-900/50 text-green-300 border border-green-700' :
+                                    'bg-gray-700 text-gray-300 border border-gray-600'
+                                  : ticket.issueType === 'Bug' ? 'bg-red-100 text-red-800' :
+                                    ticket.issueType === 'Story' ? 'bg-blue-100 text-blue-800' :
+                                    ticket.issueType === 'Epic' ? 'bg-purple-100 text-purple-800' :
+                                    ticket.issueType === 'Task' ? 'bg-green-100 text-green-800' :
+                                    'bg-gray-100 text-gray-800'
                               }`}>
                                 {ticket.issueType}
                               </span>
@@ -725,37 +775,59 @@ const ReleaseComparison = () => {
                                     href={ticketUrl}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="text-sm font-semibold text-purple-600 hover:text-purple-800"
+                                    className={`text-sm font-semibold ${darkMode ? 'text-purple-400 hover:text-purple-300' : 'text-purple-600 hover:text-purple-800'}`}
                                   >
                                     {ticket.key}: {ticket.summary}
                                   </a>
                                 ) : (
-                                  <div className="text-sm font-semibold text-purple-600">
+                                  <div className={`text-sm font-semibold ${darkMode ? 'text-purple-400' : 'text-purple-600'}`}>
                                     {ticket.key}: {ticket.summary}
                                   </div>
                                 )}
                                 {!hasCommit && (
-                                  <span className="flex-shrink-0 inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-yellow-100 text-yellow-800">
+                                  <span className={`flex-shrink-0 inline-flex items-center px-2 py-0.5 rounded text-xs font-medium ${
+                                    darkMode ? 'bg-yellow-900/30 text-yellow-400 border border-yellow-800' : 'bg-yellow-100 text-yellow-800'
+                                  }`}>
                                     ⚠️ No commits
                                   </span>
                                 )}
                               </div>
-                              <div className="flex items-center gap-3 text-xs text-gray-600 mt-1.5">
+                              <div className={`flex items-center gap-3 text-xs mt-1.5 ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
                                 <span className={`inline-flex items-center px-2 py-0.5 rounded font-medium ${
-                                  ticket.status === 'Done' || ticket.status === 'Closed' || ticket.status === 'Closed Verified' ? 'bg-green-100 text-green-800' :
-                                  ticket.status === 'In Progress' || ticket.status === 'Dev complete' || ticket.status === 'In Review' ? 'bg-yellow-100 text-yellow-800' :
-                                  'bg-gray-100 text-gray-800'
+                                  darkMode
+                                    ? ticket.status === 'Done' || ticket.status === 'Closed' || ticket.status === 'Closed Verified' ? 'bg-green-900/50 text-green-300 border border-green-700' :
+                                      ticket.status === 'In Progress' || ticket.status === 'Dev complete' || ticket.status === 'In Review' ? 'bg-yellow-900/50 text-yellow-300 border border-yellow-700' :
+                                      'bg-gray-700 text-gray-300 border border-gray-600'
+                                    : ticket.status === 'Done' || ticket.status === 'Closed' || ticket.status === 'Closed Verified' ? 'bg-green-100 text-green-800' :
+                                      ticket.status === 'In Progress' || ticket.status === 'Dev complete' || ticket.status === 'In Review' ? 'bg-yellow-100 text-yellow-800' :
+                                      'bg-gray-100 text-gray-800'
                                 }`}>
                                   {ticket.status}
                                 </span>
                                 <span>👤 {ticket.assignee}</span>
-                                {ticket.priority && <span className={`inline-flex items-center px-2 py-0.5 rounded font-medium ${
-                                  ticket.priority === 'High' || ticket.priority === 'Highest' ? 'bg-red-50 text-red-700 border border-red-200' :
-                                  ticket.priority === 'Medium' ? 'bg-yellow-50 text-yellow-700 border border-yellow-200' :
-                                  'bg-gray-50 text-gray-700 border border-gray-200'
+                                {ticket.storyPoints && <span className={`inline-flex items-center px-2 py-0.5 rounded font-medium border ${
+                                  darkMode ? 'bg-blue-900/50 text-blue-300 border-blue-700' : 'bg-blue-50 text-blue-700 border-blue-200'
+                                }`}>
+                                  📊 {ticket.storyPoints} pts
+                                </span>}
+                                {ticket.priority && <span className={`inline-flex items-center px-2 py-0.5 rounded font-medium border ${
+                                  darkMode
+                                    ? ticket.priority === 'High' || ticket.priority === 'Highest' ? 'bg-red-900/50 text-red-300 border-red-700' :
+                                      ticket.priority === 'Medium' ? 'bg-yellow-900/50 text-yellow-300 border-yellow-700' :
+                                      'bg-gray-700 text-gray-300 border-gray-600'
+                                    : ticket.priority === 'High' || ticket.priority === 'Highest' ? 'bg-red-50 text-red-700 border-red-200' :
+                                      ticket.priority === 'Medium' ? 'bg-yellow-50 text-yellow-700 border-yellow-200' :
+                                      'bg-gray-50 text-gray-700 border-gray-200'
                                 }`}>
                                   {ticket.priority}
                                 </span>}
+                                <span className={`inline-flex items-center px-2 py-0.5 rounded font-medium border ${
+                                  darkMode
+                                    ? ticket.featureFlag ? 'bg-indigo-900/50 text-indigo-300 border-indigo-700' : 'bg-gray-700 text-gray-400 border-gray-600'
+                                    : ticket.featureFlag ? 'bg-indigo-50 text-indigo-700 border-indigo-200' : 'bg-gray-50 text-gray-600 border-gray-200'
+                                }`}>
+                                  🚩 {ticket.featureFlag || 'N/A'}
+                                </span>
                               </div>
                             </div>
                           </div>
@@ -766,28 +838,28 @@ const ReleaseComparison = () => {
                 </div>
               )}
 
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">GitHub Changes by Repository</h3>
+              <h3 className={`text-lg font-semibold mb-3 ${darkMode ? 'text-white' : 'text-gray-900'}`}>GitHub Changes by Repository</h3>
               <div className="overflow-x-auto">
-                <table className="min-w-full divide-y divide-gray-200">
-                  <thead className="bg-gray-50">
+                <table className={`min-w-full divide-y ${darkMode ? 'divide-gray-700' : 'divide-gray-200'}`}>
+                  <thead className={darkMode ? 'bg-gray-900/50' : 'bg-gray-50'}>
                     <tr>
-                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">App</th>
-                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">DB Migration</th>
-                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Changes</th>
-                      <th className="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Expand</th>
+                      <th className={`px-6 py-3 text-left text-xs font-medium uppercase tracking-wider ${darkMode ? 'text-gray-400' : 'text-gray-500'}`}>App</th>
+                      <th className={`px-6 py-3 text-left text-xs font-medium uppercase tracking-wider ${darkMode ? 'text-gray-400' : 'text-gray-500'}`}>DB Migration</th>
+                      <th className={`px-6 py-3 text-left text-xs font-medium uppercase tracking-wider ${darkMode ? 'text-gray-400' : 'text-gray-500'}`}>Changes</th>
+                      <th className={`px-6 py-3 text-center text-xs font-medium uppercase tracking-wider ${darkMode ? 'text-gray-400' : 'text-gray-500'}`}>Expand</th>
                     </tr>
                   </thead>
-                  <tbody className="bg-white divide-y divide-gray-200">
+                  <tbody className={`divide-y ${darkMode ? 'bg-gray-800/50 divide-gray-700' : 'bg-white divide-gray-200'}`}>
                     {items.map((item, index) => {
                       const rowKey = `${releaseKey}-${item.app}`;
                       const isExpanded = expandedRows[rowKey];
 
                       return (
                         <React.Fragment key={index}>
-                          <tr className="hover:bg-gray-50">
+                          <tr className={darkMode ? 'hover:bg-gray-700/50' : 'hover:bg-gray-50'}>
                             <td className="px-6 py-4 whitespace-nowrap">
-                              <div className="text-sm font-medium text-gray-900">{item.app}</div>
-                              <div className="text-xs text-gray-500">{item.path}</div>
+                              <div className={`text-sm font-medium ${darkMode ? 'text-gray-200' : 'text-gray-900'}`}>{item.app}</div>
+                              <div className={`text-xs ${darkMode ? 'text-gray-400' : 'text-gray-500'}`}>{item.path}</div>
                             </td>
                             <td className="px-6 py-4">
                               {item.app === 'credo-backend' ? (
@@ -802,7 +874,7 @@ const ReleaseComparison = () => {
                                           href={migration.pr.url}
                                           target="_blank"
                                           rel="noopener noreferrer"
-                                          className="text-xs text-blue-600 hover:text-blue-800 underline"
+                                          className={`text-xs underline ${darkMode ? 'text-blue-400 hover:text-blue-300' : 'text-blue-600 hover:text-blue-800'}`}
                                         >
                                           PR #{migration.pr.number}
                                         </a>
@@ -820,7 +892,7 @@ const ReleaseComparison = () => {
                             </td>
                             <td className="px-6 py-4">
                               {item.missingReleases ? (
-                                <span className="text-xs text-gray-500 italic">{item.missingReleases}</span>
+                                <span className={`text-xs italic ${darkMode ? 'text-gray-400' : 'text-gray-500'}`}>{item.missingReleases}</span>
                               ) : item.hasChanges === true ? (
                                 <button
                                   onClick={() => setModalData({
@@ -830,7 +902,7 @@ const ReleaseComparison = () => {
                                     commits: item.commits || [],
                                     changeCount: item.changeCount,
                                   })}
-                                  className="text-xs text-green-600 hover:text-green-800 font-semibold underline cursor-pointer"
+                                  className={`text-xs font-semibold underline cursor-pointer ${darkMode ? 'text-green-400 hover:text-green-300' : 'text-green-600 hover:text-green-800'}`}
                                 >
                                   {item.changeCount} changes
                                 </button>
@@ -846,7 +918,7 @@ const ReleaseComparison = () => {
                               {item.commits && item.commits.length > 0 && (
                                 <button
                                   onClick={() => setExpandedRows(prev => ({ ...prev, [rowKey]: !prev[rowKey] }))}
-                                  className="text-blue-600 hover:text-blue-800 font-medium text-sm"
+                                  className={`font-medium text-sm ${darkMode ? 'text-blue-400 hover:text-blue-300' : 'text-blue-600 hover:text-blue-800'}`}
                                 >
                                   {isExpanded ? '▼ Hide' : '▶ Show'}
                                 </button>
@@ -855,15 +927,15 @@ const ReleaseComparison = () => {
                           </tr>
                           {isExpanded && item.commits && item.commits.length > 0 && (
                             <tr>
-                              <td colSpan="4" className="px-6 py-4 bg-gray-50">
+                              <td colSpan="4" className={`px-6 py-4 ${darkMode ? 'bg-gray-900/70' : 'bg-gray-50'}`}>
                                 <div className="space-y-2">
-                                  <h4 className="font-semibold text-sm text-gray-700 mb-3">Commits ({item.commits.length}):</h4>
+                                  <h4 className={`font-semibold text-sm mb-3 ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>Commits ({item.commits.length}):</h4>
                                   {item.commits.map((commit, commitIdx) => (
-                                    <div key={commitIdx} className="flex items-start gap-3 p-3 bg-white rounded-lg border border-gray-200">
-                                      <code className="text-xs text-gray-500 font-mono mt-0.5">{commit.sha}</code>
+                                    <div key={commitIdx} className={`flex items-start gap-3 p-3 rounded-lg border ${darkMode ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'}`}>
+                                      <code className={`text-xs font-mono mt-0.5 ${darkMode ? 'text-gray-400' : 'text-gray-500'}`}>{commit.sha}</code>
                                       <div className="flex-1 min-w-0">
-                                        <p className="text-sm text-gray-900">{renderMessageWithJiraLinks(commit.message)}</p>
-                                        <div className="flex items-center gap-3 mt-1 text-xs text-gray-500">
+                                        <p className={`text-sm ${darkMode ? 'text-gray-200' : 'text-gray-900'}`}>{renderMessageWithJiraLinks(commit.message)}</p>
+                                        <div className={`flex items-center gap-3 mt-1 text-xs ${darkMode ? 'text-gray-400' : 'text-gray-500'}`}>
                                           <span>{commit.author}</span>
                                           <span>{new Date(commit.date).toLocaleDateString()}</span>
                                           {commit.pr && (
@@ -871,7 +943,7 @@ const ReleaseComparison = () => {
                                               href={commit.pr.url}
                                               target="_blank"
                                               rel="noopener noreferrer"
-                                              className="text-blue-600 hover:text-blue-800 font-medium"
+                                              className={`font-medium ${darkMode ? 'text-blue-400 hover:text-blue-300' : 'text-blue-600 hover:text-blue-800'}`}
                                             >
                                               PR #{commit.pr.number}
                                             </a>
@@ -986,6 +1058,9 @@ const ReleaseComparison = () => {
                                     {ticket.status}
                                   </span>
                                   <span>👤 {ticket.assignee}</span>
+                                  {ticket.storyPoints && <span className="inline-flex items-center px-2 py-0.5 rounded font-medium bg-blue-50 text-blue-700 border border-blue-200">
+                                    📊 {ticket.storyPoints} pts
+                                  </span>}
                                   {ticket.priority && <span className={`inline-flex items-center px-2 py-0.5 rounded text-xs font-medium ${
                                     ticket.priority === 'High' || ticket.priority === 'Highest' ? 'bg-red-50 text-red-700' :
                                     ticket.priority === 'Medium' ? 'bg-yellow-50 text-yellow-700' :
@@ -993,6 +1068,11 @@ const ReleaseComparison = () => {
                                   }`}>
                                     {ticket.priority}
                                   </span>}
+                                  <span className={`inline-flex items-center px-2 py-0.5 rounded text-xs font-medium ${
+                                    ticket.featureFlag ? 'bg-indigo-50 text-indigo-700 border border-indigo-200' : 'bg-gray-50 text-gray-600 border border-gray-200'
+                                  }`}>
+                                    🚩 {ticket.featureFlag || 'N/A'}
+                                  </span>
                                 </div>
                               </div>
                             </div>
