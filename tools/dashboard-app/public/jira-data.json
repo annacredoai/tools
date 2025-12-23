@@ -1,0 +1,69 @@
+{
+  "tickets": {
+    "DEV-4521": {
+      "key": "DEV-4521",
+      "summary": "Convert existing users to Read-only Admins (followup to Read-Only Admin work)",
+      "issueType": "Story",
+      "status": "In Progress",
+      "isEpic": false
+    },
+    "DEV-4498": {
+      "key": "DEV-4498",
+      "summary": "Context Source: External tools via MCP Server",
+      "issueType": "Epic",
+      "status": "Open",
+      "isEpic": true
+    },
+    "DEV-4372": {
+      "key": "DEV-4372",
+      "summary": "Email Case Sensitivity in Integration Service",
+      "issueType": "Bug",
+      "status": "Closed",
+      "isEpic": false
+    },
+    "DEV-4364": {
+      "key": "DEV-4364",
+      "summary": "(FE)AI assist UI: explanation pattern clean-up for registration",
+      "issueType": "Story",
+      "status": "Dev complete",
+      "isEpic": false
+    },
+    "DEV-4321": {
+      "key": "DEV-4321",
+      "summary": "Create Tags via GitHub Actions",
+      "issueType": "Story",
+      "status": "In Progress",
+      "isEpic": false
+    },
+    "DEV-4320": {
+      "key": "DEV-4320",
+      "summary": "Improve test ids and aria labels to enable stable E2E testing.",
+      "issueType": "Story",
+      "status": "In Progress",
+      "isEpic": false
+    },
+    "DEV-4233": {
+      "key": "DEV-4233",
+      "summary": "[BE] [3a] Implement Risk Score Application Logic",
+      "issueType": "Story",
+      "status": "In Progress",
+      "isEpic": false
+    },
+    "DEV-4065": {
+      "key": "DEV-4065",
+      "summary": "Customizable Use Case Reports",
+      "issueType": "Epic",
+      "status": "In Progress",
+      "isEpic": true
+    },
+    "DEV-3872": {
+      "key": "DEV-3872",
+      "summary": "[GAIA] Architecture",
+      "issueType": "Epic",
+      "status": "Closed",
+      "isEpic": true
+    }
+  },
+  "lastUpdated": "2025-12-23T03:16:45.241Z",
+  "ticketCount": 9
+}

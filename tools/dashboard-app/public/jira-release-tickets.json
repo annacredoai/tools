@@ -1,0 +1,5701 @@
+{
+  "releases": {
+    "v26.0": [
+      {
+        "key": "DEV-4514",
+        "summary": "[FE] Applying multi-select answer suggestion malforms evidence data",
+        "issueType": "Bug",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Leonardo Lemos",
+        "priority": "Medium"
+      }
+    ],
+    "v25.0": [
+      {
+        "key": "DEV-4521",
+        "summary": "Convert existing users to Read-only Admins (followup to Read-Only Admin work)",
+        "issueType": "Story",
+        "status": "In Progress",
+        "isEpic": false,
+        "assignee": "Patrick Higgins",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-4515",
+        "summary": "[FE] Hide AI Assist Banner when AI Assist Panel is Open",
+        "issueType": "Bug",
+        "status": "Ready for Sprint",
+        "isEpic": false,
+        "assignee": "Leonardo Lemos",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-4483",
+        "summary": "Questionnaire suggestions don't (always) show explanations",
+        "issueType": "Bug",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Leonardo Lemos",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-4482",
+        "summary": "'Description' not shown for entity metadata suggestions",
+        "issueType": "Bug",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Leonardo Lemos",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-4460",
+        "summary": "[BE] Add pagination to context entities endpoints",
+        "issueType": "Story",
+        "status": "In Progress",
+        "isEpic": false,
+        "assignee": "Anna Tovkun",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-4423",
+        "summary": "AI-Assist suggests only one option for multi-select questions despite multiple applicable",
+        "issueType": "Bug",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Anna Tovkun",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-4362",
+        "summary": "(FE)AI Assist: Metadata in registration missing affordance + no selection pattern",
+        "issueType": "Bug",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Ed Morales",
+        "priority": "Medium"
+      }
+    ],
+    "v24.0": [
+      {
+        "key": "DEV-4479",
+        "summary": "[BE] Add all missing metadata fields in ai_suggestion (captured under ai_suggestion_request)",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Anna Tovkun",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-4478",
+        "summary": "Investigate and resolve cache issues affecting policy pack deployment",
+        "issueType": "Bug",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Lisa Felten",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-4361",
+        "summary": "(FE)AI Assist: Waiting for suggestions banner missing",
+        "issueType": "Bug",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Ed Morales",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-4310",
+        "summary": "Dual Entity Suggestions + Questionnaire Suggestions Requests Simultaneously on Use Case Creation",
+        "issueType": "Bug",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Eli Sherman",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-4249",
+        "summary": "[BE] Support multiple suggestion for risks and controls",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Anna Tovkun",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-4188",
+        "summary": "[BE] Audit log filter functionality should support search",
+        "issueType": "Story",
+        "status": "In Progress",
+        "isEpic": false,
+        "assignee": "Patrick Higgins",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-3922",
+        "summary": "[FE] Migrate tenant-info-form.tsx from MUI to Curakit",
+        "issueType": "Task",
+        "status": "In Review",
+        "isEpic": false,
+        "assignee": "Leonardo Lemos",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3564",
+        "summary": "Error 500 occurs when attempting to add a number question to a questionnaire",
+        "issueType": "Bug",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Lisa Felten",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-2499",
+        "summary": "Deleting a model re-directs to the vendor registry",
+        "issueType": "Bug",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Ed Morales",
+        "priority": "Medium"
+      }
+    ],
+    "v23.0": [
+      {
+        "key": "DEV-4493",
+        "summary": "External user redirected to error page when accessing assigned questionnaire",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Unassigned",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-4491",
+        "summary": "Error when opening external (vendor) portal",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Wesley Candido",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-4489",
+        "summary": "Risk classification alert reflecting old triggers",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Juan Alcantara",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-4475",
+        "summary": "Bug in use case questionnaire date selector",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Wesley Candido",
+        "priority": "Highest"
+      },
+      {
+        "key": "DEV-4470",
+        "summary": "\"Something went wrong\" error message when uploading technical evidence for metric type risk control",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Patrick Higgins",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-4469",
+        "summary": "\"Something went wrong\" error message when uploading technical evidence for Fraud policy pack",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Patrick Higgins",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-4466",
+        "summary": "Risk scenario search fails to load additional results on initial scroll down",
+        "issueType": "Bug",
+        "status": "Open",
+        "isEpic": false,
+        "assignee": "Unassigned",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-4465",
+        "summary": "Vendor user is receiving a link to the Credo AI tenant",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Patrick Higgins",
+        "priority": "Highest"
+      },
+      {
+        "key": "DEV-4414",
+        "summary": "Base64 decoding error prevents Use Case context upload completion",
+        "issueType": "Bug",
+        "status": "Open",
+        "isEpic": false,
+        "assignee": "Unassigned",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-4401",
+        "summary": "AI Generation flow fails with database permission error during suggestion generation",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Anna Tovkun",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-4393",
+        "summary": "Inconsistencies When Admin & Expert User Attempt to Add Reviewers",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Patrick Higgins",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-4392",
+        "summary": "Read-only Admin has access to Add Trigger button",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Patrick Higgins",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-4391",
+        "summary": "Incomplete Display of User Names in Comment Mention Dropdown",
+        "issueType": "Bug",
+        "status": "Open",
+        "isEpic": false,
+        "assignee": "Unassigned",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-4376",
+        "summary": "Regions with the same name are not differentiated in the UI",
+        "issueType": "Bug",
+        "status": "In Progress",
+        "isEpic": false,
+        "assignee": "Jefferson Reis",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-4375",
+        "summary": "Review Bar",
+        "issueType": "Story",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Ed Morales",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-4370",
+        "summary": "Remove evidence created event from audit logs",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Fabrizio Puletti",
+        "priority": "Highest"
+      },
+      {
+        "key": "DEV-4356",
+        "summary": "Multi-Trigger of 11 different triggers is not triggering the action when all triggers are met.",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Juan Alcantara",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-4308",
+        "summary": "Audit log entries for policy pack due date changes use identical wording for all operations",
+        "issueType": "Bug",
+        "status": "In Progress",
+        "isEpic": false,
+        "assignee": "Barbara Jaber",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-4246",
+        "summary": "No System User Error",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Barbara Jaber",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-4084",
+        "summary": "Improve \"Add Risk Scenario\" modal browsing",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Wesley Candido",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-2339",
+        "summary": "Links in description fields and free text requirements evidence in Questionnaire and Policy pack open in redirecting page, instead of a new tab",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Jefferson Reis",
+        "priority": "High"
+      }
+    ],
+    "v22.0": [
+      {
+        "key": "DEV-4473",
+        "summary": "AI Suggestions try to queue oban job with FF Off",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Steven Barber",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-4463",
+        "summary": "User can select a internal role when adding an External user",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Wesley Candido",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-4386",
+        "summary": "Feature Flag Enablement",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Anna Tovkun",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-4366",
+        "summary": "Use Case Tab Navigation Fails When Questionnaire Is Removed Without Page Refresh",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Leonardo Lemos",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-4358",
+        "summary": "New Use Case Creation Requires a Questionnaire in order to be created",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Wesley Candido",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-4319",
+        "summary": "\"Read-only\" admin users cannot view the Custom Fields.",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Patrick Higgins",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-4318",
+        "summary": "The “Audit Logs” tab is not available for Read-Only Admin users.",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Patrick Higgins",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-4317",
+        "summary": "A \"Read-only\" admin user can create, edit, update and delete comments",
+        "issueType": "Bug",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Patrick Higgins",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-4316",
+        "summary": "User roles do not update when the Read-only admin user is added as a stakeholder.",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Patrick Higgins",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-4315",
+        "summary": "A \"Read-Only Admin user is unable to view the Governance Center, policy packs, or questionnaires.",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Patrick Higgins",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-4314",
+        "summary": "Use Case bar overlaps with the \"Add controls\" button when expanded.",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Ed Morales",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-4312",
+        "summary": "Tabs are not switching in use case unless force refreshed ",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Leonardo Lemos",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-4302",
+        "summary": "Upgrade user add dialog to support designating user type",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Patrick Higgins",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-4296",
+        "summary": "Read-Only Admin Has Full CRUD Permissions on Models",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Patrick Higgins",
+        "priority": "Highest"
+      },
+      {
+        "key": "DEV-4295",
+        "summary": "Read-Only Admin Can Create and Delete Model Files",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Patrick Higgins",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-4294",
+        "summary": "Read-Only Admin Role Constraints Return Wrong HTTP Status Codes",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Patrick Higgins",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-4245",
+        "summary": "Cannot Create Regions with same Name",
+        "issueType": "Bug",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Barbara Jaber",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-4241",
+        "summary": "Read-only admins should have access to tokens",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Patrick Higgins",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-4235",
+        "summary": "[BE] Support multi-selection in enumerated audit logs filters ",
+        "issueType": "Story",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Patrick Higgins",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-4195",
+        "summary": "Risk Scoring: Normalize weights to account for unrepresented risk types",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Lisa Felten",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-4193",
+        "summary": "Revert questionnaire description info button to full text display in application (keep in web component)",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Patrick Higgins",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-4192",
+        "summary": "[FE] Audit log filters should support multi-selection",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Patrick Higgins",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-4167",
+        "summary": "Use Case Filter Bug",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Anna Tovkun",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-4069",
+        "summary": "Use case reorganization (nested nav > tabs)",
+        "issueType": "Story",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Ed Morales",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-4068",
+        "summary": "AI Assist/Comments panel + Review UI updates",
+        "issueType": "Story",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Ed Morales",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-4007",
+        "summary": "Read-only admin role [RBAC Phase 1]",
+        "issueType": "Epic",
+        "status": "Open",
+        "isEpic": true,
+        "assignee": "Unassigned",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3925",
+        "summary": "[FE] Migrate preferences.tsx from MUI to Curakit",
+        "issueType": "Task",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Wesley Candido",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-1182",
+        "summary": "Add audit log when updating Policy Pack due date",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Barbara Jaber",
+        "priority": "Medium"
+      }
+    ],
+    "v21.1": [
+      {
+        "key": "DEV-4222",
+        "summary": "Integration Service Schema Type Mismatch in `use_case_schemas.py`",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Nick Cemenenkoff",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-4213",
+        "summary": "The use case edit web component returns a 404 when users submit forms with filled question responses. Submissions with empty questions succeed.",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Juan Alcantara",
+        "priority": "Highest"
+      },
+      {
+        "key": "DEV-4194",
+        "summary": "Risk Scoring: Display \"Unknown classification\" for use cases with no risk scores instead of defaulting to \"Low\"",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Lisa Felten",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-4094",
+        "summary": "ServiceNow Integration Configuration Interface",
+        "issueType": "Epic",
+        "status": "Closed",
+        "isEpic": true,
+        "assignee": "Ed Morales",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-4063",
+        "summary": "User filter not working as expected",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Patrick Higgins",
+        "priority": "High"
+      }
+    ],
+    "v21.0": [
+      {
+        "key": "DEV-4224",
+        "summary": "Create Tenant Reserved Names Too Restrictive",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Travis Mattera",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-4198",
+        "summary": "Replace Use case > Risk > Charts > Risk type distribution spider chart with bar chart",
+        "issueType": "Story",
+        "status": "In Refinement",
+        "isEpic": false,
+        "assignee": "Lisa Felten",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-4197",
+        "summary": "Use case > Risk > Charts > copy change for card",
+        "issueType": "Story",
+        "status": "Ready for Sprint",
+        "isEpic": false,
+        "assignee": "Unassigned",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-4196",
+        "summary": "Use case risk needs blue ribbon indicating scenarios not scored",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Wesley Candido",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-4185",
+        "summary": "Risk charts display as complete when scenario added without scoring data",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Jefferson Reis",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-4184",
+        "summary": "Risk chart incorrectly shows all control evidence provided when only partial evidence exists",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Jefferson Reis",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-4174",
+        "summary": "Audit log shows \"unknown user\" for risk weight redistribution after risk type deletion",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Lisa Felten",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-4151",
+        "summary": "Risk scenario score option missing when scoring classification enabled.",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Wesley Candido",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-4140",
+        "summary": "Revert Shadow AI Discovery APIs in OpenAPI 3.0 spec",
+        "issueType": "Story",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Unassigned",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-4139",
+        "summary": "Move API specs to OpenAPI 3.0 [Phase 2]",
+        "issueType": "Initiative",
+        "status": "Open",
+        "isEpic": false,
+        "assignee": "Unassigned",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-4138",
+        "summary": "[BE] Add Open API documentation",
+        "issueType": "Story",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Anna Tovkun",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-4137",
+        "summary": "AI event metadata fields return 500 error instead of 422 when exceeding 256-character limit",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Anna Tovkun",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-4136",
+        "summary": "Shadow AI Discovery: \"Add to registry\" button not refreshing to \"View in registry\" after successful tool addition",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Wesley Candido",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-4133",
+        "summary": "Something went wrong upon creating a Risk Scenario",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Fabrizio Puletti",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-4131",
+        "summary": "Vendor association is missing from the model card when downloaded",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Jefferson Reis",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-4128",
+        "summary": "Audit Log generates an entry for each metadata field upon update",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Patrick Higgins",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-4120",
+        "summary": "\"Something Went Wrong\" when trying to edit standalone control's risk type",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Jefferson Reis",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-4118",
+        "summary": "A 404 error occurs when the Vendor user clicks on an assigned task.",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Patrick Higgins",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-4117",
+        "summary": "\"Something Went Wrong\" when trying to edit risk scenario",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Fabrizio Puletti",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-4115",
+        "summary": "Clicking the “Export Data” button redirects to an empty Credo Knowledge Center page",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Wesley Candido",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-4102",
+        "summary": "Cannot scroll the filter menu in Audit Log page",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Ed Morales",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-4101",
+        "summary": "Audit Log Shows Admin as an “Unknown User” when Risk Type Weighting Values are added",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Patrick Higgins",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-4100",
+        "summary": "Error window functionally is behind a previous window",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Patrick Higgins",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-4099",
+        "summary": "Cannot export csv from audit logs page",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Patrick Higgins",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-4098",
+        "summary": "Questions' names are tripled in use cases",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Ed Morales",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-4096",
+        "summary": "The Risk Scoring Classification page displays a 500 Internal Server Error message.",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Lisa Felten",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-4095",
+        "summary": "Audit Log page gives \"something went wrong\"",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Patrick Higgins",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-4085",
+        "summary": "Audit logs fail with \"something went wrong\" for `new_value`/`old_value` of type Object",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Patrick Higgins",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-4081",
+        "summary": "Heatmap queries fail with cannot accumulate empty arrays (SQLSTATE 2202E), later followed by grouping_error (42803)",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Juan Alcantara",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-4080",
+        "summary": "Bulk risk score calculation job improvements",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Lisa Felten",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-4079",
+        "summary": "Risk scoring classification not displayed when score equals maximum threshold (25)",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Unassigned",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-4077",
+        "summary": "Incorrect error pattern handling in bulk risk score recalculation job",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Lisa Felten",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-4064",
+        "summary": "Alerts box not allowing scroll with multiple alerts",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Ed Morales",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-4032",
+        "summary": "[BE] [4] Filter use cases by configurable risk score classification",
+        "issueType": "Task",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Lisa Felten",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-4028",
+        "summary": "Expand Regions to include all US states and countries",
+        "issueType": "Story",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Steven Barber",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-3987",
+        "summary": "External users see legal terms when logging in for the first time",
+        "issueType": "Epic",
+        "status": "Open",
+        "isEpic": true,
+        "assignee": "Unassigned",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3986",
+        "summary": "Add Legal Term Links to User Sign Up Flow",
+        "issueType": "Epic",
+        "status": "Ready for Sprint",
+        "isEpic": true,
+        "assignee": "Unassigned",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3950",
+        "summary": "[FE] Bind /register to \"Add to registry\" AI tool action",
+        "issueType": "Story",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Leonardo Lemos",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3884",
+        "summary": "[FE] Add new UI for visualizing audit logs",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Patrick Higgins",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3879",
+        "summary": "[BE] AI Suggestions API",
+        "issueType": "Story",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Steven Barber",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3878",
+        "summary": "Shadow AI Discovery - Go-Live",
+        "issueType": "Epic",
+        "status": "Open",
+        "isEpic": true,
+        "assignee": "Unassigned",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3877",
+        "summary": "Shadow AI Discovery Go-Live",
+        "issueType": "Initiative",
+        "status": "Open",
+        "isEpic": false,
+        "assignee": "Unassigned",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3871",
+        "summary": "[FE] Api integrations for risk scoring page in governance center",
+        "issueType": "Sub-task",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Unassigned",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3870",
+        "summary": "[FE] Realtime updates, websocket integration",
+        "issueType": "Sub-task",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Unassigned",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3869",
+        "summary": "[FE] Override rules UI",
+        "issueType": "Sub-task",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Wesley Candido",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3868",
+        "summary": "[FE] Risk Scoring configuration page integration",
+        "issueType": "Sub-task",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Unassigned",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3867",
+        "summary": "[FE] Risk type weighting UI",
+        "issueType": "Sub-task",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Wesley Candido",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3866",
+        "summary": "[FE] Risk Scoring classification UI",
+        "issueType": "Sub-task",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Wesley Candido",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3861",
+        "summary": "[BE] Add validation for all action types' data fields",
+        "issueType": "Story",
+        "status": "Ready for Sprint",
+        "isEpic": false,
+        "assignee": "Unassigned",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3860",
+        "summary": "[BE] Enhance UUID type/format validation for fields in trigger action embedded data",
+        "issueType": "Story",
+        "status": "Ready for Sprint",
+        "isEpic": false,
+        "assignee": "Unassigned",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3859",
+        "summary": "[BE] Move DB-dependent validations from Action changeset to context module",
+        "issueType": "Story",
+        "status": "Ready for Sprint",
+        "isEpic": false,
+        "assignee": "Unassigned",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3858",
+        "summary": "[FE] Comprehensive testing & polish",
+        "issueType": "Story",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Wesley Candido",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3857",
+        "summary": "[FE] Risk scoring api integrations",
+        "issueType": "Story",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Wesley Candido",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3856",
+        "summary": "[FE] Update use case page with new risk score info",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Wesley Candido",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3855",
+        "summary": "[FE] Input validations for risk score config page",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Wesley Candido",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3854",
+        "summary": "[FE] Create Risk Scoring Configuration page UI in governance center",
+        "issueType": "Story",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Wesley Candido",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3853",
+        "summary": "[FE] Refactor/generalize components for risk score config page",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Wesley Candido",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3852",
+        "summary": "[BE] [6] Feature env integration testing, monitoring, and optimization",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Lisa Felten",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3851",
+        "summary": "[BE] [4] Create risk score configuration and classifications API controller",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Juan Alcantara",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3850",
+        "summary": "[BE] [5] Implement risk score event subscribers/handlers",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Juan Alcantara",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3849",
+        "summary": "[BE] [4] Create and build new risk score related events",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Juan Alcantara",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3848",
+        "summary": "[BE] [4] Implement audit logging for risk score and config changes",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Lisa Felten",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3845",
+        "summary": "[BUG] [BE] Validate residual risk lower than inherent on risk scenario update",
+        "issueType": "Task",
+        "status": "Open",
+        "isEpic": false,
+        "assignee": "Unassigned",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3844",
+        "summary": "[BUG] [FE] Prevent setting use case risk scenario residual risk higher than inherent",
+        "issueType": "Task",
+        "status": "Open",
+        "isEpic": false,
+        "assignee": "Unassigned",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3831",
+        "summary": "Address issues with duplicated names for @-mentions in comments",
+        "issueType": "Epic",
+        "status": "Open",
+        "isEpic": true,
+        "assignee": "Unassigned",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3828",
+        "summary": "Risk scoring logic contains a flaw",
+        "issueType": "Bug",
+        "status": "Blocked",
+        "isEpic": false,
+        "assignee": "Unassigned",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3782",
+        "summary": "[FE] Create Department Detailed Sheet",
+        "issueType": "Story",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Leonardo Lemos",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3781",
+        "summary": "[FE] Develop Individual Detailed Sheet",
+        "issueType": "Story",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Leonardo Lemos",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3780",
+        "summary": "[FE] Create Departments Data Table",
+        "issueType": "Story",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Leonardo Lemos",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3779",
+        "summary": "[FE] Build Individuals Data Table",
+        "issueType": "Story",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Leonardo Lemos",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3778",
+        "summary": "[FE] Implement AI Users & Departments Overview",
+        "issueType": "Story",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Leonardo Lemos",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3777",
+        "summary": "[FE] Create Tool Detailed Sheet View",
+        "issueType": "Story",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Leonardo Lemos",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3776",
+        "summary": "[FE] Add AI Tools Search Functionality",
+        "issueType": "Story",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Leonardo Lemos",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3774",
+        "summary": "[FE] Implement AI Tools Data Table",
+        "issueType": "Story",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Leonardo Lemos",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3773",
+        "summary": "[FE] Develop Most Accessed Tools Interface",
+        "issueType": "Story",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Leonardo Lemos",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3772",
+        "summary": "[FE] Create AI Users by Department Breakdown",
+        "issueType": "Story",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Leonardo Lemos",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3771",
+        "summary": "[FE] Build Accessed Tools with Highest Risk View",
+        "issueType": "Story",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Leonardo Lemos",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3770",
+        "summary": "[FE] Implement Insights Statistics Dashboard",
+        "issueType": "Story",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Leonardo Lemos",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3762",
+        "summary": "[BE] [4] Implement caching of risk score calculation config",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Lisa Felten",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3761",
+        "summary": "[BE] [3] Create risk score calculator context module",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Lisa Felten",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3760",
+        "summary": "[BE] [3] Create risk score calculation config CRUD/context module",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Juan Alcantara",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3759",
+        "summary": "[BE] [2] Add risk score types to audit log schema module",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Juan Alcantara",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3758",
+        "summary": "[BE] [2] Add risk score fields to use case schema module",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Juan Alcantara",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3757",
+        "summary": "[BE] Implement analytics > risk type distribution spider metric",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Juan Alcantara",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3756",
+        "summary": "[FE] Implement analytics > risk type distribution spider metric",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Wesley Candido",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3755",
+        "summary": "[FE] Implement analytics > heatmaps",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Wesley Candido",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3753",
+        "summary": "[FE] Risk information modal for custom risk scenarios",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Jefferson Reis",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3752",
+        "summary": "[FE] Residual Risk / Inherent Risk modal (risk scores)",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Jefferson Reis",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3741",
+        "summary": "[BE] [2] Create risk score classification schema module",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Lisa Felten",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3740",
+        "summary": "[BE] [2] Create risk score calculation config schema module",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Lisa Felten",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3739",
+        "summary": "[BE] [2] Create performance indexes",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Juan Alcantara",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3738",
+        "summary": "[BE] [1] Add risk score audit log types to audit logs table",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Juan Alcantara",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3737",
+        "summary": "[BE] [1] Add risk score fields to use cases table",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Juan Alcantara",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3736",
+        "summary": "[BE] [1] Create risk score classifications table",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Lisa Felten",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3735",
+        "summary": "[BE] [1] Create risk score calculation config table",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Lisa Felten",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3734",
+        "summary": "[BE] Risk analytics APIs",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Juan Alcantara",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3733",
+        "summary": "[BE] Risk heatmap APIs",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Juan Alcantara",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3728",
+        "summary": "[BE] Update existing audit logs endpoints",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Patrick Higgins",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3726",
+        "summary": "[FE] Admin UI - filter form to request CSV ",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Patrick Higgins",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3725",
+        "summary": "[BE] Add endpoint to export audit logs in CSV",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Patrick Higgins",
+        "priority": "Medium"
+      }
+    ],
+    "v20.1": [
+      {
+        "key": "DEV-4004",
+        "summary": "Configure `Referrer-Policy` on API",
+        "issueType": "Sub-task",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Patrick Higgins",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3996",
+        "summary": "Email notifications are missing names, making the messages appear incorrect and unpolished",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Anna Tovkun",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3994",
+        "summary": "Admin users unable to edit Use Case metadata fields",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Unassigned",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-3992",
+        "summary": "Use Case contributors can modify team reviews when they are not team members",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Lisa Felten",
+        "priority": "Highest"
+      },
+      {
+        "key": "DEV-3953",
+        "summary": "The system fails to send email notifications to additional external users if a task assignee already exists",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Patrick Higgins",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3948",
+        "summary": "External user is not sent an email after being bulk assigned to model and vendor questionnaire",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Patrick Higgins",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-3898",
+        "summary": "** (Ecto.StaleEntryError) attempted to delete a stale struct:  %CredoAI.Schema.UseCase.TriggeredAction",
+        "issueType": "Bug",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Anna Tovkun",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3893",
+        "summary": "Cannot bulk assign Vendor and Model Questionnaires to external users",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Patrick Higgins",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-3839",
+        "summary": "Users can access our license agreement through a link in the footer of the platform.",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Patrick Higgins",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3832",
+        "summary": "User license agreement linked in footer",
+        "issueType": "Epic",
+        "status": "Open",
+        "isEpic": true,
+        "assignee": "Unassigned",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3751",
+        "summary": "Hyperlink formatting in questionnaires",
+        "issueType": "Bug",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Patrick Higgins",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-3706",
+        "summary": "Use Case Editing Web Component (WC2)",
+        "issueType": "Epic",
+        "status": "Dev complete",
+        "isEpic": true,
+        "assignee": "Juan Alcantara",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3526",
+        "summary": "[PenTest] Exposure of Sensitive Information via an HTTP Response Header",
+        "issueType": "Bug",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Leonardo Lemos",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3115",
+        "summary": "[Tech Debt] Re-create materialized view on server startup",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Anna Tovkun",
+        "priority": "Medium"
+      }
+    ],
+    "v20.0": [
+      {
+        "key": "DEV-3891",
+        "summary": "Dashboard shows 0 Total use cases  ",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Unassigned",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3843",
+        "summary": "[BUG] [BE] Validate max 255 chars for model/vendor name when creating use case",
+        "issueType": "Task",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Patrick Higgins",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-3842",
+        "summary": "[BUG] [FE] Limit vendor/model fields to 255 chars in use case form",
+        "issueType": "Task",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Patrick Higgins",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-3841",
+        "summary": "Creating a vendor and a model from the use case form does not validate if name is more than 255 characters",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Patrick Higgins",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-3833",
+        "summary": "Add SS 1/23 Policy Pack",
+        "issueType": "New Feature",
+        "status": "Open",
+        "isEpic": false,
+        "assignee": "Unassigned",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3822",
+        "summary": "Cannot create governance bounds together with evidence requirement",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Fabrizio Puletti",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3819",
+        "summary": "[FE] Filter by use cases with alerts doesn't work when user is redirected from homepage",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Leonardo Lemos",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-3818",
+        "summary": "Alert resolution system not functioning - alerts remain active when evidence returns to within bounds",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Patrick Higgins",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-3817",
+        "summary": "\"Has alerts\" filter in Use Case Registry appears to apply no filtering and displays all use cases",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Patrick Higgins",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-3815",
+        "summary": "Dashboard counters are at 0 ",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Barbara Jaber",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3812",
+        "summary": "Alert badge not displayed next to control name on risks page despite active alerts in metric evidence requirements",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Leonardo Lemos",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-3811",
+        "summary": "Governance Plan in Use Case Overview does not display active alerts for metric evidence requirements",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Jefferson Reis",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-3810",
+        "summary": "Control details page does not update to show active alerts after evidence submission without page reload",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Patrick Higgins",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-3809",
+        "summary": "System displays only 1 alert notification instead of separate notifications for each active alert in controls with multiple metric evidences",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Patrick Higgins",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-3808",
+        "summary": "Alert icon displays in Compliance tab instead of Risk tab for Standalone Risk Control with active alert",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Leonardo Lemos",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-3807",
+        "summary": "System duplicates mathematical and governance bounds when adding second metric evidence requirement, causing creation failures",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Fabrizio Puletti",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-3806",
+        "summary": "Alert dismissal functionality not working in control details page despite active alerts and UI elements",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Juan Alcantara",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3801",
+        "summary": "Alert not displayed for a use case with standalone control evidence which is in GB",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Anna Tovkun",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-3799",
+        "summary": "Use Case with Alerts counter is incorrect",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Anna Tovkun",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-3793",
+        "summary": "Dashboard count cards display 0 for all filters despite containing correct data when clicked",
+        "issueType": "Bug",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Unassigned",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-3792",
+        "summary": "Use Case Registry filters persist after navigation and clearing, preventing display of all use cases",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Jefferson Reis",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-3788",
+        "summary": "Bulk Assignment list is not pressable in use case questionnaire page",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Wesley Candido",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-3783",
+        "summary": "Use Case creation window is unscrollable",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Wesley Candido",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-3768",
+        "summary": "External Users should only be notified by tasks",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Patrick Higgins",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-3767",
+        "summary": "Creating vendor and models with a long title causes use case creation page to break out of bounds",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Wesley Candido",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-3766",
+        "summary": "Unexpected \"0\" displayed under Edit Vendors section in Use Case overview",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Unassigned",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3765",
+        "summary": "Homepage alert widget displays incorrect count and filtering fails for use cases with no alerts",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Leonardo Lemos",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-3749",
+        "summary": "Deleted governance bounds reappear after saving and reopening evidence requirement for editing",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Jefferson Reis",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3747",
+        "summary": "Governance bounds order changes when evidence requirement is reopened for editing",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Patrick Higgins",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3745",
+        "summary": "Controls marked with validation errors prevent publishing despite all required fields being completed",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Jefferson Reis",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-3743",
+        "summary": "Update button remains disabled when adding evidence requirement to Custom Policy Pack Control",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Leonardo Lemos",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-3717",
+        "summary": "[BE] Duplicate GB when duplicating a policy pack",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Ehrik Aldana",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3716",
+        "summary": "[BE] Whitelist Endpoints for Vendors to Upload Evidence to Q Sections",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Steven Barber",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3710",
+        "summary": "Evidence creation fails when requirement key is specified in the asset loader",
+        "issueType": "Bug",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Fabrizio Puletti",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3701",
+        "summary": "[Testing] Test Design and Implementaiton",
+        "issueType": "Story",
+        "status": "Open",
+        "isEpic": false,
+        "assignee": "Unassigned",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3700",
+        "summary": "Metrics Values Cut Off in Policy Pack Page and Report",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Jefferson Reis",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-3681",
+        "summary": "Risk type does not save when creating or editing custom control",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Wesley Candido",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-3678",
+        "summary": "[FE] Automatically mention on replies",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Wesley Candido",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3677",
+        "summary": "[BE] Duplicate governance bounds when creating a new PP / PC version",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Anna Tovkun",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3672",
+        "summary": "Update Credo AI logo to new 2025 version in email notifications",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Juan Alcantara",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3669",
+        "summary": "Improve performance of Comment endpoints",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Juan Alcantara",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-3659",
+        "summary": "Stop using Postgres LISTEN/NOTIFY",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Lisa Felten",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-3658",
+        "summary": "[TDD] Postgres LISTEN/NOTIFY DB connection pool pressure",
+        "issueType": "Task",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Lisa Felten",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-3653",
+        "summary": "Update Credo AI logo to new 2025 version in platform",
+        "issueType": "Story",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Ed Morales",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3646",
+        "summary": "Error when displaying reviewer comments for a use case",
+        "issueType": "Bug",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Patrick Higgins",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-3645",
+        "summary": "Triggers not displaying when accessing via Questionnaire tab",
+        "issueType": "Bug",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Steven Barber",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-3643",
+        "summary": "Policy Pack not removed on option change",
+        "issueType": "Bug",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Unassigned",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-3636",
+        "summary": "[BE] Remove governance bounds code from evidence requirements ",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Fabrizio Puletti",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3635",
+        "summary": "Delete workflow stage API returns wrong error code and undefined error message",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Anna Tovkun",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3626",
+        "summary": "User can change review feedback after the review has been completed ",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Jefferson Reis",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-3615",
+        "summary": "[BE] Test Deployment of YAML Changes",
+        "issueType": "Bug",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Fabrizio Puletti",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3614",
+        "summary": "[BE] Update Asset Loader to Use New Governance Bounds Resource",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Fabrizio Puletti",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3613",
+        "summary": "[FE] Update FE to Use Governance Bounds API",
+        "issueType": "Story",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Leonardo Lemos",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3612",
+        "summary": "[BE] Business Logic to Create Alerts from Governance Bounds",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Anna Tovkun",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3611",
+        "summary": "[BE] Governance Bounds CRUD API",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Anna Tovkun",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3610",
+        "summary": "[BE] Migrate Governance Bounds into Separate Resource",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Fabrizio Puletti",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3598",
+        "summary": "[FE] Make questionnaires in models and vendors be in edit mode always",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Jefferson Reis",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3593",
+        "summary": "Data migration to delete invalid/corrupted Tasks (missing assignees)",
+        "issueType": "Task",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Unassigned",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-3591",
+        "summary": "OOTB & admin-configurable mathematical, governance bounds, alerts for Policy Packs",
+        "issueType": "Story",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Unassigned",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3587",
+        "summary": "[Harden T&A] Unhandled errors when applying triggered actions stops further processing",
+        "issueType": "Bug",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Lisa Felten",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-3585",
+        "summary": "[Harden APIs] Validate Trigger and Action creation request data",
+        "issueType": "Bug",
+        "status": "Blocked",
+        "isEpic": false,
+        "assignee": "Unassigned",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3579",
+        "summary": "Error message displayed when accessing the ‘Reviewers’ tab on the ‘Overview’ page for use cases under review.",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Patrick Higgins",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-3505",
+        "summary": "[FE] Form inventory to plan for migration to zod and curakit elements and forms",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Wesley Candido",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3501",
+        "summary": "[BE] Alerts Audit Logs",
+        "issueType": "Story",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Juan Alcantara",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3499",
+        "summary": "[BE] Notifications (email / in - app) for alerts",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Juan Alcantara",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3498",
+        "summary": "[BE] Get \"My Alerts\" or Alert Dashboards",
+        "issueType": "Story",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Anna Tovkun",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3497",
+        "summary": "[BE] Alerts CRUD APIs (including filtering)",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Juan Alcantara",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3477",
+        "summary": "[FE] Rename Alerts to automations (or remove)",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Leonardo Lemos",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3476",
+        "summary": "[FE] Hover alerts modal",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Leonardo Lemos",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3474",
+        "summary": "[FE] Show alerts in homepage and use case list",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Leonardo Lemos",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3473",
+        "summary": "[FE] Update governance bounds to create metric bound triggers with alert action",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Leonardo Lemos",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3472",
+        "summary": "Add \"Datasets (coming soon)\" Option to Nav",
+        "issueType": "Story",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Ed Morales",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3471",
+        "summary": "[FE] Update use case registration UX",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Wesley Candido",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-3470",
+        "summary": "[FE] Add subtype field to `Use case information`",
+        "issueType": "Story",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Ed Morales",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3468",
+        "summary": "[FE] Update use cases list to support new column and filter `type`",
+        "issueType": "Story",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Ed Morales",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3467",
+        "summary": "[FE] Support navigation for in app notifications for new tasks",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Jefferson Reis",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3466",
+        "summary": "[FE] Support section drill down for model and vendor in external user portal",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Jefferson Reis",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3465",
+        "summary": "[FE] Update tasks in homepage to support models and vendors tasks",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Jefferson Reis",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3464",
+        "summary": "[FE] Model and Vendor Questionnaire Task Assignment - Bulk",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Jefferson Reis",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3463",
+        "summary": "[FE] Model and Vendor Questionnaire Task Assignment - Single",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Jefferson Reis",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3430",
+        "summary": "[BE] Add system_type to Audit Logs",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Barbara Jaber",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3429",
+        "summary": "[BE] Add system_type to use case export json",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Barbara Jaber",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3420",
+        "summary": "Notify a user when someone replies to their comment",
+        "issueType": "Story",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Unassigned",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3390",
+        "summary": "[Testing] Design and implement tests to verify ACs",
+        "issueType": "Story",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Alberto Paneda",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3389",
+        "summary": "[Testing] Design and implement tests to verify ACs",
+        "issueType": "Story",
+        "status": "Ready for Sprint",
+        "isEpic": false,
+        "assignee": "nikita.jamrovskis",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3388",
+        "summary": "[Testing] Design and implement tests to verify ACs",
+        "issueType": "Story",
+        "status": "Ready for Sprint",
+        "isEpic": false,
+        "assignee": "Katerina Zaprova",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3387",
+        "summary": "[Testing] Design and implement tests to verify ACs",
+        "issueType": "Story",
+        "status": "Ready for Sprint",
+        "isEpic": false,
+        "assignee": "Unassigned",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3386",
+        "summary": "Credo AI Labs \"Tier 1\" Support",
+        "issueType": "Epic",
+        "status": "Open",
+        "isEpic": true,
+        "assignee": "Chanaveer Kadapatti",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3376",
+        "summary": "Move core controllers for OpenAPI",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Fabrizio Puletti",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3372",
+        "summary": "Migrate all endpoints to OpenAPI",
+        "issueType": "Epic",
+        "status": "Closed",
+        "isEpic": true,
+        "assignee": "Fabrizio Puletti",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3350",
+        "summary": "[TDD] [BE] Create a TDD about triggering the alerts in the automation framework",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Steven Barber",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3348",
+        "summary": "[FE] Create the visualization",
+        "issueType": "Story",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Ed Morales",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3347",
+        "summary": "[BE] Add system type (agent / app) to use case schema",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Barbara Jaber",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3346",
+        "summary": "[FE] Update Dashboards for System Entity",
+        "issueType": "Story",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Ed Morales",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3345",
+        "summary": "[TDD][BE] Task Support for Model and Vendor Questionnaire",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Steven Barber",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3344",
+        "summary": "[TDD][BE] Create the TDD",
+        "issueType": "Story",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Anna Tovkun",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3343",
+        "summary": "Remove RAI Issues",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Anna Tovkun",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3342",
+        "summary": "[BE] Update Dashboards for System Entity",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Barbara Jaber",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3309",
+        "summary": "No way to update model questionnaires to their latest version in the Model Details page",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Jefferson Reis",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-3290",
+        "summary": "Visualization of System Associations",
+        "issueType": "Epic",
+        "status": "In Progress",
+        "isEpic": true,
+        "assignee": "Unassigned",
+        "priority": "Medium"
+      }
+    ],
+    "v19.1": [
+      {
+        "key": "DEV-3628",
+        "summary": "Overview section of Use Case page is not loading for certain use cases",
+        "issueType": "Bug",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Unassigned",
+        "priority": "Highest"
+      },
+      {
+        "key": "DEV-3624",
+        "summary": "Upgrade questionnaire may erase section attachments",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Steven Barber",
+        "priority": "Highest"
+      },
+      {
+        "key": "DEV-3592",
+        "summary": "[BE] Use Case not deleted from SNOW when deleted from platform",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Steven Barber",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-3575",
+        "summary": "[Scheduled Review] schema CredoAI.Schema.Task does not have association or embed :setting",
+        "issueType": "Bug",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Anna Tovkun",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3574",
+        "summary": "No warning message is displayed when a Use Case with a scheduled Review is deleted",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Wesley Candido",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3573",
+        "summary": "The assigned user continues to appear in the Review modal, despite having been deleted from the tenant",
+        "issueType": "Bug",
+        "status": "Open",
+        "isEpic": false,
+        "assignee": "Unassigned",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3572",
+        "summary": "Integration Service CORS Error when hosted",
+        "issueType": "Bug",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Steven Barber",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-3568",
+        "summary": "[Scheduled Reviews] Review cancelled notification when scheduling a review for today",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Anna Tovkun",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3563",
+        "summary": "No In-app or email notifications sent to Vendor user when assigned to controls",
+        "issueType": "Bug",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Unassigned",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-3562",
+        "summary": "No registration email is delivered upon Vendor creation ",
+        "issueType": "Bug",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Barbara Jaber",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-3561",
+        "summary": "The \"Forgot Password\" email is not being received",
+        "issueType": "Bug",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Barbara Jaber",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-3560",
+        "summary": "Cannot delete a Trigger from the Questionnaire view",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Jefferson Reis",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-3556",
+        "summary": "No in-app or email notifications sent to team members when a Scheduled Review is assigned to a Team",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Anna Tovkun",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-3555",
+        "summary": "Reviewer assignment selector allows selecting external users, despite reviews not being assignable to them",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Leonardo Lemos",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-3554",
+        "summary": "No notifications sent when a scheduled Use Case review is cancelled",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Anna Tovkun",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3553",
+        "summary": "Use case search function returns 400 Bad Request ",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Juan Alcantara",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-3552",
+        "summary": "Missing modal prompt to schedule a future review after approval to “Cleared” status",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Wesley Candido",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-3546",
+        "summary": "Optional comment entered during Use Case Review completion is not shown in review history",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Jefferson Reis",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-3538",
+        "summary": "[Scheduled Review] When scheduled review opened, creator did not receive in app notification",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Anna Tovkun",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3537",
+        "summary": "[Scheduled reviews] Review opened email says no reviews assigned when there are reviewers",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Anna Tovkun",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3536",
+        "summary": "Long-text choices in Intake Questions are cut off from view at use case level",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Jefferson Reis",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-3525",
+        "summary": "Audit logs missing information about scheduling reviews",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Wesley Candido",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3512",
+        "summary": "Alert still displays for deprecated trigger",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Lisa Felten",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-3511",
+        "summary": "[SNOW][FE] Final integration with IS",
+        "issueType": "Story",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Steven Barber",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3508",
+        "summary": "Comments UX - Comments panel visual elements",
+        "issueType": "Bug",
+        "status": "Open",
+        "isEpic": false,
+        "assignee": "Unassigned",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3507",
+        "summary": "Comments UX bug - Comment drawer visibility",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Jefferson Reis",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3457",
+        "summary": "[BE] (AC14) Scheduled Review reassignment - notify reviewers",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Anna Tovkun",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3456",
+        "summary": "[BE] (AC15) Cancel scheduled review if use case deleted",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Anna Tovkun",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3455",
+        "summary": "[BE] (AC12) Cancel scheduled review if use case stage changes",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Anna Tovkun",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3452",
+        "summary": "[FE] Show Reviewer tab by default in Use Case if there are no active Comments",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Leonardo Lemos",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3448",
+        "summary": "[FE] Edit the summary in the edit dialog",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Jefferson Reis",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3445",
+        "summary": "Remove all Vendor Information Card icons to in Vendo page for consistency with Model",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Jefferson Reis",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3443",
+        "summary": "[FE]  External portal - Allowing external users to comment on controls at the control level",
+        "issueType": "Task",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Leonardo Lemos",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3442",
+        "summary": "[FE] Compliance Evidence Comment Link does not navigate correctly",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Lisa Felten",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3441",
+        "summary": "[BE] Skip compliance check when opening a scheduled review",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Anna Tovkun",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3421",
+        "summary": "Error in logs showing invalid member access on Comment",
+        "issueType": "Bug",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Lisa Felten",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-3419",
+        "summary": "No email notification when external user leaves comments on my use case",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Barbara Jaber",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3418",
+        "summary": "Email notification for new comment has the wrong title and content",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Barbara Jaber",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3412",
+        "summary": "[FE] Add summary to the side panel of models",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Jefferson Reis",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3409",
+        "summary": "Unhandled error in noti event handler when user disabled in-app noti",
+        "issueType": "Bug",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Juan Alcantara",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3377",
+        "summary": "Move stats controllers to OpenAPI",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Fabrizio Puletti",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3372",
+        "summary": "Migrate all endpoints to OpenAPI",
+        "issueType": "Epic",
+        "status": "Closed",
+        "isEpic": true,
+        "assignee": "Fabrizio Puletti",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3369",
+        "summary": "Comment bubbles in review history show live updates instead of frozen snapshot content",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Jefferson Reis",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-3341",
+        "summary": "[FE] Update Design System Radii Scale",
+        "issueType": "Task",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Leonardo Lemos",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3339",
+        "summary": "Auto-generate DB UUIDs for use cases + entities",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Juan Alcantara",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3334",
+        "summary": "Mentioning a user in a comment does not trigger email notification",
+        "issueType": "Bug",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Unassigned",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3330",
+        "summary": "Comment bubble does not reopen when clicking the same comment title after dismissing it",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Jefferson Reis",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-3329",
+        "summary": "[FE] Control details page defaults to Comments tab instead of Evidence when accessed from Risk Scenarios or Compliance sections",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Leonardo Lemos",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3327",
+        "summary": "Custom field values not showing in use case registry",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Juan Alcantara",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-3325",
+        "summary": "Comments panel does not scroll to newly added comment after posting",
+        "issueType": "Bug",
+        "status": "Open",
+        "isEpic": false,
+        "assignee": "Unassigned",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3323",
+        "summary": "Clicking on Policy Pack control comment title redirects to control details page instead of Policy Pack",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Jefferson Reis",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-3286",
+        "summary": "[BE] Cleanup: Remove dependency on View from event/business context module",
+        "issueType": "Task",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Lisa Felten",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3271",
+        "summary": "Question Description with right Markdown syntax is not rendered correctly in the Use Case ",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Ed Morales",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-3253",
+        "summary": "[FE] Update status column in use cases list",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Wesley Candido",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3246",
+        "summary": "[BE] Scheduled Reviews Audit Logs",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Anna Tovkun",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3245",
+        "summary": "[BE] Scheduled Reviews API (CRUD / filters)",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Anna Tovkun",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3240",
+        "summary": "[FE] Confirm dialog before moving to next stage to check if there is a scheduled review",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Wesley Candido",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3239",
+        "summary": "[FE] Add scheduled review banner in use case overview",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Wesley Candido",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3238",
+        "summary": "[FE] Add filters to use cases list",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Wesley Candido",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3237",
+        "summary": "[FE] Delete scheduled review",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Wesley Candido",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3236",
+        "summary": "[FE] Scheduled Reviews Notifications",
+        "issueType": "Story",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Wesley Candido",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3234",
+        "summary": "[BE] Scheduled Reviews Notifications ",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Anna Tovkun",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3233",
+        "summary": "[FE] Scheduled Review CRU Dialog",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Wesley Candido",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3232",
+        "summary": "[BE] Scheduled Review Oban Worker Implementation",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Anna Tovkun",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3231",
+        "summary": "[BE] Scheduled Reviews Schema",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Anna Tovkun",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3203",
+        "summary": "ServiceNow Self-Service Integration Setup & Deployment",
+        "issueType": "Epic",
+        "status": "Closed",
+        "isEpic": true,
+        "assignee": "Chanaveer Kadapatti",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3202",
+        "summary": "ServiceNow Metadata & Questionnaire Integration",
+        "issueType": "Epic",
+        "status": "In Progress",
+        "isEpic": true,
+        "assignee": "Chanaveer Kadapatti",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3201",
+        "summary": "ServiceNow Use Case Creation & Sync to Credo AI",
+        "issueType": "Epic",
+        "status": "In Progress",
+        "isEpic": true,
+        "assignee": "Chanaveer Kadapatti",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3159",
+        "summary": "\"Add questionnaire\" in approve/close review modal",
+        "issueType": "Epic",
+        "status": "Ready for Sprint",
+        "isEpic": true,
+        "assignee": "Ehrik Aldana",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3154",
+        "summary": "Moving to OpenAPI 3.0",
+        "issueType": "Epic",
+        "status": "In Progress",
+        "isEpic": true,
+        "assignee": "Chanaveer Kadapatti",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3138",
+        "summary": "Improve Use Case Risk Reports",
+        "issueType": "Task",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Unassigned",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3024",
+        "summary": "Filtering Use Cases by Multi-Select Custom Field Returns No Results",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Barbara Jaber",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-2886",
+        "summary": "Unexpected ControlKey Codification in Custom Policy Pack Report (Pepsico Use Case)",
+        "issueType": "Bug",
+        "status": "Open",
+        "isEpic": false,
+        "assignee": "Unassigned",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-2852",
+        "summary": "Verbiage truncated in - Use cases by risk classification section of Dashboard",
+        "issueType": "Bug",
+        "status": "Open",
+        "isEpic": false,
+        "assignee": "Leonardo Lemos",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-2752",
+        "summary": "[FE] Gracefully handle resource-not-found for linked comments",
+        "issueType": "Story",
+        "status": "Ready for Sprint",
+        "isEpic": false,
+        "assignee": "Leonardo Lemos",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-2735",
+        "summary": "[BE] Pre-/Post-migration data verification scripts",
+        "issueType": "Story",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Lisa Felten",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-2644",
+        "summary": "[DB] connection not available",
+        "issueType": "Bug",
+        "status": "Ready for Sprint",
+        "isEpic": false,
+        "assignee": "Unassigned",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-2642",
+        "summary": "[Triggers] Set custom field exception",
+        "issueType": "Bug",
+        "status": "Open",
+        "isEpic": false,
+        "assignee": "Unassigned",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-2542",
+        "summary": "Scheduled Use Case Reviews",
+        "issueType": "Epic",
+        "status": "In Progress",
+        "isEpic": true,
+        "assignee": "Ehrik Aldana",
+        "priority": "Medium"
+      }
+    ],
+    "v19.0": [
+      {
+        "key": "DEV-3475",
+        "summary": "Multi Triggers created on old questionnaires will causes use case overview to throw a 500",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Steven Barber",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-3453",
+        "summary": "Inconsistent behavior in questionnaire comment section",
+        "issueType": "Bug",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Unassigned",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-3447",
+        "summary": "Inputting a value into a custom field for the first time trigger internal server error",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Steven Barber",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3427",
+        "summary": "Unable to delete use cases due to foreign key constraint error",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Lisa Felten",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-3417",
+        "summary": "[SNOW][Backend] Use basic auth instead of integration key",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Steven Barber",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3410",
+        "summary": "[BE] Unhandled error when creating review action without task_id",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Lisa Felten",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-3406",
+        "summary": "OOTB model: loading failure in QA",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Fabrizio Puletti",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-3396",
+        "summary": "Some unhandled errors in deprecated comments endpoints",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Lisa Felten",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3395",
+        "summary": "Unhandled pattern in event subscriber",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Lisa Felten",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3393",
+        "summary": "Reviewer count is not updated until hard page refresh if removed by trigger",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Jefferson Reis",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3392",
+        "summary": "[BE] Segment subscriber fails to build properties for comment events",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Lisa Felten",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-3391",
+        "summary": "[BE] Creating note comments via deprecated API fails",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Lisa Felten",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3383",
+        "summary": "Unable to create a custom policy pack - unprocessable entity",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Ed Morales",
+        "priority": "Highest"
+      },
+      {
+        "key": "DEV-3368",
+        "summary": "Finalized review snapshots show edit/delete actions in comment bubbles, despite being read-only",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Jefferson Reis",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3367",
+        "summary": "Replying to a Review comment fails silently — comment is not posted or retained",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Jefferson Reis",
+        "priority": "Highest"
+      },
+      {
+        "key": "DEV-3360",
+        "summary": "[FE] Replies to Review comments are sorted newest-first, breaking thread readability and consistency",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Leonardo Lemos",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-3357",
+        "summary": "Questionnaire IDs returned empty in Models and Vendors endpoints",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Barbara Jaber",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3352",
+        "summary": "Model Registry - \"CredoAI\" filter has no space in it",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Fabrizio Puletti",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3320",
+        "summary": "Previously created models not migrated properly, old data is missing",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Fabrizio Puletti",
+        "priority": "Highest"
+      },
+      {
+        "key": "DEV-3319",
+        "summary": "Model cannot be created if only 1 model questionnaire exists in a tenant",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Jefferson Reis",
+        "priority": "Highest"
+      },
+      {
+        "key": "DEV-3316",
+        "summary": "[FE] Filter button doesn't work on Use Cases and Vendors pages",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Leonardo Lemos",
+        "priority": "Highest"
+      },
+      {
+        "key": "DEV-3315",
+        "summary": "[FE] No warning message when internal user comments on a questionnaire assigned to external user",
+        "issueType": "Bug",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Leonardo Lemos",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3313",
+        "summary": "Models card is missing from the Vendor Info page",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Ed Morales",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3312",
+        "summary": "Downloaded model card PNG has low-contrast colors making content unreadable",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Ed Morales",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3311",
+        "summary": "Model card overflows vertically with large content and cannot be scrolled",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Ed Morales",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3310",
+        "summary": "Hidden questions can be created in Model and Vendor questionnaires but cannot be used or displayed",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Ed Morales",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3308",
+        "summary": "Long description string without spaces overflows in Model Versions card",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Ed Morales",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3307",
+        "summary": "Deleting an answer in a model questionnaire results in a \"Not found\" error (404 on evidence deletion)",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Fabrizio Puletti",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3306",
+        "summary": "Long use case names overflow in the Use Cases section on the Model Details page",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Ed Morales",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3305",
+        "summary": "Long file names overflow the Documents section on the Model Details page",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Ed Morales",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3302",
+        "summary": "Unhelpful validation error shown when unselecting questionnaire in Register Model dialog",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Ed Morales",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3300",
+        "summary": "Model name overflows in Model Information section when 255 characters long",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Ed Morales",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3299",
+        "summary": "Add Model dialog cannot be dismissed after validation error",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Jefferson Reis",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-3298",
+        "summary": "Archive button incorrectly displayed for OOTB questionnaires which cannot be archived",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Lisa Felten",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3289",
+        "summary": "Create migration for default model questionnaire",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Fabrizio Puletti",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-3280",
+        "summary": "Remove \"Beta\" tag from Vendor AI Registry section",
+        "issueType": "Story",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Ed Morales",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3276",
+        "summary": "Resolved comment status is not updated for other users until force-refresh of the page",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Leonardo Lemos",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3275",
+        "summary": "[FE] Comment is missing control's name if it's a compliance control",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Leonardo Lemos",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3273",
+        "summary": "[FE] Comment timestamp is incorrect",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Leonardo Lemos",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3272",
+        "summary": "Truncate the number of characters allowed in answer of text fields",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Steven Barber",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-3257",
+        "summary": "[FE] Review anchors for comment threads",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Leonardo Lemos",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3255",
+        "summary": "[BE] Send comment notification email to Use Case owner",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Barbara Jaber",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3249",
+        "summary": "Modify asset loader to load OOTB models",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Fabrizio Puletti",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-3218",
+        "summary": "[BE] Event handling, notifications, websockets, webhooks",
+        "issueType": "Story",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Fabrizio Puletti",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3214",
+        "summary": "[SNOW][IS] Encrypt Cache Key",
+        "issueType": "Story",
+        "status": "Ready for Sprint",
+        "isEpic": false,
+        "assignee": "Steven Barber",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3213",
+        "summary": "[SNOW][Backend] Support Use Case Sync Issues in Backend",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Steven Barber",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3183",
+        "summary": "[BE] Prevent UseCaseReviewFeedbackCreated email from being sent on comments",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Barbara Jaber",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3173",
+        "summary": "[FE] Create bubble component for Questionnaire Comments",
+        "issueType": "Task",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Wesley Candido",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3166",
+        "summary": "[FE] Add support for new resource type Review Action",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Leonardo Lemos",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-3165",
+        "summary": "[BE] Add support for new resource type Review Action (type != :comment)",
+        "issueType": "Story",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Lisa Felten",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3164",
+        "summary": "[FE] Snapshot Comment Threads in Review History",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Leonardo Lemos",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3140",
+        "summary": "Usetiful tours are enabled when they shouldn't be",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Ed Morales",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3122",
+        "summary": "[FE] Add model <-> vendor CRUD in model view",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Jefferson Reis",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3113",
+        "summary": "[SNOW][INT] Guided Setup",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Chika",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3112",
+        "summary": "[SNOW][Backend] Support Source in Backend",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Barbara Jaber",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3111",
+        "summary": "[SNOW][INFRA] Integration Service running in K8s cluster",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Nate Faerber",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3110",
+        "summary": "[SNOW][INT] Scripted REST API to create use case record in credo_ai_use_case_table",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Chika",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3109",
+        "summary": "[SNOW][INT] Create credo_ai_use_case_table",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Chika",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3108",
+        "summary": "[SNOW][INT] Configure Integration",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Chika",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3105",
+        "summary": "[BE] Paginate comments endpoints",
+        "issueType": "Story",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Lisa Felten",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3097",
+        "summary": "[SNOW][Backend] Create a Module to Handle Interacting with SNOW Integration",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Steven Barber",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3096",
+        "summary": "[SNOW][Form] Vulcanized Form to Create Use Cases and Answer Questions",
+        "issueType": "Story",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Ed Morales",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3095",
+        "summary": "[SNOW][IS] Set Custom and Default Metadata via Integration Service",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Steven Barber",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3094",
+        "summary": "[SNOW][IS] Answer Questions via Integration Service",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Steven Barber",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3092",
+        "summary": "[SNOW][IS] Create Use Case via Integration Service",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Steven Barber",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3085",
+        "summary": "[Frontend] Migrate risk scenarios API client to use pagination and backend filtering / sorting",
+        "issueType": "Task",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Ed Morales",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-3028",
+        "summary": "[FE] Create solution architecture proposal for Enhanced Comments experience",
+        "issueType": "Task",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Leonardo Lemos",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3016",
+        "summary": "[FE] Update model list table and filters",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Jefferson Reis",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-2972",
+        "summary": "[BE] Deprecate model fields",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Fabrizio Puletti",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-2946",
+        "summary": "[FE] Expand model name char limit to 255 chars",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Fabrizio Puletti",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-2922",
+        "summary": "[BE] Remove governance_status (cleanup)",
+        "issueType": "Task",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Anna Tovkun",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-2918",
+        "summary": "[FE] [Blueprint] Next.js Server Side Application",
+        "issueType": "Task",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Leonardo Lemos",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-2849",
+        "summary": "Write up customer docs to use new webhooks and API endpoints",
+        "issueType": "Task",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Lisa Felten",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-2814",
+        "summary": "[SNOW][IS] Loading and creating users from integration service",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Steven Barber",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-2813",
+        "summary": "[SNOW][INFRA] Integration Service running locally",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Steven Barber",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-2791",
+        "summary": "[BE] Allow model vendor link creation authorization only to admins",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Fabrizio Puletti",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-2786",
+        "summary": "[FE] Allow click to navigate to linked resources from resolved comment threads",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Leonardo Lemos",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-2785",
+        "summary": "[FE] Visually distinguish externally-facing comments",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Leonardo Lemos",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-2784",
+        "summary": "[FE] Rename the Reviewers pane to “Review”",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Leonardo Lemos",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-2783",
+        "summary": "[FE] Replace “notes” with comments at the Compliance Control level",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Leonardo Lemos",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-2782",
+        "summary": "[FE] Replace “notes” with comments at the Risk Control level",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Leonardo Lemos",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-2781",
+        "summary": "[FE] Implement use case threads in questionnaires view to replace review threads",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Leonardo Lemos",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-2780",
+        "summary": "[FE] Modify the Vendor portal to support comments",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Wesley Candido",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-2779",
+        "summary": "[FE] Use the new Websockets for notifications",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Leonardo Lemos",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-2778",
+        "summary": "[FE] Implement pane for use case comments",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Leonardo Lemos",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-2777",
+        "summary": "[FE] Repurpose use-case-thread-open-action and use-case-threads components to use new API",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Leonardo Lemos",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-2776",
+        "summary": "[FE] Repurpose use-case-comments components to use new API",
+        "issueType": "Story",
+        "status": "Dev complete",
+        "isEpic": false,
+        "assignee": "Leonardo Lemos",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-2761",
+        "summary": "[BE- Admin BE] Implement Cache for Admin BE",
+        "issueType": "Story",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Paula Gluss",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-2736",
+        "summary": "[BE] Data migration",
+        "issueType": "Story",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Lisa Felten",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-2734",
+        "summary": "[BE] Deprecate old “Review Action” comment webhooks",
+        "issueType": "Story",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Lisa Felten",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-2733",
+        "summary": "[BE] Add filters to API endpoints to support granular search",
+        "issueType": "Story",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Lisa Felten",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-2732",
+        "summary": "[BE] Deprecate old API endpoints → use new controllers",
+        "issueType": "Story",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Lisa Felten",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-2731",
+        "summary": "[BE] Implement dual-write logic",
+        "issueType": "Story",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Lisa Felten",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-2730",
+        "summary": "[BE] Create API views, controllers, and endpoints",
+        "issueType": "Story",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Lisa Felten",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-2729",
+        "summary": "[BE] CRUD + business logic",
+        "issueType": "Task",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Lisa Felten",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-2728",
+        "summary": "[BE] Schema migration",
+        "issueType": "Task",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Lisa Felten",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-2653",
+        "summary": "[BE - Industries] Implement industries in Admin Backend",
+        "issueType": "Story",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Paula Gluss",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-2652",
+        "summary": "[BE - Domains] Implement domains in Admin Backend",
+        "issueType": "Story",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Paula Gluss",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-2543",
+        "summary": "TDD: Time-based Re-Reviews",
+        "issueType": "Story",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Anna Tovkun",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-2528",
+        "summary": "[BE - Admin BE] Set up Admin BE with stub endpoint",
+        "issueType": "Story",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Paula Gluss",
+        "priority": "Medium"
+      }
+    ],
+    "v18.2": [
+      {
+        "key": "DEV-3248",
+        "summary": "Questionnaire Bug / Simplot",
+        "issueType": "Bug",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Unassigned",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-3243",
+        "summary": "Governance bounds validation is only being displayed to some selected bounds rather than all",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Ed Morales",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3242",
+        "summary": "Mathematical bounds not explicitly stated that it is required in order to create governance bounds",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Ed Morales",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3241",
+        "summary": "Email sent to stakeholders after evidence review displays incorrect name",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Barbara Jaber",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-3226",
+        "summary": "Non-performant Pagination in Use Cases Registry",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Ed Morales",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3217",
+        "summary": "User Search doesn't give related results",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Anna Tovkun",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-3212",
+        "summary": "[BE] Task reminder email has link to Use Case ",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Barbara Jaber",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3195",
+        "summary": "UI allows duplicate Governance Bound names, leading to backend rejection and loss of user input",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Ed Morales",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-3194",
+        "summary": "UI allows duplicate bound colors when creating Metric evidence, violating uniqueness requirement",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Unassigned",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-3193",
+        "summary": "[BE] When a review or comment is left in a Use Case, the reviewer/commenter receives feedback email",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Barbara Jaber",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3192",
+        "summary": "[BE] Task new assignments email has misaligned bullet list",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Barbara Jaber",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3190",
+        "summary": "Setting Risk Status Label to \"In progress\" from \"Ready for validation\" fails",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Fabrizio Puletti",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-3189",
+        "summary": "Incorrect Options in \"Risk Status\" Dropdown",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Fabrizio Puletti",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3185",
+        "summary": "Help Link in Emails Ignores Tenant's Custom URL",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Barbara Jaber",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-3184",
+        "summary": "Status value in a Status column of External Portal homepage is incorrect",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Ed Morales",
+        "priority": "Low"
+      },
+      {
+        "key": "DEV-3175",
+        "summary": "SCIM Implementation Returns Incorrect Status Codes",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Steven Barber",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3163",
+        "summary": "Wrong requirement type and duplicate requirement in EU-HIGH Policy Pack",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Eli Sherman",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-3161",
+        "summary": "Non-admin Users Can See and Attempt to Change Use Case Stage/Status",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Ed Morales",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3152",
+        "summary": "Extremely long file name upload leads to internal server error - Azure",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Juan Alcantara",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-3149",
+        "summary": "Change 'vendor' to 'external' in the add external user pop-up",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Ed Morales",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3145",
+        "summary": "Possibly Inaccurate Zero-State Message for Risks/Policy Packs in Assessment Status",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Ed Morales",
+        "priority": "Low"
+      },
+      {
+        "key": "DEV-3134",
+        "summary": "[FE] Add warning label to T/A deletion UX",
+        "issueType": "Story",
+        "status": "Ready for Release",
+        "isEpic": false,
+        "assignee": "Fred Chung",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3121",
+        "summary": "Implement Enhanced Governance Workflow Stages Progress Indicator",
+        "issueType": "Epic",
+        "status": "Ready for Release",
+        "isEpic": true,
+        "assignee": "Ehrik Aldana",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3090",
+        "summary": "[FEATURE] Improve existing email notifications",
+        "issueType": "Epic",
+        "status": "In Progress",
+        "isEpic": true,
+        "assignee": "Chanaveer Kadapatti",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3070",
+        "summary": "Limits error stacktrace and code is dumped to response",
+        "issueType": "Bug",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Lisa Felten",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-3067",
+        "summary": "[BE] Improve logging for Review status changes",
+        "issueType": "Task",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Fabrizio Puletti",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-3037",
+        "summary": "[FEATURE] Implement governance bounds for metric type evidence requirements",
+        "issueType": "Epic",
+        "status": "Ready for Release",
+        "isEpic": true,
+        "assignee": "Ehrik Aldana",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3036",
+        "summary": "[FEATURE] Implement mathematical bounds for metric type evidence requirements",
+        "issueType": "Epic",
+        "status": "Ready for Release",
+        "isEpic": true,
+        "assignee": "Ehrik Aldana",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-2949",
+        "summary": "[TDD] Mathematical Out of Bounds and Stoplight Metrics Thresholds",
+        "issueType": "Story",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Paula Gluss",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-2915",
+        "summary": "Granular Control Statuses",
+        "issueType": "Epic",
+        "status": "Closed",
+        "isEpic": true,
+        "assignee": "Ehrik Aldana",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-2692",
+        "summary": "Reviewer sees Edit for Risk Classification but cannot edit",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Ed Morales",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-2665",
+        "summary": "Audit logs may have blank name of user if given_name and family_name are nil",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Barbara Jaber",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-2206",
+        "summary": "Task Assignment Enhancements (bulk assign + assign multiple users)",
+        "issueType": "Epic",
+        "status": "In Progress",
+        "isEpic": true,
+        "assignee": "Unassigned",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-2150",
+        "summary": "Make sure we update `q` search filter in /users to support searches like `ed mo` for full searches",
+        "issueType": "Task",
+        "status": "Ready for Release",
+        "isEpic": false,
+        "assignee": "Anna Tovkun",
+        "priority": "Medium"
+      }
+    ],
+    "v18.0": [
+      {
+        "key": "TCR-1001",
+        "summary": "Test Execution for Azure v18",
+        "issueType": "Test Execution",
+        "status": "DONE",
+        "isEpic": false,
+        "assignee": "Unassigned",
+        "priority": "Medium"
+      },
+      {
+        "key": "TCR-965",
+        "summary": "v18.0 Regression Testing - AWS QA",
+        "issueType": "Test Execution",
+        "status": "DONE",
+        "isEpic": false,
+        "assignee": "Unassigned",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3125",
+        "summary": "[BE] Use Case description being logged on bulk upload error (description field too long)",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Steven Barber",
+        "priority": "Highest"
+      },
+      {
+        "key": "DEV-3120",
+        "summary": "Default governance stages showing as \"Intake\" and \"Production\" instead of \"Intake\" and \"Governance.\"",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Steven Barber",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-3117",
+        "summary": "External user email still reads as vendor user",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Fabrizio Puletti",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3098",
+        "summary": "Settings tab - Admin unable to save changes when editing user Information ( V16.2.1)",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Ed Morales",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-3091",
+        "summary": "KY-SB4 Policy Pack",
+        "issueType": "New Feature",
+        "status": "Ready for Release",
+        "isEpic": false,
+        "assignee": "Eli Sherman",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3089",
+        "summary": "Governance Dashboard showing up active statuses not applicable to specific stages",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Ed Morales",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3088",
+        "summary": "Governance Dashboard Displays Items in Incorrect Order",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Ed Morales",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3083",
+        "summary": "Use Case Reviewer Approval Count Not Updating Without Hard Refresh",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Ed Morales",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3082",
+        "summary": "403 Forbidden Error on AI Registry for Expert Users & Non-functional Domain Filter",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Anna Tovkun",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3075",
+        "summary": "\"Submit a Review\" and \"Settings\" buttons are missing when Use Case name is too long",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Wesley Candido",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3071",
+        "summary": "users/external API endpoint call from UI failing with 400",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Ed Morales",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-3069",
+        "summary": "Task Completion label doesn't have a timestamp",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Fabrizio Puletti",
+        "priority": "Low"
+      },
+      {
+        "key": "DEV-3063",
+        "summary": "OMB M25-21 and M25-22 Policy Packs",
+        "issueType": "New Feature",
+        "status": "Ready for Release",
+        "isEpic": false,
+        "assignee": "Unassigned",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3062",
+        "summary": "EU AI Act Policy Pack Updates",
+        "issueType": "New Feature",
+        "status": "Ready for Release",
+        "isEpic": false,
+        "assignee": "Unassigned",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3059",
+        "summary": "Use Case Registry Column-visibility selector closes prematurely after each checkbox click",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Ed Morales",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3058",
+        "summary": "Filter settings persist across user sessions in same browser",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Leonardo Lemos",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3057",
+        "summary": "[Entitlements] Use case creation is limited when use case limit is 0",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Steven Barber",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3054",
+        "summary": "Use Case Overview page does not display updated Risk Classification after selection",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Anna Tovkun",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-3053",
+        "summary": "SCIM API: Unable to delete SSO users",
+        "issueType": "Bug",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Steven Barber",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3052",
+        "summary": "SCIM API: Unable to update groups",
+        "issueType": "Bug",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Steven Barber",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3045",
+        "summary": "Use Case Registry Download file should show Governance Status and Workflow Stage labels",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Anna Tovkun",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-3035",
+        "summary": "[SCIM API] Hide SCIM behind SCIM entitlement",
+        "issueType": "Story",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Steven Barber",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3034",
+        "summary": "SCIM API: Unable to connect Okta IdP to environment",
+        "issueType": "Bug",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Steven Barber",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3033",
+        "summary": "SCIM API: Get Users",
+        "issueType": "Story",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Steven Barber",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3032",
+        "summary": "Risk Scenarios and Controls Visibility",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Susannah Shattuck",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-3031",
+        "summary": "Custom Field Tests Randomly Fail",
+        "issueType": "Bug",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Steven Barber",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3003",
+        "summary": "[Backend] Reviewer sees Edit for Risk Classification but cannot edit",
+        "issueType": "Task",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Anna Tovkun",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-3000",
+        "summary": "Download and Delete Buttons for Uploaded Files or Attachments Missing for Long File Names",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Wesley Candido",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-2995",
+        "summary": "Settings > Teams Table Only Displays 30 Entries and Pagination Fails",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Wesley Candido",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-2986",
+        "summary": "Manually Removing a Policy Pack added by an Action causes Triggers and Actions to stop working",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Steven Barber",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-2953",
+        "summary": "[FE] Module definition documentation",
+        "issueType": "Task",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Leonardo Lemos",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-2948",
+        "summary": "SCIM API: Generate static responses",
+        "issueType": "Story",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Steven Barber",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-2947",
+        "summary": "SCIM API: CRUD for Groups",
+        "issueType": "Story",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Steven Barber",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-2935",
+        "summary": "Update \"Region\" Field to Include Utah, Kentucky",
+        "issueType": "Story",
+        "status": "Ready for Release",
+        "isEpic": false,
+        "assignee": "Paula Gluss",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-2933",
+        "summary": "FE: Update form description spacing",
+        "issueType": "Story",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Wesley Candido",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-2931",
+        "summary": "Global UI: Rename Switch component to Toggle in Design System",
+        "issueType": "Story",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Jefferson Reis",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-2929",
+        "summary": "JSON upload ignores provided Domain values",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Anna Tovkun",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-2928",
+        "summary": "Refactor & cleanup AWS configuration in BE",
+        "issueType": "Task",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Paula Gluss",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-2924",
+        "summary": "Risk Scenario not removed when questionnaire answer changes",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Steven Barber",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-2919",
+        "summary": "Expired package version message on Policy Pack Report",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Ed Morales",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-2903",
+        "summary": "SCIM API: Authenticate with static bearer token",
+        "issueType": "Story",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Steven Barber",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-2884",
+        "summary": "SCIM API: Delete (deactivate) User",
+        "issueType": "Story",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Steven Barber",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-2883",
+        "summary": "SCIM API: Update User",
+        "issueType": "Story",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Steven Barber",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-2881",
+        "summary": "The link in the email notification for added or removed users leads to a 404 error",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Ed Morales",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-2880",
+        "summary": "[FE] Setup feature flags service",
+        "issueType": "Task",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Leonardo Lemos",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-2870",
+        "summary": "[FE] Change Pull Request required approval to UI Platform group",
+        "issueType": "Task",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Leonardo Lemos",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-2869",
+        "summary": "[FE] Add Cursor Rule for Pull Request Template",
+        "issueType": "Task",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Leonardo Lemos",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-2839",
+        "summary": "[BE] Update task completion business logic for questionnaire sections",
+        "issueType": "Story",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Fabrizio Puletti",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-2836",
+        "summary": "Rename Vendor Portal to External User Portal",
+        "issueType": "Story",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Fabrizio Puletti",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-2827",
+        "summary": "SCIM API: Implement API Throttling",
+        "issueType": "Story",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Steven Barber",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-2806",
+        "summary": "[BE] Update use cases API with new filters",
+        "issueType": "Story",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Anna Tovkun",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-2805",
+        "summary": "[FE] Update dashboards FE to consider stage and status",
+        "issueType": "Story",
+        "status": "In Production (GA)",
+        "isEpic": false,
+        "assignee": "Ed Morales",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-2804",
+        "summary": "[BE] Update dashboards APIs to consider stage and status",
+        "issueType": "Story",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Anna Tovkun",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-2788",
+        "summary": "[BE] Stages API CRUD",
+        "issueType": "Story",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Anna Tovkun",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-2773",
+        "summary": "SCIM API: Add User Limit",
+        "issueType": "Story",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Steven Barber",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-2772",
+        "summary": "SCIM API: Basic add user",
+        "issueType": "Story",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Steven Barber",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-2745",
+        "summary": "Risk Classification can be altered in finalized reviews and reports",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Juan Alcantara",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-2693",
+        "summary": "[FEATURE] Review history tab : snapshots include stage and status",
+        "issueType": "New Feature",
+        "status": "In Production (GA)",
+        "isEpic": false,
+        "assignee": "Unassigned",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-2691",
+        "summary": "Update email notifications (audit and track)",
+        "issueType": "Story",
+        "status": "Ready for Release",
+        "isEpic": false,
+        "assignee": "Anna Tovkun",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-2690",
+        "summary": "[FEATURE] Change the status of a use case",
+        "issueType": "New Feature",
+        "status": "Ready for Release",
+        "isEpic": false,
+        "assignee": "Unassigned",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-2689",
+        "summary": "[FEATURE] View stages and what governance statuses are active within each tenant",
+        "issueType": "New Feature",
+        "status": "Ready for Release",
+        "isEpic": false,
+        "assignee": "Unassigned",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-2688",
+        "summary": "[FEATURE] View what stage and governance status a use case is in",
+        "issueType": "New Feature",
+        "status": "Ready for Release",
+        "isEpic": false,
+        "assignee": "Unassigned",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-2687",
+        "summary": "Update existing dashboard with new statuses",
+        "issueType": "New Feature",
+        "status": "In Production (GA)",
+        "isEpic": false,
+        "assignee": "Unassigned",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-2680",
+        "summary": "[Feature] Update Overview Dashboard for new Governance Workflow Stages",
+        "issueType": "New Feature",
+        "status": "In Production (GA)",
+        "isEpic": false,
+        "assignee": "Unassigned",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-2662",
+        "summary": "TDD: Implement SCIM APIs",
+        "issueType": "Story",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Steven Barber",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-2603",
+        "summary": "[FE] Improve responsive layout at large screenwidths",
+        "issueType": "Story",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Ed Morales",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-2533",
+        "summary": "TDD: External User Portal (Vendor Portal) Usability Improvements",
+        "issueType": "Story",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Ed Morales",
+        "priority": "Highest"
+      },
+      {
+        "key": "DEV-2532",
+        "summary": "External User Portal usability improvements",
+        "issueType": "Epic",
+        "status": "In Production (GA)",
+        "isEpic": true,
+        "assignee": "Chanaveer Kadapatti",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-2480",
+        "summary": "[Cleanup] Remove hidden and custom asset fields",
+        "issueType": "Task",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Anna Tovkun",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-2450",
+        "summary": "New control creation redirects to View page instead of Edit page",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Wesley Candido",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-2349",
+        "summary": "Unsupported file still visible upon getting an error message for uploading it to a file-upload question-type",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Wesley Candido",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-2287",
+        "summary": "Enhanced Governance Workflow Statuses",
+        "issueType": "Epic",
+        "status": "In Production (GA)",
+        "isEpic": true,
+        "assignee": "Ehrik Aldana",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-2286",
+        "summary": "Governance Workflow Stage Change Log",
+        "issueType": "New Feature",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Unassigned",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-2283",
+        "summary": "TDD: Governance Workflow Statuses",
+        "issueType": "Story",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Ed Morales",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-2237",
+        "summary": "Global UI: Switch",
+        "issueType": "Story",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Jefferson Reis",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-2099",
+        "summary": "[FE] Save a user's AI Registry filters",
+        "issueType": "Story",
+        "status": "In Production (GA)",
+        "isEpic": false,
+        "assignee": "Leonardo Lemos",
+        "priority": "High"
+      }
+    ],
+    "v17.1": [
+      {
+        "key": "DEV-2917",
+        "summary": "Archiving a risk scenario has no impact",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Anna Tovkun",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-2909",
+        "summary": "Multi-trigger metadata field creation fails with unprocessable entity in self-hosted",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Fabrizio Puletti",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-2895",
+        "summary": "Trigger action does not set value on multi-select custom field",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Fabrizio Puletti",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-2874",
+        "summary": "Add UT SB149 Policy Pack to Library",
+        "issueType": "Story",
+        "status": "In Production (GA)",
+        "isEpic": false,
+        "assignee": "Lucia Gamboa",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-2873",
+        "summary": "Add AI Verify Policy Pack to Library",
+        "issueType": "Story",
+        "status": "In Production (GA)",
+        "isEpic": false,
+        "assignee": "Alvaro Sanchez",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-2872",
+        "summary": "Add DSA Policy Pack to Library",
+        "issueType": "Story",
+        "status": "In Production (GA)",
+        "isEpic": false,
+        "assignee": "Lucia Gamboa",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-2871",
+        "summary": "Add SR 11-7 Policy Pack to Library",
+        "issueType": "Story",
+        "status": "In Production (GA)",
+        "isEpic": false,
+        "assignee": "Lucia Gamboa",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-2861",
+        "summary": "Hidden Risk Scenarios still listed in menu of risk scenarios in Use Case",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Unassigned",
+        "priority": "High"
+      }
+    ],
+    "v17.0": [
+      {
+        "key": "DEV-2885",
+        "summary": "[FE] Update archive filter in risk scenarios screen to be consistent",
+        "issueType": "Story",
+        "status": "In Production (GA)",
+        "isEpic": false,
+        "assignee": "Ed Morales",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-2882",
+        "summary": "Model name shown incorrectly on Use Case type controls",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Ed Morales",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-2868",
+        "summary": "Creating a trigger from the questionnaire will redirect user to something went wrong page when editing the trigger",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Ed Morales",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-2863",
+        "summary": "When archiving a risk scenario there is a missing button element to revert archive state",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Ed Morales",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-2860",
+        "summary": "404 error upon clicking on \"View tokens\" for Technical control",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Ed Morales",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-2858",
+        "summary": "Newly created Model's content cannot be populated",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Fabrizio Puletti",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-2857",
+        "summary": "Error for Custom Risk Scenario creation in Risk Tab of Use Case ",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Paula Gluss",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-2855",
+        "summary": "Unable to add a use case if the ‘Value’ field is left empty in the ‘Add Use Case” pop up window",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Ed Morales",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-2854",
+        "summary": "Draft label/icon displayed in UI on all Questionnaires regardless of published status",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Leonardo Lemos",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-2853",
+        "summary": "Overlapping Use Case Names on AI Registry",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Ed Morales",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-2851",
+        "summary": "Re-introduce Policy Pack level audit logs",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Ed Morales",
+        "priority": "Highest"
+      },
+      {
+        "key": "DEV-2850",
+        "summary": "Evidence deactivation mis-behave across multiple questionnaires",
+        "issueType": "Bug",
+        "status": "Closed Verified",
+        "isEpic": false,
+        "assignee": "Lisa Felten",
+        "priority": "Highest"
+      },
+      {
+        "key": "DEV-2767",
+        "summary": "V3 API Deprecation",
+        "issueType": "Epic",
+        "status": "Closed",
+        "isEpic": true,
+        "assignee": "Fabrizio Puletti",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-2753",
+        "summary": "[Asset Deprecation] Update archived and deprecated fields in YAML schemas ",
+        "issueType": "Task",
+        "status": "In Production (GA)",
+        "isEpic": false,
+        "assignee": "Travis Mattera",
+        "priority": "High"
+      },
+      {
+        "key": "DEV-2723",
+        "summary": "TDD: Decouple S3 blob store",
+        "issueType": "Story",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Paula Gluss",
+        "priority": "Highest"
+      },
+      {
+        "key": "DEV-2721",
+        "summary": "Only surface alerts that correspond with the final risk classification",
+        "issueType": "Story",
+        "status": "In Production (GA)",
+        "isEpic": false,
+        "assignee": "Lisa Felten",
+        "priority": "Highest"
+      },
+      {
+        "key": "DEV-2702",
+        "summary": "Custom metadata fields support multi-select",
+        "issueType": "Story",
+        "status": "In Production (GA)",
+        "isEpic": false,
+        "assignee": "Alberto Paneda",
+        "priority": "Highest"
+      },
+      {
+        "key": "DEV-2466",
+        "summary": "\"Source\" Field follow up: Data Migration",
+        "issueType": "Story",
+        "status": "In Production (GA)",
+        "isEpic": false,
+        "assignee": "Fabrizio Puletti",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-2409",
+        "summary": "FE: Asset deprecation",
+        "issueType": "Story",
+        "status": "In Production (GA)",
+        "isEpic": false,
+        "assignee": "Ed Morales",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-2408",
+        "summary": "Asset Deprecation",
+        "issueType": "Story",
+        "status": "In Production (GA)",
+        "isEpic": false,
+        "assignee": "Anna Tovkun",
+        "priority": "Medium"
+      },
+      {
+        "key": "DEV-1747",
+        "summary": "[infra] Feature Flags Investigation",
+        "issueType": "Task",
+        "status": "Closed",
+        "isEpic": false,
+        "assignee": "Anna Tovkun",
+        "priority": "Medium"
+      }
+    ]
+  },
+  "summaries": {
+    "v26.0": {
+      "totalTickets": 1,
+      "byType": {
+        "Bug": 1
+      },
+      "byStatus": {
+        "Dev complete": 1
+      }
+    },
+    "v25.0": {
+      "totalTickets": 7,
+      "byType": {
+        "Story": 2,
+        "Bug": 5
+      },
+      "byStatus": {
+        "In Progress": 2,
+        "Ready for Sprint": 1,
+        "Dev complete": 4
+      }
+    },
+    "v24.0": {
+      "totalTickets": 9,
+      "byType": {
+        "Story": 3,
+        "Bug": 5,
+        "Task": 1
+      },
+      "byStatus": {
+        "Dev complete": 7,
+        "In Progress": 1,
+        "In Review": 1
+      }
+    },
+    "v23.0": {
+      "totalTickets": 21,
+      "byType": {
+        "Bug": 18,
+        "Story": 3
+      },
+      "byStatus": {
+        "Closed Verified": 13,
+        "Open": 3,
+        "In Progress": 2,
+        "Closed": 1,
+        "Dev complete": 2
+      }
+    },
+    "v22.0": {
+      "totalTickets": 28,
+      "byType": {
+        "Bug": 17,
+        "Story": 9,
+        "Epic": 1,
+        "Task": 1
+      },
+      "byStatus": {
+        "Closed Verified": 15,
+        "Dev complete": 8,
+        "Closed": 4,
+        "Open": 1
+      }
+    },
+    "v21.1": {
+      "totalTickets": 5,
+      "byType": {
+        "Bug": 4,
+        "Epic": 1
+      },
+      "byStatus": {
+        "Closed Verified": 4,
+        "Closed": 1
+      }
+    },
+    "v21.0": {
+      "totalTickets": 100,
+      "byType": {
+        "Bug": 28,
+        "Story": 57,
+        "Initiative": 2,
+        "Task": 3,
+        "Epic": 4,
+        "Sub-task": 6
+      },
+      "byStatus": {
+        "Closed Verified": 27,
+        "In Refinement": 1,
+        "Ready for Sprint": 5,
+        "Dev complete": 35,
+        "Closed": 24,
+        "Open": 7,
+        "Blocked": 1
+      }
+    },
+    "v20.1": {
+      "totalTickets": 14,
+      "byType": {
+        "Sub-task": 1,
+        "Bug": 9,
+        "Story": 2,
+        "Epic": 2
+      },
+      "byStatus": {
+        "Dev complete": 4,
+        "Closed Verified": 6,
+        "Closed": 3,
+        "Open": 1
+      }
+    },
+    "v20.0": {
+      "totalTickets": 100,
+      "byType": {
+        "Bug": 41,
+        "Task": 4,
+        "New Feature": 1,
+        "Story": 51,
+        "Epic": 3
+      },
+      "byStatus": {
+        "Closed Verified": 33,
+        "Dev complete": 36,
+        "Open": 3,
+        "Closed": 23,
+        "Blocked": 1,
+        "Ready for Sprint": 3,
+        "In Progress": 1
+      }
+    },
+    "v19.1": {
+      "totalTickets": 79,
+      "byType": {
+        "Bug": 43,
+        "Story": 25,
+        "Task": 4,
+        "Epic": 7
+      },
+      "byStatus": {
+        "Closed": 16,
+        "Closed Verified": 27,
+        "Open": 6,
+        "Dev complete": 23,
+        "In Progress": 4,
+        "Ready for Sprint": 3
+      }
+    },
+    "v19.0": {
+      "totalTickets": 100,
+      "byType": {
+        "Bug": 38,
+        "Story": 54,
+        "Task": 8
+      },
+      "byStatus": {
+        "Closed Verified": 36,
+        "Closed": 25,
+        "Dev complete": 38,
+        "Ready for Sprint": 1
+      }
+    },
+    "v18.2": {
+      "totalTickets": 34,
+      "byType": {
+        "Bug": 24,
+        "Story": 2,
+        "Epic": 6,
+        "Task": 2
+      },
+      "byStatus": {
+        "Closed": 5,
+        "Closed Verified": 22,
+        "Ready for Release": 5,
+        "In Progress": 2
+      }
+    },
+    "v18.0": {
+      "totalTickets": 78,
+      "byType": {
+        "Test Execution": 2,
+        "Bug": 31,
+        "New Feature": 10,
+        "Story": 26,
+        "Task": 7,
+        "Epic": 2
+      },
+      "byStatus": {
+        "DONE": 2,
+        "Closed Verified": 27,
+        "Ready for Release": 8,
+        "Closed": 34,
+        "In Production (GA)": 7
+      }
+    },
+    "v17.1": {
+      "totalTickets": 8,
+      "byType": {
+        "Bug": 4,
+        "Story": 4
+      },
+      "byStatus": {
+        "Closed Verified": 4,
+        "In Production (GA)": 4
+      }
+    },
+    "v17.0": {
+      "totalTickets": 21,
+      "byType": {
+        "Story": 7,
+        "Bug": 11,
+        "Epic": 1,
+        "Task": 2
+      },
+      "byStatus": {
+        "In Production (GA)": 7,
+        "Closed Verified": 11,
+        "Closed": 3
+      }
+    }
+  },
+  "lastUpdated": "2025-12-23T03:16:52.118Z",
+  "releaseCount": 15,
+  "totalTickets": 605
+}

@@ -9,9 +9,12 @@ const ReleaseComparison = () => {
   const [loadingSummary, setLoadingSummary] = useState(false);
   const [expandedRows, setExpandedRows] = useState({});
   const [modalData, setModalData] = useState(null);
+  const [jiraReleaseTickets, setJiraReleaseTickets] = useState({});
+  const [jiraReleaseSummaries, setJiraReleaseSummaries] = useState({});
 
   useEffect(() => {
     fetchAvailableReleases();
+    loadJiraReleaseTickets();
   }, []);
 
   useEffect(() => {
@@ -48,6 +51,27 @@ const ReleaseComparison = () => {
       localStorage.setItem(cacheKey, JSON.stringify(cacheEntry));
     } catch (error) {
       console.error('[Cache] Error writing cache:', error);
+    }
+  };
+
+  const loadJiraReleaseTickets = async () => {
+    console.log('[JIRA] Loading release tickets...');
+    try {
+      const response = await fetch('/jira-release-tickets.json');
+      if (!response.ok) {
+        console.log('[JIRA] No jira-release-tickets.json found. Run: npm run fetch-jira');
+        return;
+      }
+      const data = await response.json();
+      setJiraReleaseTickets(data.releases || {});
+      setJiraReleaseSummaries(data.summaries || {});
+      console.log(`[JIRA] Loaded tickets for ${Object.keys(data.releases || {}).length} releases`);
+      console.log(`[JIRA] Total tickets: ${data.totalTickets}`);
+      if (data.lastUpdated) {
+        console.log(`[JIRA] Release tickets last updated: ${data.lastUpdated}`);
+      }
+    } catch (error) {
+      console.error('[JIRA] Error loading jira-release-tickets.json:', error);
     }
   };
 
@@ -467,7 +491,6 @@ const ReleaseComparison = () => {
                           const url = `https://github.com/search?q=${encodeURIComponent(searchQuery)}&type=pullrequests`;
                           window.open(url, '_blank');
                         }}
-                        style={{ cursor: 'pointer' }}
                       >
                         {typeStats.map((entry, index) => (
                           <Cell key={`cell-${index}`} fill={COLORS[entry.type]} />
@@ -557,10 +580,100 @@ const ReleaseComparison = () => {
             groupedByRelease[key].push(item);
           });
 
-          return Object.entries(groupedByRelease).map(([releaseKey, items]) => (
+          return Object.entries(groupedByRelease).map(([releaseKey, items]) => {
+            // Get JIRA summary for this release (once per release, not per repo)
+            const headVersion = items[0]?.headRelease || 'N/A';
+            const allTickets = [];
+            let combinedSummary = { byType: {}, byStatus: {} };
+
+            // Find all fix versions that start with this release version
+            Object.keys(jiraReleaseTickets).forEach(fixVersion => {
+              if (fixVersion.startsWith(headVersion) || fixVersion === headVersion) {
+                allTickets.push(...jiraReleaseTickets[fixVersion]);
+
+                // Combine summaries
+                const summary = jiraReleaseSummaries[fixVersion];
+                if (summary) {
+                  Object.entries(summary.byType).forEach(([type, count]) => {
+                    combinedSummary.byType[type] = (combinedSummary.byType[type] || 0) + count;
+                  });
+                  Object.entries(summary.byStatus).forEach(([status, count]) => {
+                    combinedSummary.byStatus[status] = (combinedSummary.byStatus[status] || 0) + count;
+                  });
+                }
+              }
+            });
+
+            // Find tickets with no commits (alerts)
+            const allCommitMessages = items.flatMap(item =>
+              (item.commits || []).map(commit => commit.message)
+            ).join(' ');
+
+            const ticketsWithNoCommits = allTickets.filter(ticket => {
+              // Check if this ticket key appears anywhere in the commit messages
+              return !allCommitMessages.includes(ticket.key);
+            });
+
+            return (
             <div key={releaseKey} className="bg-white rounded-lg shadow-md p-6 mb-6">
               <div className="flex items-center justify-between mb-4">
-                <h2 className="text-xl font-bold text-gray-900">{releaseKey}</h2>
+                <div>
+                  <h2 className="text-xl font-bold text-gray-900">Release {headVersion}</h2>
+                  {allTickets.length > 0 && (
+                    <div className="space-y-2 mt-2">
+                      <div className="flex items-center gap-2">
+                        <button
+                          onClick={() => setModalData({
+                            app: 'All Repos',
+                            path: releaseKey,
+                            release: releaseKey,
+                            commits: [],
+                            changeCount: 0,
+                            jiraTickets: allTickets,
+                          })}
+                          className="text-sm text-purple-600 hover:text-purple-800 font-semibold underline cursor-pointer"
+                        >
+                          {allTickets.length} JIRA ticket{allTickets.length !== 1 ? 's' : ''}
+                        </button>
+                        <div className="flex flex-wrap gap-1">
+                          {Object.entries(combinedSummary.byType).map(([type, count]) => (
+                            <span
+                              key={type}
+                              className={`inline-flex items-center px-2 py-0.5 rounded text-xs font-medium ${
+                                type === 'Bug' ? 'bg-red-100 text-red-700' :
+                                type === 'Story' ? 'bg-blue-100 text-blue-700' :
+                                type === 'Epic' ? 'bg-purple-100 text-purple-700' :
+                                type === 'Task' ? 'bg-green-100 text-green-700' :
+                                'bg-gray-100 text-gray-700'
+                              }`}
+                            >
+                              {count} {type}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                      <div className="flex items-center gap-1 text-xs text-gray-600">
+                        <span>Status:</span>
+                        {Object.entries(combinedSummary.byStatus)
+                          .sort(([,a], [,b]) => b - a)
+                          .map(([status, count]) => (
+                            <span
+                              key={status}
+                              className={`inline-flex items-center px-2 py-0.5 rounded font-medium ${
+                                status === 'Done' || status === 'Closed' || status === 'Closed Verified'
+                                  ? 'bg-green-50 text-green-700 border border-green-200' :
+                                status === 'In Progress' || status === 'Dev complete' || status === 'In Review'
+                                  ? 'bg-yellow-50 text-yellow-700 border border-yellow-200' :
+                                  'bg-gray-50 text-gray-700 border border-gray-200'
+                              }`}
+                            >
+                              {count} {status}
+                            </span>
+                          ))}
+                      </div>
+                    </div>
+                  )}
+                </div>
                 <button
                   onClick={fetchReleaseSummary}
                   disabled={loadingSummary}
@@ -576,6 +689,84 @@ const ReleaseComparison = () => {
                   )}
                 </button>
               </div>
+
+              {/* JIRA Tickets List */}
+              {allTickets.length > 0 && (
+                <div className="mb-6">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-3">JIRA Tickets in this Release</h3>
+                  <div className="space-y-2">
+                    {allTickets.map((ticket, idx) => {
+                      const jiraUrl = import.meta.env.VITE_JIRA_URL;
+                      const ticketUrl = jiraUrl ? `${jiraUrl.replace(/\/$/, '')}/browse/${ticket.key}` : null;
+                      const hasCommit = allCommitMessages.includes(ticket.key);
+
+                      return (
+                        <div key={idx} className={`p-3 rounded-lg border transition-colors ${
+                          !hasCommit
+                            ? 'bg-yellow-50 border-yellow-300'
+                            : 'bg-purple-50 border-purple-200 hover:border-purple-300'
+                        }`}>
+                          <div className="flex items-start gap-3">
+                            <div className="flex-shrink-0 mt-1">
+                              <span className={`inline-flex items-center px-2 py-0.5 rounded text-xs font-medium ${
+                                ticket.issueType === 'Bug' ? 'bg-red-100 text-red-800' :
+                                ticket.issueType === 'Story' ? 'bg-blue-100 text-blue-800' :
+                                ticket.issueType === 'Epic' ? 'bg-purple-100 text-purple-800' :
+                                ticket.issueType === 'Task' ? 'bg-green-100 text-green-800' :
+                                'bg-gray-100 text-gray-800'
+                              }`}>
+                                {ticket.issueType}
+                              </span>
+                            </div>
+                            <div className="flex-1 min-w-0">
+                              <div className="flex items-start gap-2">
+                                {ticketUrl ? (
+                                  <a
+                                    href={ticketUrl}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-sm font-semibold text-purple-600 hover:text-purple-800"
+                                  >
+                                    {ticket.key}: {ticket.summary}
+                                  </a>
+                                ) : (
+                                  <div className="text-sm font-semibold text-purple-600">
+                                    {ticket.key}: {ticket.summary}
+                                  </div>
+                                )}
+                                {!hasCommit && (
+                                  <span className="flex-shrink-0 inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-yellow-100 text-yellow-800">
+                                    ⚠️ No commits
+                                  </span>
+                                )}
+                              </div>
+                              <div className="flex items-center gap-3 text-xs text-gray-600 mt-1.5">
+                                <span className={`inline-flex items-center px-2 py-0.5 rounded font-medium ${
+                                  ticket.status === 'Done' || ticket.status === 'Closed' || ticket.status === 'Closed Verified' ? 'bg-green-100 text-green-800' :
+                                  ticket.status === 'In Progress' || ticket.status === 'Dev complete' || ticket.status === 'In Review' ? 'bg-yellow-100 text-yellow-800' :
+                                  'bg-gray-100 text-gray-800'
+                                }`}>
+                                  {ticket.status}
+                                </span>
+                                <span>👤 {ticket.assignee}</span>
+                                {ticket.priority && <span className={`inline-flex items-center px-2 py-0.5 rounded font-medium ${
+                                  ticket.priority === 'High' || ticket.priority === 'Highest' ? 'bg-red-50 text-red-700 border border-red-200' :
+                                  ticket.priority === 'Medium' ? 'bg-yellow-50 text-yellow-700 border border-yellow-200' :
+                                  'bg-gray-50 text-gray-700 border border-gray-200'
+                                }`}>
+                                  {ticket.priority}
+                                </span>}
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              )}
+
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">GitHub Changes by Repository</h3>
               <div className="overflow-x-auto">
                 <table className="min-w-full divide-y divide-gray-200">
                   <thead className="bg-gray-50">
@@ -700,7 +891,7 @@ const ReleaseComparison = () => {
                 </table>
               </div>
             </div>
-          ));
+          )});
         })()}
 
         {/* Empty State */}
@@ -747,6 +938,75 @@ const ReleaseComparison = () => {
 
               {/* Modal Body */}
               <div className="p-6 overflow-y-auto max-h-[calc(90vh-140px)]">
+                {/* JIRA Tickets Section */}
+                {modalData.jiraTickets && modalData.jiraTickets.length > 0 && (
+                  <div className="mb-6">
+                    <h3 className="text-lg font-semibold text-gray-900 mb-4">
+                      JIRA Tickets ({modalData.jiraTickets.length})
+                    </h3>
+                    <div className="space-y-2">
+                      {modalData.jiraTickets.map((ticket, idx) => {
+                        const jiraUrl = import.meta.env.VITE_JIRA_URL;
+                        const ticketUrl = jiraUrl ? `${jiraUrl.replace(/\/$/, '')}/browse/${ticket.key}` : null;
+
+                        return (
+                          <div key={idx} className="p-4 bg-purple-50 rounded-lg border border-purple-200 hover:border-purple-300 transition-colors">
+                            <div className="flex items-start gap-3">
+                              <div className="flex-shrink-0 mt-1">
+                                <span className={`inline-flex items-center px-2 py-0.5 rounded text-xs font-medium ${
+                                  ticket.issueType === 'Bug' ? 'bg-red-100 text-red-800' :
+                                  ticket.issueType === 'Story' ? 'bg-blue-100 text-blue-800' :
+                                  ticket.issueType === 'Epic' ? 'bg-purple-100 text-purple-800' :
+                                  'bg-gray-100 text-gray-800'
+                                }`}>
+                                  {ticket.issueType}
+                                </span>
+                              </div>
+                              <div className="flex-1 min-w-0">
+                                {ticketUrl ? (
+                                  <a
+                                    href={ticketUrl}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-sm font-semibold text-purple-600 hover:text-purple-800 block mb-1"
+                                  >
+                                    {ticket.key}: {ticket.summary}
+                                  </a>
+                                ) : (
+                                  <div className="text-sm font-semibold text-purple-600 mb-1">
+                                    {ticket.key}: {ticket.summary}
+                                  </div>
+                                )}
+                                <div className="flex items-center gap-3 text-xs text-gray-600 mt-2">
+                                  <span className={`inline-flex items-center px-2 py-0.5 rounded font-medium ${
+                                    ticket.status === 'Done' || ticket.status === 'Closed' || ticket.status === 'Closed Verified' ? 'bg-green-100 text-green-800' :
+                                    ticket.status === 'In Progress' || ticket.status === 'Dev complete' ? 'bg-yellow-100 text-yellow-800' :
+                                    'bg-gray-100 text-gray-800'
+                                  }`}>
+                                    {ticket.status}
+                                  </span>
+                                  <span>👤 {ticket.assignee}</span>
+                                  {ticket.priority && <span className={`inline-flex items-center px-2 py-0.5 rounded text-xs font-medium ${
+                                    ticket.priority === 'High' || ticket.priority === 'Highest' ? 'bg-red-50 text-red-700' :
+                                    ticket.priority === 'Medium' ? 'bg-yellow-50 text-yellow-700' :
+                                    'bg-gray-50 text-gray-700'
+                                  }`}>
+                                    {ticket.priority}
+                                  </span>}
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </div>
+                )}
+
+                {/* Commits Section */}
+                <h3 className="text-lg font-semibold text-gray-900 mb-4">
+                  Commits ({modalData.commits.length})
+                </h3>
                 {modalData.commits.length > 0 ? (
                   <div className="space-y-3">
                     {modalData.commits.map((commit, idx) => (

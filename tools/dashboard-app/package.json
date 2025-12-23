@@ -5,6 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "fetch-jira": "node scripts/fetch-jira.js",
+    "dev:full": "npm run fetch-jira && npm run dev",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
